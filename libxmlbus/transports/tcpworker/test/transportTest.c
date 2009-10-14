@@ -13,8 +13,13 @@
  *
  */
 /** @file transportTest.c */
-#include <xmlbus/transport.h>
+#ifdef __APPLE__
+/* support check as a framework on apple */
 #include <check/check.h>
+#else
+#include <check.h>
+#endif
+#include <xmlbus/transport.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

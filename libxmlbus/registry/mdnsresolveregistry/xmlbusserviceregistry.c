@@ -17,7 +17,7 @@
 #include "ddnshostregistry.h"
 #include "xmlbusserviceregistrylistener.h"
 #include <pthread.h>
-#include <hash.h>
+#include <xmlbus/hash.h>
 #include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>

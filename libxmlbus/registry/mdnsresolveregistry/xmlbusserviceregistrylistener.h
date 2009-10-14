@@ -17,7 +17,7 @@
  * The ServiceRegistryListener keeps track of all host that publish xmlbus services via rendezvous
  * It is used by the xmlbusserviceregistry to start and run the listenerthread and sync the cache
  */
-#include <hash.h>
+#include <xmlbus/hash.h>
 
 /*! @brief start the listener thread that will add and remove the DDNS hosts from the given hashtable
  * @return 

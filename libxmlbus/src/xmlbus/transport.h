@@ -120,7 +120,7 @@ typedef xmlbusErrorPtr (*xmlbusTransportInitializeFunc) (xmlbusTransportPtr);
 /** type definition of the xmlbusTransport structure. The contents is defined in implementation (hidden)
  * It is only possible to modify the transport with the functions found in transport.h
  */   
-typedef	struct xmlbus_transport_struct {
+typedef struct xmlbus_transport_struct {
 	xmlbus_transportstate_enum transportState; 
 	xmlbusTransportStartSenderFunc callbackStartSenderFunc;
 	xmlbusTransportStopSenderFunc callbackStopSenderFunc;

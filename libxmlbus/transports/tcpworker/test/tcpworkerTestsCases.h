@@ -13,7 +13,12 @@
  *
  */
   /*! @file tcpworkerTestsCases.h */
+#ifdef __APPLE__
+/* support check as a framework on apple */
 #include <check/check.h>
+#else
+#include <check.h>
+#endif
 
 /* NOTE: This file gives the functions to be registered for the CORE testsuite
  * This file contains the different register functions for the different files that implement tests

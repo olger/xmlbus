@@ -13,9 +13,14 @@
  *
  */
 /** @file transportresolverregistryTest.c */
+#ifdef __APPLE__
+/* This include is done to support check as a framework */
+#include <check/check.h>
+#else
+#include <check.h>
+#endif 
 #include <xmlbus/transportresolverregistry.h>
 #include <xmlbus/error.h>
-#include <check/check.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

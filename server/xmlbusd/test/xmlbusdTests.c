@@ -13,7 +13,12 @@
  *
  */
 /*! @file xmlbusdTests.c */
+#ifdef __APPLE__
+/* support check as framework on apple */
 #include <check/check.h>
+#else
+#include <check.h>
+#endif
 #include <stdlib.h>
 #include <libxml/parser.h>
 

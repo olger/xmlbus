@@ -13,7 +13,12 @@
  *
  */
 /*! @file coreTests.c */
+#ifdef __APPLE__
+/* This include is done to support check as a framework */
 #include <check/check.h>
+#else
+#include <check.h>
+#endif 
 #include <stdlib.h>
 #include <libxml/parser.h>
 

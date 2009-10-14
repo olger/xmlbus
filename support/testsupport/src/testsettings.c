@@ -13,7 +13,7 @@
  */
 /*! @file testsettings.c */
 
-#include "testsettings.h"
+#include <testsupport/testsettings.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

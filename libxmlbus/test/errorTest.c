@@ -13,7 +13,12 @@
  *
  */
  /*! @file errorTest.c */
+#ifdef __APPLE__
+/* This include is done to support check as a framework */
 #include <check/check.h>
+#else
+#include <check.h>
+#endif 
 #include <xmlbus/error.h>
 #include <testsupport/testsettings.h>
 

@@ -13,8 +13,13 @@
  *
  */
 /*! @file soapTest.c */
-#include <dirent.h>
+#ifdef __APPLE__
+/* This include is done to support check as a framework */
 #include <check/check.h>
+#else
+#include <check.h>
+#endif 
+#include <dirent.h>
 #include <stdlib.h>
 #include <string.h>
 #include <fcntl.h>

@@ -12,10 +12,15 @@
  *  A full statement is found in LICENSE.txt
  *
  */
-/** @file transport.h */
+/** @file transportTest.c */
+#ifdef __APPLE__
+/* This include is done to support check as a framework */
+#include <check/check.h>
+#else
+#include <check.h>
+#endif 
 #include <xmlbus/transport.h>
 #include <xmlbus/error.h>
-#include <check/check.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

@@ -13,8 +13,13 @@
  *
  */
 /** @file configTest.c */
-#include <xmlbus/error.h>
+#ifdef __APPLE__
+/* support check as framework on apple */
 #include <check/check.h>
+#else
+#include <check.h>
+#endif
+#include <xmlbus/error.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
