@@ -1,0 +1,1696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<l:log xmlns:l="http://www.w3.org/2002/ws/addressing/logs/" 
+    xmlns:s="http://www.w3.org/2002/ws/addr/testsuite/testcases/">
+    <l:message testcase="test1100" message="1" context="ibm-test1100">
+	<l:content href="ibm-Test1100-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1100</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1101" message="1" context="ibm-test1101">
+	<l:content href="ibm-Test1101-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:MessageID>urn:uuid:6d1d8cdd-b3ad-4a59-a948-08a43c2a6680</a:MessageID>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1101</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1102" message="1" context="ibm-test1102">
+	<l:content href="ibm-Test1102-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1102</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1103" message="1" context="ibm-test1103">
+	<l:content href="ibm-Test1103-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1103</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1104" message="1" context="ibm-test1104">
+	<l:content href="ibm-Test1104-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1104</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1106" message="1" context="ibm-test1106">
+	<l:content href="ibm-Test1106-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1106</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1107" message="1" context="ibm-test1107">
+	<l:content href="ibm-Test1107-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1107</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1108" message="1" context="ibm-test1108">
+	<l:content href="ibm-Test1108-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters d4p1:level="premium" xmlns:d4p1="http://example.org/customer">
+        <d4p1:CustomerKey>Key#123456789</d4p1:CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata customer:total="1" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:customer="http://example.org/customer">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+      <customer:Metadata xmlns:customer="http://example.org/customer">
+        <customer:extraStuff>This should be ignored</customer:extraStuff>
+      </customer:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1108</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1130" message="1" context="ibm-test1130">
+	<l:content href="ibm-Test1130-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:04148232-7dca-4273-91e6-5167ae91d929</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1130</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1130" message="2" context="ibm-test1130">
+	<l:content href="ibm-Test1130-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0A2A9-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:04148232-7dca-4273-91e6-5167ae91d929</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">test1130</m:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1131" message="1" context="ibm-test1131">
+	<l:content href="ibm-Test1131-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:fbb1cd39-e307-48b3-9d20-1659ded01f9a</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1131</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1131" message="2" context="ibm-test1131">
+	<l:content href="ibm-Test1131-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0A5B6-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:fbb1cd39-e307-48b3-9d20-1659ded01f9a</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">test1131</m:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1132" message="1" context="ibm-test1132">
+	<l:content href="ibm-Test1132-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:202df807-10af-4490-8b5c-a570b531c2df</a:MessageID>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1132</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1132" message="2" context="ibm-test1132">
+	<l:content href="ibm-Test1132-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey wsa:IsReferenceParameter="true" xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0A869-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:202df807-10af-4490-8b5c-a570b531c2df</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">test1132</m:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1133" message="1" context="ibm-test1133">
+	<l:content href="ibm-Test1133-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:5a32717e-cfc5-442d-a15e-11b836e765c6</a:MessageID>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1133</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1133" message="2" context="ibm-test1133">
+	<l:content href="ibm-Test1133-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey wsa:IsReferenceParameter="true" xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0ABEF-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:5a32717e-cfc5-442d-a15e-11b836e765c6</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode xmlns:p158="http://example.org/echo">p158:EmptyEchoString</faultcode>
+      <faultstring><![CDATA[faulttest1133]]></faultstring>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1134" message="1" context="ibm-test1134">
+	<l:content href="ibm-Test1134-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:2a31028f-1438-439b-a7fd-50d624a33554</a:MessageID>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1134</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1134" message="2" context="ibm-test1134">
+	<l:content href="ibm-Test1134-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey wsa:IsReferenceParameter="true" xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0AFF6-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:2a31028f-1438-439b-a7fd-50d624a33554</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode xmlns:p158="http://example.org/echo">p158:EmptyEchoString</faultcode>
+      <faultstring><![CDATA[faulttest1134]]></faultstring>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1135" message="1" context="ibm-test1135">
+	<l:content href="ibm-Test1135-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.microsoft.com/</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+    <a:MessageID>urn:uuid:ab0a85e1-a5a3-4121-aa95-42464624255b</a:MessageID>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1135</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1135" message="2" context="ibm-test1135">
+	<l:content href="ibm-Test1135-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey wsa:IsReferenceParameter="true" xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0B37B-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:ab0a85e1-a5a3-4121-aa95-42464624255b</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode xmlns:p158="http://example.org/echo">p158:EmptyEchoString</faultcode>
+      <faultstring><![CDATA[faulttest1135]]></faultstring>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1140" message="1" context="ibm-test1140">
+	<l:content href="ibm-Test1140-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:9a35afc8-7be6-4a41-ba64-92a44f73a3d7</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1140</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1140" message="2" context="ibm-test1140">
+	<l:content href="ibm-Test1140-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0B91E-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9a35afc8-7be6-4a41-ba64-92a44f73a3d7</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring><![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]></faultstring>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1141" message="1" context="ibm-test1141">
+	<l:content href="ibm-Test1141-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:988a97ae-6e05-46b2-8299-f6f203f74ea7</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1141</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1141" message="2" context="ibm-test1141">
+	<l:content href="ibm-Test1141-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:ReplyTo</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0BB3A-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:988a97ae-6e05-46b2-8299-f6f203f74ea7</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring><![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]></faultstring>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1142" message="1" context="ibm-test1142">
+	<l:content href="ibm-Test1142-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:FaultTo>
+    <a:FaultTo>
+      <a:Address>http://duplicate/</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:9e655269-0aab-45f0-8657-2d6a29acf93f</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1142</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1142" message="2" context="ibm-test1142">
+	<l:content href="ibm-Test1142-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:FaultTo</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0BCDF-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9e655269-0aab-45f0-8657-2d6a29acf93f</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring><![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]></faultstring>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1143" message="1" context="ibm-test1143">
+	<l:content href="ibm-Test1143-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:Action>duplicate-action</a:Action>
+    <a:MessageID>urn:uuid:2ce74876-efa2-4a4b-b21c-dccb044ebe51</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1143</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1143" message="2" context="ibm-test1143">
+	<l:content href="ibm-Test1143-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0BE8E-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:2ce74876-efa2-4a4b-b21c-dccb044ebe51</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring><![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]></faultstring>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1144" message="1" context="ibm-test1144">
+	<l:content href="ibm-Test1144-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:a42bdb24-bb76-470b-8dfe-5dcfd554a9fc</a:MessageID>
+    <a:MessageID>urn:uuid:f6f34626-7701-43a2-85f9-2361838ffd00</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1144</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1144" message="2" context="ibm-test1144">
+	<l:content href="ibm-Test1144-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:MessageID</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0C00A-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:a42bdb24-bb76-470b-8dfe-5dcfd554a9fc</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring><![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]></faultstring>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1146" message="1" context="ibm-test1146">
+	<l:content href="ibm-Test1146-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:3e57e919-3578-4213-9f50-3c29e7292b8c</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1146</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1146" message="2" context="ibm-test1146">
+	<l:content href="ibm-Test1146-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0C1F5-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:3e57e919-3578-4213-9f50-3c29e7292b8c</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring><![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]></faultstring>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1147" message="1" context="ibm-test1147">
+	<l:content href="ibm-Test1147-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:MessageID>urn:uuid:32119abf-94c4-48e0-bda5-3daaaa90771e</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1147</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1147" message="2" context="ibm-test1147">
+	<l:content href="ibm-Test1147-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0C3DF-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:32119abf-94c4-48e0-bda5-3daaaa90771e</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:MessageAddressingHeaderRequired</faultcode>
+      <faultstring><![CDATA[A required header representing a Message Addressing Property is not present]]></faultstring>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1150" message="1" context="ibm-test1150">
+	<l:content href="ibm-Test1150-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:8c79c7d8-3ba0-4c82-b648-828a3ed6a453</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/cff26bd4-9cfc-4a03-b8aa-9a4b238b4f3f/2ad8296b-8794-41c3-905f-50a6492b32fd</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">6</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1150</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1150" message="3" context="ibm-test1150">
+	<l:content href="ibm-Test1150-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://131.107.72.15:8000/cff26bd4-9cfc-4a03-b8aa-9a4b238b4f3f/2ad8296b-8794-41c3-905f-50a6492b32fd</wsa:To>
+    <ChannelInstance wsa:IsReferenceParameter="true" xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">6</ChannelInstance>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0D3A3-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:8c79c7d8-3ba0-4c82-b648-828a3ed6a453</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">test1150</m:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1152" message="1" context="ibm-test1152">
+	<l:content href="ibm-Test1152-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:3fabb860-75bc-4a5f-8069-c06d7ba3180a</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/80b17d7a-b721-4b87-9e2e-937b0904b593/6096c927-c7dd-4a11-879b-374263d947b3</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">9</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1152</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1170" message="1" context="ibm-test1170">
+	<l:content href="ibm-Test1170-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:From s:mustUnderstand="true">
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:From>
+    <a:MessageID>urn:uuid:4ec265ce-a9a3-4032-8832-77051a2b521c</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1170</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1170" message="2" context="ibm-test1170">
+	<l:content href="ibm-Test1170-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C100F0-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:4ec265ce-a9a3-4032-8832-77051a2b521c</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">test1170</m:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1200" message="1" context="ibm-test1200">
+	<l:content href="ibm-Test1200-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1200</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1201" message="1" context="ibm-test1201">
+	<l:content href="ibm-Test1201-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:MessageID>urn:uuid:7bb2ac34-154c-4c7d-acad-6f82e31eef02</a:MessageID>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1201</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1202" message="1" context="ibm-test1202">
+	<l:content href="ibm-Test1202-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1202</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1203" message="1" context="ibm-test1203">
+	<l:content href="ibm-Test1203-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1203</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1204" message="1" context="ibm-test1204">
+	<l:content href="ibm-Test1204-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1204</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1206" message="1" context="ibm-test1206">
+	<l:content href="ibm-Test1206-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1206</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1207" message="1" context="ibm-test1207">
+	<l:content href="ibm-Test1207-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1207</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1208" message="1" context="ibm-test1208">
+	<l:content href="ibm-Test1208-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters d4p1:level="premium" xmlns:d4p1="http://example.org/customer">
+        <d4p1:CustomerKey>Key#123456789</d4p1:CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata customer:total="1" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:customer="http://example.org/customer">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+      <customer:Metadata xmlns:customer="http://example.org/customer">
+        <customer:extraStuff>This should be ignored</customer:extraStuff>
+      </customer:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1208</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1230" message="1" context="ibm-test1230">
+	<l:content href="ibm-Test1230-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:21a32b4d-d41b-462a-98c3-2cb4f2512cec</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1230</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1230" message="2" context="ibm-test1230">
+	<l:content href="ibm-Test1230-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0A3FE-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:21a32b4d-d41b-462a-98c3-2cb4f2512cec</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">test1230</m:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1231" message="1" context="ibm-test1231">
+	<l:content href="ibm-Test1231-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:927e15fc-c653-4fce-8028-4a1f46577e47</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1231</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1231" message="2" context="ibm-test1231">
+	<l:content href="ibm-Test1231-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0A701-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:927e15fc-c653-4fce-8028-4a1f46577e47</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">test1231</m:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1232" message="1" context="ibm-test1232">
+	<l:content href="ibm-Test1232-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:71c8c947-77f3-4682-aa9d-920386c5b782</a:MessageID>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1232</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1232" message="2" context="ibm-test1232">
+	<l:content href="ibm-Test1232-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey wsa:IsReferenceParameter="true" xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0A9D2-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:71c8c947-77f3-4682-aa9d-920386c5b782</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">test1232</m:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1233" message="1" context="ibm-test1233">
+	<l:content href="ibm-Test1233-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:e508891e-8be6-4c74-be6c-e704cb940f34</a:MessageID>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1233</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1233" message="2" context="ibm-test1233">
+	<l:content href="ibm-Test1233-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey wsa:IsReferenceParameter="true" xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0ADE3-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:e508891e-8be6-4c74-be6c-e704cb940f34</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value xmlns:p158="http://example.org/echo">p158:EmptyEchoString</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US"><![CDATA[faulttest1233]]></soapenv:Text>
+      </soapenv:Reason>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1234" message="1" context="ibm-test1234">
+	<l:content href="ibm-Test1234-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:d979db2a-8455-4b5a-a2a1-8b58d13c76e7</a:MessageID>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1234</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1234" message="2" context="ibm-test1234">
+	<l:content href="ibm-Test1234-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey wsa:IsReferenceParameter="true" xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0B1C3-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:d979db2a-8455-4b5a-a2a1-8b58d13c76e7</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value xmlns:p158="http://example.org/echo">p158:EmptyEchoString</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US"><![CDATA[faulttest1234]]></soapenv:Text>
+      </soapenv:Reason>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1235" message="1" context="ibm-test1235">
+	<l:content href="ibm-Test1235-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.microsoft.com/</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+    <a:MessageID>urn:uuid:be39e14e-0946-460b-bedf-c769ec6d8383</a:MessageID>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1235</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1235" message="2" context="ibm-test1235">
+	<l:content href="ibm-Test1235-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey wsa:IsReferenceParameter="true" xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0B5DE-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:be39e14e-0946-460b-bedf-c769ec6d8383</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value xmlns:p158="http://example.org/echo">p158:EmptyEchoString</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US"><![CDATA[faulttest1235]]></soapenv:Text>
+      </soapenv:Reason>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1236" message="1" context="ibm-test1236">
+	<l:content href="ibm-Test1236-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:826b4e15-805c-4408-bc35-fc1b9dfb4577</a:MessageID>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1236</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1240" message="1" context="ibm-test1240">
+	<l:content href="ibm-Test1240-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:53eb42ea-b3e5-4e47-991a-61223652e6c8</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1240</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1240" message="2" context="ibm-test1240">
+	<l:content href="ibm-Test1240-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0C55C-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:53eb42ea-b3e5-4e47-991a-61223652e6c8</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US"><![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]></soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1241" message="1" context="ibm-test1241">
+	<l:content href="ibm-Test1241-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:07b70f20-7200-47c7-af28-950d6e932fe5</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1241</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1241" message="2" context="ibm-test1241">
+	<l:content href="ibm-Test1241-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:ReplyTo</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0C715-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:07b70f20-7200-47c7-af28-950d6e932fe5</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US"><![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]></soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <wsa:ProblemHeaderQName>wsa:ReplyTo</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1242" message="1" context="ibm-test1242">
+	<l:content href="ibm-Test1242-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:FaultTo>
+    <a:FaultTo>
+      <a:Address>http://duplicate/</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:774a546c-8ab6-478e-ac3f-e235ddf343d4</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1242</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1242" message="2" context="ibm-test1242">
+	<l:content href="ibm-Test1242-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:FaultTo</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0C93B-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:774a546c-8ab6-478e-ac3f-e235ddf343d4</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US"><![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]></soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <wsa:ProblemHeaderQName>wsa:FaultTo</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1243" message="1" context="ibm-test1243">
+	<l:content href="ibm-Test1243-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:Action>duplicate-action</a:Action>
+    <a:MessageID>urn:uuid:2df9d940-b30e-48c7-b1d3-8a39d713c20d</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1243</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1243" message="2" context="ibm-test1243">
+	<l:content href="ibm-Test1243-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0CAFE-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:2df9d940-b30e-48c7-b1d3-8a39d713c20d</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US"><![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]></soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1244" message="1" context="ibm-test1244">
+	<l:content href="ibm-Test1244-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:449509a0-4b10-478f-a859-a0fb187e01cb</a:MessageID>
+    <a:MessageID>urn:uuid:a1d27d04-f152-4d50-90d9-412e19126291</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1244</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1244" message="2" context="ibm-test1244">
+	<l:content href="ibm-Test1244-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:MessageID</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0CC7B-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:449509a0-4b10-478f-a859-a0fb187e01cb</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US"><![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]></soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <wsa:ProblemHeaderQName>wsa:MessageID</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1246" message="1" context="ibm-test1246">
+	<l:content href="ibm-Test1246-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:c96e0172-c25e-4a6e-a90d-a1fe93e141f0</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1246</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1246" message="2" context="ibm-test1246">
+	<l:content href="ibm-Test1246-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0CE6F-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:c96e0172-c25e-4a6e-a90d-a1fe93e141f0</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US"><![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]></soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1247" message="1" context="ibm-test1247">
+	<l:content href="ibm-Test1247-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:2efbe686-8905-462c-8db2-e2341771be31</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1247</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1247" message="2" context="ibm-test1247">
+	<l:content href="ibm-Test1247-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0D046-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:2efbe686-8905-462c-8db2-e2341771be31</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US"><![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]></soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1248" message="1" context="ibm-test1248">
+	<l:content href="ibm-Test1248-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:MessageID>urn:uuid:e02a9cea-1f93-471e-8756-a451e92e672b</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1248</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1248" message="2" context="ibm-test1248">
+	<l:content href="ibm-Test1248-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0D1F5-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:e02a9cea-1f93-471e-8756-a451e92e672b</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:MessageAddressingHeaderRequired</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US"><![CDATA[A required header representing a Message Addressing Property is not present]]></soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1250" message="1" context="ibm-test1250">
+	<l:content href="ibm-Test1250-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:7e25acdb-5ef3-4f81-92d8-e371b7948ecc</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/a50f413d-eea7-4907-bf96-d89f27df48dc/d100bebe-5ee3-4b47-a6ee-fee14f5cc205</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">7</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1250</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1250" message="3" context="ibm-test1250">
+	<l:content href="ibm-Test1250-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://131.107.72.15:8000/a50f413d-eea7-4907-bf96-d89f27df48dc/d100bebe-5ee3-4b47-a6ee-fee14f5cc205</wsa:To>
+    <ChannelInstance wsa:IsReferenceParameter="true" xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">7</ChannelInstance>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0D62E-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:7e25acdb-5ef3-4f81-92d8-e371b7948ecc</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">test1250</m:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1251" message="1" context="ibm-test1251">
+	<l:content href="ibm-Test1251-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo s:role="http://www.w3.org/2003/05/soap-envelope/role/none">
+      <a:Address>http://www.microsoft.com/</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:d9a623f2-44c5-4413-ae3c-504e8614d3e8</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/3c3ddf4c-7506-4edc-b723-de112f9e6949/598ebdbf-9d54-458d-96e0-db124f5e37cb</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">8</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1251</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1251" message="3" context="ibm-test1251">
+	<l:content href="ibm-Test1251-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://131.107.72.15:8000/3c3ddf4c-7506-4edc-b723-de112f9e6949/598ebdbf-9d54-458d-96e0-db124f5e37cb</wsa:To>
+    <ChannelInstance wsa:IsReferenceParameter="true" xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">8</ChannelInstance>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C0D7DD-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:d9a623f2-44c5-4413-ae3c-504e8614d3e8</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">test1251</m:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1252" message="1" context="ibm-test1252">
+	<l:content href="ibm-Test1252-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:8f180360-bec7-4ecd-8fb9-9e22992f9de2</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/735aed14-ab86-4c43-a9e4-6a9328272edf/4ff3eb6f-e212-4ed7-92af-8a4028304f2d</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">10</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1252</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1270" message="1" context="ibm-test1270">
+	<l:content href="ibm-Test1270-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:From s:mustUnderstand="true">
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:From>
+    <a:MessageID>urn:uuid:036c78fe-630c-4183-baf3-3a44476afb6a</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://cwctest.dynalias.org:9080/wsaiop/services/wsaTestSoap11Endpoint</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1270</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1270" message="2" context="ibm-test1270">
+	<l:content href="ibm-Test1270-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">uuid:D1C10244-0109-4000-E000-02ACC0A8015E</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:036c78fe-630c-4183-baf3-3a44476afb6a</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">test1270</m:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+</l:log>

@@ -1,0 +1,6 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+soap:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<soap:Body>
+	<my:dump xmlns:my="http://xmlbus.org/test">Hello World</my:dump>
+</soap:Body>
+</soap:Envelope>

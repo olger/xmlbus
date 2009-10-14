@@ -1,0 +1,13 @@
+<?xml version='1.0' ?>
+<soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/"
+                 xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <soap11:Header>
+  <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+  <wsa:MessageID>http://message.id/test</wsa:MessageID>
+  <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To> 
+  <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To> 
+ </soap11:Header>
+ <soap11:Body>
+  <m:echo xmlns:m="http://example.org/echo">Echo This Text</m:echo>
+ </soap11:Body>
+</soap11:Envelope>

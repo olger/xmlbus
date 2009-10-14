@@ -1,0 +1,20 @@
+TODO:
+
+CLIENT SUPPORT
+
+Create a command line client that can (a-sync) call xmlbus services, use the transport plugins to support. 
+Add mapping of endpoint URIs based on registry resolve functions. 
+
+HTTP TRANSPORT
+
+Currently basic TCP is used for transport, to be more based on currently used standards, implement an embedded webserver for outbound and a http client for inbound transport.
+
+ASYNC SERVICES UPDATE
+
+In order to support ASYNC in the right way, the incoming (request) soapmessage connection should be closed before the service execution function will be triggered. (only if async is indicated (replyto != NULL) (the address information can be part of the  soapMessage, a pipeline implementation can be used to set these (replyto, faultto), ws-addressing can be supported this way
+NOTE: Async update will include WS-Addressing for the adressing of endpoints. 
+NOTE: Async will be supported after finalization of the client.
+
+MEMORY LEAKS CHECKING
+Found using the XCode MallocDebug tool:
+- it seems that error string creation and clean is not managed properly. (send a message to the testservice asking for a action that does not exist: you will get a soapfault. Memory is leaked around xmlErrorGetString

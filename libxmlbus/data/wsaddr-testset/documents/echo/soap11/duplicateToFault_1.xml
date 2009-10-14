@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- $Id: duplicateToFault_1.xml,v 1.3 2006/01/19 06:05:30 hugo Exp $ -->
+<soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:FaultDetail>
+      <wsa:ProblemHeader>
+        <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+      </wsa:ProblemHeader>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo>urn:uuid:AA187032-9872-4448-BAA8-F954D54BA4B1</wsa:RelatesTo>
+    <wsa:MessageID>urn:uuid:67DBD6C6-CE84-4580-B3E2-A130EA4AA406</wsa:MessageID>
+  </soap11:Header>
+  <soap11:Body>
+    <soap11:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+    </soap11:Fault>
+  </soap11:Body>
+</soap11:Envelope>

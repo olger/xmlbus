@@ -1,0 +1,322 @@
+line 117 column 107 - Warning: inserting implicit <p>
+line 135 column 104 - Warning: inserting implicit <p>
+line 159 column 140 - Warning: inserting implicit <p>
+line 179 column 146 - Warning: inserting implicit <p>
+line 194 column 143 - Warning: inserting implicit <p>
+line 214 column 149 - Warning: inserting implicit <p>
+line 234 column 149 - Warning: inserting implicit <p>
+line 252 column 155 - Warning: inserting implicit <p>
+line 267 column 143 - Warning: inserting implicit <p>
+line 287 column 149 - Warning: inserting implicit <p>
+line 307 column 134 - Warning: inserting implicit <p>
+line 327 column 128 - Warning: inserting implicit <p>
+line 347 column 134 - Warning: inserting implicit <p>
+line 369 column 134 - Warning: inserting implicit <p>
+line 384 column 98 - Warning: inserting implicit <p>
+line 402 column 98 - Warning: inserting implicit <p>
+line 420 column 113 - Warning: inserting implicit <p>
+line 436 column 104 - Warning: inserting implicit <p>
+line 449 column 104 - Warning: inserting implicit <p>
+line 465 column 104 - Warning: inserting implicit <p>
+line 481 column 104 - Warning: inserting implicit <p>
+line 500 column 104 - Warning: inserting implicit <p>
+line 520 column 104 - Warning: inserting implicit <p>
+line 540 column 104 - Warning: inserting implicit <p>
+line 566 column 119 - Warning: inserting implicit <p>
+line 586 column 125 - Warning: inserting implicit <p>
+line 599 column 104 - Warning: inserting implicit <p>
+line 613 column 104 - Warning: inserting implicit <p>
+line 627 column 98 - Warning: inserting implicit <p>
+line 641 column 98 - Warning: inserting implicit <p>
+line 655 column 125 - Warning: inserting implicit <p>
+line 672 column 125 - Warning: inserting implicit <p>
+line 692 column 128 - Warning: inserting implicit <p>
+line 706 column 125 - Warning: inserting implicit <p>
+line 726 column 128 - Warning: inserting implicit <p>
+line 740 column 140 - Warning: inserting implicit <p>
+line 767 column 146 - Warning: inserting implicit <p>
+line 782 column 143 - Warning: inserting implicit <p>
+line 809 column 149 - Warning: inserting implicit <p>
+line 829 column 149 - Warning: inserting implicit <p>
+line 854 column 155 - Warning: inserting implicit <p>
+line 869 column 143 - Warning: inserting implicit <p>
+line 896 column 149 - Warning: inserting implicit <p>
+line 916 column 134 - Warning: inserting implicit <p>
+line 943 column 128 - Warning: inserting implicit <p>
+line 970 column 134 - Warning: inserting implicit <p>
+line 999 column 134 - Warning: inserting implicit <p>
+line 1026 column 134 - Warning: inserting implicit <p>
+line 1041 column 104 - Warning: inserting implicit <p>
+line 1066 column 98 - Warning: inserting implicit <p>
+line 1091 column 98 - Warning: inserting implicit <p>
+line 1116 column 113 - Warning: inserting implicit <p>
+line 1133 column 104 - Warning: inserting implicit <p>
+line 1147 column 104 - Warning: inserting implicit <p>
+line 1164 column 104 - Warning: inserting implicit <p>
+line 1181 column 104 - Warning: inserting implicit <p>
+line 1201 column 104 - Warning: inserting implicit <p>
+line 1221 column 104 - Warning: inserting implicit <p>
+line 1241 column 104 - Warning: inserting implicit <p>
+line 1267 column 119 - Warning: inserting implicit <p>
+line 1294 column 125 - Warning: inserting implicit <p>
+line 1307 column 104 - Warning: inserting implicit <p>
+line 1321 column 104 - Warning: inserting implicit <p>
+line 1336 column 104 - Warning: inserting implicit <p>
+line 1351 column 98 - Warning: inserting implicit <p>
+line 1365 column 98 - Warning: inserting implicit <p>
+line 1380 column 131 - Warning: inserting implicit <p>
+line 1402 column 125 - Warning: inserting implicit <p>
+line 1425 column 131 - Warning: inserting implicit <p>
+line 1442 column 125 - Warning: inserting implicit <p>
+line 1459 column 131 - Warning: inserting implicit <p>
+line 1479 column 125 - Warning: inserting implicit <p>
+line 1496 column 125 - Warning: inserting implicit <p>
+line 1516 column 125 - Warning: inserting implicit <p>
+line 1536 column 128 - Warning: inserting implicit <p>
+line 1550 column 119 - Warning: inserting implicit <p>
+line 1577 column 125 - Warning: inserting implicit <p>
+line 1594 column 68 - Warning: inserting implicit <p>
+line 1604 column 68 - Warning: inserting implicit <p>
+line 1620 column 68 - Warning: inserting implicit <p>
+line 1638 column 104 - Warning: inserting implicit <p>
+line 1654 column 110 - Warning: inserting implicit <p>
+line 1668 column 110 - Warning: inserting implicit <p>
+line 1683 column 113 - Warning: inserting implicit <p>
+line 1698 column 110 - Warning: inserting implicit <p>
+line 1715 column 110 - Warning: inserting implicit <p>
+line 1732 column 110 - Warning: inserting implicit <p>
+line 1752 column 110 - Warning: inserting implicit <p>
+line 1774 column 110 - Warning: inserting implicit <p>
+line 1794 column 110 - Warning: inserting implicit <p>
+line 1819 column 110 - Warning: inserting implicit <p>
+line 1845 column 104 - Warning: inserting implicit <p>
+line 1864 column 110 - Warning: inserting implicit <p>
+line 1878 column 110 - Warning: inserting implicit <p>
+line 1893 column 113 - Warning: inserting implicit <p>
+line 1908 column 110 - Warning: inserting implicit <p>
+line 1925 column 110 - Warning: inserting implicit <p>
+line 1942 column 110 - Warning: inserting implicit <p>
+line 1962 column 110 - Warning: inserting implicit <p>
+line 1984 column 110 - Warning: inserting implicit <p>
+line 2004 column 110 - Warning: inserting implicit <p>
+line 2029 column 110 - Warning: inserting implicit <p>
+line 2055 column 110 - Warning: inserting implicit <p>
+line 2144 column 110 - Warning: inserting implicit <p>
+line 2 column 1 - Warning: <html> proprietary attribute "xmlns:s"
+line 117 column 107 - Warning: trimming empty <p>
+line 135 column 104 - Warning: trimming empty <p>
+line 159 column 140 - Warning: trimming empty <p>
+line 179 column 146 - Warning: trimming empty <p>
+line 194 column 143 - Warning: trimming empty <p>
+line 214 column 149 - Warning: trimming empty <p>
+line 234 column 149 - Warning: trimming empty <p>
+line 252 column 155 - Warning: trimming empty <p>
+line 267 column 143 - Warning: trimming empty <p>
+line 287 column 149 - Warning: trimming empty <p>
+line 307 column 134 - Warning: trimming empty <p>
+line 327 column 128 - Warning: trimming empty <p>
+line 347 column 134 - Warning: trimming empty <p>
+line 369 column 134 - Warning: trimming empty <p>
+line 384 column 98 - Warning: trimming empty <p>
+line 402 column 98 - Warning: trimming empty <p>
+line 420 column 113 - Warning: trimming empty <p>
+line 436 column 104 - Warning: trimming empty <p>
+line 449 column 104 - Warning: trimming empty <p>
+line 465 column 104 - Warning: trimming empty <p>
+line 481 column 104 - Warning: trimming empty <p>
+line 500 column 104 - Warning: trimming empty <p>
+line 520 column 104 - Warning: trimming empty <p>
+line 540 column 104 - Warning: trimming empty <p>
+line 566 column 119 - Warning: trimming empty <p>
+line 586 column 125 - Warning: trimming empty <p>
+line 599 column 104 - Warning: trimming empty <p>
+line 613 column 104 - Warning: trimming empty <p>
+line 627 column 98 - Warning: trimming empty <p>
+line 641 column 98 - Warning: trimming empty <p>
+line 655 column 125 - Warning: trimming empty <p>
+line 672 column 125 - Warning: trimming empty <p>
+line 692 column 128 - Warning: trimming empty <p>
+line 706 column 125 - Warning: trimming empty <p>
+line 726 column 128 - Warning: trimming empty <p>
+line 740 column 140 - Warning: trimming empty <p>
+line 767 column 146 - Warning: trimming empty <p>
+line 782 column 143 - Warning: trimming empty <p>
+line 809 column 149 - Warning: trimming empty <p>
+line 829 column 149 - Warning: trimming empty <p>
+line 854 column 155 - Warning: trimming empty <p>
+line 869 column 143 - Warning: trimming empty <p>
+line 896 column 149 - Warning: trimming empty <p>
+line 916 column 134 - Warning: trimming empty <p>
+line 943 column 128 - Warning: trimming empty <p>
+line 970 column 134 - Warning: trimming empty <p>
+line 999 column 134 - Warning: trimming empty <p>
+line 1026 column 134 - Warning: trimming empty <p>
+line 1041 column 104 - Warning: trimming empty <p>
+line 1066 column 98 - Warning: trimming empty <p>
+line 1091 column 98 - Warning: trimming empty <p>
+line 1116 column 113 - Warning: trimming empty <p>
+line 1133 column 104 - Warning: trimming empty <p>
+line 1147 column 104 - Warning: trimming empty <p>
+line 1164 column 104 - Warning: trimming empty <p>
+line 1181 column 104 - Warning: trimming empty <p>
+line 1201 column 104 - Warning: trimming empty <p>
+line 1221 column 104 - Warning: trimming empty <p>
+line 1241 column 104 - Warning: trimming empty <p>
+line 1267 column 119 - Warning: trimming empty <p>
+line 1294 column 125 - Warning: trimming empty <p>
+line 1307 column 104 - Warning: trimming empty <p>
+line 1321 column 104 - Warning: trimming empty <p>
+line 1336 column 104 - Warning: trimming empty <p>
+line 1351 column 98 - Warning: trimming empty <p>
+line 1365 column 98 - Warning: trimming empty <p>
+line 1380 column 131 - Warning: trimming empty <p>
+line 1402 column 125 - Warning: trimming empty <p>
+line 1425 column 131 - Warning: trimming empty <p>
+line 1442 column 125 - Warning: trimming empty <p>
+line 1459 column 131 - Warning: trimming empty <p>
+line 1479 column 125 - Warning: trimming empty <p>
+line 1496 column 125 - Warning: trimming empty <p>
+line 1516 column 125 - Warning: trimming empty <p>
+line 1536 column 128 - Warning: trimming empty <p>
+line 1550 column 119 - Warning: trimming empty <p>
+line 1577 column 125 - Warning: trimming empty <p>
+line 1594 column 68 - Warning: trimming empty <p>
+line 1604 column 68 - Warning: trimming empty <p>
+line 1620 column 68 - Warning: trimming empty <p>
+line 1638 column 104 - Warning: trimming empty <p>
+line 1654 column 110 - Warning: trimming empty <p>
+line 1668 column 110 - Warning: trimming empty <p>
+line 1683 column 113 - Warning: trimming empty <p>
+line 1698 column 110 - Warning: trimming empty <p>
+line 1715 column 110 - Warning: trimming empty <p>
+line 1732 column 110 - Warning: trimming empty <p>
+line 1752 column 110 - Warning: trimming empty <p>
+line 1774 column 110 - Warning: trimming empty <p>
+line 1794 column 110 - Warning: trimming empty <p>
+line 1819 column 110 - Warning: trimming empty <p>
+line 1845 column 104 - Warning: trimming empty <p>
+line 1864 column 110 - Warning: trimming empty <p>
+line 1878 column 110 - Warning: trimming empty <p>
+line 1893 column 113 - Warning: trimming empty <p>
+line 1908 column 110 - Warning: trimming empty <p>
+line 1925 column 110 - Warning: trimming empty <p>
+line 1942 column 110 - Warning: trimming empty <p>
+line 1962 column 110 - Warning: trimming empty <p>
+line 1984 column 110 - Warning: trimming empty <p>
+line 2004 column 110 - Warning: trimming empty <p>
+line 2029 column 110 - Warning: trimming empty <p>
+line 2055 column 110 - Warning: trimming empty <p>
+line 2144 column 110 - Warning: trimming empty <p>
+line 117 column 14 - Warning: <a> cannot copy name attribute to id
+line 135 column 5 - Warning: <a> cannot copy name attribute to id
+line 159 column 5 - Warning: <a> cannot copy name attribute to id
+line 179 column 5 - Warning: <a> cannot copy name attribute to id
+line 194 column 5 - Warning: <a> cannot copy name attribute to id
+line 214 column 5 - Warning: <a> cannot copy name attribute to id
+line 234 column 5 - Warning: <a> cannot copy name attribute to id
+line 252 column 5 - Warning: <a> cannot copy name attribute to id
+line 267 column 5 - Warning: <a> cannot copy name attribute to id
+line 287 column 5 - Warning: <a> cannot copy name attribute to id
+line 307 column 5 - Warning: <a> cannot copy name attribute to id
+line 327 column 5 - Warning: <a> cannot copy name attribute to id
+line 347 column 5 - Warning: <a> cannot copy name attribute to id
+line 369 column 5 - Warning: <a> cannot copy name attribute to id
+line 384 column 5 - Warning: <a> cannot copy name attribute to id
+line 402 column 5 - Warning: <a> cannot copy name attribute to id
+line 420 column 5 - Warning: <a> cannot copy name attribute to id
+line 436 column 5 - Warning: <a> cannot copy name attribute to id
+line 449 column 5 - Warning: <a> cannot copy name attribute to id
+line 465 column 5 - Warning: <a> cannot copy name attribute to id
+line 481 column 5 - Warning: <a> cannot copy name attribute to id
+line 500 column 5 - Warning: <a> cannot copy name attribute to id
+line 520 column 5 - Warning: <a> cannot copy name attribute to id
+line 540 column 5 - Warning: <a> cannot copy name attribute to id
+line 566 column 5 - Warning: <a> cannot copy name attribute to id
+line 586 column 5 - Warning: <a> cannot copy name attribute to id
+line 599 column 5 - Warning: <a> cannot copy name attribute to id
+line 613 column 5 - Warning: <a> cannot copy name attribute to id
+line 627 column 5 - Warning: <a> cannot copy name attribute to id
+line 641 column 5 - Warning: <a> cannot copy name attribute to id
+line 655 column 5 - Warning: <a> cannot copy name attribute to id
+line 672 column 5 - Warning: <a> cannot copy name attribute to id
+line 692 column 5 - Warning: <a> cannot copy name attribute to id
+line 706 column 5 - Warning: <a> cannot copy name attribute to id
+line 726 column 5 - Warning: <a> cannot copy name attribute to id
+line 740 column 5 - Warning: <a> cannot copy name attribute to id
+line 767 column 5 - Warning: <a> cannot copy name attribute to id
+line 782 column 5 - Warning: <a> cannot copy name attribute to id
+line 809 column 5 - Warning: <a> cannot copy name attribute to id
+line 829 column 5 - Warning: <a> cannot copy name attribute to id
+line 854 column 5 - Warning: <a> cannot copy name attribute to id
+line 869 column 5 - Warning: <a> cannot copy name attribute to id
+line 896 column 5 - Warning: <a> cannot copy name attribute to id
+line 916 column 5 - Warning: <a> cannot copy name attribute to id
+line 943 column 5 - Warning: <a> cannot copy name attribute to id
+line 970 column 5 - Warning: <a> cannot copy name attribute to id
+line 999 column 5 - Warning: <a> cannot copy name attribute to id
+line 1026 column 5 - Warning: <a> cannot copy name attribute to id
+line 1041 column 5 - Warning: <a> cannot copy name attribute to id
+line 1066 column 5 - Warning: <a> cannot copy name attribute to id
+line 1091 column 5 - Warning: <a> cannot copy name attribute to id
+line 1116 column 5 - Warning: <a> cannot copy name attribute to id
+line 1133 column 5 - Warning: <a> cannot copy name attribute to id
+line 1147 column 5 - Warning: <a> cannot copy name attribute to id
+line 1164 column 5 - Warning: <a> cannot copy name attribute to id
+line 1181 column 5 - Warning: <a> cannot copy name attribute to id
+line 1201 column 5 - Warning: <a> cannot copy name attribute to id
+line 1221 column 5 - Warning: <a> cannot copy name attribute to id
+line 1241 column 5 - Warning: <a> cannot copy name attribute to id
+line 1267 column 5 - Warning: <a> cannot copy name attribute to id
+line 1294 column 5 - Warning: <a> cannot copy name attribute to id
+line 1307 column 5 - Warning: <a> cannot copy name attribute to id
+line 1321 column 5 - Warning: <a> cannot copy name attribute to id
+line 1336 column 5 - Warning: <a> cannot copy name attribute to id
+line 1351 column 5 - Warning: <a> cannot copy name attribute to id
+line 1365 column 5 - Warning: <a> cannot copy name attribute to id
+line 1380 column 5 - Warning: <a> cannot copy name attribute to id
+line 1402 column 5 - Warning: <a> cannot copy name attribute to id
+line 1425 column 5 - Warning: <a> cannot copy name attribute to id
+line 1442 column 5 - Warning: <a> cannot copy name attribute to id
+line 1459 column 5 - Warning: <a> cannot copy name attribute to id
+line 1479 column 5 - Warning: <a> cannot copy name attribute to id
+line 1496 column 5 - Warning: <a> cannot copy name attribute to id
+line 1516 column 5 - Warning: <a> cannot copy name attribute to id
+line 1536 column 5 - Warning: <a> cannot copy name attribute to id
+line 1550 column 5 - Warning: <a> cannot copy name attribute to id
+line 1577 column 5 - Warning: <a> cannot copy name attribute to id
+line 1594 column 5 - Warning: <a> cannot copy name attribute to id
+line 1604 column 5 - Warning: <a> cannot copy name attribute to id
+line 1620 column 5 - Warning: <a> cannot copy name attribute to id
+line 1638 column 5 - Warning: <a> cannot copy name attribute to id
+line 1654 column 5 - Warning: <a> cannot copy name attribute to id
+line 1668 column 5 - Warning: <a> cannot copy name attribute to id
+line 1683 column 5 - Warning: <a> cannot copy name attribute to id
+line 1698 column 5 - Warning: <a> cannot copy name attribute to id
+line 1715 column 5 - Warning: <a> cannot copy name attribute to id
+line 1732 column 5 - Warning: <a> cannot copy name attribute to id
+line 1752 column 5 - Warning: <a> cannot copy name attribute to id
+line 1774 column 5 - Warning: <a> cannot copy name attribute to id
+line 1794 column 5 - Warning: <a> cannot copy name attribute to id
+line 1819 column 5 - Warning: <a> cannot copy name attribute to id
+line 1845 column 5 - Warning: <a> cannot copy name attribute to id
+line 1864 column 5 - Warning: <a> cannot copy name attribute to id
+line 1878 column 5 - Warning: <a> cannot copy name attribute to id
+line 1893 column 5 - Warning: <a> cannot copy name attribute to id
+line 1908 column 5 - Warning: <a> cannot copy name attribute to id
+line 1925 column 5 - Warning: <a> cannot copy name attribute to id
+line 1942 column 5 - Warning: <a> cannot copy name attribute to id
+line 1962 column 5 - Warning: <a> cannot copy name attribute to id
+line 1984 column 5 - Warning: <a> cannot copy name attribute to id
+line 2004 column 5 - Warning: <a> cannot copy name attribute to id
+line 2029 column 5 - Warning: <a> cannot copy name attribute to id
+line 2055 column 5 - Warning: <a> cannot copy name attribute to id
+line 2144 column 5 - Warning: <a> cannot copy name attribute to id
+Info: Doctype given is "-//W3C//DTD HTML 4.01 Transitional//EN"
+Info: Document content looks like HTML 4.01 Strict
+313 warnings, 0 errors were found!
+
+
+To learn more about HTML Tidy see http://tidy.sourceforge.net
+Please send bug reports to html-tidy@w3.org
+HTML and CSS specifications are available from http://www.w3.org/
+Lobby your company to join W3C, see http://www.w3.org/Consortium

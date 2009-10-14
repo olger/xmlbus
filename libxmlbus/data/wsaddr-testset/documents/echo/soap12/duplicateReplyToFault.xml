@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!-- $Id: duplicateReplyToFault.xml,v 1.4 2006/01/19 06:05:31 hugo Exp $ -->
+<soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID>urn:uuid:9044A05B-B3FF-449C-82E1-1402D200C945</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:34AAAA7C-EC8E-40C4-8DD8-63FCA2282806</wsa:RelatesTo>
+  </soap12:Header>
+  <soap12:Body>
+    <soap12:Fault>
+      <soap12:Code>
+        <soap12:Value>soap12:Sender</soap12:Value>
+        <soap12:Subcode>
+          <soap12:Value>wsa:InvalidAddressingHeader</soap12:Value>
+        </soap12:Subcode>
+      </soap12:Code>
+      <soap12:Reason>
+        <soap12:Text xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</soap12:Text>
+      </soap12:Reason>
+      <soap12:Detail>
+        <wsa:ProblemHeaderQName>wsa:ReplyTo</wsa:ProblemHeaderQName>
+      </soap12:Detail>
+    </soap12:Fault>
+  </soap12:Body>
+</soap12:Envelope>

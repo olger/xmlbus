@@ -1,0 +1,85 @@
+SOAP 1.2
+Duplicate wsa:To
+
+Request
+count(/soap12:Envelope/soap12:Header/wsa:To) {int} 2
+
+Response
+
+/soap12:Envelope/soap12:Header/wsa:Action {match} http://www.w3.org/2005/08/addressing/fault
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value {qname} soap12:Sender
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value {qname} wsa:InvalidAddressingHeader
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Reason/soap12:Text {match} "A header representing a Message Addressing Property is not valid and the message cannot be processed"
+
+either
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName {qname} wsa:To
+or
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:To {match} http://www.w3.org/2005/08/addressing/anonymous
+
+Duplicate wsa:Action
+
+Request
+count(/soap12:Envelope/soap12:Header/wsa:Action) {int} 2
+
+Response
+
+/soap12:Envelope/soap12:Header/wsa:Action {match} http://www.w3.org/2005/08/addressing/fault
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value {qname} soap12:Sender
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value {qname} wsa:InvalidAddressingHeader
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Reason/soap12:Text {match} "A header representing a Message Addressing Property is not valid and the message cannot be processed"
+
+either
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName {qname} wsa:Action
+or
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:Action {match} http://example.org/action/echoIn
+
+Duplicate wsa:MessageID
+
+Request
+count(/soap12:Envelope/soap12:Header/wsa:MessageID) {int} 2
+
+Response
+
+/soap12:Envelope/soap12:Header/wsa:Action {match} http://www.w3.org/2005/08/addressing/fault
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value {qname} soap12:Sender
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value {qname} wsa:InvalidAddressingHeader
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Reason/soap12:Text {match} "A header representing a Message Addressing Property is not valid and the message cannot be processed"
+
+either
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName {qname} wsa:MessageID
+or
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:MessageID {regex} .*
+
+Duplicate wsa:ReplyTo
+
+Request
+count(/soap12:Envelope/soap12:Header/wsa:ReplyTo) {int} 2
+
+Response
+
+/soap12:Envelope/soap12:Header/wsa:Action {match} http://www.w3.org/2005/08/addressing/fault
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value {qname} soap12:Sender
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value {qname} wsa:InvalidAddressingHeader
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Reason/soap12:Text {match} "A header representing a Message Addressing Property is not valid and the message cannot be processed"
+
+either
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName {qname} wsa:ReplyTo
+or
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:ReplyTo/wsa:Address {match} http://www.w3.org/2005/08/addressing/anonymous
+
+Duplicate wsa:FaultTo
+
+Request
+count(/soap12:Envelope/soap12:Header/wsa:FaultTo) {int} 2
+
+Response
+
+/soap12:Envelope/soap12:Header/wsa:Action {match} http://www.w3.org/2005/08/addressing/fault
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value {qname} soap12:Sender
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value {qname} wsa:InvalidAddressingHeader
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Reason/soap12:Text {match} "A header representing a Message Addressing Property is not valid and the message cannot be processed"
+
+either
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName {qname} wsa:FaultTo
+or
+/soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:FaultTo/wsa:Address {match} http://www.w3.org/2005/08/addressing/anonymous

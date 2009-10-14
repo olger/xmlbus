@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- $Id: duplicateToRequest.xml,v 1.5 2006/01/19 06:05:31 hugo Exp $ -->
+<soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:3FA30C1C-7CC0-4D0E-AA2E-50D082989797</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+  </soap12:Header>
+  <soap12:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap12:Body>
+</soap12:Envelope>

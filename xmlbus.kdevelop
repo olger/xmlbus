@@ -1,0 +1,247 @@
+<?xml version = '1.0'?>
+<kdevelop>
+  <general>
+    <author>Olger Warnier</author>
+    <email>olger.warnier@spectare.nl</email>
+    <version>1.0</version>
+    <projectmanagement>KDevAutoProject</projectmanagement>
+    <primarylanguage>C</primarylanguage>
+    <keywords>
+      <keyword>C</keyword>
+      <keyword>Code</keyword>
+    </keywords>
+    <versioncontrol>kdevsubversion</versioncontrol>
+    <ignoreparts/>
+    <projectdirectory>.</projectdirectory>
+    <absoluteprojectpath>false</absoluteprojectpath>
+    <description/>
+    <defaultencoding/>
+  </general>
+  <kdevautoproject>
+    <general>
+      <activetarget>libxmlbus/src/libxmlbus.la</activetarget>
+      <useconfiguration>debug</useconfiguration>
+    </general>
+    <run>
+      <mainprogram/>
+      <terminal>false</terminal>
+      <directoryradio>executable</directoryradio>
+      <customdirectory>/</customdirectory>
+      <programargs/>
+      <autocompile>false</autocompile>
+      <envvars>
+        <envvar value="no" name="CK_FORK" />
+        <envvar value="/home/olger/svndir/xmlbus/debug/libxmlbus/transports/tcpworker/src/.libs/" name="LD_LIBRARY_PATH" />
+        <envvar value="stdout" name="LOG4C_APPENDER" />
+        <envvar value="debug" name="LOG4C_PRIORITY" />
+      </envvars>
+      <runarguments>
+        <coreTests/>
+        <tcpworkerTests/>
+        <xmlbusdTests/>
+        <xmlbusd>-c $HOME/svndir/xmlbus/server/xmlbusd/data/config_linux.xml</xmlbusd>
+        <xbb/>
+      </runarguments>
+    </run>
+    <configurations>
+      <optimized>
+        <builddir>optimized</builddir>
+        <ccompiler>kdevgccoptions</ccompiler>
+        <cxxcompiler>kdevgppoptions</cxxcompiler>
+        <f77compiler>kdevg77options</f77compiler>
+        <cflags>-O2 -g0 </cflags>
+        <envvars/>
+        <configargs>--prefix=/opt/xmlbus --enable-debug=full --with-log4c=/usr/local --with-check=/usr/local</configargs>
+        <topsourcedir/>
+        <cppflags/>
+        <ldflags/>
+        <ccompilerbinary/>
+        <cxxcompilerbinary/>
+        <f77compilerbinary/>
+        <cxxflags/>
+        <f77flags/>
+      </optimized>
+      <debug>
+        <configargs>--prefix=/opt/xmlbus --enable-debug=full --with-log4c=/usr/local --with-check=/usr/local</configargs>
+        <builddir>debug</builddir>
+        <ccompiler>kdevgccoptions</ccompiler>
+        <cxxcompiler>kdevgppoptions</cxxcompiler>
+        <f77compiler>kdevg77options</f77compiler>
+        <cflags>-g</cflags>
+        <envvars/>
+        <topsourcedir/>
+        <cppflags/>
+        <ldflags/>
+        <ccompilerbinary/>
+        <cxxcompilerbinary/>
+        <f77compilerbinary/>
+        <cxxflags/>
+        <f77flags/>
+      </debug>
+    </configurations>
+    <make>
+      <envvars>
+        <envvar value="1" name="WANT_AUTOCONF_2_5" />
+        <envvar value="1" name="WANT_AUTOMAKE_1_6" />
+      </envvars>
+      <abortonerror>true</abortonerror>
+      <numberofjobs>1</numberofjobs>
+      <dontact>false</dontact>
+      <makebin/>
+      <prio>0</prio>
+      <runmultiplejobs>false</runmultiplejobs>
+    </make>
+  </kdevautoproject>
+  <kdevdoctreeview>
+    <ignoretocs>
+      <toc>ada</toc>
+      <toc>ada_bugs_gcc</toc>
+      <toc>bash</toc>
+      <toc>bash_bugs</toc>
+      <toc>clanlib</toc>
+      <toc>w3c-dom-level2-html</toc>
+      <toc>fortran_bugs_gcc</toc>
+      <toc>gnome1</toc>
+      <toc>gnustep</toc>
+      <toc>gtk</toc>
+      <toc>gtk_bugs</toc>
+      <toc>haskell</toc>
+      <toc>haskell_bugs_ghc</toc>
+      <toc>java_bugs_gcc</toc>
+      <toc>java_bugs_sun</toc>
+      <toc>kde2book</toc>
+      <toc>libstdc++</toc>
+      <toc>opengl</toc>
+      <toc>pascal_bugs_fp</toc>
+      <toc>php</toc>
+      <toc>php_bugs</toc>
+      <toc>perl</toc>
+      <toc>perl_bugs</toc>
+      <toc>python</toc>
+      <toc>python_bugs</toc>
+      <toc>qt-kdev3</toc>
+      <toc>ruby</toc>
+      <toc>ruby_bugs</toc>
+      <toc>sdl</toc>
+      <toc>stl</toc>
+      <toc>w3c-svg</toc>
+      <toc>sw</toc>
+      <toc>w3c-uaag10</toc>
+      <toc>wxwidgets_bugs</toc>
+    </ignoretocs>
+    <ignoreqt_xml>
+      <toc>Guide to the Qt Translation Tools</toc>
+      <toc>Qt Assistant Manual</toc>
+      <toc>Qt Designer Manual</toc>
+      <toc>Qt Reference Documentation</toc>
+      <toc>qmake User Guide</toc>
+    </ignoreqt_xml>
+    <ignoredoxygen>
+      <toc>KDE Libraries (Doxygen)</toc>
+    </ignoredoxygen>
+  </kdevdoctreeview>
+  <kdevfilecreate>
+    <filetypes/>
+    <useglobaltypes>
+      <type ext="c" />
+      <type ext="h" />
+    </useglobaltypes>
+  </kdevfilecreate>
+  <kdevfileview>
+    <groups>
+      <group pattern="*.h" name="Header files" />
+      <group pattern="*.c" name="Source files" />
+      <hidenonprojectfiles>false</hidenonprojectfiles>
+      <hidenonlocation>false</hidenonlocation>
+    </groups>
+    <tree>
+      <hidepatterns>*.o,*.lo,CVS</hidepatterns>
+      <hidenonprojectfiles>false</hidenonprojectfiles>
+      <showvcsfields>true</showvcsfields>
+    </tree>
+  </kdevfileview>
+  <kdevdocumentation>
+    <projectdoc>
+      <docsystem>Doxygen Documentation Collection</docsystem>
+      <docurl>xmlbus.tag</docurl>
+      <usermanualurl/>
+    </projectdoc>
+  </kdevdocumentation>
+  <substmap>
+    <APPNAME>xmlbus</APPNAME>
+    <APPNAMELC>xmlbus</APPNAMELC>
+    <APPNAMESC>Xmlbus</APPNAMESC>
+    <APPNAMEUC>XMLBUS</APPNAMEUC>
+    <AUTHOR>Olger Warnier</AUTHOR>
+    <CFLAGS/>
+    <EMAIL>olger.warnier@gmail.com</EMAIL>
+    <LICENSE>LGPL</LICENSE>
+    <LICENSEFILE>COPYING.LIB</LICENSEFILE>
+    <OPT_INCS>-I/usr/include</OPT_INCS>
+    <OPT_LIBS>-lm</OPT_LIBS>
+    <VERSION>0.1</VERSION>
+    <YEAR>2006</YEAR>
+    <dest>/home/olger/cvsdir/xmlbus</dest>
+  </substmap>
+  <kdevcppsupport>
+    <references/>
+    <codecompletion>
+      <includeGlobalFunctions>true</includeGlobalFunctions>
+      <includeTypes>true</includeTypes>
+      <includeEnums>true</includeEnums>
+      <includeTypedefs>true</includeTypedefs>
+      <automaticCodeCompletion>true</automaticCodeCompletion>
+      <automaticArgumentsHint>true</automaticArgumentsHint>
+      <automaticHeaderCompletion>true</automaticHeaderCompletion>
+      <codeCompletionDelay>250</codeCompletionDelay>
+      <argumentsHintDelay>400</argumentsHintDelay>
+      <headerCompletionDelay>250</headerCompletionDelay>
+    </codecompletion>
+    <qt>
+      <used>false</used>
+      <version>3</version>
+      <root>/usr/lib/qt3</root>
+    </qt>
+    <creategettersetter>
+      <prefixGet/>
+      <prefixSet>set</prefixSet>
+      <prefixVariable>m_,_</prefixVariable>
+      <parameterName>theValue</parameterName>
+      <inlineGet>true</inlineGet>
+      <inlineSet>true</inlineSet>
+    </creategettersetter>
+    <splitheadersource>
+      <enabled>false</enabled>
+      <synchronize>true</synchronize>
+      <orientation>Vertical</orientation>
+    </splitheadersource>
+  </kdevcppsupport>
+  <cppsupportpart>
+    <filetemplates>
+      <interfacesuffix>.h</interfacesuffix>
+      <implementationsuffix>.cpp</implementationsuffix>
+    </filetemplates>
+  </cppsupportpart>
+  <kdevdebugger>
+    <general>
+      <programargs>-c $HOME/svndir/xmlbus/server/xmlbusd/data/config_linux.xml</programargs>
+      <gdbpath/>
+      <dbgshell>libtool --mode=execute</dbgshell>
+      <configGdbScript/>
+      <runShellScript/>
+      <runGdbScript/>
+      <breakonloadinglibs>true</breakonloadinglibs>
+      <separatetty>false</separatetty>
+      <floatingtoolbar>false</floatingtoolbar>
+    </general>
+    <display>
+      <staticmembers>false</staticmembers>
+      <demanglenames>true</demanglenames>
+      <outputradix>10</outputradix>
+    </display>
+  </kdevdebugger>
+  <ctagspart>
+    <customArguments/>
+    <customTagfilePath/>
+  </ctagspart>
+</kdevelop>

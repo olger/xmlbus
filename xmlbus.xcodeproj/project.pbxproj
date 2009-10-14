@@ -1,0 +1,3131 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		643976450DABC16D00A4ED0D /* all */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6439766E0DABC1AD00A4ED0D /* Build configuration list for PBXAggregateTarget "all" */;
+			buildPhases = (
+			);
+			dependencies = (
+				643976490DABC17A00A4ED0D /* PBXTargetDependency */,
+				6439764B0DABC17A00A4ED0D /* PBXTargetDependency */,
+				6439764F0DABC17A00A4ED0D /* PBXTargetDependency */,
+				643976510DABC17A00A4ED0D /* PBXTargetDependency */,
+				643976530DABC17A00A4ED0D /* PBXTargetDependency */,
+				643976550DABC17A00A4ED0D /* PBXTargetDependency */,
+				643976570DABC17A00A4ED0D /* PBXTargetDependency */,
+				643976590DABC17A00A4ED0D /* PBXTargetDependency */,
+				6439765B0DABC17A00A4ED0D /* PBXTargetDependency */,
+				6439765F0DABC17A00A4ED0D /* PBXTargetDependency */,
+				643976610DABC17A00A4ED0D /* PBXTargetDependency */,
+				643976630DABC17A00A4ED0D /* PBXTargetDependency */,
+				643976650DABC17A00A4ED0D /* PBXTargetDependency */,
+				643976670DABC17A00A4ED0D /* PBXTargetDependency */,
+				643976690DABC17A00A4ED0D /* PBXTargetDependency */,
+			);
+			name = all;
+			productName = all;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		6400340F0A7A27BA00392BA9 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = 640034090A7A27BA00392BA9 /* error.c */; };
+		640034100A7A27BA00392BA9 /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 6400340A0A7A27BA00392BA9 /* hash.c */; };
+		640034110A7A27BA00392BA9 /* logger.c in Sources */ = {isa = PBXBuildFile; fileRef = 6400340B0A7A27BA00392BA9 /* logger.c */; };
+		640034590A7A27E200392BA9 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		640034700A7A299800392BA9 /* error.h in Headers */ = {isa = PBXBuildFile; fileRef = 6400346A0A7A299800392BA9 /* error.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		640034710A7A299800392BA9 /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 6400346B0A7A299800392BA9 /* hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		640034720A7A299800392BA9 /* logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 6400346C0A7A299800392BA9 /* logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		640035B30A7A415900392BA9 /* testsettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 640035B20A7A415900392BA9 /* testsettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		640035B50A7A417100392BA9 /* testsettings.c in Sources */ = {isa = PBXBuildFile; fileRef = 640035B40A7A417100392BA9 /* testsettings.c */; };
+		640036190A7A4B8F00392BA9 /* exports in Resources */ = {isa = PBXBuildFile; fileRef = 640036180A7A4B8F00392BA9 /* exports */; };
+		640036960A7A7A5800392BA9 /* testsupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640035AD0A7A413900392BA9 /* testsupport.framework */; };
+		640036A20A7A7ADE00392BA9 /* coreTests.c in Sources */ = {isa = PBXBuildFile; fileRef = 640034FC0A7A326C00392BA9 /* coreTests.c */; };
+		640036A30A7A7ADE00392BA9 /* coreTestsCases.h in Headers */ = {isa = PBXBuildFile; fileRef = 640034FD0A7A326C00392BA9 /* coreTestsCases.h */; settings = {ATTRIBUTES = (); }; };
+		640036A40A7A7ADE00392BA9 /* errorTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 640034FE0A7A326C00392BA9 /* errorTest.c */; };
+		640036A50A7A7ADE00392BA9 /* loggerTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 640034FF0A7A326C00392BA9 /* loggerTest.c */; };
+		640036A70A7A7ADE00392BA9 /* soapTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 640035010A7A326C00392BA9 /* soapTest.c */; };
+		640036BB0A7A7BE100392BA9 /* check.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400357C0A7A408600392BA9 /* check.framework */; };
+		641B95E90B220361001D5CFD /* testpublishregistry.c in Sources */ = {isa = PBXBuildFile; fileRef = 641B95E80B220361001D5CFD /* testpublishregistry.c */; };
+		641B95F20B2204FF001D5CFD /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		641B96220B220509001D5CFD /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		641ED5DF0B22F72900805496 /* mdnspublishregistry.c in Sources */ = {isa = PBXBuildFile; fileRef = 641ED5DE0B22F72900805496 /* mdnspublishregistry.c */; };
+		641ED5E50B22F7AF00805496 /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		641ED6150B22F7B700805496 /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		641ED72A0B232C2C00805496 /* xbb.c in Sources */ = {isa = PBXBuildFile; fileRef = 641ED7290B232C2C00805496 /* xbb.c */; };
+		641ED72B0B232C4600805496 /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		641ED72C0B232C4C00805496 /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		642728EE0AFE68F500925F68 /* request_withoutmustunderstand.xml in Resources */ = {isa = PBXBuildFile; fileRef = 642728ED0AFE68F500925F68 /* request_withoutmustunderstand.xml */; };
+		642728EF0AFE68F500925F68 /* request_withoutmustunderstand.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 642728ED0AFE68F500925F68 /* request_withoutmustunderstand.xml */; };
+		642729640AFE7E2400925F68 /* request_withmustunderstand.xml in Resources */ = {isa = PBXBuildFile; fileRef = 642729630AFE7E2400925F68 /* request_withmustunderstand.xml */; };
+		642729650AFE7E2400925F68 /* request_withmustunderstand.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 642729630AFE7E2400925F68 /* request_withmustunderstand.xml */; };
+		643181200A7CF13700C8464C /* pipelineTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 6431811F0A7CF13700C8464C /* pipelineTest.c */; };
+		643532770A8BB83700A4600D /* tcpworkerTests.c in Sources */ = {isa = PBXBuildFile; fileRef = 643532750A8BB83700A4600D /* tcpworkerTests.c */; };
+		643532780A8BB84A00A4600D /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		643532790A8BB85300A4600D /* check.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400357C0A7A408600392BA9 /* check.framework */; };
+		6435327C0A8BB85A00A4600D /* testsupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640035AD0A7A413900392BA9 /* testsupport.framework */; };
+		643532820A8BB87C00A4600D /* tcpworkerTestsCases.h in Headers */ = {isa = PBXBuildFile; fileRef = 643532810A8BB87C00A4600D /* tcpworkerTestsCases.h */; };
+		643532920A8BB91C00A4600D /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		643532AF0A8BBF1B00A4600D /* tcp-inboundworker.c in Sources */ = {isa = PBXBuildFile; fileRef = 643532260A8BB6DB00A4600D /* tcp-inboundworker.c */; };
+		643532B10A8BBF3F00A4600D /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		643532B20A8BBF4A00A4600D /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		643532B80A8BBFD900A4600D /* libtcpworker-transport.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 643532AB0A8BBED100A4600D /* libtcpworker-transport.dylib */; };
+		643974C60DABA07500A4ED0D /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		643974C70DABA08100A4ED0D /* testsupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640035AD0A7A413900392BA9 /* testsupport.framework */; };
+		643974FB0DABA8FA00A4ED0D /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		643974FF0DABA93300A4ED0D /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		6439750D0DABA9AB00A4ED0D /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		643978B90DAC88ED00A4ED0D /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		643978BD0DAC88FD00A4ED0D /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		6443FAA40AF0AA0300EB8300 /* configparser.c in Sources */ = {isa = PBXBuildFile; fileRef = 64F128840AE22CD0008ED149 /* configparser.c */; };
+		6443FAA50AF0AA0700EB8300 /* configparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 64F128820AE22CB7008ED149 /* configparser.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6443FABC0AF0ABCC00EB8300 /* configTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 6443FAB90AF0ABCC00EB8300 /* configTest.c */; };
+		6443FABD0AF0ABCC00EB8300 /* xmlbusdTests.c in Sources */ = {isa = PBXBuildFile; fileRef = 6443FABA0AF0ABCC00EB8300 /* xmlbusdTests.c */; };
+		6443FABE0AF0ABCC00EB8300 /* xmlbusdTestsCases.h in Headers */ = {isa = PBXBuildFile; fileRef = 6443FABB0AF0ABCC00EB8300 /* xmlbusdTestsCases.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6443FABF0AF0ABE600EB8300 /* check.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400357C0A7A408600392BA9 /* check.framework */; };
+		6443FAC20AF0ABEA00EB8300 /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		6443FAF20AF0ABF200EB8300 /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		6443FAFD0AF0AC1D00EB8300 /* testsupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640035AD0A7A413900392BA9 /* testsupport.framework */; };
+		6443FBC70AF105A200EB8300 /* configtest_serverconf.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6443FBC60AF105A100EB8300 /* configtest_serverconf.xml */; };
+		6443FBCA0AF105DD00EB8300 /* configtest_serverconfmulti.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6443FBC90AF105DD00EB8300 /* configtest_serverconfmulti.xml */; };
+		6443FBD70AF1071700EB8300 /* configtest_serverconffailing.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6443FBD60AF1071700EB8300 /* configtest_serverconffailing.xml */; };
+		644A7BFD0B439DA700529992 /* soap.c in Sources */ = {isa = PBXBuildFile; fileRef = 6400340D0A7A27BA00392BA9 /* soap.c */; };
+		644A7BFE0B439DB500529992 /* soap.h in Headers */ = {isa = PBXBuildFile; fileRef = 6400346E0A7A299800392BA9 /* soap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		644A7C000B439DCE00529992 /* pipeline.c in Sources */ = {isa = PBXBuildFile; fileRef = 64C41DEB0A7CB86F00CC4B52 /* pipeline.c */; };
+		644A7C010B439DD600529992 /* pipeline.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C41DE90A7CB85600CC4B52 /* pipeline.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		644A7C100B439E8900529992 /* registry.h in Headers */ = {isa = PBXBuildFile; fileRef = 64E2EBED0B1CBCC3008D38C2 /* registry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		644A7C110B439E9500529992 /* registry.c in Sources */ = {isa = PBXBuildFile; fileRef = 64E2EBEE0B1CBCC3008D38C2 /* registry.c */; };
+		644A7C260B43A2C600529992 /* transport.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C2076A0B3DB21000B45563 /* transport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		644A7C270B43A2D100529992 /* transport.c in Sources */ = {isa = PBXBuildFile; fileRef = 64C2076B0B3DB21000B45563 /* transport.c */; };
+		644A7D9C0B43C2DF00529992 /* transportresolverregistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 64DBA7250B427439004A6C18 /* transportresolverregistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		644A7D9D0B43C2E300529992 /* transportresolverregistry.c in Sources */ = {isa = PBXBuildFile; fileRef = 64DBA7260B427439004A6C18 /* transportresolverregistry.c */; };
+		644A7DBB0B43CC9B00529992 /* service.h in Headers */ = {isa = PBXBuildFile; fileRef = 643180F30A7CDFB900C8464C /* service.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		644A7DBC0B43CCA200529992 /* service.c in Sources */ = {isa = PBXBuildFile; fileRef = 643180F50A7CDFCF00C8464C /* service.c */; };
+		644A7E8E0B43FCF200529992 /* tcptransport.c in Sources */ = {isa = PBXBuildFile; fileRef = 644A7E8D0B43FCF200529992 /* tcptransport.c */; };
+		644A7E940B43FD8100529992 /* tcptransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 644A7E930B43FD8100529992 /* tcptransport.h */; };
+		644A7E980B43FDA500529992 /* tcpcallbacks.c in Sources */ = {isa = PBXBuildFile; fileRef = 644A7E970B43FDA500529992 /* tcpcallbacks.c */; };
+		644A7ECD0B44040600529992 /* tcpconfig.c in Sources */ = {isa = PBXBuildFile; fileRef = 644A7ECC0B44040600529992 /* tcpconfig.c */; };
+		6462764D0A7BAB6100DB8E74 /* xmlbusFwTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 640036820A7A793700392BA9 /* xmlbusFwTests-Info.plist */; };
+		6462764E0A7BAB6300DB8E74 /* xmlbusFrameworkTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6400368E0A7A79EA00392BA9 /* xmlbusFrameworkTests-Info.plist */; };
+		6462764F0A7BAB6400DB8E74 /* xmlbus-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 640033F90A7A24B900392BA9 /* xmlbus-Info.plist */; };
+		646276500A7BAB6600DB8E74 /* testsupport-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 640035AE0A7A413900392BA9 /* testsupport-Info.plist */; };
+		646276510A7BAB6E00DB8E74 /* exports in Resources */ = {isa = PBXBuildFile; fileRef = 640036180A7A4B8F00392BA9 /* exports */; };
+		6463FC040AFBCFFD004A194C /* request_echoservice.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6463FC030AFBCFFD004A194C /* request_echoservice.xml */; };
+		646A6FAE0AFA495700748544 /* dlservice.h in Headers */ = {isa = PBXBuildFile; fileRef = 646A6FAD0AFA495700748544 /* dlservice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6472B0000B46EB5900C61268 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		6472B0110B46EBB500C61268 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		6472B0140B46EBD100C61268 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		6472B0150B46EBD700C61268 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		6472B0160B46EBDE00C61268 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		6472B0170B46EBE400C61268 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		6472B0180B46EBEA00C61268 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		6472B0190B46EBF100C61268 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		647768B40A7FCE870026AE2F /* coreTestsCases.h in Headers */ = {isa = PBXBuildFile; fileRef = 640034FD0A7A326C00392BA9 /* coreTestsCases.h */; settings = {ATTRIBUTES = (); }; };
+		647768B50A7FCE910026AE2F /* coreTests.c in Sources */ = {isa = PBXBuildFile; fileRef = 640034FC0A7A326C00392BA9 /* coreTests.c */; };
+		647768B60A7FCE910026AE2F /* errorTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 640034FE0A7A326C00392BA9 /* errorTest.c */; };
+		647768B70A7FCE910026AE2F /* loggerTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 640034FF0A7A326C00392BA9 /* loggerTest.c */; };
+		647768B80A7FCE910026AE2F /* soapTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 640035010A7A326C00392BA9 /* soapTest.c */; };
+		647768B90A7FCE910026AE2F /* pipelineTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 6431811F0A7CF13700C8464C /* pipelineTest.c */; };
+		647768F40A7FCE990026AE2F /* check.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400357C0A7A408600392BA9 /* check.framework */; };
+		6480A5250B386C9E00FC3C51 /* ddnshostregistry.c in Sources */ = {isa = PBXBuildFile; fileRef = 6480A51F0B386C9E00FC3C51 /* ddnshostregistry.c */; };
+		6480A5260B386C9E00FC3C51 /* ddnshostregistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6480A5200B386C9E00FC3C51 /* ddnshostregistry.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6480A5270B386C9E00FC3C51 /* xmlbusserviceregistry.c in Sources */ = {isa = PBXBuildFile; fileRef = 6480A5210B386C9E00FC3C51 /* xmlbusserviceregistry.c */; };
+		6480A5280B386C9E00FC3C51 /* xmlbusserviceregistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6480A5220B386C9E00FC3C51 /* xmlbusserviceregistry.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6480A5290B386C9E00FC3C51 /* xmlbusserviceregistrylistener.c in Sources */ = {isa = PBXBuildFile; fileRef = 6480A5230B386C9E00FC3C51 /* xmlbusserviceregistrylistener.c */; };
+		6480A52A0B386C9E00FC3C51 /* xmlbusserviceregistrylistener.h in Headers */ = {isa = PBXBuildFile; fileRef = 6480A5240B386C9E00FC3C51 /* xmlbusserviceregistrylistener.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6480A52B0B386CCA00FC3C51 /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		6480A55B0B386CD300FC3C51 /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		64A6F3790ABB4679001FA552 /* tcp-outbound.c in Sources */ = {isa = PBXBuildFile; fileRef = 64A6F3780ABB4679001FA552 /* tcp-outbound.c */; };
+		64AA553A0ACAFFF100E5220B /* tcphelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 64AA55380ACAFFF100E5220B /* tcphelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64AA553B0ACAFFF100E5220B /* tcphelpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 64AA55390ACAFFF100E5220B /* tcphelpers.c */; };
+		64ABAF610B49199A0082C5A3 /* transportresolverregistryTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 64ABAF5F0B49199A0082C5A3 /* transportresolverregistryTest.c */; };
+		64ABAF620B49199A0082C5A3 /* transportTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 64ABAF600B49199A0082C5A3 /* transportTest.c */; };
+		64ABAF630B49199A0082C5A3 /* transportresolverregistryTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 64ABAF5F0B49199A0082C5A3 /* transportresolverregistryTest.c */; };
+		64ABAF640B49199A0082C5A3 /* transportTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 64ABAF600B49199A0082C5A3 /* transportTest.c */; };
+		64ABAF680B4919BE0082C5A3 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		64ABAF790B4919F80082C5A3 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		64ABAF7C0B491A4A0082C5A3 /* transportTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 64ABAF7B0B491A490082C5A3 /* transportTest.c */; };
+		64ABAF7E0B491A5C0082C5A3 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		64B2465A0B4FF2730078F9E4 /* cdlrunner.c in Sources */ = {isa = PBXBuildFile; fileRef = 64B246590B4FF2730078F9E4 /* cdlrunner.c */; };
+		64B246630B4FF2CA0078F9E4 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		64B246700B4FF2CE0078F9E4 /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		64B2467B0B4FF2D70078F9E4 /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		64B2F2C10AC997B3005FA4BC /* serviceTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 64B2F2C00AC997B3005FA4BC /* serviceTest.c */; };
+		64B2F2C20AC997B3005FA4BC /* serviceTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 64B2F2C00AC997B3005FA4BC /* serviceTest.c */; };
+		64BC8B680B99AD6D0055E2F0 /* xmlbusexports.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC8B670B99AD6D0055E2F0 /* xmlbusexports.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64DAB7120AF35934007DD7D3 /* registeroutbound.c in Sources */ = {isa = PBXBuildFile; fileRef = 64DAB7110AF35934007DD7D3 /* registeroutbound.c */; };
+		64DAB7150AF35965007DD7D3 /* xmlbusd.h in Headers */ = {isa = PBXBuildFile; fileRef = 64DAB7140AF35965007DD7D3 /* xmlbusd.h */; };
+		64DAB7920AF379E9007DD7D3 /* dlservicerunner.c in Sources */ = {isa = PBXBuildFile; fileRef = 64DAB7910AF379E9007DD7D3 /* dlservicerunner.c */; };
+		64DAB8170AF3CACA007DD7D3 /* config_osx.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 64DAB8160AF3CACA007DD7D3 /* config_osx.xml */; };
+		64DAB8920AF3E30A007DD7D3 /* testservice.c in Sources */ = {isa = PBXBuildFile; fileRef = 64DAB8910AF3E30A007DD7D3 /* testservice.c */; };
+		64DAB8980AF3E372007DD7D3 /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		64DAB8C80AF3E379007DD7D3 /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		64DB4E030B5D6E4E0009F401 /* pyxmlbus.c in Sources */ = {isa = PBXBuildFile; fileRef = 64DB4DEE0B5D6BE50009F401 /* pyxmlbus.c */; };
+		64DB4E040B5D6E540009F401 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		64DB4E110B5D6E580009F401 /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		64DB4E1C0B5D6E5A0009F401 /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		64DB4E4C0B5D6E5D0009F401 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DF4A1C0B516BE700FFEA21 /* Python.framework */; };
+		64DB4E950B5D6E650009F401 /* pysoapmessage.c in Sources */ = {isa = PBXBuildFile; fileRef = 64DB6D770B5A1549004DB717 /* pysoapmessage.c */; };
+		64DB4E960B5D6E680009F401 /* pysoapmessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 64DB6D790B5A1569004DB717 /* pysoapmessage.h */; };
+		64DF49CC0B5169F100FFEA21 /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		64DF49FC0B5169F400FFEA21 /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		64DF4A070B5169FA00FFEA21 /* log4c.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034480A7A27E200392BA9 /* log4c.framework */; };
+		64DF4A180B516A2200FFEA21 /* pyrunner.c in Sources */ = {isa = PBXBuildFile; fileRef = 64DF4A170B516A2200FFEA21 /* pyrunner.c */; };
+		64DF4A670B516BE700FFEA21 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DF4A1C0B516BE700FFEA21 /* Python.framework */; };
+		64EBDA3A0B62988200D3BCBB /* xmlbus.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DB4DFD0B5D6DBB0009F401 /* xmlbus.so */; };
+		64F128350AE22732008ED149 /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		64F128650AE2273C008ED149 /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+		64F1287D0AE22B4C008ED149 /* xmlbusd.c in Sources */ = {isa = PBXBuildFile; fileRef = 64F128780AE22B4C008ED149 /* xmlbusd.c */; };
+		64F128830AE22CB7008ED149 /* configparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 64F128820AE22CB7008ED149 /* configparser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64F128850AE22CD0008ED149 /* configparser.c in Sources */ = {isa = PBXBuildFile; fileRef = 64F128840AE22CD0008ED149 /* configparser.c */; };
+		64F6F35C0B371D07009F2376 /* mdnsresolveregistry.c in Sources */ = {isa = PBXBuildFile; fileRef = 64F6F35B0B371D07009F2376 /* mdnsresolveregistry.c */; };
+		64F7C2A40B124FFB00CB5A0E /* testpipeline.c in Sources */ = {isa = PBXBuildFile; fileRef = 64F7C2A30B124FFB00CB5A0E /* testpipeline.c */; };
+		64F7C2AE0B1251BA00CB5A0E /* libxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640034150A7A27D600392BA9 /* libxml.framework */; };
+		64F7C2DE0B1251C400CB5A0E /* xmlbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640033F70A7A24B900392BA9 /* xmlbus.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		640036B00A7A7B2700392BA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640033F60A7A24B900392BA9;
+			remoteInfo = xmlbus;
+		};
+		640036B20A7A7B2F00392BA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640035AC0A7A413900392BA9;
+			remoteInfo = testsupport;
+		};
+		6402F6F30B134A3500DE06A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640033F60A7A24B900392BA9;
+			remoteInfo = xmlbus;
+		};
+		6402F6F50B134A3900DE06A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64F128300AE226FE008ED149;
+			remoteInfo = xmlbusd;
+		};
+		641B95E30B220325001D5CFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640033F60A7A24B900392BA9;
+			remoteInfo = xmlbus;
+		};
+		641ED5D90B22F6F700805496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640033F60A7A24B900392BA9;
+			remoteInfo = xmlbus;
+		};
+		641ED6850B230F4800805496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64F128300AE226FE008ED149;
+			remoteInfo = xmlbusd;
+		};
+		641ED7240B232BD600805496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640033F60A7A24B900392BA9;
+			remoteInfo = xmlbus;
+		};
+		643532830A8BB88C00A4600D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640033F60A7A24B900392BA9;
+			remoteInfo = xmlbus;
+		};
+		643532B90A8BBFE200A4600D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 643532AA0A8BBED100A4600D;
+			remoteInfo = "tcpworker-transport";
+		};
+		643975100DABA9DD00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 643532AA0A8BBED100A4600D;
+			remoteInfo = "tcpworker-transport";
+		};
+		643976480DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640035AC0A7A413900392BA9;
+			remoteInfo = testsupport;
+		};
+		6439764A0DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640033F60A7A24B900392BA9;
+			remoteInfo = xmlbus;
+		};
+		6439764E0DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 647768AF0A7FCE5F0026AE2F;
+			remoteInfo = xmlbusFrameworkTestsBin;
+		};
+		643976500DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 643532AA0A8BBED100A4600D;
+			remoteInfo = "tcpworker-transport";
+		};
+		643976520DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6435326E0A8BB7F600A4600D;
+			remoteInfo = tcpworkerTransportTestsBin;
+		};
+		643976540DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64F128300AE226FE008ED149;
+			remoteInfo = xmlbusd;
+		};
+		643976560DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6443FAA10AF0A9ED00EB8300;
+			remoteInfo = xmlbusdTestsBin;
+		};
+		643976580DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64DAB8830AF3E29E007DD7D3;
+			remoteInfo = testservice;
+		};
+		6439765A0DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64F7C29E0B124FC300CB5A0E;
+			remoteInfo = testpipeline;
+		};
+		6439765E0DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 641ED5D70B22F6EF00805496;
+			remoteInfo = mdnspublishregistry;
+		};
+		643976600DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 641ED7210B232BD000805496;
+			remoteInfo = xbb;
+		};
+		643976620DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64F6F3560B371CC0009F2376;
+			remoteInfo = mdnsresolveregistry;
+		};
+		643976640DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64B246520B4FF2300078F9E4;
+			remoteInfo = cdlrunner;
+		};
+		643976660DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64DF49C60B5169CF00FFEA21;
+			remoteInfo = pyrunner;
+		};
+		643976680DABC17A00A4ED0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64DB4DFC0B5D6DBB0009F401;
+			remoteInfo = pyxmlbus;
+		};
+		646A6F960AFA451100748544 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640033F60A7A24B900392BA9;
+			remoteInfo = xmlbus;
+		};
+		647769080A7FD62D0026AE2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640033F60A7A24B900392BA9;
+			remoteInfo = xmlbus;
+		};
+		6477690A0A7FD6320026AE2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640035AC0A7A413900392BA9;
+			remoteInfo = testsupport;
+		};
+		6480A5680B386CDC00FC3C51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640033F60A7A24B900392BA9;
+			remoteInfo = xmlbus;
+		};
+		649929A80AB9E894000C6C69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640035AC0A7A413900392BA9;
+			remoteInfo = testsupport;
+		};
+		64B246540B4FF2390078F9E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64F128300AE226FE008ED149;
+			remoteInfo = xmlbusd;
+		};
+		64DAB8850AF3E2AB007DD7D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640033F60A7A24B900392BA9;
+			remoteInfo = xmlbus;
+		};
+		64DB4DFE0B5D6DC10009F401 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640033F60A7A24B900392BA9;
+			remoteInfo = xmlbus;
+		};
+		64DF49CA0B5169DD00FFEA21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64F128300AE226FE008ED149;
+			remoteInfo = xmlbusd;
+		};
+		64E5576C0B03BFD6007ACE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64F128300AE226FE008ED149;
+			remoteInfo = xmlbusd;
+		};
+		64EBDA380B62984000D3BCBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64DB4DFC0B5D6DBB0009F401;
+			remoteInfo = pyxmlbus;
+		};
+		64FCF1E90B4569EC00510B04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640033E70A7A1C1600392BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640033F60A7A24B900392BA9;
+			remoteInfo = xmlbus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		642728E90AFE68CA00925F68 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = libxmlbus/testdata;
+			dstSubfolderSpec = 7;
+			files = (
+				642728EF0AFE68F500925F68 /* request_withoutmustunderstand.xml in CopyFiles */,
+				642729650AFE7E2400925F68 /* request_withmustunderstand.xml in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6443FBC40AF1055400EB8300 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				6443FBC70AF105A200EB8300 /* configtest_serverconf.xml in CopyFiles */,
+				6443FBCA0AF105DD00EB8300 /* configtest_serverconfmulti.xml in CopyFiles */,
+				6443FBD70AF1071700EB8300 /* configtest_serverconffailing.xml in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6463FBFB0AFBCFD2004A194C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				6463FC040AFBCFFD004A194C /* request_echoservice.xml in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DAB80E0AF3B30F007DD7D3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				64DAB8170AF3CACA007DD7D3 /* config_osx.xml in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		640033F70A7A24B900392BA9 /* xmlbus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = xmlbus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		640033F90A7A24B900392BA9 /* xmlbus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "xmlbus-Info.plist"; sourceTree = "<group>"; };
+		640034090A7A27BA00392BA9 /* error.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = error.c; path = libxmlbus/src/error.c; sourceTree = "<group>"; };
+		6400340A0A7A27BA00392BA9 /* hash.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = hash.c; path = libxmlbus/src/hash.c; sourceTree = "<group>"; };
+		6400340B0A7A27BA00392BA9 /* logger.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = logger.c; path = libxmlbus/src/logger.c; sourceTree = "<group>"; };
+		6400340D0A7A27BA00392BA9 /* soap.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = soap.c; path = libxmlbus/src/soap.c; sourceTree = "<group>"; };
+		640034150A7A27D600392BA9 /* libxml.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libxml.framework; path = ../../Library/Frameworks/libxml.framework; sourceTree = SOURCE_ROOT; };
+		640034480A7A27E200392BA9 /* log4c.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = log4c.framework; path = ../../Library/Frameworks/log4c.framework; sourceTree = SOURCE_ROOT; };
+		6400346A0A7A299800392BA9 /* error.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = error.h; path = libxmlbus/src/xmlbus/error.h; sourceTree = "<group>"; };
+		6400346B0A7A299800392BA9 /* hash.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = hash.h; path = libxmlbus/src/xmlbus/hash.h; sourceTree = "<group>"; };
+		6400346C0A7A299800392BA9 /* logger.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = logger.h; path = libxmlbus/src/xmlbus/logger.h; sourceTree = "<group>"; };
+		6400346E0A7A299800392BA9 /* soap.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = soap.h; path = libxmlbus/src/xmlbus/soap.h; sourceTree = "<group>"; };
+		640034FC0A7A326C00392BA9 /* coreTests.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = coreTests.c; path = libxmlbus/test/coreTests.c; sourceTree = "<group>"; };
+		640034FD0A7A326C00392BA9 /* coreTestsCases.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = coreTestsCases.h; path = libxmlbus/test/coreTestsCases.h; sourceTree = "<group>"; };
+		640034FE0A7A326C00392BA9 /* errorTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = errorTest.c; path = libxmlbus/test/errorTest.c; sourceTree = "<group>"; };
+		640034FF0A7A326C00392BA9 /* loggerTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = loggerTest.c; path = libxmlbus/test/loggerTest.c; sourceTree = "<group>"; };
+		640035010A7A326C00392BA9 /* soapTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = soapTest.c; path = libxmlbus/test/soapTest.c; sourceTree = "<group>"; };
+		6400357C0A7A408600392BA9 /* check.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = check.framework; path = ../../Library/Frameworks/check.framework; sourceTree = SOURCE_ROOT; };
+		640035AD0A7A413900392BA9 /* testsupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = testsupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		640035AE0A7A413900392BA9 /* testsupport-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testsupport-Info.plist"; sourceTree = "<group>"; };
+		640035B20A7A415900392BA9 /* testsettings.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = testsettings.h; path = support/testsupport/src/testsupport/testsettings.h; sourceTree = "<group>"; };
+		640035B40A7A417100392BA9 /* testsettings.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = testsettings.c; path = support/testsupport/src/testsettings.c; sourceTree = "<group>"; };
+		640036180A7A4B8F00392BA9 /* exports */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = exports; path = libxmlbus/src/exports; sourceTree = "<group>"; };
+		640036820A7A793700392BA9 /* xmlbusFwTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "xmlbusFwTests-Info.plist"; sourceTree = "<group>"; };
+		6400368D0A7A79EA00392BA9 /* xmlbusFrameworkTests.checktest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xmlbusFrameworkTests.checktest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6400368E0A7A79EA00392BA9 /* xmlbusFrameworkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "xmlbusFrameworkTests-Info.plist"; sourceTree = "<group>"; };
+		640F38601067636E00F705AC /* mod_xmlbus.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mod_xmlbus.c; path = client/apachegw/mod_xmlbus.c; sourceTree = "<group>"; };
+		640F38611067636E00F705AC /* mod_xmlbus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mod_xmlbus.h; path = client/apachegw/mod_xmlbus.h; sourceTree = "<group>"; };
+		641B95E20B22031F001D5CFD /* libtestpublishregistry.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtestpublishregistry.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		641B95E80B220361001D5CFD /* testpublishregistry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = testpublishregistry.c; path = libxmlbus/registry/testpublishregistry/testpublishregistry.c; sourceTree = "<group>"; };
+		641ED5D80B22F6EF00805496 /* libmdnspublishregistry.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libmdnspublishregistry.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		641ED5DE0B22F72900805496 /* mdnspublishregistry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mdnspublishregistry.c; path = libxmlbus/registry/mdnspublishregistry/mdnspublishregistry.c; sourceTree = "<group>"; };
+		641ED7220B232BD000805496 /* xbb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xbb; sourceTree = BUILT_PRODUCTS_DIR; };
+		641ED7290B232C2C00805496 /* xbb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xbb.c; path = client/xbb/xbb.c; sourceTree = "<group>"; };
+		642728ED0AFE68F500925F68 /* request_withoutmustunderstand.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = request_withoutmustunderstand.xml; path = libxmlbus/data/headerentries/request_withoutmustunderstand.xml; sourceTree = "<group>"; };
+		642729630AFE7E2400925F68 /* request_withmustunderstand.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = request_withmustunderstand.xml; path = libxmlbus/data/headerentries/request_withmustunderstand.xml; sourceTree = "<group>"; };
+		643180F30A7CDFB900C8464C /* service.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = service.h; path = libxmlbus/src/xmlbus/service.h; sourceTree = "<group>"; };
+		643180F50A7CDFCF00C8464C /* service.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = service.c; path = libxmlbus/src/service.c; sourceTree = "<group>"; };
+		6431811F0A7CF13700C8464C /* pipelineTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pipelineTest.c; path = libxmlbus/test/pipelineTest.c; sourceTree = "<group>"; };
+		643532260A8BB6DB00A4600D /* tcp-inboundworker.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "tcp-inboundworker.c"; path = "libxmlbus/transports/tcpworker/src/tcp-inboundworker.c"; sourceTree = "<group>"; };
+		6435326F0A8BB7F600A4600D /* tcpworkerTransportTestsBin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tcpworkerTransportTestsBin; sourceTree = BUILT_PRODUCTS_DIR; };
+		643532750A8BB83700A4600D /* tcpworkerTests.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = tcpworkerTests.c; path = libxmlbus/transports/tcpworker/test/tcpworkerTests.c; sourceTree = "<group>"; };
+		643532810A8BB87C00A4600D /* tcpworkerTestsCases.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tcpworkerTestsCases.h; path = libxmlbus/transports/tcpworker/test/tcpworkerTestsCases.h; sourceTree = "<group>"; };
+		643532AB0A8BBED100A4600D /* libtcpworker-transport.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libtcpworker-transport.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6443FAA20AF0A9ED00EB8300 /* xmlbusdTestsBin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xmlbusdTestsBin; sourceTree = BUILT_PRODUCTS_DIR; };
+		6443FAB90AF0ABCC00EB8300 /* configTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = configTest.c; path = server/xmlbusd/test/configTest.c; sourceTree = "<group>"; };
+		6443FABA0AF0ABCC00EB8300 /* xmlbusdTests.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = xmlbusdTests.c; path = server/xmlbusd/test/xmlbusdTests.c; sourceTree = "<group>"; };
+		6443FABB0AF0ABCC00EB8300 /* xmlbusdTestsCases.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = xmlbusdTestsCases.h; path = server/xmlbusd/test/xmlbusdTestsCases.h; sourceTree = "<group>"; };
+		6443FBC60AF105A100EB8300 /* configtest_serverconf.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = configtest_serverconf.xml; path = server/xmlbusd/data/configtest_serverconf.xml; sourceTree = "<group>"; };
+		6443FBC90AF105DD00EB8300 /* configtest_serverconfmulti.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = configtest_serverconfmulti.xml; path = server/xmlbusd/data/configtest_serverconfmulti.xml; sourceTree = "<group>"; };
+		6443FBD60AF1071700EB8300 /* configtest_serverconffailing.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = configtest_serverconffailing.xml; path = server/xmlbusd/data/configtest_serverconffailing.xml; sourceTree = "<group>"; };
+		644A7E8D0B43FCF200529992 /* tcptransport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tcptransport.c; path = libxmlbus/transports/tcpworker/src/tcptransport.c; sourceTree = "<group>"; };
+		644A7E930B43FD8100529992 /* tcptransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tcptransport.h; path = libxmlbus/transports/tcpworker/src/tcptransport.h; sourceTree = "<group>"; };
+		644A7E970B43FDA500529992 /* tcpcallbacks.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tcpcallbacks.c; path = libxmlbus/transports/tcpworker/src/tcpcallbacks.c; sourceTree = "<group>"; };
+		644A7ECC0B44040600529992 /* tcpconfig.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tcpconfig.c; path = libxmlbus/transports/tcpworker/src/tcpconfig.c; sourceTree = "<group>"; };
+		6463FC030AFBCFFD004A194C /* request_echoservice.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = request_echoservice.xml; path = services/testservice/data/request_echoservice.xml; sourceTree = "<group>"; };
+		646A6FAD0AFA495700748544 /* dlservice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dlservice.h; path = server/xmlbusd/src/dlservice.h; sourceTree = "<group>"; };
+		647768B00A7FCE5F0026AE2F /* xmlbusFrameworkTestsBin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xmlbusFrameworkTestsBin; sourceTree = BUILT_PRODUCTS_DIR; };
+		6480A51F0B386C9E00FC3C51 /* ddnshostregistry.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = ddnshostregistry.c; path = libxmlbus/registry/mdnsresolveregistry/ddnshostregistry.c; sourceTree = "<group>"; };
+		6480A5200B386C9E00FC3C51 /* ddnshostregistry.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ddnshostregistry.h; path = libxmlbus/registry/mdnsresolveregistry/ddnshostregistry.h; sourceTree = "<group>"; };
+		6480A5210B386C9E00FC3C51 /* xmlbusserviceregistry.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = xmlbusserviceregistry.c; path = libxmlbus/registry/mdnsresolveregistry/xmlbusserviceregistry.c; sourceTree = "<group>"; };
+		6480A5220B386C9E00FC3C51 /* xmlbusserviceregistry.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = xmlbusserviceregistry.h; path = libxmlbus/registry/mdnsresolveregistry/xmlbusserviceregistry.h; sourceTree = "<group>"; };
+		6480A5230B386C9E00FC3C51 /* xmlbusserviceregistrylistener.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = xmlbusserviceregistrylistener.c; path = libxmlbus/registry/mdnsresolveregistry/xmlbusserviceregistrylistener.c; sourceTree = "<group>"; };
+		6480A5240B386C9E00FC3C51 /* xmlbusserviceregistrylistener.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = xmlbusserviceregistrylistener.h; path = libxmlbus/registry/mdnsresolveregistry/xmlbusserviceregistrylistener.h; sourceTree = "<group>"; };
+		64A6F3780ABB4679001FA552 /* tcp-outbound.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "tcp-outbound.c"; path = "libxmlbus/transports/tcpworker/src/tcp-outbound.c"; sourceTree = "<group>"; };
+		64AA55380ACAFFF100E5220B /* tcphelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tcphelpers.h; path = support/testsupport/src/testsupport/tcphelpers.h; sourceTree = "<group>"; };
+		64AA55390ACAFFF100E5220B /* tcphelpers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tcphelpers.c; path = support/testsupport/src/tcphelpers.c; sourceTree = "<group>"; };
+		64ABAF5F0B49199A0082C5A3 /* transportresolverregistryTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = transportresolverregistryTest.c; path = libxmlbus/test/transportresolverregistryTest.c; sourceTree = "<group>"; };
+		64ABAF600B49199A0082C5A3 /* transportTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = transportTest.c; path = libxmlbus/test/transportTest.c; sourceTree = "<group>"; };
+		64ABAF7B0B491A490082C5A3 /* transportTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = transportTest.c; path = libxmlbus/transports/tcpworker/test/transportTest.c; sourceTree = "<group>"; };
+		64B246530B4FF2300078F9E4 /* libcdlrunner.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcdlrunner.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		64B246590B4FF2730078F9E4 /* cdlrunner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cdlrunner.c; path = server/xmlbusd/cdlrunner/cdlrunner.c; sourceTree = "<group>"; };
+		64B2F2C00AC997B3005FA4BC /* serviceTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = serviceTest.c; path = libxmlbus/test/serviceTest.c; sourceTree = "<group>"; };
+		64BC8B670B99AD6D0055E2F0 /* xmlbusexports.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = xmlbusexports.h; path = libxmlbus/src/xmlbus/xmlbusexports.h; sourceTree = "<group>"; };
+		64C2076A0B3DB21000B45563 /* transport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = transport.h; path = libxmlbus/src/xmlbus/transport.h; sourceTree = "<group>"; };
+		64C2076B0B3DB21000B45563 /* transport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = transport.c; path = libxmlbus/src/transport.c; sourceTree = "<group>"; };
+		64C41DE90A7CB85600CC4B52 /* pipeline.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = pipeline.h; path = libxmlbus/src/xmlbus/pipeline.h; sourceTree = "<group>"; };
+		64C41DEB0A7CB86F00CC4B52 /* pipeline.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pipeline.c; path = libxmlbus/src/pipeline.c; sourceTree = "<group>"; };
+		64DAB7110AF35934007DD7D3 /* registeroutbound.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = registeroutbound.c; path = server/xmlbusd/src/registeroutbound.c; sourceTree = "<group>"; };
+		64DAB7140AF35965007DD7D3 /* xmlbusd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xmlbusd.h; path = server/xmlbusd/src/xmlbusd.h; sourceTree = "<group>"; };
+		64DAB7910AF379E9007DD7D3 /* dlservicerunner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dlservicerunner.c; path = server/xmlbusd/src/dlservicerunner.c; sourceTree = "<group>"; };
+		64DAB8160AF3CACA007DD7D3 /* config_osx.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = config_osx.xml; path = server/xmlbusd/data/config_osx.xml; sourceTree = "<group>"; };
+		64DAB8840AF3E29E007DD7D3 /* libtestservice.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtestservice.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		64DAB8910AF3E30A007DD7D3 /* testservice.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = testservice.c; path = services/testservice/src/testservice.c; sourceTree = "<group>"; };
+		64DB4DE30B5D6B6D0009F401 /* setup.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = setup.py; path = libxmlbus/python/setup.py; sourceTree = "<group>"; };
+		64DB4DEE0B5D6BE50009F401 /* pyxmlbus.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pyxmlbus.c; path = libxmlbus/python/pyxmlbus.c; sourceTree = "<group>"; };
+		64DB4DFD0B5D6DBB0009F401 /* xmlbus.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = xmlbus.so; sourceTree = BUILT_PRODUCTS_DIR; };
+		64DB6D770B5A1549004DB717 /* pysoapmessage.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pysoapmessage.c; path = libxmlbus/python/pysoapmessage.c; sourceTree = "<group>"; };
+		64DB6D790B5A1569004DB717 /* pysoapmessage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = pysoapmessage.h; path = libxmlbus/python/pysoapmessage.h; sourceTree = "<group>"; };
+		64DBA7250B427439004A6C18 /* transportresolverregistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = transportresolverregistry.h; path = libxmlbus/src/xmlbus/transportresolverregistry.h; sourceTree = "<group>"; };
+		64DBA7260B427439004A6C18 /* transportresolverregistry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = transportresolverregistry.c; path = libxmlbus/src/transportresolverregistry.c; sourceTree = "<group>"; };
+		64DF49C70B5169CF00FFEA21 /* libpyrunner.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libpyrunner.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		64DF4A170B516A2200FFEA21 /* pyrunner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pyrunner.c; path = server/xmlbusd/pyrunner/pyrunner.c; sourceTree = "<group>"; };
+		64DF4A1C0B516BE700FFEA21 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = /System/Library/Frameworks/Python.framework; sourceTree = "<absolute>"; };
+		64DF4AA20B51765200FFEA21 /* testservice.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = testservice.py; path = server/xmlbusd/pyrunner/testservice.py; sourceTree = "<group>"; };
+		64E2EBED0B1CBCC3008D38C2 /* registry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = registry.h; path = libxmlbus/src/xmlbus/registry.h; sourceTree = "<group>"; };
+		64E2EBEE0B1CBCC3008D38C2 /* registry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = registry.c; path = libxmlbus/src/registry.c; sourceTree = "<group>"; };
+		64F128310AE226FE008ED149 /* xmlbusd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xmlbusd; sourceTree = BUILT_PRODUCTS_DIR; };
+		64F128730AE22B4C008ED149 /* dlrunner.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = dlrunner.c; path = server/xmlbusd/src/dlrunner.c; sourceTree = "<group>"; };
+		64F128740AE22B4C008ED149 /* dlrunner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = dlrunner.h; path = server/xmlbusd/src/dlrunner.h; sourceTree = "<group>"; };
+		64F128770AE22B4C008ED149 /* servicestartup.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = servicestartup.c; path = server/xmlbusd/src/servicestartup.c; sourceTree = "<group>"; };
+		64F128780AE22B4C008ED149 /* xmlbusd.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = xmlbusd.c; path = server/xmlbusd/src/xmlbusd.c; sourceTree = "<group>"; };
+		64F128820AE22CB7008ED149 /* configparser.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = configparser.h; path = server/xmlbusd/src/configparser.h; sourceTree = "<group>"; };
+		64F128840AE22CD0008ED149 /* configparser.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = configparser.c; path = server/xmlbusd/src/configparser.c; sourceTree = "<group>"; };
+		64F128870AE24818008ED149 /* servicepackage.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = servicepackage.c; path = server/xmlbusd/src/servicepackage.c; sourceTree = "<group>"; };
+		64F1288A0AE2482E008ED149 /* servicepackage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = servicepackage.h; path = server/xmlbusd/src/servicepackage.h; sourceTree = "<group>"; };
+		64F6F3570B371CC0009F2376 /* libmdnsresolveregistry.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libmdnsresolveregistry.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		64F6F35B0B371D07009F2376 /* mdnsresolveregistry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mdnsresolveregistry.c; path = libxmlbus/registry/mdnsresolveregistry/mdnsresolveregistry.c; sourceTree = "<group>"; };
+		64F7C29F0B124FC300CB5A0E /* libtestpipeline.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtestpipeline.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		64F7C2A30B124FFB00CB5A0E /* testpipeline.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = testpipeline.c; path = libxmlbus/pipelines/testpipeline/src/testpipeline.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		640033F50A7A24B900392BA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				643974FF0DABA93300A4ED0D /* libxml.framework in Frameworks */,
+				640034590A7A27E200392BA9 /* log4c.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		640035AB0A7A413900392BA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				643974FB0DABA8FA00A4ED0D /* libxml.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6400368A0A7A79EA00392BA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				643978BD0DAC88FD00A4ED0D /* libxml.framework in Frameworks */,
+				640036960A7A7A5800392BA9 /* testsupport.framework in Frameworks */,
+				640036BB0A7A7BE100392BA9 /* check.framework in Frameworks */,
+				64ABAF680B4919BE0082C5A3 /* log4c.framework in Frameworks */,
+				643978B90DAC88ED00A4ED0D /* xmlbus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641B95E00B22031F001D5CFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6472B0160B46EBDE00C61268 /* log4c.framework in Frameworks */,
+				641B96220B220509001D5CFD /* xmlbus.framework in Frameworks */,
+				641B95F20B2204FF001D5CFD /* libxml.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641ED5D60B22F6EF00805496 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6472B0170B46EBE400C61268 /* log4c.framework in Frameworks */,
+				641ED6150B22F7B700805496 /* xmlbus.framework in Frameworks */,
+				641ED5E50B22F7AF00805496 /* libxml.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641ED7200B232BD000805496 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6472B0180B46EBEA00C61268 /* log4c.framework in Frameworks */,
+				641ED72C0B232C4C00805496 /* xmlbus.framework in Frameworks */,
+				641ED72B0B232C4600805496 /* libxml.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6435326D0A8BB7F600A4600D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				643532B80A8BBFD900A4600D /* libtcpworker-transport.dylib in Frameworks */,
+				643532920A8BB91C00A4600D /* libxml.framework in Frameworks */,
+				6435327C0A8BB85A00A4600D /* testsupport.framework in Frameworks */,
+				643532790A8BB85300A4600D /* check.framework in Frameworks */,
+				64ABAF7E0B491A5C0082C5A3 /* log4c.framework in Frameworks */,
+				643532780A8BB84A00A4600D /* xmlbus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		643532A90A8BBED100A4600D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6472B0000B46EB5900C61268 /* log4c.framework in Frameworks */,
+				643532B20A8BBF4A00A4600D /* xmlbus.framework in Frameworks */,
+				643532B10A8BBF3F00A4600D /* libxml.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6443FAA00AF0A9ED00EB8300 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6443FAFD0AF0AC1D00EB8300 /* testsupport.framework in Frameworks */,
+				6443FAF20AF0ABF200EB8300 /* xmlbus.framework in Frameworks */,
+				6443FAC20AF0ABEA00EB8300 /* libxml.framework in Frameworks */,
+				6443FABF0AF0ABE600EB8300 /* check.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		647768AE0A7FCE5F0026AE2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6439750D0DABA9AB00A4ED0D /* libxml.framework in Frameworks */,
+				647768F40A7FCE990026AE2F /* check.framework in Frameworks */,
+				64ABAF790B4919F80082C5A3 /* log4c.framework in Frameworks */,
+				643974C60DABA07500A4ED0D /* xmlbus.framework in Frameworks */,
+				643974C70DABA08100A4ED0D /* testsupport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64B246510B4FF2300078F9E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64B2467B0B4FF2D70078F9E4 /* libxml.framework in Frameworks */,
+				64B246700B4FF2CE0078F9E4 /* xmlbus.framework in Frameworks */,
+				64B246630B4FF2CA0078F9E4 /* log4c.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DAB8820AF3E29E007DD7D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6472B0140B46EBD100C61268 /* log4c.framework in Frameworks */,
+				64DAB8C80AF3E379007DD7D3 /* xmlbus.framework in Frameworks */,
+				64DAB8980AF3E372007DD7D3 /* libxml.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DB4DFB0B5D6DBB0009F401 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64DB4E4C0B5D6E5D0009F401 /* Python.framework in Frameworks */,
+				64DB4E1C0B5D6E5A0009F401 /* libxml.framework in Frameworks */,
+				64DB4E110B5D6E580009F401 /* xmlbus.framework in Frameworks */,
+				64DB4E040B5D6E540009F401 /* log4c.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DF49C50B5169CF00FFEA21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64EBDA3A0B62988200D3BCBB /* xmlbus.so in Frameworks */,
+				64DF4A070B5169FA00FFEA21 /* log4c.framework in Frameworks */,
+				64DF49FC0B5169F400FFEA21 /* xmlbus.framework in Frameworks */,
+				64DF49CC0B5169F100FFEA21 /* libxml.framework in Frameworks */,
+				64DF4A670B516BE700FFEA21 /* Python.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64F1282F0AE226FE008ED149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6472B0110B46EBB500C61268 /* log4c.framework in Frameworks */,
+				64F128650AE2273C008ED149 /* xmlbus.framework in Frameworks */,
+				64F128350AE22732008ED149 /* libxml.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64F6F3550B371CC0009F2376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6472B0190B46EBF100C61268 /* log4c.framework in Frameworks */,
+				6480A55B0B386CD300FC3C51 /* xmlbus.framework in Frameworks */,
+				6480A52B0B386CCA00FC3C51 /* libxml.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64F7C29D0B124FC300CB5A0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6472B0150B46EBD700C61268 /* log4c.framework in Frameworks */,
+				64F7C2DE0B1251C400CB5A0E /* xmlbus.framework in Frameworks */,
+				64F7C2AE0B1251BA00CB5A0E /* libxml.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		640033E50A7A1C1600392BA9 = {
+			isa = PBXGroup;
+			children = (
+				6439757E0DABB73C00A4ED0D /* clients */,
+				643975630DABB0C700A4ED0D /* pipelines */,
+				643975550DABADDB00A4ED0D /* services */,
+				643974F00DABA4DD00A4ED0D /* testsupport */,
+				643975360DABABB600A4ED0D /* xmlbus-core */,
+				643975310DABABA500A4ED0D /* tcptransport */,
+				64DF4A1C0B516BE700FFEA21 /* Python.framework */,
+				6400357C0A7A408600392BA9 /* check.framework */,
+				640034480A7A27E200392BA9 /* log4c.framework */,
+				640034150A7A27D600392BA9 /* libxml.framework */,
+				640033F80A7A24B900392BA9 /* Products */,
+				640033F90A7A24B900392BA9 /* xmlbus-Info.plist */,
+				640035AE0A7A413900392BA9 /* testsupport-Info.plist */,
+				640036820A7A793700392BA9 /* xmlbusFwTests-Info.plist */,
+				6400368E0A7A79EA00392BA9 /* xmlbusFrameworkTests-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		640033F80A7A24B900392BA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				640033F70A7A24B900392BA9 /* xmlbus.framework */,
+				640035AD0A7A413900392BA9 /* testsupport.framework */,
+				6400368D0A7A79EA00392BA9 /* xmlbusFrameworkTests.checktest */,
+				647768B00A7FCE5F0026AE2F /* xmlbusFrameworkTestsBin */,
+				6435326F0A8BB7F600A4600D /* tcpworkerTransportTestsBin */,
+				643532AB0A8BBED100A4600D /* libtcpworker-transport.dylib */,
+				64F128310AE226FE008ED149 /* xmlbusd */,
+				6443FAA20AF0A9ED00EB8300 /* xmlbusdTestsBin */,
+				64DAB8840AF3E29E007DD7D3 /* libtestservice.dylib */,
+				64F7C29F0B124FC300CB5A0E /* libtestpipeline.dylib */,
+				641B95E20B22031F001D5CFD /* libtestpublishregistry.dylib */,
+				641ED5D80B22F6EF00805496 /* libmdnspublishregistry.dylib */,
+				641ED7220B232BD000805496 /* xbb */,
+				64F6F3570B371CC0009F2376 /* libmdnsresolveregistry.dylib */,
+				64B246530B4FF2300078F9E4 /* libcdlrunner.dylib */,
+				64DF49C70B5169CF00FFEA21 /* libpyrunner.dylib */,
+				64DB4DFD0B5D6DBB0009F401 /* xmlbus.so */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		643974F00DABA4DD00A4ED0D /* testsupport */ = {
+			isa = PBXGroup;
+			children = (
+				64AA55390ACAFFF100E5220B /* tcphelpers.c */,
+				64AA55380ACAFFF100E5220B /* tcphelpers.h */,
+				640035B40A7A417100392BA9 /* testsettings.c */,
+				640035B20A7A415900392BA9 /* testsettings.h */,
+			);
+			name = testsupport;
+			sourceTree = "<group>";
+		};
+		643975060DABA96000A4ED0D /* xmlbus */ = {
+			isa = PBXGroup;
+			children = (
+				640034090A7A27BA00392BA9 /* error.c */,
+				6400346A0A7A299800392BA9 /* error.h */,
+				640036180A7A4B8F00392BA9 /* exports */,
+				6400340A0A7A27BA00392BA9 /* hash.c */,
+				6400346B0A7A299800392BA9 /* hash.h */,
+				6400340B0A7A27BA00392BA9 /* logger.c */,
+				6400346C0A7A299800392BA9 /* logger.h */,
+				64C41DEB0A7CB86F00CC4B52 /* pipeline.c */,
+				64C41DE90A7CB85600CC4B52 /* pipeline.h */,
+				64E2EBEE0B1CBCC3008D38C2 /* registry.c */,
+				64E2EBED0B1CBCC3008D38C2 /* registry.h */,
+				643180F50A7CDFCF00C8464C /* service.c */,
+				643180F30A7CDFB900C8464C /* service.h */,
+				6400340D0A7A27BA00392BA9 /* soap.c */,
+				6400346E0A7A299800392BA9 /* soap.h */,
+				64C2076B0B3DB21000B45563 /* transport.c */,
+				64C2076A0B3DB21000B45563 /* transport.h */,
+				64DBA7260B427439004A6C18 /* transportresolverregistry.c */,
+				64DBA7250B427439004A6C18 /* transportresolverregistry.h */,
+				64BC8B670B99AD6D0055E2F0 /* xmlbusexports.h */,
+			);
+			name = xmlbus;
+			sourceTree = "<group>";
+		};
+		643975180DABAA0F00A4ED0D /* tcpworker-transport */ = {
+			isa = PBXGroup;
+			children = (
+				643532260A8BB6DB00A4600D /* tcp-inboundworker.c */,
+				64A6F3780ABB4679001FA552 /* tcp-outbound.c */,
+				644A7E970B43FDA500529992 /* tcpcallbacks.c */,
+				644A7ECC0B44040600529992 /* tcpconfig.c */,
+				644A7E8D0B43FCF200529992 /* tcptransport.c */,
+				644A7E930B43FD8100529992 /* tcptransport.h */,
+			);
+			name = "tcpworker-transport";
+			sourceTree = "<group>";
+		};
+		6439751D0DABAA4200A4ED0D /* xmlbusFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				640034FC0A7A326C00392BA9 /* coreTests.c */,
+				640034FD0A7A326C00392BA9 /* coreTestsCases.h */,
+				640034FE0A7A326C00392BA9 /* errorTest.c */,
+				640034FF0A7A326C00392BA9 /* loggerTest.c */,
+				6431811F0A7CF13700C8464C /* pipelineTest.c */,
+				642729630AFE7E2400925F68 /* request_withmustunderstand.xml */,
+				642728ED0AFE68F500925F68 /* request_withoutmustunderstand.xml */,
+				64B2F2C00AC997B3005FA4BC /* serviceTest.c */,
+				640035010A7A326C00392BA9 /* soapTest.c */,
+				64ABAF5F0B49199A0082C5A3 /* transportresolverregistryTest.c */,
+				64ABAF600B49199A0082C5A3 /* transportTest.c */,
+			);
+			name = xmlbusFrameworkTests;
+			sourceTree = "<group>";
+		};
+		643975260DABAB1200A4ED0D /* tcpworkerTransportTests */ = {
+			isa = PBXGroup;
+			children = (
+				643532750A8BB83700A4600D /* tcpworkerTests.c */,
+				643532810A8BB87C00A4600D /* tcpworkerTestsCases.h */,
+				64ABAF7B0B491A490082C5A3 /* transportTest.c */,
+			);
+			name = tcpworkerTransportTests;
+			sourceTree = "<group>";
+		};
+		643975310DABABA500A4ED0D /* tcptransport */ = {
+			isa = PBXGroup;
+			children = (
+				643975180DABAA0F00A4ED0D /* tcpworker-transport */,
+				643975260DABAB1200A4ED0D /* tcpworkerTransportTests */,
+			);
+			name = tcptransport;
+			sourceTree = "<group>";
+		};
+		643975360DABABB600A4ED0D /* xmlbus-core */ = {
+			isa = PBXGroup;
+			children = (
+				643975670DABB0F500A4ED0D /* registry */,
+				6439755A0DABAE3200A4ED0D /* Python runtime */,
+				643975590DABAE2200A4ED0D /* C - dynamic lib runtime */,
+				643975060DABA96000A4ED0D /* xmlbus */,
+				6439751D0DABAA4200A4ED0D /* xmlbusFrameworkTests */,
+				643975410DABAC7E00A4ED0D /* daemon */,
+				6439754B0DABAD3900A4ED0D /* daemon - tests */,
+			);
+			name = "xmlbus-core";
+			sourceTree = "<group>";
+		};
+		643975410DABAC7E00A4ED0D /* daemon */ = {
+			isa = PBXGroup;
+			children = (
+				64F128870AE24818008ED149 /* servicepackage.c */,
+				64F1288A0AE2482E008ED149 /* servicepackage.h */,
+				64F128740AE22B4C008ED149 /* dlrunner.h */,
+				64F128770AE22B4C008ED149 /* servicestartup.c */,
+				64F128730AE22B4C008ED149 /* dlrunner.c */,
+				64DAB8160AF3CACA007DD7D3 /* config_osx.xml */,
+				646A6FAD0AFA495700748544 /* dlservice.h */,
+				64DAB7910AF379E9007DD7D3 /* dlservicerunner.c */,
+				64DAB7110AF35934007DD7D3 /* registeroutbound.c */,
+				64F128780AE22B4C008ED149 /* xmlbusd.c */,
+				64DAB7140AF35965007DD7D3 /* xmlbusd.h */,
+			);
+			name = daemon;
+			sourceTree = "<group>";
+		};
+		6439754B0DABAD3900A4ED0D /* daemon - tests */ = {
+			isa = PBXGroup;
+			children = (
+				64F128840AE22CD0008ED149 /* configparser.c */,
+				64F128820AE22CB7008ED149 /* configparser.h */,
+				6443FAB90AF0ABCC00EB8300 /* configTest.c */,
+				6443FBC60AF105A100EB8300 /* configtest_serverconf.xml */,
+				6443FBD60AF1071700EB8300 /* configtest_serverconffailing.xml */,
+				6443FBC90AF105DD00EB8300 /* configtest_serverconfmulti.xml */,
+				6443FABA0AF0ABCC00EB8300 /* xmlbusdTests.c */,
+				6443FABB0AF0ABCC00EB8300 /* xmlbusdTestsCases.h */,
+			);
+			name = "daemon - tests";
+			sourceTree = "<group>";
+		};
+		643975550DABADDB00A4ED0D /* services */ = {
+			isa = PBXGroup;
+			children = (
+				6439756F0DABB5D800A4ED0D /* Python - testservice */,
+				643975560DABADE400A4ED0D /* C - testservice */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		643975560DABADE400A4ED0D /* C - testservice */ = {
+			isa = PBXGroup;
+			children = (
+				6463FC030AFBCFFD004A194C /* request_echoservice.xml */,
+				64DAB8910AF3E30A007DD7D3 /* testservice.c */,
+			);
+			name = "C - testservice";
+			sourceTree = "<group>";
+		};
+		643975590DABAE2200A4ED0D /* C - dynamic lib runtime */ = {
+			isa = PBXGroup;
+			children = (
+				64B246590B4FF2730078F9E4 /* cdlrunner.c */,
+			);
+			name = "C - dynamic lib runtime";
+			sourceTree = "<group>";
+		};
+		6439755A0DABAE3200A4ED0D /* Python runtime */ = {
+			isa = PBXGroup;
+			children = (
+				6439755E0DABAE8E00A4ED0D /* runtime */,
+				6439755D0DABAE8500A4ED0D /* support */,
+			);
+			name = "Python runtime";
+			sourceTree = "<group>";
+		};
+		6439755D0DABAE8500A4ED0D /* support */ = {
+			isa = PBXGroup;
+			children = (
+				64DB6D770B5A1549004DB717 /* pysoapmessage.c */,
+				64DB6D790B5A1569004DB717 /* pysoapmessage.h */,
+				64DB4DEE0B5D6BE50009F401 /* pyxmlbus.c */,
+			);
+			name = support;
+			sourceTree = "<group>";
+		};
+		6439755E0DABAE8E00A4ED0D /* runtime */ = {
+			isa = PBXGroup;
+			children = (
+				64DF4A170B516A2200FFEA21 /* pyrunner.c */,
+			);
+			name = runtime;
+			sourceTree = "<group>";
+		};
+		643975630DABB0C700A4ED0D /* pipelines */ = {
+			isa = PBXGroup;
+			children = (
+				643975640DABB0D100A4ED0D /* testpipeline */,
+			);
+			name = pipelines;
+			sourceTree = "<group>";
+		};
+		643975640DABB0D100A4ED0D /* testpipeline */ = {
+			isa = PBXGroup;
+			children = (
+				64F7C2A30B124FFB00CB5A0E /* testpipeline.c */,
+			);
+			name = testpipeline;
+			sourceTree = "<group>";
+		};
+		643975670DABB0F500A4ED0D /* registry */ = {
+			isa = PBXGroup;
+			children = (
+				6439756C0DABB13700A4ED0D /* test */,
+				643975690DABB10700A4ED0D /* mdns resolve */,
+				643975680DABB0FC00A4ED0D /* mdns publish */,
+			);
+			name = registry;
+			sourceTree = "<group>";
+		};
+		643975680DABB0FC00A4ED0D /* mdns publish */ = {
+			isa = PBXGroup;
+			children = (
+				641ED5DE0B22F72900805496 /* mdnspublishregistry.c */,
+			);
+			name = "mdns publish";
+			sourceTree = "<group>";
+		};
+		643975690DABB10700A4ED0D /* mdns resolve */ = {
+			isa = PBXGroup;
+			children = (
+				6480A51F0B386C9E00FC3C51 /* ddnshostregistry.c */,
+				6480A5200B386C9E00FC3C51 /* ddnshostregistry.h */,
+				64F6F35B0B371D07009F2376 /* mdnsresolveregistry.c */,
+				6480A5210B386C9E00FC3C51 /* xmlbusserviceregistry.c */,
+				6480A5220B386C9E00FC3C51 /* xmlbusserviceregistry.h */,
+				6480A5230B386C9E00FC3C51 /* xmlbusserviceregistrylistener.c */,
+				6480A5240B386C9E00FC3C51 /* xmlbusserviceregistrylistener.h */,
+			);
+			name = "mdns resolve";
+			sourceTree = "<group>";
+		};
+		6439756C0DABB13700A4ED0D /* test */ = {
+			isa = PBXGroup;
+			children = (
+				641B95E80B220361001D5CFD /* testpublishregistry.c */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
+		6439756F0DABB5D800A4ED0D /* Python - testservice */ = {
+			isa = PBXGroup;
+			children = (
+				64DB4DE30B5D6B6D0009F401 /* setup.py */,
+				64DF4AA20B51765200FFEA21 /* testservice.py */,
+			);
+			name = "Python - testservice";
+			sourceTree = "<group>";
+		};
+		6439757E0DABB73C00A4ED0D /* clients */ = {
+			isa = PBXGroup;
+			children = (
+				643975800DABB75300A4ED0D /* apache gateway */,
+				6439757F0DABB74200A4ED0D /* xbb - command line */,
+			);
+			name = clients;
+			sourceTree = "<group>";
+		};
+		6439757F0DABB74200A4ED0D /* xbb - command line */ = {
+			isa = PBXGroup;
+			children = (
+				641ED7290B232C2C00805496 /* xbb.c */,
+			);
+			name = "xbb - command line";
+			sourceTree = "<group>";
+		};
+		643975800DABB75300A4ED0D /* apache gateway */ = {
+			isa = PBXGroup;
+			children = (
+				640F38601067636E00F705AC /* mod_xmlbus.c */,
+				640F38611067636E00F705AC /* mod_xmlbus.h */,
+			);
+			name = "apache gateway";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		640033F20A7A24B900392BA9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640034700A7A299800392BA9 /* error.h in Headers */,
+				640034710A7A299800392BA9 /* hash.h in Headers */,
+				640034720A7A299800392BA9 /* logger.h in Headers */,
+				644A7BFE0B439DB500529992 /* soap.h in Headers */,
+				644A7C010B439DD600529992 /* pipeline.h in Headers */,
+				644A7C100B439E8900529992 /* registry.h in Headers */,
+				644A7C260B43A2C600529992 /* transport.h in Headers */,
+				644A7D9C0B43C2DF00529992 /* transportresolverregistry.h in Headers */,
+				644A7DBB0B43CC9B00529992 /* service.h in Headers */,
+				64BC8B680B99AD6D0055E2F0 /* xmlbusexports.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		640035A80A7A413900392BA9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640035B30A7A415900392BA9 /* testsettings.h in Headers */,
+				64AA553A0ACAFFF100E5220B /* tcphelpers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		640036B50A7A7B8400392BA9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640036A30A7A7ADE00392BA9 /* coreTestsCases.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641B95DE0B22031F001D5CFD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641ED5D40B22F6EF00805496 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6435327F0A8BB86500A4600D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				643532820A8BB87C00A4600D /* tcpworkerTestsCases.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		643532A70A8BBED100A4600D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				644A7E940B43FD8100529992 /* tcptransport.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6443FAA60AF0AA1500EB8300 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6443FAA50AF0AA0700EB8300 /* configparser.h in Headers */,
+				6443FABE0AF0ABCC00EB8300 /* xmlbusdTestsCases.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		647768B20A7FCE800026AE2F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				647768B40A7FCE870026AE2F /* coreTestsCases.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64B2464F0B4FF2300078F9E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DAB8800AF3E29E007DD7D3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DB4DF90B5D6DBB0009F401 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64DB4E960B5D6E680009F401 /* pysoapmessage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DF49C30B5169CF00FFEA21 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64F1287E0AE22B64008ED149 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64F128830AE22CB7008ED149 /* configparser.h in Headers */,
+				64DAB7150AF35965007DD7D3 /* xmlbusd.h in Headers */,
+				646A6FAE0AFA495700748544 /* dlservice.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64F6F3530B371CC0009F2376 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6480A5260B386C9E00FC3C51 /* ddnshostregistry.h in Headers */,
+				6480A5280B386C9E00FC3C51 /* xmlbusserviceregistry.h in Headers */,
+				6480A52A0B386C9E00FC3C51 /* xmlbusserviceregistrylistener.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64F7C29B0B124FC300CB5A0E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		640033F60A7A24B900392BA9 /* xmlbus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 640033FA0A7A24BB00392BA9 /* Build configuration list for PBXNativeTarget "xmlbus" */;
+			buildPhases = (
+				640033F20A7A24B900392BA9 /* Headers */,
+				640033F30A7A24B900392BA9 /* Resources */,
+				640033F40A7A24B900392BA9 /* Sources */,
+				640033F50A7A24B900392BA9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xmlbus;
+			productName = xmlbus;
+			productReference = 640033F70A7A24B900392BA9 /* xmlbus.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		640035AC0A7A413900392BA9 /* testsupport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 640035AF0A7A413A00392BA9 /* Build configuration list for PBXNativeTarget "testsupport" */;
+			buildPhases = (
+				640035A80A7A413900392BA9 /* Headers */,
+				640035A90A7A413900392BA9 /* Resources */,
+				640035AA0A7A413900392BA9 /* Sources */,
+				640035AB0A7A413900392BA9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testsupport;
+			productName = testsupport;
+			productReference = 640035AD0A7A413900392BA9 /* testsupport.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6400368C0A7A79EA00392BA9 /* xmlbusFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6400368F0A7A79EB00392BA9 /* Build configuration list for PBXNativeTarget "xmlbusFrameworkTests" */;
+			buildPhases = (
+				640036B50A7A7B8400392BA9 /* Headers */,
+				640036880A7A79EA00392BA9 /* Resources */,
+				640036890A7A79EA00392BA9 /* Sources */,
+				6400368A0A7A79EA00392BA9 /* Frameworks */,
+				6400368B0A7A79EA00392BA9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				640036B10A7A7B2700392BA9 /* PBXTargetDependency */,
+				640036B30A7A7B2F00392BA9 /* PBXTargetDependency */,
+			);
+			name = xmlbusFrameworkTests;
+			productName = xmlbusFrameworkTests;
+			productReference = 6400368D0A7A79EA00392BA9 /* xmlbusFrameworkTests.checktest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		641B95E10B22031F001D5CFD /* testpublishregistry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 641B95E50B220344001D5CFD /* Build configuration list for PBXNativeTarget "testpublishregistry" */;
+			buildPhases = (
+				641B95DE0B22031F001D5CFD /* Headers */,
+				641B95DF0B22031F001D5CFD /* Sources */,
+				641B95E00B22031F001D5CFD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				641B95E40B220325001D5CFD /* PBXTargetDependency */,
+			);
+			name = testpublishregistry;
+			productName = testpublishregistry;
+			productReference = 641B95E20B22031F001D5CFD /* libtestpublishregistry.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		641ED5D70B22F6EF00805496 /* mdnspublishregistry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 641ED5DB0B22F71600805496 /* Build configuration list for PBXNativeTarget "mdnspublishregistry" */;
+			buildPhases = (
+				641ED5D40B22F6EF00805496 /* Headers */,
+				641ED5D50B22F6EF00805496 /* Sources */,
+				641ED5D60B22F6EF00805496 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				641ED5DA0B22F6F700805496 /* PBXTargetDependency */,
+				641ED6860B230F4800805496 /* PBXTargetDependency */,
+			);
+			name = mdnspublishregistry;
+			productName = mdnspublishregistry;
+			productReference = 641ED5D80B22F6EF00805496 /* libmdnspublishregistry.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		641ED7210B232BD000805496 /* xbb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 641ED7260B232BF500805496 /* Build configuration list for PBXNativeTarget "xbb" */;
+			buildPhases = (
+				641ED71F0B232BD000805496 /* Sources */,
+				641ED7200B232BD000805496 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				641ED7250B232BD600805496 /* PBXTargetDependency */,
+			);
+			name = xbb;
+			productName = xbb;
+			productReference = 641ED7220B232BD000805496 /* xbb */;
+			productType = "com.apple.product-type.tool";
+		};
+		6435326E0A8BB7F600A4600D /* tcpworkerTransportTestsBin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 643532710A8BB82900A4600D /* Build configuration list for PBXNativeTarget "tcpworkerTransportTestsBin" */;
+			buildPhases = (
+				6435327F0A8BB86500A4600D /* Headers */,
+				6435326C0A8BB7F600A4600D /* Sources */,
+				6435326D0A8BB7F600A4600D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				643532840A8BB88C00A4600D /* PBXTargetDependency */,
+				643532BA0A8BBFE200A4600D /* PBXTargetDependency */,
+				649929A90AB9E894000C6C69 /* PBXTargetDependency */,
+			);
+			name = tcpworkerTransportTestsBin;
+			productName = tcpworkerTransportTestsBin;
+			productReference = 6435326F0A8BB7F600A4600D /* tcpworkerTransportTestsBin */;
+			productType = "com.apple.product-type.tool";
+		};
+		643532AA0A8BBED100A4600D /* tcpworker-transport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 643532AC0A8BBEFC00A4600D /* Build configuration list for PBXNativeTarget "tcpworker-transport" */;
+			buildPhases = (
+				643532A70A8BBED100A4600D /* Headers */,
+				643532A80A8BBED100A4600D /* Sources */,
+				643532A90A8BBED100A4600D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64FCF1EA0B4569EC00510B04 /* PBXTargetDependency */,
+			);
+			name = "tcpworker-transport";
+			productName = "tcpworker-transport";
+			productReference = 643532AB0A8BBED100A4600D /* libtcpworker-transport.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		6443FAA10AF0A9ED00EB8300 /* xmlbusdTestsBin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6443FAB60AF0AA3A00EB8300 /* Build configuration list for PBXNativeTarget "xmlbusdTestsBin" */;
+			buildPhases = (
+				6443FBC40AF1055400EB8300 /* CopyFiles */,
+				6443FAA60AF0AA1500EB8300 /* Headers */,
+				6443FA9F0AF0A9ED00EB8300 /* Sources */,
+				6443FAA00AF0A9ED00EB8300 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xmlbusdTestsBin;
+			productName = xmlbusdTestsBin;
+			productReference = 6443FAA20AF0A9ED00EB8300 /* xmlbusdTestsBin */;
+			productType = "com.apple.product-type.tool";
+		};
+		647768AF0A7FCE5F0026AE2F /* xmlbusFrameworkTestsBin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 647768F90A7FCEC10026AE2F /* Build configuration list for PBXNativeTarget "xmlbusFrameworkTestsBin" */;
+			buildPhases = (
+				642728E90AFE68CA00925F68 /* CopyFiles */,
+				647768B20A7FCE800026AE2F /* Headers */,
+				647768AD0A7FCE5F0026AE2F /* Sources */,
+				647768AE0A7FCE5F0026AE2F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				647769090A7FD62D0026AE2F /* PBXTargetDependency */,
+				6477690B0A7FD6320026AE2F /* PBXTargetDependency */,
+				643975110DABA9DD00A4ED0D /* PBXTargetDependency */,
+			);
+			name = xmlbusFrameworkTestsBin;
+			productName = xmlbusFrameworkTestsBin;
+			productReference = 647768B00A7FCE5F0026AE2F /* xmlbusFrameworkTestsBin */;
+			productType = "com.apple.product-type.tool";
+		};
+		64B246520B4FF2300078F9E4 /* cdlrunner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64B246560B4FF2580078F9E4 /* Build configuration list for PBXNativeTarget "cdlrunner" */;
+			buildPhases = (
+				64B2464F0B4FF2300078F9E4 /* Headers */,
+				64B246500B4FF2300078F9E4 /* Sources */,
+				64B246510B4FF2300078F9E4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64B246550B4FF2390078F9E4 /* PBXTargetDependency */,
+			);
+			name = cdlrunner;
+			productName = cdlrunner;
+			productReference = 64B246530B4FF2300078F9E4 /* libcdlrunner.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		64DAB8830AF3E29E007DD7D3 /* testservice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64DAB88E0AF3E2BD007DD7D3 /* Build configuration list for PBXNativeTarget "testservice" */;
+			buildPhases = (
+				6463FBFB0AFBCFD2004A194C /* CopyFiles */,
+				64DAB8800AF3E29E007DD7D3 /* Headers */,
+				64DAB8810AF3E29E007DD7D3 /* Sources */,
+				64DAB8820AF3E29E007DD7D3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64DAB8860AF3E2AB007DD7D3 /* PBXTargetDependency */,
+				64E5576D0B03BFD6007ACE2A /* PBXTargetDependency */,
+			);
+			name = testservice;
+			productName = testservice;
+			productReference = 64DAB8840AF3E29E007DD7D3 /* libtestservice.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		64DB4DFC0B5D6DBB0009F401 /* pyxmlbus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64DB4E000B5D6DE00009F401 /* Build configuration list for PBXNativeTarget "pyxmlbus" */;
+			buildPhases = (
+				64DB4DF90B5D6DBB0009F401 /* Headers */,
+				64DB4DFA0B5D6DBB0009F401 /* Sources */,
+				64DB4DFB0B5D6DBB0009F401 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64DB4DFF0B5D6DC10009F401 /* PBXTargetDependency */,
+			);
+			name = pyxmlbus;
+			productName = pyxmlbus;
+			productReference = 64DB4DFD0B5D6DBB0009F401 /* xmlbus.so */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		64DF49C60B5169CF00FFEA21 /* pyrunner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64DF4A140B516A1800FFEA21 /* Build configuration list for PBXNativeTarget "pyrunner" */;
+			buildPhases = (
+				64DF49C30B5169CF00FFEA21 /* Headers */,
+				64DF49C40B5169CF00FFEA21 /* Sources */,
+				64DF49C50B5169CF00FFEA21 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64DF49CB0B5169DD00FFEA21 /* PBXTargetDependency */,
+				64EBDA390B62984000D3BCBB /* PBXTargetDependency */,
+			);
+			name = pyrunner;
+			productName = pyrunner;
+			productReference = 64DF49C70B5169CF00FFEA21 /* libpyrunner.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		64F128300AE226FE008ED149 /* xmlbusd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64F128700AE22761008ED149 /* Build configuration list for PBXNativeTarget "xmlbusd" */;
+			buildPhases = (
+				64DAB80E0AF3B30F007DD7D3 /* CopyFiles */,
+				64F1287E0AE22B64008ED149 /* Headers */,
+				64F1282E0AE226FE008ED149 /* Sources */,
+				64F1282F0AE226FE008ED149 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				646A6F970AFA451100748544 /* PBXTargetDependency */,
+			);
+			name = xmlbusd;
+			productName = xmlbusd;
+			productReference = 64F128310AE226FE008ED149 /* xmlbusd */;
+			productType = "com.apple.product-type.tool";
+		};
+		64F6F3560B371CC0009F2376 /* mdnsresolveregistry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64F6F3580B371CDF009F2376 /* Build configuration list for PBXNativeTarget "mdnsresolveregistry" */;
+			buildPhases = (
+				64F6F3530B371CC0009F2376 /* Headers */,
+				64F6F3540B371CC0009F2376 /* Sources */,
+				64F6F3550B371CC0009F2376 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6480A5690B386CDC00FC3C51 /* PBXTargetDependency */,
+			);
+			name = mdnsresolveregistry;
+			productName = mdnsresolveregistry;
+			productReference = 64F6F3570B371CC0009F2376 /* libmdnsresolveregistry.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		64F7C29E0B124FC300CB5A0E /* testpipeline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64F7C2A00B124FE100CB5A0E /* Build configuration list for PBXNativeTarget "testpipeline" */;
+			buildPhases = (
+				64F7C29B0B124FC300CB5A0E /* Headers */,
+				64F7C29C0B124FC300CB5A0E /* Sources */,
+				64F7C29D0B124FC300CB5A0E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6402F6F40B134A3500DE06A3 /* PBXTargetDependency */,
+				6402F6F60B134A3900DE06A3 /* PBXTargetDependency */,
+			);
+			name = testpipeline;
+			productName = testpipeline;
+			productReference = 64F7C29F0B124FC300CB5A0E /* libtestpipeline.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		640033E70A7A1C1600392BA9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = xmlbus.org;
+			};
+			buildConfigurationList = 640033E80A7A1C1600392BA9 /* Build configuration list for PBXProject "xmlbus" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 640033E50A7A1C1600392BA9;
+			productRefGroup = 640033F80A7A24B900392BA9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				640035AC0A7A413900392BA9 /* testsupport */,
+				640033F60A7A24B900392BA9 /* xmlbus */,
+				6400368C0A7A79EA00392BA9 /* xmlbusFrameworkTests */,
+				647768AF0A7FCE5F0026AE2F /* xmlbusFrameworkTestsBin */,
+				643532AA0A8BBED100A4600D /* tcpworker-transport */,
+				6435326E0A8BB7F600A4600D /* tcpworkerTransportTestsBin */,
+				64F128300AE226FE008ED149 /* xmlbusd */,
+				6443FAA10AF0A9ED00EB8300 /* xmlbusdTestsBin */,
+				64DAB8830AF3E29E007DD7D3 /* testservice */,
+				64F7C29E0B124FC300CB5A0E /* testpipeline */,
+				641B95E10B22031F001D5CFD /* testpublishregistry */,
+				641ED5D70B22F6EF00805496 /* mdnspublishregistry */,
+				641ED7210B232BD000805496 /* xbb */,
+				64F6F3560B371CC0009F2376 /* mdnsresolveregistry */,
+				64B246520B4FF2300078F9E4 /* cdlrunner */,
+				64DF49C60B5169CF00FFEA21 /* pyrunner */,
+				64DB4DFC0B5D6DBB0009F401 /* pyxmlbus */,
+				643976450DABC16D00A4ED0D /* all */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		640033F30A7A24B900392BA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640036190A7A4B8F00392BA9 /* exports in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		640035A90A7A413900392BA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		640036880A7A79EA00392BA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6462764D0A7BAB6100DB8E74 /* xmlbusFwTests-Info.plist in Resources */,
+				6462764E0A7BAB6300DB8E74 /* xmlbusFrameworkTests-Info.plist in Resources */,
+				6462764F0A7BAB6400DB8E74 /* xmlbus-Info.plist in Resources */,
+				646276500A7BAB6600DB8E74 /* testsupport-Info.plist in Resources */,
+				646276510A7BAB6E00DB8E74 /* exports in Resources */,
+				642728EE0AFE68F500925F68 /* request_withoutmustunderstand.xml in Resources */,
+				642729640AFE7E2400925F68 /* request_withmustunderstand.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6400368B0A7A79EA00392BA9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\nMallocHelp=TRUE\nMallocScribble=TRUE\nMallocBadFreeAbort=TRUE\nXML_MEM_TRACE=TRUE\n#export MallocHelp \nexport MallocScribble\nexport MallocBadFreeAbort\nexport XML_MEM_TRACE\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		640033F40A7A24B900392BA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6400340F0A7A27BA00392BA9 /* error.c in Sources */,
+				640034100A7A27BA00392BA9 /* hash.c in Sources */,
+				640034110A7A27BA00392BA9 /* logger.c in Sources */,
+				644A7BFD0B439DA700529992 /* soap.c in Sources */,
+				644A7C000B439DCE00529992 /* pipeline.c in Sources */,
+				644A7C110B439E9500529992 /* registry.c in Sources */,
+				644A7C270B43A2D100529992 /* transport.c in Sources */,
+				644A7D9D0B43C2E300529992 /* transportresolverregistry.c in Sources */,
+				644A7DBC0B43CCA200529992 /* service.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		640035AA0A7A413900392BA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640035B50A7A417100392BA9 /* testsettings.c in Sources */,
+				64AA553B0ACAFFF100E5220B /* tcphelpers.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		640036890A7A79EA00392BA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640036A20A7A7ADE00392BA9 /* coreTests.c in Sources */,
+				640036A40A7A7ADE00392BA9 /* errorTest.c in Sources */,
+				640036A50A7A7ADE00392BA9 /* loggerTest.c in Sources */,
+				640036A70A7A7ADE00392BA9 /* soapTest.c in Sources */,
+				643181200A7CF13700C8464C /* pipelineTest.c in Sources */,
+				64B2F2C10AC997B3005FA4BC /* serviceTest.c in Sources */,
+				64ABAF630B49199A0082C5A3 /* transportresolverregistryTest.c in Sources */,
+				64ABAF640B49199A0082C5A3 /* transportTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641B95DF0B22031F001D5CFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				641B95E90B220361001D5CFD /* testpublishregistry.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641ED5D50B22F6EF00805496 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				641ED5DF0B22F72900805496 /* mdnspublishregistry.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641ED71F0B232BD000805496 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				641ED72A0B232C2C00805496 /* xbb.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6435326C0A8BB7F600A4600D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				643532770A8BB83700A4600D /* tcpworkerTests.c in Sources */,
+				64ABAF7C0B491A4A0082C5A3 /* transportTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		643532A80A8BBED100A4600D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				643532AF0A8BBF1B00A4600D /* tcp-inboundworker.c in Sources */,
+				64A6F3790ABB4679001FA552 /* tcp-outbound.c in Sources */,
+				644A7E8E0B43FCF200529992 /* tcptransport.c in Sources */,
+				644A7E980B43FDA500529992 /* tcpcallbacks.c in Sources */,
+				644A7ECD0B44040600529992 /* tcpconfig.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6443FA9F0AF0A9ED00EB8300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6443FAA40AF0AA0300EB8300 /* configparser.c in Sources */,
+				6443FABC0AF0ABCC00EB8300 /* configTest.c in Sources */,
+				6443FABD0AF0ABCC00EB8300 /* xmlbusdTests.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		647768AD0A7FCE5F0026AE2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				647768B50A7FCE910026AE2F /* coreTests.c in Sources */,
+				647768B60A7FCE910026AE2F /* errorTest.c in Sources */,
+				647768B70A7FCE910026AE2F /* loggerTest.c in Sources */,
+				647768B80A7FCE910026AE2F /* soapTest.c in Sources */,
+				647768B90A7FCE910026AE2F /* pipelineTest.c in Sources */,
+				64B2F2C20AC997B3005FA4BC /* serviceTest.c in Sources */,
+				64ABAF610B49199A0082C5A3 /* transportresolverregistryTest.c in Sources */,
+				64ABAF620B49199A0082C5A3 /* transportTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64B246500B4FF2300078F9E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64B2465A0B4FF2730078F9E4 /* cdlrunner.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DAB8810AF3E29E007DD7D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64DAB8920AF3E30A007DD7D3 /* testservice.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DB4DFA0B5D6DBB0009F401 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64DB4E950B5D6E650009F401 /* pysoapmessage.c in Sources */,
+				64DB4E030B5D6E4E0009F401 /* pyxmlbus.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DF49C40B5169CF00FFEA21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64DF4A180B516A2200FFEA21 /* pyrunner.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64F1282E0AE226FE008ED149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64F1287D0AE22B4C008ED149 /* xmlbusd.c in Sources */,
+				64F128850AE22CD0008ED149 /* configparser.c in Sources */,
+				64DAB7120AF35934007DD7D3 /* registeroutbound.c in Sources */,
+				64DAB7920AF379E9007DD7D3 /* dlservicerunner.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64F6F3540B371CC0009F2376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64F6F35C0B371D07009F2376 /* mdnsresolveregistry.c in Sources */,
+				6480A5250B386C9E00FC3C51 /* ddnshostregistry.c in Sources */,
+				6480A5270B386C9E00FC3C51 /* xmlbusserviceregistry.c in Sources */,
+				6480A5290B386C9E00FC3C51 /* xmlbusserviceregistrylistener.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64F7C29C0B124FC300CB5A0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64F7C2A40B124FFB00CB5A0E /* testpipeline.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		640036B10A7A7B2700392BA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640033F60A7A24B900392BA9 /* xmlbus */;
+			targetProxy = 640036B00A7A7B2700392BA9 /* PBXContainerItemProxy */;
+		};
+		640036B30A7A7B2F00392BA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640035AC0A7A413900392BA9 /* testsupport */;
+			targetProxy = 640036B20A7A7B2F00392BA9 /* PBXContainerItemProxy */;
+		};
+		6402F6F40B134A3500DE06A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640033F60A7A24B900392BA9 /* xmlbus */;
+			targetProxy = 6402F6F30B134A3500DE06A3 /* PBXContainerItemProxy */;
+		};
+		6402F6F60B134A3900DE06A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64F128300AE226FE008ED149 /* xmlbusd */;
+			targetProxy = 6402F6F50B134A3900DE06A3 /* PBXContainerItemProxy */;
+		};
+		641B95E40B220325001D5CFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640033F60A7A24B900392BA9 /* xmlbus */;
+			targetProxy = 641B95E30B220325001D5CFD /* PBXContainerItemProxy */;
+		};
+		641ED5DA0B22F6F700805496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640033F60A7A24B900392BA9 /* xmlbus */;
+			targetProxy = 641ED5D90B22F6F700805496 /* PBXContainerItemProxy */;
+		};
+		641ED6860B230F4800805496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64F128300AE226FE008ED149 /* xmlbusd */;
+			targetProxy = 641ED6850B230F4800805496 /* PBXContainerItemProxy */;
+		};
+		641ED7250B232BD600805496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640033F60A7A24B900392BA9 /* xmlbus */;
+			targetProxy = 641ED7240B232BD600805496 /* PBXContainerItemProxy */;
+		};
+		643532840A8BB88C00A4600D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640033F60A7A24B900392BA9 /* xmlbus */;
+			targetProxy = 643532830A8BB88C00A4600D /* PBXContainerItemProxy */;
+		};
+		643532BA0A8BBFE200A4600D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 643532AA0A8BBED100A4600D /* tcpworker-transport */;
+			targetProxy = 643532B90A8BBFE200A4600D /* PBXContainerItemProxy */;
+		};
+		643975110DABA9DD00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 643532AA0A8BBED100A4600D /* tcpworker-transport */;
+			targetProxy = 643975100DABA9DD00A4ED0D /* PBXContainerItemProxy */;
+		};
+		643976490DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640035AC0A7A413900392BA9 /* testsupport */;
+			targetProxy = 643976480DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		6439764B0DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640033F60A7A24B900392BA9 /* xmlbus */;
+			targetProxy = 6439764A0DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		6439764F0DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 647768AF0A7FCE5F0026AE2F /* xmlbusFrameworkTestsBin */;
+			targetProxy = 6439764E0DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		643976510DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 643532AA0A8BBED100A4600D /* tcpworker-transport */;
+			targetProxy = 643976500DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		643976530DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6435326E0A8BB7F600A4600D /* tcpworkerTransportTestsBin */;
+			targetProxy = 643976520DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		643976550DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64F128300AE226FE008ED149 /* xmlbusd */;
+			targetProxy = 643976540DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		643976570DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6443FAA10AF0A9ED00EB8300 /* xmlbusdTestsBin */;
+			targetProxy = 643976560DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		643976590DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64DAB8830AF3E29E007DD7D3 /* testservice */;
+			targetProxy = 643976580DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		6439765B0DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64F7C29E0B124FC300CB5A0E /* testpipeline */;
+			targetProxy = 6439765A0DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		6439765F0DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 641ED5D70B22F6EF00805496 /* mdnspublishregistry */;
+			targetProxy = 6439765E0DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		643976610DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 641ED7210B232BD000805496 /* xbb */;
+			targetProxy = 643976600DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		643976630DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64F6F3560B371CC0009F2376 /* mdnsresolveregistry */;
+			targetProxy = 643976620DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		643976650DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64B246520B4FF2300078F9E4 /* cdlrunner */;
+			targetProxy = 643976640DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		643976670DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64DF49C60B5169CF00FFEA21 /* pyrunner */;
+			targetProxy = 643976660DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		643976690DABC17A00A4ED0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64DB4DFC0B5D6DBB0009F401 /* pyxmlbus */;
+			targetProxy = 643976680DABC17A00A4ED0D /* PBXContainerItemProxy */;
+		};
+		646A6F970AFA451100748544 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640033F60A7A24B900392BA9 /* xmlbus */;
+			targetProxy = 646A6F960AFA451100748544 /* PBXContainerItemProxy */;
+		};
+		647769090A7FD62D0026AE2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640033F60A7A24B900392BA9 /* xmlbus */;
+			targetProxy = 647769080A7FD62D0026AE2F /* PBXContainerItemProxy */;
+		};
+		6477690B0A7FD6320026AE2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640035AC0A7A413900392BA9 /* testsupport */;
+			targetProxy = 6477690A0A7FD6320026AE2F /* PBXContainerItemProxy */;
+		};
+		6480A5690B386CDC00FC3C51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640033F60A7A24B900392BA9 /* xmlbus */;
+			targetProxy = 6480A5680B386CDC00FC3C51 /* PBXContainerItemProxy */;
+		};
+		649929A90AB9E894000C6C69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640035AC0A7A413900392BA9 /* testsupport */;
+			targetProxy = 649929A80AB9E894000C6C69 /* PBXContainerItemProxy */;
+		};
+		64B246550B4FF2390078F9E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64F128300AE226FE008ED149 /* xmlbusd */;
+			targetProxy = 64B246540B4FF2390078F9E4 /* PBXContainerItemProxy */;
+		};
+		64DAB8860AF3E2AB007DD7D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640033F60A7A24B900392BA9 /* xmlbus */;
+			targetProxy = 64DAB8850AF3E2AB007DD7D3 /* PBXContainerItemProxy */;
+		};
+		64DB4DFF0B5D6DC10009F401 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640033F60A7A24B900392BA9 /* xmlbus */;
+			targetProxy = 64DB4DFE0B5D6DC10009F401 /* PBXContainerItemProxy */;
+		};
+		64DF49CB0B5169DD00FFEA21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64F128300AE226FE008ED149 /* xmlbusd */;
+			targetProxy = 64DF49CA0B5169DD00FFEA21 /* PBXContainerItemProxy */;
+		};
+		64E5576D0B03BFD6007ACE2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64F128300AE226FE008ED149 /* xmlbusd */;
+			targetProxy = 64E5576C0B03BFD6007ACE2A /* PBXContainerItemProxy */;
+		};
+		64EBDA390B62984000D3BCBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64DB4DFC0B5D6DBB0009F401 /* pyxmlbus */;
+			targetProxy = 64EBDA380B62984000D3BCBB /* PBXContainerItemProxy */;
+		};
+		64FCF1EA0B4569EC00510B04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640033F60A7A24B900392BA9 /* xmlbus */;
+			targetProxy = 64FCF1E90B4569EC00510B04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		640033E90A7A1C1600392BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DEBUGGING_SYMBOLS = full;
+				LIBRARY_SEARCH_PATHS = "";
+				SDKROOT = "";
+			};
+			name = Debug;
+		};
+		640033EA0A7A1C1600392BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				COPY_PHASE_STRIP = YES;
+				SDKROOT = "";
+			};
+			name = Release;
+		};
+		640033FB0A7A24BB00392BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				EXPORTED_SYMBOLS_FILE = libxmlbus/src/exports;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_VERSION = A;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = /Developer/SDKs/MacOSX10.5.sdk/usr/include/libxml2/;
+				INFOPLIST_FILE = "xmlbus-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_CFLAGS = (
+					"-DDEBUG",
+					"-DDEBUG_MEMORY",
+					"-DHAVE_LOG4C",
+				);
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = xmlbus;
+				SEPARATE_SYMBOL_EDIT = NO;
+			};
+			name = Debug;
+		};
+		640033FC0A7A24BB00392BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				HEADER_SEARCH_PATHS = /Developer/SDKs/MacOSX10.5.sdk/usr/include/libxml2/;
+				INFOPLIST_FILE = "xmlbus-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_CFLAGS = "-DHAVE_LOG4C";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = xmlbus;
+			};
+			name = Release;
+		};
+		640035B00A7A413A00392BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "testsupport-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					libxml,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = testsupport;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		640035B10A7A413A00392BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "testsupport-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					libxml,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = testsupport;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		640036900A7A79EB00392BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "xmlbusFrameworkTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				PRODUCT_NAME = xmlbusFrameworkTests;
+				TEST_RIG = /Users/olger/bin/CheckTestRig;
+				WRAPPER_EXTENSION = checktest;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		640036910A7A79EB00392BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "xmlbusFrameworkTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				PRODUCT_NAME = xmlbusFrameworkTests;
+				TEST_RIG = /Users/olger/bin/CheckTestRig;
+				WRAPPER_EXTENSION = checktest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		641B95E60B220344001D5CFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = testpublishregistry;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		641B95E70B220344001D5CFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = testpublishregistry;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		641ED5DC0B22F71600805496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = mdnspublishregistry;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		641ED5DD0B22F71600805496 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = mdnspublishregistry;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		641ED7270B232BF500805496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_CFLAGS = "-DHAVE_LOG4C";
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = xbb;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		641ED7280B232BF500805496 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = xbb;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		643532720A8BB82900A4600D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = tcpworkerTransportTestsBin;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		643532730A8BB82900A4600D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = tcpworkerTransportTestsBin;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		643532AD0A8BBEFC00A4600D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = "tcpworker-transport";
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		643532AE0A8BBEFC00A4600D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = "tcpworker-transport";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		643976460DABC16E00A4ED0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = all;
+			};
+			name = Debug;
+		};
+		643976470DABC16E00A4ED0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = all;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		6443FAB70AF0AA3A00EB8300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = xmlbusdTestsBin;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		6443FAB80AF0AA3A00EB8300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = xmlbusdTestsBin;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		647768FA0A7FCEC10026AE2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				MACH_O_TYPE = mh_execute;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = xmlbusFrameworkTestsBin;
+				STRIP_STYLE = "non-global";
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		647768FB0A7FCEC10026AE2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				MACH_O_TYPE = mh_execute;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = xmlbusFrameworkTestsBin;
+				STRIP_STYLE = "non-global";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		64B246570B4FF2580078F9E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				PREBINDING = NO;
+				PRODUCT_NAME = cdlrunner;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		64B246580B4FF2580078F9E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PREBINDING = NO;
+				PRODUCT_NAME = cdlrunner;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		64DAB88F0AF3E2BD007DD7D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = testservice;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		64DAB8900AF3E2BD007DD7D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = testservice;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		64DB4E010B5D6DE00009F401 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_EXTENSION = so;
+				EXECUTABLE_PREFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /opt/xmlbus/lib;
+				OTHER_CFLAGS = "-DPYTHON_AS_FRAMEWORK";
+				PREBINDING = NO;
+				PRIVATE_HEADERS_FOLDER_PATH = /opt/xmlbus/include;
+				PRODUCT_NAME = xmlbus;
+				PUBLIC_HEADERS_FOLDER_PATH = /opt/xmlbus/include;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		64DB4E020B5D6DE00009F401 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXECUTABLE_EXTENSION = so;
+				EXECUTABLE_PREFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /opt/xmlbus/lib;
+				OTHER_CFLAGS = "-DPYTHON_AS_FRAMEWORK";
+				PREBINDING = NO;
+				PRIVATE_HEADERS_FOLDER_PATH = /opt/xmlbus/include;
+				PRODUCT_NAME = xmlbus;
+				PUBLIC_HEADERS_FOLDER_PATH = /opt/xmlbus/include;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		64DF4A150B516A1800FFEA21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = "-DPYTHON_AS_FRAMEWORK";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = pyrunner;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		64DF4A160B516A1800FFEA21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = "-DPYTHON_AS_FRAMEWORK";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = pyrunner;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		64F128710AE22761008ED149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = xmlbusd;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		64F128720AE22761008ED149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = xmlbusd;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		64F6F3590B371CDF009F2376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = mdnsresolveregistry;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		64F6F35A0B371CDF009F2376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = mdnsresolveregistry;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		64F7C2A10B124FE100CB5A0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = testpipeline;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		64F7C2A20B124FE100CB5A0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-lpthread";
+				PREBINDING = NO;
+				PRODUCT_NAME = testpipeline;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		640033E80A7A1C1600392BA9 /* Build configuration list for PBXProject "xmlbus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				640033E90A7A1C1600392BA9 /* Debug */,
+				640033EA0A7A1C1600392BA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		640033FA0A7A24BB00392BA9 /* Build configuration list for PBXNativeTarget "xmlbus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				640033FB0A7A24BB00392BA9 /* Debug */,
+				640033FC0A7A24BB00392BA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		640035AF0A7A413A00392BA9 /* Build configuration list for PBXNativeTarget "testsupport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				640035B00A7A413A00392BA9 /* Debug */,
+				640035B10A7A413A00392BA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6400368F0A7A79EB00392BA9 /* Build configuration list for PBXNativeTarget "xmlbusFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				640036900A7A79EB00392BA9 /* Debug */,
+				640036910A7A79EB00392BA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		641B95E50B220344001D5CFD /* Build configuration list for PBXNativeTarget "testpublishregistry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				641B95E60B220344001D5CFD /* Debug */,
+				641B95E70B220344001D5CFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		641ED5DB0B22F71600805496 /* Build configuration list for PBXNativeTarget "mdnspublishregistry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				641ED5DC0B22F71600805496 /* Debug */,
+				641ED5DD0B22F71600805496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		641ED7260B232BF500805496 /* Build configuration list for PBXNativeTarget "xbb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				641ED7270B232BF500805496 /* Debug */,
+				641ED7280B232BF500805496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		643532710A8BB82900A4600D /* Build configuration list for PBXNativeTarget "tcpworkerTransportTestsBin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				643532720A8BB82900A4600D /* Debug */,
+				643532730A8BB82900A4600D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		643532AC0A8BBEFC00A4600D /* Build configuration list for PBXNativeTarget "tcpworker-transport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				643532AD0A8BBEFC00A4600D /* Debug */,
+				643532AE0A8BBEFC00A4600D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6439766E0DABC1AD00A4ED0D /* Build configuration list for PBXAggregateTarget "all" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				643976460DABC16E00A4ED0D /* Debug */,
+				643976470DABC16E00A4ED0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6443FAB60AF0AA3A00EB8300 /* Build configuration list for PBXNativeTarget "xmlbusdTestsBin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6443FAB70AF0AA3A00EB8300 /* Debug */,
+				6443FAB80AF0AA3A00EB8300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		647768F90A7FCEC10026AE2F /* Build configuration list for PBXNativeTarget "xmlbusFrameworkTestsBin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				647768FA0A7FCEC10026AE2F /* Debug */,
+				647768FB0A7FCEC10026AE2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64B246560B4FF2580078F9E4 /* Build configuration list for PBXNativeTarget "cdlrunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64B246570B4FF2580078F9E4 /* Debug */,
+				64B246580B4FF2580078F9E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64DAB88E0AF3E2BD007DD7D3 /* Build configuration list for PBXNativeTarget "testservice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64DAB88F0AF3E2BD007DD7D3 /* Debug */,
+				64DAB8900AF3E2BD007DD7D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64DB4E000B5D6DE00009F401 /* Build configuration list for PBXNativeTarget "pyxmlbus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64DB4E010B5D6DE00009F401 /* Debug */,
+				64DB4E020B5D6DE00009F401 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64DF4A140B516A1800FFEA21 /* Build configuration list for PBXNativeTarget "pyrunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64DF4A150B516A1800FFEA21 /* Debug */,
+				64DF4A160B516A1800FFEA21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64F128700AE22761008ED149 /* Build configuration list for PBXNativeTarget "xmlbusd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64F128710AE22761008ED149 /* Debug */,
+				64F128720AE22761008ED149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64F6F3580B371CDF009F2376 /* Build configuration list for PBXNativeTarget "mdnsresolveregistry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64F6F3590B371CDF009F2376 /* Debug */,
+				64F6F35A0B371CDF009F2376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64F7C2A00B124FE100CB5A0E /* Build configuration list for PBXNativeTarget "testpipeline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64F7C2A10B124FE100CB5A0E /* Debug */,
+				64F7C2A20B124FE100CB5A0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 640033E70A7A1C1600392BA9 /* Project object */;
+}

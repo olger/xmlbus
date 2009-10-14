@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet href="../common/xsl/log.xsl" type="text/xsl" ?> -->
+<log timestamp="2006-01-18T15:57:14.125"
+    xmlns="http://www.ws-i.org/testing/2004/07/log/"
+    xmlns:wsi-monConfig="http://www.ws-i.org/testing/2004/07/monitorConfig/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <monitor version="1.0.0" releaseDate="2005-05-30">
+    <implementer name="Eclipse.org Organization" location="http://www.eclipse.org/wsvt"/>
+    <environment>
+      <runtime name="Java(TM) 2 Runtime Environment, Standard Edition" version="1.5.0_02-b09"/>
+      <operatingSystem name="Windows XP" version="5.1"/>
+      <xmlParser name="Apache Xerces" version="Xerces-J 2.6.2"/>
+    </environment>
+    <wsi-monConfig:configuration>
+    <wsi-monConfig:comment>This configuration file is used for W3C WS-Addressing CR interop testing.</wsi-monConfig:comment>
+      <wsi-monConfig:logFile replace="true" location="messageLog.xml">
+      <wsi-monConfig:addStyleSheet href="../common/xsl/log.xsl" type="text/xsl" />
+    </wsi-monConfig:logFile>
+      <wsi-monConfig:logDuration>600</wsi-monConfig:logDuration>
+      <wsi-monConfig:cleanupTimeoutSeconds>3</wsi-monConfig:cleanupTimeoutSeconds>
+      <wsi-monConfig:manInTheMiddle>
+        <wsi-monConfig:redirect>
+    <wsi-monConfig:comment>This is a redirect example for local W3C WS-Addressing CR interop testing on port 8080.</wsi-monConfig:comment>
+
+          <wsi-monConfig:listenPort>4040</wsi-monConfig:listenPort>
+          <wsi-monConfig:schemeAndHostPort>http://localhost:8080</wsi-monConfig:schemeAndHostPort>
+          <wsi-monConfig:maxConnections>1000</wsi-monConfig:maxConnections>
+          <wsi-monConfig:readTimeoutSeconds>15</wsi-monConfig:readTimeoutSeconds>
+        </wsi-monConfig:redirect>
+        <wsi-monConfig:redirect>
+    <wsi-monConfig:comment>Redirect for IBM's W3C WS-Addressing CR interop testing</wsi-monConfig:comment>
+
+          <wsi-monConfig:listenPort>4041</wsi-monConfig:listenPort>
+          <wsi-monConfig:schemeAndHostPort>http://192.168.1.69:9080</wsi-monConfig:schemeAndHostPort>
+          <wsi-monConfig:maxConnections>1000</wsi-monConfig:maxConnections>
+          <wsi-monConfig:readTimeoutSeconds>15</wsi-monConfig:readTimeoutSeconds>
+        </wsi-monConfig:redirect>
+        <wsi-monConfig:redirect>
+    <wsi-monConfig:comment>Redirect for Microsoft's W3C WS-Addressing CR interop testing</wsi-monConfig:comment>
+
+          <wsi-monConfig:listenPort>4042</wsi-monConfig:listenPort>
+          <wsi-monConfig:schemeAndHostPort>http://192.168.1.73</wsi-monConfig:schemeAndHostPort>
+          <wsi-monConfig:maxConnections>1000</wsi-monConfig:maxConnections>
+          <wsi-monConfig:readTimeoutSeconds>15</wsi-monConfig:readTimeoutSeconds>
+        </wsi-monConfig:redirect>
+        <wsi-monConfig:redirect>
+    <wsi-monConfig:comment>Redirect for Axis's W3C WS-Addressing CR interop testing</wsi-monConfig:comment>
+
+          <wsi-monConfig:listenPort>4043</wsi-monConfig:listenPort>
+          <wsi-monConfig:schemeAndHostPort>http://192.168.1.67</wsi-monConfig:schemeAndHostPort>
+          <wsi-monConfig:maxConnections>1000</wsi-monConfig:maxConnections>
+          <wsi-monConfig:readTimeoutSeconds>15</wsi-monConfig:readTimeoutSeconds>
+        </wsi-monConfig:redirect>
+      </wsi-monConfig:manInTheMiddle>
+    </wsi-monConfig:configuration>
+  </monitor>
+
+<messageEntry xsi:type="httpMessageEntry" ID="1" conversationID="1" type="request" timestamp="2006-01-18T15:57:18.441">
+<messageContent>&lt;?xml version=&quot;1.0&quot; ?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:ns1=&quot;http://example.org/notify&quot; xmlns:ns2=&quot;http://example.org/echo&quot;&gt;&lt;soapenv:Header xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:To&gt;http://localhost:4043/axis/services/test&lt;/wsa:To&gt;&lt;wsa:MessageID&gt;uuid:c3510ba4-a8dd-43a1-9dde-81870e782c2e&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:Action&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ns1:notify&gt;test1200&lt;/ns1:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3295</senderHostAndPort>
+<receiverHostAndPort>192.168.1.67:80</receiverHostAndPort>
+<httpHeaders>POST /axis/services/test HTTP/1.1&#xd;
+Content-Length: 659&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Accept: application/soap+xml, application/xop+xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2&#xd;
+User-Agent: Java/1.5.0_02&#xd;
+Host: localhost:4043&#xd;
+Connection: keep-alive&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="2" conversationID="1" type="response" timestamp="2006-01-18T15:57:23.158">
+<messageContent>x-WSI-Test-Tool-Error: Couldn&apos;t find message content.  Full message: [[B@f0c0d3].</messageContent>
+<senderHostAndPort>192.168.1.67:80</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3295</receiverHostAndPort>
+<httpHeaders>x-WSI-Test-Tool-Error: Couldn&apos;t find headers.  Full message: [[B@f0c0d3].</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="3" conversationID="2" type="request" timestamp="2006-01-18T15:57:23.469">
+<messageContent>&lt;?xml version=&quot;1.0&quot; ?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:ns1=&quot;http://example.org/notify&quot; xmlns:ns2=&quot;http://example.org/echo&quot;&gt;&lt;soapenv:Header xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:To&gt;http://localhost:4043/axis/services/test&lt;/wsa:To&gt;&lt;wsa:MessageID&gt;uuid:80da2e9d-9cad-4642-ac12-912c349f327e&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:Action&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ns1:notify&gt;test1201&lt;/ns1:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3297</senderHostAndPort>
+<receiverHostAndPort>192.168.1.67:80</receiverHostAndPort>
+<httpHeaders>POST /axis/services/test HTTP/1.1&#xd;
+Content-Length: 659&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Accept: application/soap+xml, application/xop+xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2&#xd;
+User-Agent: Java/1.5.0_02&#xd;
+Host: localhost:4043&#xd;
+Connection: keep-alive&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="4" conversationID="2" type="response" timestamp="2006-01-18T15:57:27.995">
+<messageContent>x-WSI-Test-Tool-Error: Couldn&apos;t find message content.  Full message: [[B@8acf6e].</messageContent>
+<senderHostAndPort>192.168.1.67:80</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3297</receiverHostAndPort>
+<httpHeaders>x-WSI-Test-Tool-Error: Couldn&apos;t find headers.  Full message: [[B@8acf6e].</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="5" conversationID="3" type="request" timestamp="2006-01-18T15:57:28.025">
+<messageContent>&lt;?xml version=&quot;1.0&quot; ?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:ns1=&quot;http://example.org/notify&quot; xmlns:ns2=&quot;http://example.org/echo&quot;&gt;&lt;soapenv:Header xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:To&gt;http://localhost:4043/axis/services/test&lt;/wsa:To&gt;&lt;wsa:MessageID&gt;uuid:21a9eced-2933-4f0e-ad6b-10b93c4a6cf7&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:Action&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ns1:notify&gt;test1202&lt;/ns1:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3299</senderHostAndPort>
+<receiverHostAndPort>192.168.1.67:80</receiverHostAndPort>
+<httpHeaders>POST /axis/services/test HTTP/1.1&#xd;
+Content-Length: 659&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Accept: application/soap+xml, application/xop+xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2&#xd;
+User-Agent: Java/1.5.0_02&#xd;
+Host: localhost:4043&#xd;
+Connection: keep-alive&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="6" conversationID="3" type="response" timestamp="2006-01-18T15:57:32.552">
+<messageContent>x-WSI-Test-Tool-Error: Couldn&apos;t find message content.  Full message: [[B@73a34b].</messageContent>
+<senderHostAndPort>192.168.1.67:80</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3299</receiverHostAndPort>
+<httpHeaders>x-WSI-Test-Tool-Error: Couldn&apos;t find headers.  Full message: [[B@73a34b].</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="7" conversationID="4" type="request" timestamp="2006-01-18T15:57:32.582">
+<messageContent>&lt;?xml version=&quot;1.0&quot; ?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:ns1=&quot;http://example.org/notify&quot; xmlns:ns2=&quot;http://example.org/echo&quot;&gt;&lt;soapenv:Header xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:To&gt;http://localhost:4043/axis/services/test&lt;/wsa:To&gt;&lt;wsa:MessageID&gt;uuid:d526fede-893c-4810-9562-7723578d4998&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:FaultTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:FaultTo&gt;&lt;wsa:Action&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ns1:notify&gt;test1203&lt;/ns1:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3301</senderHostAndPort>
+<receiverHostAndPort>192.168.1.67:80</receiverHostAndPort>
+<httpHeaders>POST /axis/services/test HTTP/1.1&#xd;
+Content-Length: 754&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Accept: application/soap+xml, application/xop+xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2&#xd;
+User-Agent: Java/1.5.0_02&#xd;
+Host: localhost:4043&#xd;
+Connection: keep-alive&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="8" conversationID="4" type="response" timestamp="2006-01-18T15:57:37.118">
+<messageContent>x-WSI-Test-Tool-Error: Couldn&apos;t find message content.  Full message: [[B@1df280b].</messageContent>
+<senderHostAndPort>192.168.1.67:80</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3301</receiverHostAndPort>
+<httpHeaders>x-WSI-Test-Tool-Error: Couldn&apos;t find headers.  Full message: [[B@1df280b].</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="9" conversationID="5" type="request" timestamp="2006-01-18T15:57:37.138">
+<messageContent>&lt;?xml version=&quot;1.0&quot; ?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:ns1=&quot;http://example.org/notify&quot; xmlns:ns2=&quot;http://example.org/echo&quot;&gt;&lt;soapenv:Header xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:To&gt;http://localhost:4043/axis/services/test&lt;/wsa:To&gt;&lt;wsa:MessageID&gt;uuid:1d0b7e24-307e-46af-8b9a-1f1ea40f18e3&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:FaultTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:FaultTo&gt;&lt;wsa:Action&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ns1:notify&gt;test1204&lt;/ns1:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3303</senderHostAndPort>
+<receiverHostAndPort>192.168.1.67:80</receiverHostAndPort>
+<httpHeaders>POST /axis/services/test HTTP/1.1&#xd;
+Content-Length: 754&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Accept: application/soap+xml, application/xop+xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2&#xd;
+User-Agent: Java/1.5.0_02&#xd;
+Host: localhost:4043&#xd;
+Connection: keep-alive&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="10" conversationID="5" type="response" timestamp="2006-01-18T15:57:41.695">
+<messageContent>x-WSI-Test-Tool-Error: Couldn&apos;t find message content.  Full message: [[B@73a7ab].</messageContent>
+<senderHostAndPort>192.168.1.67:80</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3303</receiverHostAndPort>
+<httpHeaders>x-WSI-Test-Tool-Error: Couldn&apos;t find headers.  Full message: [[B@73a7ab].</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="11" conversationID="6" type="request" timestamp="2006-01-18T15:57:41.745">
+<messageContent>&lt;?xml version=&quot;1.0&quot; ?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:ns1=&quot;http://example.org/notify&quot; xmlns:ns2=&quot;http://example.org/echo&quot;&gt;&lt;soapenv:Header xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:To&gt;http://localhost:4043/axis/services/test&lt;/wsa:To&gt;&lt;wsa:MessageID&gt;uuid:55ca9df1-e431-48ab-84a7-6b3f9870fbeb&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters&gt;&lt;ck:CustomerKey xmlns:ck=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/ck:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:Action&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ns1:notify&gt;test1206&lt;/ns1:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3305</senderHostAndPort>
+<receiverHostAndPort>192.168.1.67:80</receiverHostAndPort>
+<httpHeaders>POST /axis/services/test HTTP/1.1&#xd;
+Content-Length: 800&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Accept: application/soap+xml, application/xop+xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2&#xd;
+User-Agent: Java/1.5.0_02&#xd;
+Host: localhost:4043&#xd;
+Connection: keep-alive&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="12" conversationID="6" type="response" timestamp="2006-01-18T15:57:46.322">
+<messageContent>x-WSI-Test-Tool-Error: Couldn&apos;t find message content.  Full message: [[B@5f8172].</messageContent>
+<senderHostAndPort>192.168.1.67:80</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3305</receiverHostAndPort>
+<httpHeaders>x-WSI-Test-Tool-Error: Couldn&apos;t find headers.  Full message: [[B@5f8172].</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="13" conversationID="7" type="request" timestamp="2006-01-18T15:57:46.372">
+<messageContent>&lt;?xml version=&quot;1.0&quot; ?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:ns1=&quot;http://example.org/notify&quot; xmlns:ns2=&quot;http://example.org/echo&quot;&gt;&lt;soapenv:Header xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:To&gt;http://localhost:4043/axis/services/test&lt;/wsa:To&gt;&lt;wsa:MessageID&gt;uuid:3253a413-85c7-490f-8704-107f1abd0a11&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;wsa:Metadata&gt;&lt;definitions:definitions xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:wsaw=&quot;http://www.w3.org/2005/08/addressing/wsdl&quot; xmlns:soap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:service=&quot;http://example.org/wsaTestService&quot; xmlns:s1=&quot;http://example.org/echo&quot; xmlns:s0=&quot;http://example.org/notify&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns=&quot;&quot; xmlns:definitions=&quot;http://schemas.xmlsoap.org/wsdl/&quot; targetNamespace=&quot;http://example.org/wsaTestService&quot;&gt;
+
+  &lt;definitions:types&gt;
+    &lt;xs:schema attributeFormDefault=&quot;unqualified&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://example.org/notify&quot;&gt;
+        &lt;xs:element name=&quot;notify&quot; type=&quot;xs:string&quot;&gt;&lt;/xs:element&gt;
+    &lt;/xs:schema&gt;
+
+    &lt;xs:schema attributeFormDefault=&quot;unqualified&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://example.org/echo&quot;&gt;
+        &lt;xs:element name=&quot;echoIn&quot; type=&quot;xs:string&quot;&gt;&lt;/xs:element&gt;
+        &lt;xs:element name=&quot;echoOut&quot; type=&quot;xs:string&quot;&gt;&lt;/xs:element&gt;
+    &lt;/xs:schema&gt;
+  &lt;/definitions:types&gt;
+
+  &lt;definitions:message name=&quot;wsaNotifyMessage&quot;&gt;
+    &lt;definitions:part element=&quot;s0:notify&quot; name=&quot;wsaNotifyMessagePart&quot;&gt;&lt;/definitions:part&gt;
+  &lt;/definitions:message&gt;
+
+  &lt;definitions:message name=&quot;wsaEchoInMessage&quot;&gt;
+    &lt;definitions:part element=&quot;s1:echoIn&quot; name=&quot;wsaEchoInPart&quot;&gt;&lt;/definitions:part&gt;
+  &lt;/definitions:message&gt;
+        
+  &lt;definitions:message name=&quot;wsaEchoOutMessage&quot;&gt;
+    &lt;definitions:part element=&quot;s1:echoOut&quot; name=&quot;wsaEchoOutPart&quot;&gt;&lt;/definitions:part&gt;
+  &lt;/definitions:message&gt;
+        
+  &lt;definitions:portType name=&quot;wsaTestPortType&quot;&gt;
+    &lt;definitions:operation name=&quot;notify&quot;&gt;
+      &lt;definitions:input message=&quot;service:wsaNotifyMessage&quot; wsaw:Action=&quot;http://example.org/action/notify&quot;&gt;&lt;/definitions:input&gt;
+    &lt;/definitions:operation&gt;
+
+    
+
+    &lt;definitions:operation name=&quot;echoOut&quot;&gt;
+      &lt;definitions:input message=&quot;service:wsaEchoOutMessage&quot;&gt;&lt;/definitions:input&gt;
+    &lt;/definitions:operation&gt;
+
+    &lt;definitions:operation name=&quot;echo&quot;&gt;
+      &lt;definitions:input message=&quot;service:wsaEchoInMessage&quot; wsaw:Action=&quot;http://example.org/action/echoIn&quot;&gt;&lt;/definitions:input&gt;
+      &lt;definitions:output message=&quot;service:wsaEchoOutMessage&quot; wsaw:Action=&quot;http://example.org/action/echoOut&quot;&gt;&lt;/definitions:output&gt;
+    &lt;/definitions:operation&gt;
+  &lt;/definitions:portType&gt;
+        
+  &lt;definitions:binding name=&quot;wsaTestSoap12Binding&quot; type=&quot;service:wsaTestPortType&quot;&gt;
+    &lt;soap12:binding style=&quot;document&quot; transport=&quot;http://www.w3.org/2003/05/soap/bindings/HTTP/&quot;&gt;&lt;/soap12:binding&gt;
+        &lt;definitions:operation name=&quot;notify&quot;&gt;
+          &lt;soap12:operation soapAction=&quot;&quot; style=&quot;document&quot;&gt;&lt;/soap12:operation&gt;
+          &lt;definitions:input&gt;
+              &lt;soap12:body use=&quot;literal&quot;&gt;&lt;/soap12:body&gt;
+          &lt;/definitions:input&gt;
+        &lt;/definitions:operation&gt;
+
+        
+
+        &lt;definitions:operation name=&quot;echoOut&quot;&gt;
+          &lt;soap12:operation soapAction=&quot;&quot; style=&quot;document&quot;&gt;&lt;/soap12:operation&gt;
+          &lt;definitions:input&gt;
+              &lt;soap12:body use=&quot;literal&quot;&gt;&lt;/soap12:body&gt;
+          &lt;/definitions:input&gt;
+        &lt;/definitions:operation&gt;
+
+        &lt;definitions:operation name=&quot;echo&quot;&gt;
+          &lt;soap12:operation soapAction=&quot;&quot; style=&quot;document&quot;&gt;&lt;/soap12:operation&gt;
+          &lt;definitions:input&gt;
+              &lt;soap12:body use=&quot;literal&quot;&gt;&lt;/soap12:body&gt;
+          &lt;/definitions:input&gt;
+          &lt;definitions:output&gt;
+              &lt;soap12:body use=&quot;literal&quot;&gt;&lt;/soap12:body&gt;
+          &lt;/definitions:output&gt;
+        &lt;/definitions:operation&gt;
+
+    &lt;/definitions:binding&gt;
+    
+    &lt;definitions:service name=&quot;wsaTestService&quot;&gt;
+      &lt;definitions:port binding=&quot;service:wsaTestSoap12Binding&quot; name=&quot;wsaTestPort&quot;&gt;
+          &lt;soap12:address location=&quot;http://example.org/node/B&quot;&gt;&lt;/soap12:address&gt;
+      &lt;/definitions:port&gt;
+    &lt;/definitions:service&gt;
+&lt;/definitions:definitions&gt;&lt;/wsa:Metadata&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:Action&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ns1:notify&gt;test1207&lt;/ns1:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3307</senderHostAndPort>
+<receiverHostAndPort>192.168.1.67:80</receiverHostAndPort>
+<httpHeaders>POST /axis/services/test HTTP/1.1&#xd;
+Content-Length: 4484&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Accept: application/soap+xml, application/xop+xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2&#xd;
+User-Agent: Java/1.5.0_02&#xd;
+Host: localhost:4043&#xd;
+Connection: keep-alive&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="14" conversationID="7" type="response" timestamp="2006-01-18T15:57:50.948">
+<messageContent>x-WSI-Test-Tool-Error: Couldn&apos;t find message content.  Full message: [[B@4ac00c].</messageContent>
+<senderHostAndPort>192.168.1.67:80</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3307</receiverHostAndPort>
+<httpHeaders>x-WSI-Test-Tool-Error: Couldn&apos;t find headers.  Full message: [[B@4ac00c].</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="15" conversationID="8" type="request" timestamp="2006-01-18T15:57:50.978">
+<messageContent>&lt;?xml version=&quot;1.0&quot; ?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:ns1=&quot;http://example.org/notify&quot; xmlns:ns2=&quot;http://example.org/echo&quot;&gt;&lt;soapenv:Header xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:To&gt;http://localhost:4043/axis/services/test&lt;/wsa:To&gt;&lt;wsa:MessageID&gt;uuid:e08a623c-c972-47b1-8fbd-bb99f756807c&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo&gt;&lt;customer:Metadata xmlns:customer=&quot;http://example.org/customer&quot;&gt;&lt;customer:extraStuff&gt;This should be ignored&lt;/customer:extraStuff&gt;&lt;/customer:Metadata&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:customer=&quot;http://example.org/customer&quot; customer:level=&quot;premium&quot;&gt;&lt;customer:CustomerKey&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;wsa:Metadata xmlns:customer=&quot;http://example.org/customer&quot; customer:total=&quot;1&quot;&gt;&lt;/wsa:Metadata&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:Action&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ns1:notify&gt;test1208&lt;/ns1:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3309</senderHostAndPort>
+<receiverHostAndPort>192.168.1.67:80</receiverHostAndPort>
+<httpHeaders>POST /axis/services/test HTTP/1.1&#xd;
+Content-Length: 1085&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Accept: application/soap+xml, application/xop+xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2&#xd;
+User-Agent: Java/1.5.0_02&#xd;
+Host: localhost:4043&#xd;
+Connection: keep-alive&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="16" conversationID="8" type="response" timestamp="2006-01-18T15:57:55.775">
+<messageContent>x-WSI-Test-Tool-Error: Couldn&apos;t find message content.  Full message: [[B@15ac3c9].</messageContent>
+<senderHostAndPort>192.168.1.67:80</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3309</receiverHostAndPort>
+<httpHeaders>x-WSI-Test-Tool-Error: Couldn&apos;t find headers.  Full message: [[B@15ac3c9].</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="17" conversationID="9" type="request" timestamp="2006-01-18T15:57:56.356">
+<messageContent>&lt;?xml version=&quot;1.0&quot; ?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:ns1=&quot;http://example.org/notify&quot; xmlns:ns2=&quot;http://example.org/echo&quot;&gt;&lt;soapenv:Header xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:To&gt;http://localhost:4043/axis/services/test&lt;/wsa:To&gt;&lt;wsa:MessageID&gt;uuid:6d5274c6-0432-40aa-bb76-b8d87feed127&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:Action&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ns2:echoIn&gt;test1230&lt;/ns2:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3311</senderHostAndPort>
+<receiverHostAndPort>192.168.1.67:80</receiverHostAndPort>
+<httpHeaders>POST /axis/services/test HTTP/1.1&#xd;
+Content-Length: 664&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Accept: application/soap+xml, application/xop+xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2&#xd;
+User-Agent: Java/1.5.0_02&#xd;
+Host: localhost:4043&#xd;
+Connection: keep-alive&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="18" conversationID="9" type="response" timestamp="2006-01-18T15:58:00.902">
+<messageContent>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:MessageID&gt;uuid:666d0040-887d-11da-a671-f19d11e536f4&lt;/wsa:MessageID&gt;&lt;wsa:To&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;wsa:Action&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:From xmlns=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;http://localhost:4043/axis/services/test&lt;/wsa:Address&gt;&lt;/wsa:From&gt;&lt;wsa:RelatesTo RelationshipType=&quot;wsa:Reply&quot;&gt;uuid:6d5274c6-0432-40aa-bb76-b8d87feed127&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;echoOut xmlns=&quot;http://example.org/echo&quot;&gt;test1230&lt;/echoOut&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.67:80</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3311</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Set-Cookie: 46&#xd;
+Set-Cookie2: 46&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="19" conversationID="10" type="request" timestamp="2006-01-18T15:58:01.263">
+<messageContent>&lt;?xml version=&quot;1.0&quot; ?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:ns1=&quot;http://example.org/notify&quot; xmlns:ns2=&quot;http://example.org/echo&quot;&gt;&lt;soapenv:Header xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:To&gt;http://localhost:4043/axis/services/test&lt;/wsa:To&gt;&lt;wsa:MessageID&gt;uuid:be02ba43-d532-412e-b101-19af1047e39a&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:Action&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ns2:echoIn&gt;test1231&lt;/ns2:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3313</senderHostAndPort>
+<receiverHostAndPort>192.168.1.67:80</receiverHostAndPort>
+<httpHeaders>POST /axis/services/test HTTP/1.1&#xd;
+Content-Length: 664&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Accept: application/soap+xml, application/xop+xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2&#xd;
+User-Agent: Java/1.5.0_02&#xd;
+Host: localhost:4043&#xd;
+Connection: keep-alive&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="20" conversationID="10" type="response" timestamp="2006-01-18T15:58:05.840">
+<messageContent>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:MessageID&gt;uuid:695c09e0-887d-11da-a671-f19d11e536f4&lt;/wsa:MessageID&gt;&lt;wsa:To&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;wsa:Action&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:From xmlns=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;http://localhost:4043/axis/services/test&lt;/wsa:Address&gt;&lt;/wsa:From&gt;&lt;wsa:RelatesTo RelationshipType=&quot;wsa:Reply&quot;&gt;uuid:be02ba43-d532-412e-b101-19af1047e39a&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;echoOut xmlns=&quot;http://example.org/echo&quot;&gt;test1231&lt;/echoOut&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.67:80</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3313</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Set-Cookie: 47&#xd;
+Set-Cookie2: 47&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="21" conversationID="11" type="request" timestamp="2006-01-18T15:58:06.170">
+<messageContent>&lt;?xml version=&quot;1.0&quot; ?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:ns1=&quot;http://example.org/notify&quot; xmlns:ns2=&quot;http://example.org/echo&quot;&gt;&lt;soapenv:Header xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:To&gt;http://localhost:4043/axis/services/test&lt;/wsa:To&gt;&lt;wsa:MessageID&gt;uuid:65ad2414-fbda-41e4-80cf-38c4e4b9cdb3&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters&gt;&lt;ck:CustomerKey xmlns:ck=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/ck:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:Action&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ns2:echoIn&gt;test1232&lt;/ns2:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3315</senderHostAndPort>
+<receiverHostAndPort>192.168.1.67:80</receiverHostAndPort>
+<httpHeaders>POST /axis/services/test HTTP/1.1&#xd;
+Content-Length: 800&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Accept: application/soap+xml, application/xop+xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2&#xd;
+User-Agent: Java/1.5.0_02&#xd;
+Host: localhost:4043&#xd;
+Connection: keep-alive&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="22" conversationID="11" type="response" timestamp="2006-01-18T15:58:10.717">
+<messageContent>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:MessageID&gt;uuid:6c43e790-887d-11da-a671-f19d11e536f4&lt;/wsa:MessageID&gt;&lt;wsa:To&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;wsa:Action&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:From xmlns=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;http://localhost:4043/axis/services/test&lt;/wsa:Address&gt;&lt;/wsa:From&gt;&lt;wsa:RelatesTo RelationshipType=&quot;wsa:Reply&quot;&gt;uuid:65ad2414-fbda-41e4-80cf-38c4e4b9cdb3&lt;/wsa:RelatesTo&gt;&lt;ck:CustomerKey xmlns:ck=&quot;http://example.org/customer&quot; wsa:IsReferenceParameter=&quot;true&quot;&gt;Key#123456789&lt;/ck:CustomerKey&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;echoOut xmlns=&quot;http://example.org/echo&quot;&gt;test1232&lt;/echoOut&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.67:80</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3315</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Set-Cookie: 48&#xd;
+Set-Cookie2: 48&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="23" conversationID="12" type="request" timestamp="2006-01-18T15:58:15.303">
+<messageContent>&lt;?xml version=&quot;1.0&quot; ?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:ns1=&quot;http://example.org/notify&quot; xmlns:ns2=&quot;http://example.org/echo&quot;&gt;&lt;soapenv:Header xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:To&gt;http://localhost:4043/axis/services/test&lt;/wsa:To&gt;&lt;wsa:MessageID&gt;uuid:b327da00-f70d-4737-8bcf-69efc6801a05&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:FaultTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters&gt;&lt;ck:CustomerKey xmlns:ck=&quot;http://example.org/customer&quot;&gt;Fault#123456789&lt;/ck:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;/wsa:FaultTo&gt;&lt;wsa:Action&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ns2:echoIn&gt;fault-test1233&lt;/ns2:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3317</senderHostAndPort>
+<receiverHostAndPort>192.168.1.67:80</receiverHostAndPort>
+<httpHeaders>POST /axis/services/test HTTP/1.1&#xd;
+Content-Length: 908&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Accept: application/soap+xml, application/xop+xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2&#xd;
+User-Agent: Java/1.5.0_02&#xd;
+Host: localhost:4043&#xd;
+Connection: keep-alive&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="24" conversationID="12" type="response" timestamp="2006-01-18T15:58:19.880">
+<messageContent>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:MessageID&gt;uuid:71b8ffd0-887d-11da-a671-f19d11e536f4&lt;/wsa:MessageID&gt;&lt;wsa:Action&gt;http://www.w3.org/2005/08/addressing/fault&lt;/wsa:Action&gt;&lt;wsa:From xmlns=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;http://localhost:4043/axis/services/test&lt;/wsa:Address&gt;&lt;/wsa:From&gt;&lt;wsa:RelatesTo RelationshipType=&quot;wsa:Reply&quot;&gt;uuid:b327da00-f70d-4737-8bcf-69efc6801a05&lt;/wsa:RelatesTo&gt;&lt;ck:CustomerKey xmlns:ck=&quot;http://example.org/customer&quot; wsa:IsReferenceParameter=&quot;true&quot;&gt;Fault#123456789&lt;/ck:CustomerKey&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;soapenv:Code xmlns:ns1=&quot;http://xml.apache.org/axis/&quot;&gt;&lt;soapenv:Value&gt;ns1:Client.EmptyEchoString&lt;/soapenv:Value&gt;&lt;/soapenv:Code&gt;&lt;soapenv:Reason&gt;&lt;soapenv:Text xml:lang=&quot;en&quot;&gt;Received empty string&lt;/soapenv:Text&gt;&lt;/soapenv:Reason&gt;&lt;soapenv:Detail&gt;&lt;ns2:stackTrace xmlns:ns2=&quot;http://xml.apache.org/axis/&quot;&gt;Received empty string&#xd;
+	at interop.Service.echo(Service.java:18)&#xd;
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)&#xd;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)&#xd;
+	at java.lang.reflect.Method.invoke(Method.java:324)&#xd;
+	at org.apache.axis.providers.java.RPCProvider.invokeMethod(RPCProvider.java:410)&#xd;
+	at org.apache.axis.providers.java.RPCProvider.processMessage(RPCProvider.java:186)&#xd;
+	at org.apache.axis.providers.java.JavaProvider.invoke(JavaProvider.java:328)&#xd;
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)&#xd;
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)&#xd;
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)&#xd;
+	at org.apache.axis.handlers.soap.SOAPService.invoke(SOAPService.java:454)&#xd;
+	at org.apache.axis.server.AxisServer.invoke(AxisServer.java:281)&#xd;
+	at org.apache.axis.transport.http.SimpleAxisWorker.execute(SimpleAxisWorker.java:437)&#xd;
+	at org.apache.axis.transport.http.SimpleAxisWorker.run(SimpleAxisWorker.java:156)&#xd;
+	at org.apache.axis.transport.http.SimpleAxisServer.run(SimpleAxisServer.java:245)&#xd;
+	at org.apache.axis.transport.http.SimpleAxisServer.start(SimpleAxisServer.java:296)&#xd;
+	at org.apache.axis.transport.http.SimpleAxisServer.start(SimpleAxisServer.java:304)&#xd;
+	at org.apache.axis.transport.http.SimpleAxisServer.main(SimpleAxisServer.java:385)&#xd;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xd;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)&#xd;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)&#xd;
+	at java.lang.reflect.Method.invoke(Method.java:324)&#xd;
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:86)&#xd;
+&lt;/ns2:stackTrace&gt;&lt;ns3:hostname xmlns:ns3=&quot;http://xml.apache.org/axis/&quot;&gt;Lappy&lt;/ns3:hostname&gt;&lt;/soapenv:Detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.67:80</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3317</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 500 Internal server error&#xd;
+Set-Cookie: 49&#xd;
+Set-Cookie2: 49&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="25" conversationID="13" type="request" timestamp="2006-01-18T15:58:20.050">
+<messageContent>&lt;?xml version=&quot;1.0&quot; ?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:ns1=&quot;http://example.org/notify&quot; xmlns:ns2=&quot;http://example.org/echo&quot;&gt;&lt;soapenv:Header xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:To&gt;http://localhost:4043/axis/services/test&lt;/wsa:To&gt;&lt;wsa:MessageID&gt;uuid:5d1d9927-53fd-49e9-bfd3-4926d876d334&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters&gt;&lt;ck:CustomerKey xmlns:ck=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/ck:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:Action&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;ns2:echoIn&gt;fault-test1234&lt;/ns2:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3319</senderHostAndPort>
+<receiverHostAndPort>192.168.1.67:80</receiverHostAndPort>
+<httpHeaders>POST /axis/services/test HTTP/1.1&#xd;
+Content-Length: 806&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Accept: application/soap+xml, application/xop+xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2&#xd;
+User-Agent: Java/1.5.0_02&#xd;
+Host: localhost:4043&#xd;
+Connection: keep-alive&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="26" conversationID="13" type="response" timestamp="2006-01-18T15:58:24.617">
+<messageContent>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:MessageID&gt;uuid:748b59b0-887d-11da-a671-f19d11e536f4&lt;/wsa:MessageID&gt;&lt;wsa:Action&gt;http://www.w3.org/2005/08/addressing/fault&lt;/wsa:Action&gt;&lt;wsa:From xmlns=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;http://localhost:4043/axis/services/test&lt;/wsa:Address&gt;&lt;/wsa:From&gt;&lt;wsa:RelatesTo RelationshipType=&quot;wsa:Reply&quot;&gt;uuid:5d1d9927-53fd-49e9-bfd3-4926d876d334&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;soapenv:Code xmlns:ns1=&quot;http://xml.apache.org/axis/&quot;&gt;&lt;soapenv:Value&gt;ns1:Client.EmptyEchoString&lt;/soapenv:Value&gt;&lt;/soapenv:Code&gt;&lt;soapenv:Reason&gt;&lt;soapenv:Text xml:lang=&quot;en&quot;&gt;Received empty string&lt;/soapenv:Text&gt;&lt;/soapenv:Reason&gt;&lt;soapenv:Detail&gt;&lt;ns2:stackTrace xmlns:ns2=&quot;http://xml.apache.org/axis/&quot;&gt;Received empty string&#xd;
+	at interop.Service.echo(Service.java:18)&#xd;
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)&#xd;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)&#xd;
+	at java.lang.reflect.Method.invoke(Method.java:324)&#xd;
+	at org.apache.axis.providers.java.RPCProvider.invokeMethod(RPCProvider.java:410)&#xd;
+	at org.apache.axis.providers.java.RPCProvider.processMessage(RPCProvider.java:186)&#xd;
+	at org.apache.axis.providers.java.JavaProvider.invoke(JavaProvider.java:328)&#xd;
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)&#xd;
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)&#xd;
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)&#xd;
+	at org.apache.axis.handlers.soap.SOAPService.invoke(SOAPService.java:454)&#xd;
+	at org.apache.axis.server.AxisServer.invoke(AxisServer.java:281)&#xd;
+	at org.apache.axis.transport.http.SimpleAxisWorker.execute(SimpleAxisWorker.java:437)&#xd;
+	at org.apache.axis.transport.http.SimpleAxisWorker.run(SimpleAxisWorker.java:156)&#xd;
+	at org.apache.axis.transport.http.SimpleAxisServer.run(SimpleAxisServer.java:245)&#xd;
+	at org.apache.axis.transport.http.SimpleAxisServer.start(SimpleAxisServer.java:296)&#xd;
+	at org.apache.axis.transport.http.SimpleAxisServer.start(SimpleAxisServer.java:304)&#xd;
+	at org.apache.axis.transport.http.SimpleAxisServer.main(SimpleAxisServer.java:385)&#xd;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xd;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)&#xd;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)&#xd;
+	at java.lang.reflect.Method.invoke(Method.java:324)&#xd;
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:86)&#xd;
+&lt;/ns2:stackTrace&gt;&lt;ns3:hostname xmlns:ns3=&quot;http://xml.apache.org/axis/&quot;&gt;Lappy&lt;/ns3:hostname&gt;&lt;/soapenv:Detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.67:80</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3319</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 500 Internal server error&#xd;
+Set-Cookie: 50&#xd;
+Set-Cookie2: 50&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+</log>

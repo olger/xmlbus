@@ -1,0 +1,30 @@
+    <xmlbusd>
+        <outboundtransports>
+            <!-- outbound transports can be available a number of times -->
+            <outboundtransport>
+                <implementation>libtcpworker-transport.so</implementation>
+                <configuration><empty/></configuration>
+            </outboundtransport>
+			<outboundtransport>
+				<implementation>libnotexisting-transport.so</implementation>
+				<configuration></configuration>
+			</outboundtransport>
+        </outboundtransports>
+        <services>
+            <service>
+                <implementation>myserviceimpl.so</implementation>
+                <inboundtransport> <!-- there is only one per service -->
+                    <implementation>libtcpworker-transport.so</implementation>
+                    <configuration><port>6789</port></configuration>
+                </inboundtransport>
+            </service>
+            <service>
+                <implementation>mysecondserviceimpl.so</implementation>
+                <inboundtransport> <!-- there is only one per service -->
+                    <implementation>libtcpworker-transport.so</implementation>
+					<!-- mismatch in tag over here creates parsing failure -->
+                    <configuration><port>6790</port></confuration>
+                </inboundtransport>
+            </service>
+        </services>
+    </xmlbusd>

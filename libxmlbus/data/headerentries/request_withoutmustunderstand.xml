@@ -1,0 +1,15 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Header>
+    <MyFirstHeader>
+        firstheadercontent
+    </MyFirstHeader>
+	<MySecondHeader mustUnderstand="0"/>
+	<MyThirdHeader SOAP-ENV:mustUnderstand="0"/>
+</SOAP-ENV:Header>
+<SOAP-ENV:Body>
+<m:getQuote xmlns:m="urn:stockquote">
+<symbol>IBM</symbol>
+</m:getQuote>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

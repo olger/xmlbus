@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- $Id: reply1.xml,v 1.6 2006/01/19 06:05:30 hugo Exp $ -->
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID>urn:uuid:D666E4D6-2DB6-45DA-BB45-C7406B2AFE9E</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:B5756A05-3B9B-43B8-B2EA-AB58DDF25303</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">Echo This Text</m:echoOut>
+  </env:Body>
+</env:Envelope>

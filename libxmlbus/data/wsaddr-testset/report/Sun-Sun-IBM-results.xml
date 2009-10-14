@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results xmlns:sch="http://www.ascc.net/xml/schematron" xmlns:wsdl20="http://www.w3.org/2006/01/wsdl" xmlns:customer="http://example.org/customer" xmlns:wsdl11="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2005/03/addressing/wsdl" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:log="http://www.w3.org/2002/ws/addressing/logs/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:echo="http://example.org/echo" xmlns:notify="http://example.org/notify" xmlns:alertcontrol="http://example.org/alertcontrol">
+   <assertion xpath="soap12:Envelope/soap12:Header/alertcontrol:alertcontrol/@soap12:mustUnderstand" against="test1238" message="1" result="failed"/>
+   <assertion xpath="soap12:Envelope/soap12:Header/alertcontrol:alertcontrol/@soap12:mustUnderstand and soap12:Envelope/soap12:Header/alertcontrol:alertcontrol/@soap12:mustUnderstand cast as xs:boolean = true()" against="test1238" message="1" result="failed"/>
+   <assertion xpath="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.) = xs:QName('soap12:MustUnderstand'))" against="test1238" message="2" result="failed"/>
+   <assertion xpath="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('wsa:InvalidCardinality'))" against="test1247" message="2" result="failed"/>
+   <assertion xpath="all required messages present" against="test1150" message="3" result="failed"/>
+   <assertion xpath="all required messages present" against="test1250" message="3" result="failed"/>
+   <assertion xpath="all required messages present" against="test1251" message="3" result="failed"/>
+</results>

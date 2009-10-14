@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- 
+    Web Services Addressing Logs
+    $Header: /w3ccvs/WWW/2002/ws/addr/testsuite/endpoints/endpoints.xml,v 1.8 2006/03/09 16:52:04 pdowney Exp $
+-->
+
+<endpoints xmlns="http://www.w3.org/2002/ws/addr/testsuite/endpoints/">
+
+  <endpoint xml:id="Axis" href="http://webservices.sonicsw.com:8080/interop/services/wsaTest">
+    <title>Apache Axis Web Services Addressing</title>
+  </endpoint>
+
+  <endpoint xml:id="IBM" href="http://cwctest.dynalias.org:9080/wsaiop/">
+    <title>IBM WSAddressing Implementation</title>
+  </endpoint>
+
+  <endpoint xml:id="JBoss" href="http://213.162.124.157:8080/interop">
+    <title>JBoss Web Services Addressing</title>
+  </endpoint>
+  <endpoint xml:id="WCF" href="http://131.107.72.15/WSAddressingCR_Service_WCF/">
+    <title>Microsoft Windows Communication Foundation 1.0 (WCF)</title>
+  </endpoint>
+
+  <endpoint xml:id="Sun" href="http://soapinterop.java.sun.com:8080/index.html">
+    <title>Sun Java API for XML Web Services Addressing</title>
+  </endpoint>
+
+  <endpoint xml:id="WSO2" href="http://www-lk.wso2.com:5049/axis2/services/wsaTestService">
+    <title>WSO2 Web Services Addressing</title>
+  </endpoint>
+
+</endpoints>

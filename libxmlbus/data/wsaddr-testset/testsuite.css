@@ -1,0 +1,26 @@
+
+div.assertion { border: double #555; padding: 0.5em;margin-bottom: 0.2em; }
+div.must {border: solid black}
+div.informative { border: double silver }
+
+.may {}
+.should {}
+.informative {}
+.deprecated {}
+
+blockquote {background-color: #eee}
+
+div.message-exchange { border: double #555; padding: 0.5em; margin-bottom: 0.2em; }
+.soap11 { background-color: #eef }
+.soap12 { background-color: #efe }
+
+div.scenario { border: double #555; padding: 0.5em;margin-bottom: 0.2em; }
+div.MessagePassing { background-color: #eef }
+
+.cr-REQUIRED { background-color: #eef }
+.test-description { padding-left: 20px; font-style: italic }
+.message-exchange { padding-left: 20px; }
+
+.oper { padding-left: 8pt; padding-right: 8pt; font-style: italic }
+
+/* */

@@ -1,0 +1,15 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+soap:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<soap:Header>
+	<FirstHeader>
+		nothing special here
+	</FirstHeader>
+	<SecondHeader soap:mustUnderstand="1">
+	<!-- hello tag is not closed, should return an error -->
+		<hello>
+	</SecondHeader>
+</soap:Header>
+<soap:Body>
+	<echo>Hello World</echo>
+</soap:Body>
+</soap:Envelope>

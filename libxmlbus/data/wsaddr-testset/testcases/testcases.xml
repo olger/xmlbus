@@ -1,0 +1,1260 @@
+<?xml version="1.0"?>
+<!-- 
+    Web Services Addressing Test Cases
+    $Date: 2006/03/07 04:01:14 $ 
+-->
+<!-- 
+
+  - Add XPaths for inputs and output processing
+  - CR status: REQUIRED, OPTIONAL, INFORMATIONAL
+  - CR documents covered: CORE, SOAP, WSDL
+  - generic tagging of tests
+
+-->
+
+<testcases xmlns="http://www.w3.org/2002/ws/addr/testsuite/testcases/">
+
+  <ns prefix="wsa" uri="http://www.w3.org/2005/08/addressing"/>
+  <ns prefix="wsaw" uri="http://www.w3.org/2005/03/addressing/wsdl"/>
+  <ns prefix="soap11" uri="http://schemas.xmlsoap.org/soap/envelope/"/>
+  <ns prefix="soap12" uri="http://www.w3.org/2003/05/soap-envelope"/>
+  <ns prefix="wsdl11" uri="http://schemas.xmlsoap.org/wsdl/"/>
+  <ns prefix="wsdl20" uri="http://www.w3.org/2006/01/wsdl"/>
+  <ns prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
+  <ns prefix="customer" uri="http://example.org/customer"/>
+  <ns prefix="notify" uri="http://example.org/notify"/>
+  <ns prefix="echo" uri="http://example.org/echo"/>
+  <ns prefix="alertcontrol" uri="http://example.org/alertcontrol"/>
+  <ns prefix="log" uri="http://www.w3.org/2002/ws/addressing/logs/"/>
+
+  <testcase xml:id="test1100"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 one-way message</title>
+    <description><![CDATA[One-way message containing an Action header. Everything else is defaulted.]]></description>
+    <features>
+	<feature>core01</feature>
+	<feature>soap05</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Only" addr-binding="soap11">
+	<message from="A" to="B" document="notify/soap11/message0.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	</message>
+    </message-exchange>
+  </testcase>
+
+
+  <testcase xml:id="test1200"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 one-way message</title>
+    <description><![CDATA[One-way message containing an Action header. Everything else is defaulted.]]></description>
+    <features>
+	<feature>core01</feature>
+	<feature>soap01</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Only" addr-binding="soap12">
+	<message from="A" to="B" document="notify/soap12/message0.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1101"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 one-way defaulted with a MessageID value</title>
+    <description><![CDATA[One-way message containing a MessageID. ReplyTo and FaultTo are defaulted.]]></description>
+    <features>
+	<feature>core02</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Only" addr-binding="soap11">
+	<message from="A" to="B" document="notify/soap11/message1.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:MessageID"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1201"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 one-way defaulted with a MessageID value</title>
+    <description><![CDATA[One-way message containing a MessageID. ReplyTo and FaultTo are defaulted.]]></description>
+    <features>
+	<feature>core02</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Only" addr-binding="soap12">
+	<message from="A" to="B" document="notify/soap12/message1.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:MessageID"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1102"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 one-way message with a ReplyTo address of none</title>
+    <description><![CDATA[One-way message containing a ReplyTo address value of none.]]></description>
+    <features>
+	<feature>core02</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Only" addr-binding="soap11">
+	<message from="A" to="B" document="notify/soap11/message2.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1202"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 one-way message with a ReplyTo address of none</title>
+    <description><![CDATA[One-way message containing a ReplyTo address value of none.]]></description>
+    <features>
+	<feature>core02</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Only" addr-binding="soap12">
+	<message from="A" to="B" document="notify/soap12/message2.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1103"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 one-way message with a FaultTo address of none</title>
+    <description><![CDATA[One-way message containing a FaultTo address value of none.]]></description>
+    <features>
+	<feature>core02</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Only" addr-binding="soap11">
+	<message from="A" to="B" document="notify/soap11/message3.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:FaultTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1203"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 one-way message with a FaultTo address of none</title>
+    <description><![CDATA[One-way message containing a FaultTo address value of none.]]></description>
+    <features>
+	<feature>core02</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Only" addr-binding="soap12">
+	<message from="A" to="B" document="notify/soap12/message3.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1104"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 one-way message with a ReplyTo and FaultTo address of none</title>
+    <description><![CDATA[One-way message containing none ReplyTo and FaultTo address values.]]></description>
+    <features>
+	<feature>core01</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Only" addr-binding="soap11">
+	<message from="A" to="B" document="notify/soap11/message4.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:FaultTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1204"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 one-way message with a ReplyTo and FaultTo address of none</title>
+    <description><![CDATA[One-way message containing none ReplyTo and FaultTo address values.]]></description>
+    <features>
+	<feature>core01</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Only" addr-binding="soap12">
+	<message from="A" to="B" document="notify/soap12/message4.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1106"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 one-way message with ReplyTo containing a Reference Parameter</title>
+    <description><![CDATA[One-way message containing none ReplyTo address with Reference Parameter.]]></description>
+    <features>
+	<feature>core02</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Only" addr-binding="soap11">
+	<message from="A" to="B" document="notify/soap11/message7.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey = 'Key#123456789'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1206"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 one-way message with ReplyTo containing a Reference Parameter</title>
+    <description><![CDATA[One-way message containing none ReplyTo address with Reference Parameter.]]></description>
+    <features>
+	<feature>core02</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Only" addr-binding="soap12">
+	<message from="A" to="B" document="notify/soap12/message7.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey = 'Key#123456789'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1107"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 one-way message with ReplyTo containing WSDL Metadata </title>
+    <description><![CDATA[One-way message containing none ReplyTo address with a WSDL 1.1 and WSDL 2.0 documents appearing in the Metadata.]]></description>
+    <features>
+	<feature>core02</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Only" addr-binding="soap11">
+	<message from="A" to="B" document="notify/soap11/message8.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Metadata/wsdl11:definitions"/>
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Metadata/wsdl20:description"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1207"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 one-way message with ReplyTo containing WSDL Metadata </title>
+    <description><![CDATA[One-way message containing none ReplyTo address with a WSDL 1.1 and WSDL 2.0 documents appearing in the Metadata.]]></description>
+    <features>
+	<feature>core02</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Only" addr-binding="soap12">
+	<message from="A" to="B" document="notify/soap12/message8.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Metadata/wsdl11:definitions"/>
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Metadata/wsdl20:description"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1108"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 one-way message with ReplyTo containing EPR extensions</title>
+    <description><![CDATA[One-way message containing a ReplyTo address with an element extension and an attribute extension of the ReferenceParameters and Metadata elements.]]></description>
+    <features>
+	<feature>core03</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Only" addr-binding="soap11">
+	<message from="A" to="B" document="notify/soap11/message9.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:ReferenceParameters/@customer:level = 'premium'"/>
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey = 'Key#123456789'"/>
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Metadata/@customer:total = '1'"/>
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/customer:Metadata"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1208"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 one-way message with ReplyTo containing EPR extensions</title>
+    <description><![CDATA[One-way message containing a ReplyTo address with an element extension and an attribute extension of the ReferenceParameters and Metadata elements.]]></description>
+    <features>
+	<feature>core03</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Only" addr-binding="soap12">
+	<message from="A" to="B" document="notify/soap12/message9.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/notify'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:ReferenceParameters/@customer:level = 'premium'"/>
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey = 'Key#123456789'"/>
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Metadata/@customer:total = '1'"/>
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/customer:Metadata"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+
+  <testcase xml:id="test1130"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 two-way message.</title>
+    <description><![CDATA[Two-way message exchange containing an Action. All other fields are defaulted. The presence of a MessageID in the first message and of the corresponding RelatesTo in the second message is tested.]]></description>
+    <features>
+	<feature>core05</feature>
+	<feature>core06</feature>
+	<feature>core09</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/message1.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap11/reply1.xml" name="reply">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/echoOut'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+	    <assert test="not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+            <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+            <assert test= "not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1230"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message.</title>
+    <description><![CDATA[Two-way message exchange containing an Action. All other fields are defaulted. The presence of a MessageID in the first message and of the corresponding RelatesTo in the second message is tested.]]></description>
+    <features>
+	<feature>core05</feature>
+	<feature>core06</feature>
+	<feature>core09</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/message1.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap12/reply1.xml" name="reply">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoOut'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+	    <assert test="not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1131"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 two-way message with ReplyTo address of anonymous.</title>
+    <description><![CDATA[Two-way message exchange containing an Action, MessageID and a ReplyTo of anonymous. All other fields are defaulted.]]></description>
+    <features>
+	<feature>core04</feature>
+	<feature>core05</feature>
+	<feature>soap04</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/message2.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+		<assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap11/reply1-1.xml" name="reply">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/echoOut'"/> 
+            <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+            <assert test= "not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1231"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with ReplyTo address of anonymous.</title>
+    <description><![CDATA[Two-way message exchange containing an Action, MessageID and a ReplyTo of anonymous. All other fields are defaulted.]]></description>
+    <features>
+	<feature>core04</feature>
+	<feature>core05</feature>
+	<feature>soap02</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/message2.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+		<assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'"/> 	    
+	</message>
+	<message from="B" to="A" document="echo/soap12/reply1-1.xml" name="reply">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoOut'"/> 
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1132"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 two-way message with ReplyTo address containing Reference Parameters.</title>
+    <description><![CDATA[Two-way message exchange containing an Action and a ReplyTo with the address set to anonymous. The ReplyTo contains at least one Reference Parameter value. The reply message is returned on the HTTP response with the Reference Parameter value as a first class SOAP header.]]></description>
+    <features>
+	<feature>core09</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/message7.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey = 'Key#123456789'"/>
+	</message>
+	<message from="B" to="A" document="echo/soap11/reply2.xml" name="reply">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/echoOut'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/customer:CustomerKey = 'Key#123456789'"/>
+	    <assert test="soap11:Envelope/soap11:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+			  and soap11:Envelope/soap11:Header/customer:CustomerKey/@wsa:IsReferenceParameter cast as xs:boolean = true()"/>
+            <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+            <assert test= "not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1232"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with ReplyTo address containing Reference Parameters.</title>
+    <description><![CDATA[Two-way message exchange containing an Action and a ReplyTo with the address set to anonymous. The ReplyTo contains at least one Reference Parameter value. The reply message is returned on the HTTP response with the Reference Parameter value as a first class SOAP header.]]></description>
+    <features>
+	<feature>core09</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/message7.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey = 'Key#123456789'"/>
+	</message>
+	<message from="B" to="A" document="echo/soap12/reply2.xml" name="reply">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoOut'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/customer:CustomerKey = 'Key#123456789'"/>
+	    <assert test="soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+			  and soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter cast as xs:boolean = true()"/>
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1133"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 two-way message with fault. ReplyTo and FaultTo addresses containing Reference Parameters.</title>
+    <description><![CDATA[Two-way message exchange containing an Action. The ReplyTo and FaultTo addresses are both anonymous. The ReplyTo and FaultTo contain at least one Reference Parameter value which are different. A fault message is returned on the HTTP response with the FaultTo Reference Parameter value as a first class SOAP header.]]></description>
+    <features>
+	<feature>core10</feature>
+	<feature>soap06</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out-Fault" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/message9.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey = 'Key#123456789'"/>
+
+	    <assert test="soap11:Envelope/soap11:Header/wsa:FaultTo/wsa:ReferenceParameters/customer:CustomerKey = 'Fault#123456789'"/>
+	    <assert test="soap11:Envelope/soap11:Header/wsa:FaultTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap11/fault1.xml" name="fault">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault' or soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/fault'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/customer:CustomerKey = 'Fault#123456789'"/>
+	    <assert test="soap11:Envelope/soap11:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+	                  and soap11:Envelope/soap11:Header/customer:CustomerKey/@wsa:IsReferenceParameter cast as xs:boolean = true()"/>
+	    <assert test="soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('echo:EmptyEchoString')) or soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('soap11:Sender'))"/> 
+            <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+            <assert test= "not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1233"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with fault. ReplyTo and FaultTo addresses containing Reference Parameters.</title>
+    <description><![CDATA[Two-way message exchange containing an Action. The ReplyTo and FaultTo addresses are both anonymous. The ReplyTo and FaultTo contain at least one Reference Parameter value which are different. A fault message is returned on the HTTP response with the FaultTo Reference Parameter value as a first class SOAP header.]]></description>
+    <features>
+	<feature>core10</feature>
+	<feature>soap03</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Fault" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/message9.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey = 'Key#123456789'"/>
+
+	    <assert test="soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:ReferenceParameters/customer:CustomerKey = 'Fault#123456789'"/>
+	    <assert test="soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap12/fault1.xml" name="fault">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault' or soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/fault'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/customer:CustomerKey = 'Fault#123456789'"/>
+	    <assert test="soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+			  and soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter cast as xs:boolean = true()"/>
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('echo:EmptyEchoString'))"/>
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1134"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 two-way message with fault. FaultTo is defaulted, ReplyTo address contains Reference Parameters.</title>
+    <description><![CDATA[Two-way message exchange containing an Action and a ReplyTo address, but no FaultTo EPR. The ReplyTo address is anonymous. The ReplyTo contains at least one Reference Parameter value. A fault message is returned on the HTTP response with the ReplyTo Reference Parameter value as a first class SOAP header.]]></description>
+    <features>
+	<feature>core10</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out-Fault" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/message8.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="not(soap11:Envelope/soap11:Header/wsa:ReplyTo) or soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey = 'Key#123456789'"/>
+	</message>
+	<message from="B" to="A" document="echo/soap11/fault2.xml" name="fault">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault' or soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/fault'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/customer:CustomerKey = 'Key#123456789'"/>
+	    <assert test="soap11:Envelope/soap11:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+			  and soap11:Envelope/soap11:Header/customer:CustomerKey/@wsa:IsReferenceParameter cast as xs:boolean = true()"/>
+	    <assert test="soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('echo:EmptyEchoString')) or soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('soap11:Sender'))"/> 
+            <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+            <assert test= "not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1234"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with fault. FaultTo is defaulted, ReplyTo address contains Reference Parameters.</title>
+    <description><![CDATA[Two-way message exchange containing an Action and a ReplyTo address, but no FaultTo EPR. The ReplyTo address is anonymous. The ReplyTo contains at least one Reference Parameter value. A fault message is returned on the HTTP response with the ReplyTo Reference Parameter value as a first class SOAP header.]]></description>
+    <features>
+	<feature>core10</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Fault" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/message8.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="not(soap12:Envelope/soap12:Header/wsa:ReplyTo) or soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey = 'Key#123456789'"/>
+	</message>
+	<message from="B" to="A" document="echo/soap12/fault2.xml" name="fault">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault' or soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/fault'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/customer:CustomerKey = 'Key#123456789'"/>
+	    <assert test="soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+			  and soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter cast as xs:boolean = true()"/>
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('echo:EmptyEchoString'))"/>
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1235"
+    origin="mailto:hugo@w3.org"
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with fault. FaultTo is anonymous, ReplyTo is non-anonymous.</title>
+    <description><![CDATA[Two-way message exchange containing an Action, a ReplyTo EPR, and a FaultTo EPR. The ReplyTo address is not anonymous. The FaultTo address is anonymous. The FaultTo contains at least one Reference Parameter value. A fault message is returned on the HTTP response.]]></description>
+    <features>
+	<feature>core10</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Fault" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/test1235request.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+            <assert test="not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = '')"/> 
+	    <assert test="not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous')"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:ReferenceParameters/customer:CustomerKey = 'Fault#123456789'"/>
+	</message>
+	<message from="B" to="A" document="echo/soap12/fault1-1.xml" name="fault">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/customer:CustomerKey = 'Fault#123456789'"/>
+	    <assert test="soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+			  and soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter cast as xs:boolean = true()"/>
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('echo:EmptyEchoString'))"/>
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1236"
+    origin="mailto:hugo@w3.org"
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with a ReplyTo address of none.</title>
+    <description><![CDATA[Two-way message exchange containing an ReplyTo EPR. The Reply-To EPR is has a value of http://www.w3.org/2005/08/addressing/none. No message is sent back.]]></description>
+    <features>
+	<feature>core01</feature>
+	<feature>core09</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out" addr-binding="soap12">
+      <message from="A" to="B" document="echo/soap12/test1236request.xml" name="message">
+	<assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	<assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	<assert test="not(../following-sibling::log:message[@testcase=current()/../@testcase and @message!='1']) or count(../following-sibling::log:message[@testcase=current()/../@testcase and @message!='1']/log:content/*) = 0"/>
+      </message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1237"
+    origin="mailto:hugo@w3.org"
+    cr="INFORMATIONAL">
+    <title>SOAP 1.2 two-way message with a ReplyTo address of none and a role of '/next'.</title>
+    <description><![CDATA[Two-way message exchange containing an ReplyTo EPR. The Reply-To EPR is has a value of "http://www.w3.org/2005/08/addressing/none" and a role of "http://www.w3.org/2003/05/soap-envelope/role/next". No message is sent back.]]></description>
+    <features>
+	<feature>core01</feature>
+	<feature>core09</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out" addr-binding="soap12">
+      <message from="A" to="B" document="echo/soap12/test1236-1request.xml" name="message">
+	<assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	<assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	<assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/@soap12:role = 'http://www.w3.org/2003/05/soap-envelope/role/next'"/>
+	<assert test="not(../following-sibling::log:message[@testcase=current()/../@testcase and @message!='1']) or count(../following-sibling::log:message[@testcase=current()/../@testcase and @message!='1']/log:content/*) = 0"/>
+      </message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1238"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Aug/0000.html"
+    cr="INFORMATIONAL">
+    <title>SOAP 1.2 two-way message triggers mustUnderstand fault</title>
+    <description><![CDATA[A SOAP header marked with @mustUndertand="1" and a FaultTo address of none. The header isn't understood and a mustUnderstand fault is generated by the underlying SOAP processing model and sent back to the node A.]]></description>
+    <features>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Only-Fault" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/test1205-1request.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/alertcontrol:alertcontrol/@soap12:mustUnderstand"/> 
+	    <assert test="soap12:Envelope/soap12:Header/alertcontrol:alertcontrol/@soap12:mustUnderstand 
+			  and soap12:Envelope/soap12:Header/alertcontrol:alertcontrol/@soap12:mustUnderstand cast as xs:boolean = true()"/> 
+	</message>
+	<message from="B" to="A" document="notify/soap12/fault5.xml" name="fault">
+	    <assert test="not(soap12:Envelope/soap12:Header/soap12:NotUnderstood) or soap12:Envelope/soap12:Header/soap12:NotUnderstood/@qname/(resolve-QName(.,parent::node()) = xs:QName('alertcontrol:alertcontrol'))"/>
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.) = xs:QName('soap12:MustUnderstand'))"/> 
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1140"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="REQUIRED">
+    <title>SOAP 1.1 two-way message with a duplicate To header.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate To header.]]></description>
+    <features>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out-Fault" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/duplicateToRequest.xml" name="message">
+	    <assert test="count(soap11:Envelope/soap11:Header/wsa:To) = 2"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap11/duplicateToFault.xml" name="fault">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('wsa:InvalidAddressingHeader'))
+	                               or soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('wsa:InvalidCardinality'))"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeader/wsa:To = 'http://www.w3.org/2005/08/addressing/anonymous'
+                          or soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:To'))"/> 
+            <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+            <assert test= "not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1141"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="REQUIRED">
+    <title>SOAP 1.1 two-way message with a duplicate Reply-To header.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate Reply-To header.]]></description>
+    <features>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out-Fault" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/duplicateReplyToRequest.xml" name="message">
+	    <assert test="count(soap11:Envelope/soap11:Header/wsa:ReplyTo) = 2"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap11/duplicateReplyToFault.xml" name="fault">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('wsa:InvalidAddressingHeader'))
+	                               or soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('wsa:InvalidCardinality'))"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeader/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'
+			  or soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:ReplyTo'))"/> 
+            <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+            <assert test= "not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1142"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="REQUIRED">
+    <title>SOAP 1.1 two-way message with a duplicate Fault-To header.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate Fault-To header.]]></description>
+    <features>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out-Fault" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/duplicateFaultToRequest.xml" name="message">
+	    <assert test="count(soap11:Envelope/soap11:Header/wsa:FaultTo) = 2"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap11/duplicateFaultToFault.xml" name="fault">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('wsa:InvalidAddressingHeader'))
+	                               or soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('wsa:InvalidCardinality'))"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeader/wsa:FaultTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'
+			  or soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:FaultTo'))"/> 
+            <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+            <assert test= "not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1143"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="REQUIRED">
+    <title>SOAP 1.1 two-way message with a duplicate action header.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate action header.]]></description>
+    <features>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out-Fault" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/duplicateActionRequest.xml" name="message">
+	    <assert test="count(soap11:Envelope/soap11:Header/wsa:Action) = 2"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap11/duplicateActionFault.xml" name="fault">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('wsa:InvalidAddressingHeader'))
+	                               or soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('wsa:InvalidCardinality'))"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeader/wsa:Action = 'http://message.id/test'
+			  or soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:Action'))"/> 
+            <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+            <assert test= "not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1144"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="INFORMATIONAL">
+    <title>SOAP 1.1 two-way message with a duplicate message ID header.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate message ID header. The RelatesTo is in essence meaningless, hence this test being informational.]]></description>
+    <features>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out-Fault" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/duplicateMessageIDRequest.xml" name="message">
+	    <assert test="count(soap11:Envelope/soap11:Header/wsa:MessageID) = 2"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap11/duplicateMessageIDFault.xml" name="fault">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('wsa:InvalidAddressingHeader'))
+	                               or soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('wsa:InvalidCardinality'))"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeader/wsa:MessageID = 'http://message.id/test'
+			  or soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:MessageID'))"/> 
+<!--
+            <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+            <assert test= "not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+-->
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1146"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="OPTIONAL">
+    <title>SOAP 1.1 two-way message with a duplicate To header.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate To header, generating a ProblemHeaderQName fault detail.]]></description>
+    <features>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out-Fault" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/duplicateToRequest.xml" name="message">
+	    <assert test="count(soap11:Envelope/soap11:Header/wsa:To) = 2"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap11/duplicateToFault-1.xml" name="fault">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('wsa:InvalidAddressingHeader'))
+	                               or soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('wsa:InvalidCardinality'))"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:To'))"/> 
+            <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+            <assert test= "not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1147"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="OPTIONAL">
+    <title>SOAP 1.1 two-way message with no action header.</title>
+    <description><![CDATA[Two-way message exchange containing no action header.]]></description>
+    <features>
+	<feature>soap07</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out-Fault" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/noActionRequest.xml" name="message">
+	    <assert test="count(soap11:Envelope/soap11:Header/wsa:Action) = 0"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap11/noActionFault.xml" name="fault">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.) = xs:QName('wsa:MessageAddressingHeaderRequired'))"/>
+	    <assert test="soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:Action'))"/> 
+            <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+            <assert test= "not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1149" 
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2006Mar/0224.html"
+    cr="INFORMATIONAL">
+    <title>SOAP 1.1 two-way message with a duplicate To header and a ReplyTo of none.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate To header and ReplyTo of none.  An InvalidAddressingHeader fault should be generated, but not sent due to the ReplyTo header.]]></description>
+    <features>
+	<feature>soap08</feature>
+      <feature>core10</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out-Fault" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/duplicateToReplyToNone.xml" name="message">
+	    <assert test="count(soap11:Envelope/soap11:Header/wsa:To) = 2"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/>
+	    <assert test="not(../following-sibling::log:message[@testcase=current()/../@testcase and @message!='1']) or count(../following-sibling::log:message[@testcase=current()/../@testcase and @message!='1']/log:content/*) = 0"/>
+	</message>
+	<message from="B" to="A"/>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1240"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with a duplicate To header.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate To header.]]></description>
+    <features>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Fault" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/duplicateToRequest.xml" name="message">
+	    <assert test="count(soap12:Envelope/soap12:Header/wsa:To) = 2"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap12/duplicateToFault.xml" name="fault">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.) = xs:QName('soap12:Sender'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('wsa:InvalidAddressingHeader'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:To = 'http://www.w3.org/2005/08/addressing/anonymous'
+			  or soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:To'))"/>
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1241"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with a duplicate Reply-To header.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate Reply-To header.]]></description>
+    <features>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Fault" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/duplicateReplyToRequest.xml" name="message">
+	    <assert test="count(soap12:Envelope/soap12:Header/wsa:ReplyTo) = 2"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap12/duplicateReplyToFault.xml" name="fault">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.) = xs:QName('soap12:Sender'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('wsa:InvalidAddressingHeader'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'
+			  or soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:ReplyTo'))"/> 
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1242"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with a duplicate Fault-To header.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate Fault-To header.]]></description>
+    <features>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Fault" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/duplicateFaultToRequest.xml" name="message">
+	    <assert test="count(soap12:Envelope/soap12:Header/wsa:FaultTo) = 2"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap12/duplicateFaultToFault.xml" name="fault">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.) = xs:QName('soap12:Sender'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('wsa:InvalidAddressingHeader'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:FaultTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous'
+			  or soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:FaultTo'))"/> 
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1243"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with a duplicate action header.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate action header.]]></description>
+    <features>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Fault" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/duplicateActionRequest.xml" name="message">
+	    <assert test="count(soap12:Envelope/soap12:Header/wsa:Action) = 2"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap12/duplicateActionFault.xml" name="fault">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.) = xs:QName('soap12:Sender'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('wsa:InvalidAddressingHeader'))"/> 
+ 	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:Action = 'http://message.id/test'
+			  or soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:Action'))"/> 
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1244"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with a duplicate message ID header.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate message ID header. RelatesTo in the reply is in essence meaningless, hence this test being informational.]]></description>
+    <features>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Fault" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/duplicateMessageIDRequest.xml" name="message">
+	    <assert test="count(soap12:Envelope/soap12:Header/wsa:MessageID) = 2"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap12/duplicateMessageIDFault.xml" name="fault">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.) = xs:QName('soap12:Sender'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('wsa:InvalidAddressingHeader'))"/> 
+ 	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:MessageID = 'http://message.id/test'
+			  or soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:MessageID'))"/> 
+<!--
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+-->
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1246"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="OPTIONAL">
+    <title>SOAP 1.2 two-way message with a duplicate To header.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate To header, generating a ProblemHeaderQName fault detail.]]></description>
+    <features>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Fault" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/duplicateToRequest.xml" name="message">
+	    <assert test="count(soap12:Envelope/soap12:Header/wsa:To) = 2"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap12/duplicateToFault-1.xml" name="fault">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.) = xs:QName('soap12:Sender'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('wsa:InvalidAddressingHeader'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:To'))"/> 
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1247"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="OPTIONAL">
+    <title>SOAP 1.2 two-way message with a duplicate To header.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate To header, generating an InvalidCardinality subcode/subcode.]]></description>
+    <features>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Fault" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/duplicateToRequest.xml" name="message">
+	    <assert test="count(soap12:Envelope/soap12:Header/wsa:To) = 2"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap12/duplicateToFault_2.xml" name="fault">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.) = xs:QName('soap12:Sender'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('wsa:InvalidAddressingHeader'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('wsa:InvalidCardinality'))"/> 
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1248"
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html"
+    cr="OPTIONAL">
+    <title>SOAP 1.2 two-way message with no action header.</title>
+    <description><![CDATA[Two-way message exchange containing no action header.]]></description>
+    <features>
+      <feature>soap07</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Fault" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/noActionRequest.xml" name="message">
+	    <assert test="count(soap12:Envelope/soap12:Header/wsa:Action) = 0"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap12/noActionFault.xml" name="fault">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.) = xs:QName('soap12:Sender'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('wsa:MessageAddressingHeaderRequired'))"/> 
+ 	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.) = xs:QName('wsa:Action'))"/> 
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1249" 
+    origin="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2006Mar/0224.html"
+    cr="INFORMATIONAL">
+    <title>SOAP 1.2 two-way message with a duplicate To header and a ReplyTo of none.</title>
+    <description><![CDATA[Two-way message exchange containing a duplicate To header and ReplyTo of none.  An InvalidAddressingHeader fault should be generated, but not sent due to the ReplyTo header.]]></description>
+    <features>
+	<feature>soap08</feature>
+      <feature>core10</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Fault" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/duplicateToReplyToNone.xml" name="message">
+	    <assert test="count(soap12:Envelope/soap12:Header/wsa:To) = 2"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/>
+	    <assert test="not(../following-sibling::log:message[@testcase=current()/../@testcase and @message!='1']) or count(../following-sibling::log:message[@testcase=current()/../@testcase and @message!='1']/log:content/*) = 0"/>
+	</message>
+	<message from="B" to="A"/>
+    </message-exchange>
+  </testcase>
+
+
+  <testcase xml:id="test1150"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 two-way message with a non-anonymous ReplyTo address.</title>
+    <description><![CDATA[Two-way message exchange containing an Action and a ReplyTo identifying an endpoint. All other fields are defaulted.]]></description>
+    <features>
+	<feature>core04</feature>
+	<feature>core05</feature>
+	<feature>soap04</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out-Callback" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/test1150request.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address"/> 
+	    <assert test="not(soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = '')"/> 
+	    <assert test="not(soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous')"/> 
+	</message>
+	<message from="B" to="A"/>
+	<message from="B" to="A" document="echo/soap11/reply1-2.xml" name="reply">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/echoOut'"/> 
+            <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+            <assert test= "not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+	<message from="A" to="B"/>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1250"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with a non-anonymous ReplyTo address.</title>
+    <description><![CDATA[Two-way message exchange containing an Action and a ReplyTo identifying an endpoint. All other fields are defaulted.]]></description>
+    <features>
+	<feature>core04</feature>
+	<feature>core05</feature>
+	<feature>soap02</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Callback" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/test1250request.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address"/> 
+	    <assert test="not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = '')"/> 
+	    <assert test="not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous')"/> 
+	</message>
+	<message from="B" to="A"/>
+	<message from="B" to="A" document="echo/soap12/reply1-2.xml" name="reply">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoOut'"/> 
+            <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+            <assert test= "not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+	<message from="A" to="B"/>
+    </message-exchange>
+  </testcase>
+
+
+  <testcase xml:id="test1251"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with a non-anonymous ReplyTo address and a Reply targeted to none.</title>
+    <description><![CDATA[Two-way message exchange containing an Action, a ReplyTo identifying an endpoint, and a ReplyTo targeted to none. All other fields are defaulted.]]></description>
+    <features>
+	<feature>core04</feature>
+	<feature>core05</feature>
+	<feature>soap02</feature>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Callback" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/test1251request.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address"/> 
+	    <assert test="not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = '')"/> 
+	    <assert test="not(soap12:Envelope/soap12:Header/wsa:ReplyTo[not(@soap12:role)]/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous')"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo[@soap12:role='http://www.w3.org/2003/05/soap-envelope/role/none']/wsa:Address"/> 
+	</message>
+	<message from="B" to="A"/>
+	<message from="B" to="A" document="echo/soap12/reply1-3.xml" name="reply">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoOut'"/> 
+	</message>
+	<message from="A" to="B"/>
+    </message-exchange>
+  </testcase>
+
+
+  <testcase xml:id="test1152"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.1 two-way message with a non-anonymous ReplyTo address and a FaultTo targeted to none.</title>
+    <description><![CDATA[Two-way message exchange containing an Action, a ReplyTo identifying an endpoint, and a FaultTo targeted to none. All other fields are defaulted. Intended to simulate an application fault, so ReplyTo won't be used.]]></description>
+    <features>
+	<feature>core04</feature>
+	<feature>core05</feature>
+	<feature>soap02</feature>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out-Callback" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/test1152request.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address"/> 
+	    <assert test="not(soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = '')"/> 
+	    <assert test="not(soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous')"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:FaultTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	    <assert test="not(../following-sibling::log:message[@testcase=current()/../@testcase and @message!='1']) or count(../following-sibling::log:message[@testcase=current()/../@testcase and @message!='1']/log:content/*) = 0"/>
+	</message>
+	<message from="B" to="A"/>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1252"
+    origin=""
+    cr="REQUIRED">
+    <title>SOAP 1.2 two-way message with a non-anonymous ReplyTo address and a FaultTo targeted to none.</title>
+    <description><![CDATA[Two-way message exchange containing an Action, a ReplyTo identifying an endpoint, and a FaultTo targeted to none. All other fields are defaulted. Intended to simulate an application fault, so ReplyTo won't be used.]]></description>
+    <features>
+	<feature>core04</feature>
+	<feature>core05</feature>
+	<feature>soap02</feature>
+	<feature>soap08</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Callback" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/test1252request.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address"/> 
+	    <assert test="not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = '')"/> 
+	    <assert test="not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/anonymous')"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:Address = 'http://www.w3.org/2005/08/addressing/none'"/> 
+	    <assert test="not(../following-sibling::log:message[@testcase=current()/../@testcase and @message!='1']) or count(../following-sibling::log:message[@testcase=current()/../@testcase and @message!='1']/log:content/*) = 0"/>
+	</message>
+	<message from="B" to="A"/>
+    </message-exchange>
+  </testcase>
+
+
+  <testcase xml:id="test1260"
+    origin=""
+    cr="INFORMATIONAL">
+    <title>SOAP 1.2 two-way message with an unreachable ReplyTo address.</title>
+    <description><![CDATA[Two-way message exchange containing an Action and a ReplyTo identifying an unreachable endpoint. All other fields are defaulted.]]></description>
+    <features>
+	<feature>core04</feature>
+	<feature>core05</feature>
+	<feature>soap02</feature>
+	<feature>soap07</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out-Callback" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/test1260request.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address = 'http://example.org/unreachable'"/> 
+	</message>
+	<message from="B" to="A"/>
+	<message from="B" to="A" document="echo/soap12/test1260fault.xml" name="fault">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://www.w3.org/2005/08/addressing/fault'"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.) = xs:QName('soap12:Sender'))"/> 
+	    <assert test="soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.) = xs:QName('wsa:DestinationUnreachable'))"/> 
+ 	    <assert test="not(soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemIRI)
+			  or soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemIRI = 'http://example.org/unreachable'"/>
+	</message>
+	<message from="A" to="B"/>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1170"
+    origin="mailto:hugo@w3.org"
+    cr="OPTIONAL">
+    <title>SOAP 1.1 two-way message with wsa:From.</title>
+    <description><![CDATA[Two-way message exchange containing an Action and a From marked with mustUnderstand. All other fields are defaulted. It is checked that the receiver understands the message.]]></description>
+    <features>
+	<feature>core04</feature>
+	<feature>core05</feature>
+	<feature>core06</feature>
+	<feature>core09</feature>
+    </features>
+    <message-exchange type="SOAP11-HTTP-In-Out" addr-binding="soap11">
+	<message from="A" to="B" document="echo/soap11/message1-70.xml" name="message">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:From/wsa:Address"/>
+	    <assert test="soap11:Envelope/soap11:Header/wsa:From/@soap11:mustUnderstand 
+			  and soap11:Envelope/soap11:Header/wsa:From/@soap11:mustUnderstand cast as xs:boolean = true()"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap11/reply1.xml" name="reply">
+	    <assert test="soap11:Envelope/soap11:Header/wsa:Action = 'http://example.org/action/echoOut'"/> 
+	    <assert test="soap11:Envelope/soap11:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID"/> 
+	    <assert test="not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType) or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+  <testcase xml:id="test1270"
+    origin="mailto:hugo@w3.org"
+    cr="OPTIONAL">
+    <title>SOAP 1.2 two-way message with wsa:From.</title>
+    <description><![CDATA[Two-way message exchange containing an Action and a From marked with mustUnderstand. All other fields are defaulted. It is checked that the receiver understands the message.]]></description>
+    <features>
+	<feature>core04</feature>
+	<feature>core05</feature>
+	<feature>core06</feature>
+	<feature>core09</feature>
+    </features>
+    <message-exchange type="SOAP12-HTTP-In-Out" addr-binding="soap12">
+	<message from="A" to="B" document="echo/soap12/message1-70.xml" name="message">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoIn'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:From/wsa:Address"/>
+	    <assert test="soap12:Envelope/soap12:Header/wsa:From/@soap12:mustUnderstand 
+			  and soap12:Envelope/soap12:Header/wsa:From/@soap12:mustUnderstand cast as xs:boolean = true()"/> 
+	</message>
+	<message from="B" to="A" document="echo/soap12/reply1.xml" name="reply">
+	    <assert test="soap12:Envelope/soap12:Header/wsa:Action = 'http://example.org/action/echoOut'"/> 
+	    <assert test="soap12:Envelope/soap12:Header/wsa:RelatesTo = ../preceding-sibling::log:message[@testcase=current()/../@testcase and @message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID"/> 
+	    <assert test="not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType) or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType = 'http://www.w3.org/2005/08/addressing/reply'"/>
+	</message>
+    </message-exchange>
+  </testcase>
+
+</testcases>

@@ -1,0 +1,16 @@
+<?xml version='1.0' ?>
+<!-- $Id: epr3.xml,v 1.3 2006/01/19 01:18:59 plehegar Exp $ -->
+<wsa:EndpointReference xmlns:wsa="http://www.w3.org/2005/08/addressing">
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+   <wsa:ReferenceParameters xmlns:customer="http://example.org/customer">
+    <customer:CustomerKey>Key#123456789</customer:CustomerKey>
+   </wsa:ReferenceParameters>
+   <wsa:Metadata>
+	<definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+		<!-- TBD: insert WSDL 1.1 here! -->
+	</definitions>
+	<description xmlns="http://www.w3.org/2006/01/wsdl">
+		<!-- TBD: insert WSDL 2.0 here! -->
+	</description>
+   </wsa:Metadata>
+</wsa:EndpointReference>

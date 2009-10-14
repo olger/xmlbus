@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head profile="http://www.w3.org/2002/12/wg">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="keywords" content="Web Services Addressing, Web Services Addressing    Test
+      Suite, Test Suite, WS-Addressing, WS-Addressing 1.0, Web    Services Addressing 1.0,
+      Addressing"/>
+    <title>Web Services Addressing - Test Suite</title>
+    <meta name="revision" content="$Id: Overview.html,v 1.41 2006/03/17 17:24:41 pdowney Exp $"/>
+    <link href="http://www.w3.org/StyleSheets/public" rel="stylesheet" type="text/css"/>
+    <link href="../../../StyleSheets/public" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="../../wsa-style.css"/>
+    <link rel="stylesheet" type="text/css" href="../public-style.css"/>
+    <link rel="Top" href="/Overview.html"/>
+    <link rel="Up" href="../"/>
+    <link rel="Search" href="http://search.w3.org/"/>
+    <link rel="CG" title="Coordination Group" href="../../cg/"/>
+    <link rel="Activity" title="Activity statement" href="../../Activity"/>
+    <link rel="Admin" title="Administrative page" href="admin.html"/>
+    <style type="text/css"> 
+	dl { width: 70%; margin-left: 1cm; padding: 12pt 12pt 12pt 0pt; } 
+	dt { color: #666; font-weight: bold; padding: 0 0 0 0; margin: 0 0 0 0; } 
+	dd { padding: 0 0 0 0; margin: 0 0 12pt 0; }
+    </style>
+  </head>
+  <body>
+
+<p class="navicons"><a href="../../../../"><img src="../../../../Icons/w3c_home"
+alt="W3C" height="48" width="72" /></a> <a href="../../../../Architecture/"><img
+src="../../../../Icons/arch" alt="Architecture Domain" height="48" width="212"
+/></a> <a href="../../"><img src="../../3/04/diags/wsa.png" width="192" height="48"
+alt="Web Services Activity" /></a></p>
+
+<p class="navlinks"><a href="../../">About Web services</a> ·
+<a href="../../Activity">Web Services Activity statement</a><br/>
+<a href="../">Web Services Addressing WG</a> ·
+<a href="../../cg/">Web Services CG</a></p>
+
+<h1 class="h1title">Web Services Addressing 1.0 Test Suite</h1>
+
+<p align="center"/>
+
+    <div class="section">
+      <h2><a name="intro" id="intro"/>Introduction</h2>
+      <p>One of the deliverables specified in the <a
+          href="http://www.w3.org/2004/09/wsa-charter.html">Charter</a> of the Web Services
+        Addressing Working Group is <em>a test suite intended to promote implementation of the
+          Candidate Recommendation, and to assess interoperability between these
+        implementations.</em> The Working Group Charter also states that <em>the Working Group is
+          expected to demonstrate four interoperable implementations during the Call for
+          Implementations step.</em> It is anticipated that some, but not all of the testcases held
+        within the test suite will be used to practically test implementations during an
+        interoperability Workshop and thereby satisfy the entrance criteria for the Web Service
+        Addressing specifications to enter the <a
+          href="http://www.w3.org/Consortium/Process-20010719/tr.html#RecsPR">Proposed
+          Recommendation stage</a>.</p>
+      <p>The test suite will be maintained by the Working Group and remain available for regression
+        testing beyond publication of the Web Addressing Recommendation, however it is not expected
+        that the test suite will form a part of the Web Addressing Recommendation.</p>
+
+      <h2><a name="conformance" id="conformance"/>Conformance</h2>
+      <p>Conformance to the Web services Addressing Test Suite does not by itself enable a party to
+        claim conformance with the Web Services Addressing specification. Not passing an individual
+        test may be used as an indication that an implementation is likely not to conform to the Web
+        Services Addressing specification.</p>
+      <p>A Web Services Addressing implementation that passes all of the tests specified in this
+        document may claim conformance to the Web Services Addressing Test Suite <i>(Release-Date)</i>.</p>
+
+      <h2><a name="structure" id="structure"/>Structure</h2>
+      <p>The Test Suite contains:</p>
+	<dl>
+	<dt><a href="features/">features</a></dt>
+            <dd>The feature list forms part of the Exit Criteria used to transition a Web Service Addressing 
+	    specification from Candidate Recommendation to Proposed Recommendation.</dd>
+
+	<dt><a href="documents/">documents</a></dt>
+	    <dd>Example messages and other documents including <a href="documents/wsdl11/">WSDL 1.1</a> and <a href="documents/wsdl20/">WSDL 2.0</a></dd>
+
+	<dt><a href="exchanges/">message exchanges</a></dt>
+	    <dd>The concrete pattern followed by a successful execution of the test case.</dd>
+
+	<dt><a href="testcases/">testcases</a></dt>
+	    <dd>The collection of test cases including assertions applied to each captured message.</dd>
+
+	<dt><a href="endpoints/">endpoints</a></dt>
+	    <dd>Public endpoints available during CR testing..</dd>
+
+	<dt><a href="logs/">logs</a></dt>
+	    <dd>Captured messages exchanged by implementations.</dd>
+
+	<dt><a href="observer/">observer</a></dt>
+	    <dd>A processor which validates captured log files against the testcases assertions.</dd>
+
+	<dt><a href="report/">report</a></dt>
+	    <dd>The result of running the observer against a set of captured log files.</dd>
+      </dl>
+
+      <p><i>The report and log files are currently restricted to W3C membership.</i></p>
+
+      <h2><a name="operations" id="operations"/>Operations</h2>
+	<p>The testsuite currently consists of two simple operations:</p>
+
+	<dl>
+	<dt>notify</dt> <dd>Text is sent in a message. 
+        <br/>No reply is expected.
+	<br/>An empty text string or a text string starting with the string 'fault' triggers a fault.</dd>
+	<dt>echo</dt> <dd>Text sent in a message is echoed in a reply message. 
+	<br/>An empty text string or a text string starting with the string 'fault' triggers a fault.</dd>
+	</dl>
+	<p>It's suggested that implementers are optionally able to send the testcase identifier as the text of the message to assist debugging. In the cases where the message is intended to cause a fault, the testcase identifier can be sent in a string beginning with 'fault'.</p>
+	<p>A WSDL author may elect to describe the echo operation as either a single In-Out operation, or as a pair of one-way operations without impacting the actual messages exchanged.</p>
+
+
+
+      <h2><a name="metadata" id="metadata"/>Test Case Metadata</h2>
+      <p>This Test Suite comprises of a collection of <a href="testcases/">testcases</a>. 
+	Each test case is categorized using the following <a
+          href="http://www.w3.org/QA/2005/08/test-case-metadata.html">test case metadata</a>:</p>
+      <dl class="metadataList">
+        <dt class="label">Identifier</dt>
+        <dd>
+          An unambiguous <a href="http://www.w3.org/TR/xml-id/">xml:id</a> value to enable the
+            test case to be referenced within a specific version of the test suite.
+        </dd>
+        <dt class="label">Title</dt>
+        <dd>
+          A friendly name for the test case.
+        </dd>
+        <dt class="label">Description</dt>
+        <dd>
+          A description of the nature and characteristics of the test case to assist reviewers to
+            understand the purpose of a test and provide those executing the test with any
+            additional information that will be helpful should the test fail.
+        </dd>
+        <dt class="label">Features</dt>
+        <dd>
+            A list of testable <a href="features/">features</a> the test case exhibits. The
+            feature list forms part of the Exit Criteria used to transition a 
+	    Web Service Addressing specification from 
+	    Candidate Recommendation to Proposed Recommendation.
+        </dd>
+        <dt class="label">Message Exchange</dt>
+        <dd>
+          The concrete <a href="exchanges/">message exchange</a> pattern 
+	    followed by a successful execution of the test case. The following nodes
+	    should be used when prodiving testcases:
+	    <p/>
+	    <table border="1">
+	    <tr>
+	    <th>node</th>
+	    <th>address</th>
+	    </tr>
+	    <tr>
+	    <td class="label">none</td>
+	    <td>http://www.w3.org/2005/08/addressing/none</td>
+	    </tr>
+	    <tr>
+	    <td class="label">anonymous</td>
+	    <td class="label">http://www.w3.org/2005/08/addressing/anonymous</td>
+	    </tr>
+	    <tr>
+	    <td class="label">A</td>
+	    <td>http://example.org/node/A</td>
+	    </tr>
+	    <tr>
+	    <td class="label">B</td>
+	    <td>http://example.org/node/B</td>
+	    </tr>
+	    </table>
+
+        </dd>
+        <dt class="label">Documents</dt>
+        <dd>
+          One or more example <a href="documents/">documents</a>, including WSDL 1.1 and
+            WSDL 2.0 documents as well as example messages and EPRs. The example messages
+            may be used to build 'canned' interactions for some testcases.
+        </dd>
+        <dt class="label">XPath Expressions</dt>
+        <dd>
+            Each test case may be accompanied a series of <a href="http://www.w3.org/TR/xpath20">XPath 2.0</a>, tests which may be asserted against a <a href="logs">log</a> of captured messages by an independent <a href="observer/">observer</a> of the messages being exchanged.
+
+	    <p>The following namespace prefixes are known to the <a href="observer/">observer</a> when evaluating XPath tests:</p>
+	    <table border="1">
+	    <tr>
+	    <th>prefix</th>
+	    <th>namespace</th>
+	    </tr>
+	    <tr>
+	    <td>wsa</td>
+	    <td>http://www.w3.org/2005/08/addressing</td>
+	    </tr>
+	    <tr>
+	    <td>wsaw</td>
+	    <td>http://www.w3.org/2005/03/addressing/wsdl</td>
+	    </tr>
+	    <tr>
+	    <td class="label">soap11</td>
+	    <td>http://schemas.xmlsoap.org/soap/envelope/</td>
+	    </tr>
+	    <tr>
+	    <td class="label">soap12</td>
+	    <td>http://www.w3.org/2003/05/soap-envelope</td>
+	    </tr>
+	    <tr>
+	    <td class="label">wsdl11</td>
+	    <td>http://schemas.xmlsoap.org/wsdl/</td>
+	    </tr>
+	    <tr>
+	    <td class="label">wsdl20</td>
+	    <td>http://www.w3.org/2005/08/wsdl</td>
+	    </tr>
+	    <tr>
+	    <td class="label">xs</td>
+	    <td>http://www.w3.org/2001/XMLSchema</td>
+	    </tr>
+	    <tr>
+	    <td class="label">customer</td>
+	    <td>http://example.org/customer</td>
+	    </tr>
+	    <tr>
+	    <td class="label">notify</td>
+	    <td>http://example.org/notify</td>
+	    </tr>
+	    <tr>
+	    <td class="label">echo</td>
+	    <td>http://example.org/echo</td>
+	    </tr>
+	    <tr>
+	    <td class="label">alertcontrol</td>
+	    <td>http://example.org/alertcontrol</td>
+	    </tr>
+	    </table>
+        </dd>
+	<dd>
+	<p>The following wsa:Action values are used by the testsuite:</p>
+
+	    <table border="1">
+	    <tr>
+	    <th>Action</th>
+	    <th>Message</th>
+	    </tr>
+	    <tr>
+	    <td>http://example.org/action/notify</td>
+	    <td>notify request</td>
+	    </tr>
+	    <tr>
+	    <td>http://example.org/action/echoIn</td>
+	    <td>echo request</td>
+	    </tr>
+	    <tr>
+	    <td>http://example.org/action/echoOut</td>
+	    <td>echo response</td>
+	    </tr>
+	    <tr>
+	    <td>http://example.org/action/fault</td>
+	    <td>testsuite fault</td>
+	    </tr>
+	    <tr>
+	    <td>http://www.w3.org/2005/08/addressing/fault</td>
+	    <td>Web Services Addressing 1.0 fault</td>
+	    </tr>
+	    </table>
+	</dd>
+	</dl>
+
+      <h2><a name="contributing" id="contributing"/>Contributing</h2>
+      <p>The Test Suite consists entirely of voluntary contributions of tests from interested
+        parties. We encourage all members of the community to consider contributing any tests they
+        may have developed to the Test Suite.</p>
+      <p>Tests may be submitted to the Suite in the form of an Email sent to <a
+          href="mailto:public-ws-addressing-tests@w3.org">public-ws-addressing-tests@w3.org</a> An
+        archive is available at <a
+          href="http://lists.w3.org/Archives/Public/public-ws-addressing-tests/"
+          >http://lists.w3.org/Archives/Public/public-ws-addressing-tests</a> Submitted testcases
+        should be released to the Test Suite by completing the <a
+          href="http://www.w3.org/2002/09/wbs/1/testgrants2-200409/">Test Case Grant II Form</a>.</p>
+      <p>When contributing materials to the Test Suite, it is helpful if each individual test case
+        cites the metadata such as the existing features and message exchanges exhibited
+	in a format suitable for adding to <a href="testcases/testcases.xml">testcases.xml</a>.
+	The submission should include complete examples of the messages exchanged as XML documents.</p>
+	<p>Where possible the tests should re-use existing operations and message exchanges, 
+	however the submission may also include details of any new scenarios which the test case 
+	exhibits, in which case providing any additional metadata such as WSDL 1.1 and WSDL 2.0 
+	documents will be of value.</p>
+
+      <h2><a name="status" id="status"/>Status</h2>
+       <p>Much of the Test Suite was developed before and during an 
+	<a href="http://www.w3.org/News/2005#item182">Interoperability Event</a> held 17-18 January in Vancouver, CA.
+	The testcase, feature and scenario identifiers will remain stable and should an item be removed, the identifier
+	won't be reused to avoid confusion.
+	</p>
+
+      <h2><a name="releases" id="releases"/>Releases</h2>
+       <p>The Test Suite is periodically made available in the form of a single file: </p>
+	<ul>
+	<li><a href="releases/testsuite-latest.zip">testsuite-latest.zip</a> - latest snapshot of work in progress</li>
+	<li><a href="releases/testsuite-20060316.zip">testsuite-20060316.zip</a> 
+	- <a href="http://www.w3.org/2002/ws/addr/5/08/impl-report/">implementation report</a>
+	    of the SOAP and Core Candidate Recommedations.</li>
+	</ul>
+    </div>
+    <hr/>
+    <address>
+      <a href="mailto:paul.downey@bt.com">Paul Downey</a>, 
+      <a href="mailto:david.illsley@uk.ibm.com.com">David Illsley</a>, 
+      <a href="mailto:jmarsh@microsoft.com">Jonathan Marsh</a>, 
+	Editors<br/>
+  <a href="mailto:bob.freund@hitachisoftware.com">Bob Freund</a>, Chair<br/>
+  <a href="../../../../People/Hugo/">Hugo Haas</a>, <a href="../../../../People/LeHegaret/">Philippe Le H&eacute;garet</a>, W3C Team contacts<br/>
+  <small>$Date: 2006/03/17 17:24:41 $</small>
+</address>
+    <p class="copyright">
+      <a rel="Copyright" href="/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2005-2006 <a
+        href="/">
+        <acronym title="World Wide Web Consortium">W3C</acronym>
+      </a>
+      <sup>®</sup> (<a href="http://www.csail.mit.edu/">
+        <acronym title="Massachusetts Institute of Technology">MIT</acronym>
+      </a>, <a href="http://www.ercim.org/">
+        <acronym title="European Research Consortium for Informatics and Mathematics"
+        >ERCIM</acronym>
+      </a>,<a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a
+        href="/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a
+        href="/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, <a rel="Copyright"
+        href="/Consortium/Legal/copyright-documents">document use</a> and <a rel="Copyright"
+        href="/Consortium/Legal/copyright-software">software licensing</a> rules apply. Your
+      interactions with this site are in accordance with our <a
+        href="/Consortium/Legal/privacy-statement#Public">public</a> and<a
+        href="/Consortium/Legal/privacy-statement#Members">Member</a> privacy statements.</p>
+  </body>
+</html>

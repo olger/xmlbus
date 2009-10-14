@@ -1,0 +1,14 @@
+<?xml version='1.0' ?>
+<soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/"
+                 xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:FaultDetail><wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName></wsa:FaultDetail>
+  </soap11:Header>
+  <soap11:Body>
+    <soap11:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+    </soap11:Fault>
+  </soap11:Body>
+</soap11:Envelope>

@@ -1,0 +1,22 @@
+<?xml version='1.0' ?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+ xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:MessageID>http://example.com/bd185f7f-30fd-4c9a-a8c1-3b1cdb37a5fe</wsa:MessageID>
+  <wsa:FaultTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+  </wsa:FaultTo>
+  <wsa:To>http://example.com/R</wsa:To>
+  <wsa:Action>http://example.com/alertNotification</wsa:Action>
+  <!-- The following is a header which will not be understood -->
+  <n:alertcontrol xmlns:n="http://example.org/alertcontrol" env:mustUnderstand="true">
+   <n:priority>1</n:priority>
+   <n:expires>2001-06-22T14:00:00-05:00</n:expires>
+  </n:alertcontrol>
+ </env:Header>
+ <env:Body>
+  <m:alert xmlns:m="http://example.org/alert">
+   <m:msg>Pick up Mary at school at 2pm</m:msg>
+  </m:alert>
+ </env:Body>
+</env:Envelope>

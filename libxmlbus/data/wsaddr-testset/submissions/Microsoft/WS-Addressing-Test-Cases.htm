@@ -1,0 +1,3531 @@
+<html>
+
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>WS-Addressing Test Cases</title>
+
+<style>
+<!--
+                       
+ font-face
+	{font-family:Tahoma;}
+font-face
+	{font-family:Verdana;}
+font-face
+	{font-family:"Lucida Console";}
+                        
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:Verdana;}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Verdana;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Verdana;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Verdana;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:Verdana;
+	font-style:italic;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:10.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:Verdana;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	background:navy;
+	font-size:10.0pt;
+	font-family:Tahoma;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:8.0pt;
+	font-family:Tahoma;}
+p.xml, li.xml, div.xml
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	background:#E6E6E6;
+	font-size:10.0pt;
+	font-family:"Lucida Console";}
+p.text, li.text, div.text
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:13.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;
+	color:black;}
+span.heading1char
+	{font-family:Verdana;
+	font-weight:bold;}
+span.heading3char
+	{font-family:Verdana;
+	font-weight:bold;}
+
+div.Section1
+	{page:Section1;}
+                       
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<h1><a name="_Toc118514308">WS-Addressing Test Cases</a></h1>
+
+<p class=MsoToc2><a name="_Toc75744434"></a><a name="_Toc75745428"></a><a
+href="#_Toc118514309">Introduction<span style='color:windowtext;display:none;
+text-decoration:none'>. 1</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc118514310">SOAP 1.2 One-Way Message Exchange
+with Invalid [Action] Value<span style='color:windowtext;display:none;
+text-decoration:none'>. 1</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc118514311">SOAP 1.2 Two-Way Message Exchange
+with a Non-Anonymous [ReplyTo] Address<span style='color:windowtext;display:
+none;text-decoration:none'> 2</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc118514312">SOAP 1.2 Two-Way Message Exchange
+with Invalid [Action] Value<span style='color:windowtext;display:none;
+text-decoration:none'>. 5</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc118514313">SOAP 1.2 Two-Way Message Exchange
+with Fault and a Non-Anonymous [FaultTo] Address<span style='color:windowtext;
+display:none;text-decoration:none'> 7</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc118514314">SOAP 1.2 Two-Way Secure Message
+Exchange with Anonymous [ReplyTo] Address<span style='color:windowtext;
+display:none;text-decoration:none'> 10</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc118514315">SOAP 1.2 Two-Way Secure Message
+Exchange with Non-Anonymous [ReplyTo] Address<span style='color:windowtext;
+display:none;text-decoration:none'> 18</span></a></p>
+
+<h2><a name="_Toc118514309">Introduction</a></h2>
+
+<p class=MsoNormal>This document proposes a set of additional test cases for
+the W3C Candidate Recommendations for WS-Addressing 1.0 &#8211; Core (<a
+href="http://www.w3.org/TR/2005/CR-ws-addr-core-20050817/">http://www.w3.org/TR/2005/CR-ws-addr-core-20050817/</a>)
+and WS-Addressing 1.0 &#8211; SOAP Binding (<a
+href="http://www.w3.org/TR/2005/CR-ws-addr-soap-20050817/">http://www.w3.org/TR/2005/CR-ws-addr-soap-20050817/</a>).</p>
+
+<h2><a name="_Toc118514310"></a><a name="_Toc75744437"></a><a
+name="_Toc75745431"></a>SOAP 1.2 One-Way Message Exchange with Invalid [Action]
+Value</h2>
+
+<p class=MsoNormal>This scenario tests a one-way message exchange with an
+[Action] that is not supported by the service.</p>
+
+<h3>Message Exchange</h3>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Client sends a SOAP message to the Server in a POST
+     request</li>
+ <li class=MsoNormal>Server sends an HTTP 202 to the Client</li>
+</ol>
+
+<h3>Message Structure</h3>
+
+<p class=MsoNormal><i>Elements and Attributes:</i></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Name</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Present?</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Comments</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Action</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: <a
+  href="http://tempuri.org/ServicePortType/BadAction">http://example.com/ServicePortType/BadAction</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MessageID</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A URI that is unique for each ping request</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>To</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The URI of the Service</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Security</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>No</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Body</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: An element containing a client-defined string</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><i>HTTP Request:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=xml>&lt;s:Envelope </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;
+xmlns:s=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&nbsp;&nbsp; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2005/08/addressing&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:Action
+s:mustUnderstand=&quot;1&quot;&gt;http://example.com/ServicePortType/BadAction&lt;/a:Action&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:To&gt;http://example.com/InteropService/Ping&lt;/a:To&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Body&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Ping
+xmlns=&quot;http://example.com/&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Ping&gt;Hello&lt;/Ping&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Ping&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Body&gt;</p>
+
+<p class=xml>&lt;/s:Envelope&gt;</p>
+
+</div>
+
+<p class=MsoNormal><i>HTTP Response:</i> HTTP 202 Accepted</p>
+
+<h2><a name="_Toc75745435"></a><a name="_Toc118514311"></a><a
+name="_Toc75744441"></a>SOAP 1.2 Two-Way Message Exchange with a Non-Anonymous
+[ReplyTo] Address</h2>
+
+<p class=MsoNormal>This scenario tests a two-way message exchange with an
+address in the [ReplyTo] that is not the anonymous address.</p>
+
+<h3><a name="_Toc75745436"></a><a name="_Toc75744442"></a>Message Exchange</h3>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Client sends a SOAP request message to the Server in a
+     POST request</li>
+ <li class=MsoNormal>Server sends an HTTP 202 Accepted to the Client</li>
+ <li class=MsoNormal>Server sends a SOAP response message to the Client in a
+     POST request</li>
+ <li class=MsoNormal>Client sends an HTTP 202 Accepted to the Server</li>
+</ol>
+
+<h3><a name="_Toc75745437"></a><a name="_Toc75744443"></a>Request Message
+Structure</h3>
+
+<p class=MsoNormal><i>Elements and Attributes:</i></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Name</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Present?</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Comments</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Action</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: <a
+  href="http://tempuri.org/ServicePortType/EchoString">http://example.com/ServicePortType/EchoString</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>ReplyTo</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;&nbsp; Address</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The URI of the endpoint expecting the response</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;&nbsp; ReferenceParameters</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>No</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;&nbsp;Extensions</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Implementations are encouraged to include elements and
+  attributes that leverage the open content model of the
+  EndpointReference.&nbsp; Services should correctly handle EndpointReferences
+  that include custom elements and attributes.</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp; Metadata</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Implementations MAY include a Metadata element in the
+  ReplyTo header.</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MessageID</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A URI that is unique for each message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>To</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The URI of the Service</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Security</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>No</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Body</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: An element containing a client-defined string</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><i>HTTP Request (Client to Service):</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=xml>&lt;s:Envelope
+xmlns:s=&quot;http://www.w3.org/2003/05/soap-envelope&quot;
+xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2005/08/addressing&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:Action s:mustUnderstand=&quot;1&quot;&gt;http://example.com/ServicePortType/EchoString&lt;/a:Action&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span lang=DE>&lt;a:MessageID&gt;urn:uuid:b00f7130-9e03-47e9-bb2b-e54bb2d04355&lt;/a:MessageID&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&lt;a:ReplyTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;a:Address&gt;http://example.com/5bab2987-4f3c-40ba-8702-0d3af7b48fa6&lt;/a:Address&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/a:ReplyTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:To&gt;http://example.com/InteropService/Echo&lt;/a:To&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Body&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;EchoString
+xmlns=&quot;http://example.com/&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;EchoString&gt;echo&lt;/EchoString&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/EchoString&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Body&gt;</p>
+
+<p class=xml>&lt;/s:Envelope&gt;</p>
+
+</div>
+
+<p class=MsoNormal><i>HTTP Response:</i> HTTP 202 Accepted</p>
+
+<h3><a name="_Toc75745438"></a><a name="_Toc75744444"></a>Response Message
+Structure</h3>
+
+<p class=MsoNormal><i>Elements and Attributes:</i></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Name</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Present?</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Comments</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Action</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: <a
+  href="http://tempuri.org/ServicePortType/EchoStringResponse">http://example.com/ServicePortType/EchoStringResponse</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>RelatesTo</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The MessageID specified in the request message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp; @RelationshipType</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>If present, it MUST contain the value: <a
+  href="http://www.w3.org/2005/08/addressing/reply">http://www.w3.org/2005/08/addressing/reply</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MessageID</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A URI that is unique for each message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>To</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The URI passed into ReplyTo\Address</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Security</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>No</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Body</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: An element containing the string from the body of
+  the request message </p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><i>HTTP Request (Service to Client):</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=xml>&lt;s:Envelope
+xmlns:s=&quot;http://www.w3.org/2003/05/soap-envelope&quot;
+xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2005/08/addressing&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:Action
+s:mustUnderstand=&quot;1&quot;&gt;http://example.com/ServicePortType/EchoStringResponse&lt;/a:Action&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;a:RelatesTo&gt;urn:uuid:b00f7130-9e03-47e9-bb2b-e54bb2d04355&lt;/a:RelatesTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:To&gt;http://example.com/5bab2987-4f3c-40ba-8702-0d3af7b48fa6&lt;/a:To&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Body&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;EchoStringResponse
+xmlns=&quot;http://example.com/&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;EchoStringResult&gt;echo&lt;/EchoStringResult&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/EchoStringResponse&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Body&gt;</p>
+
+<p class=xml>&lt;/s:Envelope&gt;</p>
+
+</div>
+
+<p class=MsoNormal><i>HTTP Response:</i> HTTP 202 Accepted<a name="_Toc75744445"></a><a
+name="_Toc75745439"></a></p>
+
+<h2><a name="_Toc118514312"></a><a name="_Toc75744449"></a><a
+name="_Toc75745443"></a>SOAP 1.2 Two-Way Message Exchange with Invalid [Action]
+Value</h2>
+
+<p class=MsoNormal>This scenario tests a two-way message exchange with an
+[Action] that is not supported by the service.&nbsp; The server will respond
+with an <span style='color:black'>Action Not Supported fault.</span></p>
+
+<h3>Message Exchange</h3>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Client sends a SOAP message to the Server in a POST
+     request</li>
+ <li class=MsoNormal>Server sends an HTTP 500 response with a fault message to
+     the Client</li>
+</ol>
+
+<h3>Request Message Structure</h3>
+
+<p class=MsoNormal><i>Elements and Attributes:</i></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Name</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Present?</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Comments</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Action</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: <a
+  href="http://tempuri.org/ServicePortType/BadAction">http://example.com/ServicePortType/BadAction</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>ReplyTo</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>If present, it MUST contain an a:Address element of <a
+  href="http://www.w3.org/2005/08/addressing/anonymous">http://www.w3.org/2005/08/addressing/anonymous</a>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MessageID</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A URI that is unique for each message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>To</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The URI of the Service</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>FaultTo</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>No</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Security</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>No</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Body</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: An element containing a client-defined string</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><i>HTTP Request:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=xml>&lt;s:Envelope
+xmlns:s=&quot;http://www.w3.org/2003/05/soap-envelope&quot;
+xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2005/08/addressing&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:Action
+s:mustUnderstand=&quot;1&quot;&gt;http://example.com/ServicePortType/BadAction&lt;/a:Action&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;a:MessageID&gt;urn:uuid:bf121bf2-38b7-4910-b8a3-f8ca65437e33&lt;/a:MessageID&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:ReplyTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;a:Address&gt;http://schemas.xmlsoap.org/ws/2005/08/addressing/anonymous&lt;/a:Address&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/a:ReplyTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:To&gt;http://example.com/InteropService/Echo&lt;/a:To&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Body&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;EchoString
+xmlns=&quot;http://example.com/&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;EchoString&gt;echo&lt;/EchoString&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/EchoString&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Body&gt;</p>
+
+<p class=xml>&lt;/s:Envelope&gt;</p>
+
+</div>
+
+<h3>Response Message Structure</h3>
+
+<p class=MsoNormal><i>Elements and Attributes:</i></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Name</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Present?</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Comments</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Action</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: <a href="http://www.w3.org/2005/08/addressing/fault">http://www.w3.org/2005/08/addressing/fault</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>RelatesTo</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The MessageID specified in the request message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp; @RelationshipType</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>If present, it MUST contain the value: <a
+  href="http://www.w3.org/2005/08/addressing/reply">http://www.w3.org/2005/08/addressing/reply</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MessageID</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A URI that is unique for each message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>To</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>If present, it MUST contain the value: <a
+  href="http://www.w3.org/2005/08/addressing/anonymous">http://www.w3.org/2005/08/addressing/anonymous</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Security</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>No</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Body</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A SOAP fault with the following values:</p>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+  style='font-family:Symbol'>&middot;</span><span style='font-size:7.0pt;
+  font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>[Code] a QName representing the value S:Sender</p>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+  style='font-family:Symbol'>&middot;</span><span style='font-size:7.0pt;
+  font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>[Subcode] a QName representing the value a:ActionNotSupported</p>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+  style='font-family:Symbol'>&middot;</span><span style='font-size:7.0pt;
+  font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>[Reason] the string: &quot;The [action] cannot be processed at the
+  receiver&quot;</p>
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+  style='font-family:Symbol'>&middot;</span><span style='font-size:7.0pt;
+  font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>[Details] a &lt;a:ProblemAction&gt; element with a &lt;a:Action&gt;
+  child element</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><i>HTTP Response:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=xml>&lt;s:Envelope
+xmlns:s=&quot;http://www.w3.org/2003/05/soap-envelope&quot;
+xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2005/08/addressing&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:Action
+s:mustUnderstand=&quot;1&quot;&gt;http://www.w3.org/2005/08/addressing/fault&lt;/a:Action&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;a:RelatesTo&gt;urn:uuid:bf121bf2-38b7-4910-b8a3-f8ca65437e33&lt;/a:RelatesTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:To&gt;http://schemas.xmlsoap.org/ws/2005/08/addressing/anonymous&lt;/a:To&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Body&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;s:Fault&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;s:Code&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;s:Value&gt;s:Sender&lt;/S:Value&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;s:Subcode&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;s:Value&gt;a:ActionNotSupported&lt;/S:Value&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/s:Subcode&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/s:Code&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;s:Reason&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;s:Text
+xml:lang=&quot;en&quot;&gt;The [action] cannot be processed at the
+receiver&lt;/S:Text&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/s:Reason&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;s:Detail&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;a:ProblemAction&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;a:Action&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+http://example.com/ServicePortType/BadAction</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/a:Action&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/a:ProblemAction&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/s:Detail&gt;&nbsp;&nbsp; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/s:Fault&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Body&gt;</p>
+
+<p class=xml>&lt;/s:Envelope&gt;</p>
+
+</div>
+
+<h2><a name="_Toc118514313">SOAP 1.2 Two-Way Message Exchange with Fault and a
+Non-Anonymous [FaultTo] Address</a></h2>
+
+<p class=MsoNormal>This scenario tests a two-way message exchange where the
+service generates a fault and the request has a non-anonymous [FaultTo].</p>
+
+<h3><a name="_Toc75745440"></a><a name="_Toc75744446"></a>Message Exchange</h3>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Client sends a SOAP message to the Server in a POST
+     request</li>
+ <li class=MsoNormal>Server sends HTTP 202 to Client</li>
+ <li class=MsoNormal>Server sends a fault to the [FaultTo] endpoint in a POST
+     request</li>
+ <li class=MsoNormal>Client sends HTTP 202 to Server</li>
+</ol>
+
+<h3><a name="_Toc75745441"></a><a name="_Toc75744447"></a>Request Message
+Structure</h3>
+
+<p class=MsoNormal><i>Elements and Attributes:</i></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Name</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Present?</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Comments</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Action</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: <a
+  href="http://tempuri.org/ServicePortType/EchoString">http://example.com/ServicePortType/EchoString</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>ReplyTo</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;&nbsp; Address</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The URI of the endpoint expecting the response</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;&nbsp; ReferenceParameters</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>No</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>FaultTo</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;&nbsp; Address</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The URI of the endpoint expecting faults</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;&nbsp;&nbsp;ReferenceParameters</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>No</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MessageID</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A URI that is unique for each message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>To</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The URI of the Service</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Security</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>No</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Body</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: An element containing a client-defined string</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><a name="_Toc75745442"></a><a name="_Toc75744448"></a><i>HTTP
+Request (Client to Service):</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=xml>&lt;s:Envelope xmlns:s=&quot;http://www.w3.org/2003/05/soap-envelope&quot;
+xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2005/08/addressing&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:Action
+s:mustUnderstand=&quot;1&quot;&gt;http://example.com/ServicePortType/EchoString&lt;/a:Action&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;a:MessageID&gt;urn:uuid:bf121bf2-38b7-4910-b8a3-f8ca65437e33&lt;/a:MessageID&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:ReplyTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;a:Address&gt;http://example.com/5bab2987-4f3c-40ba-8702-0d3af7b48fa6&lt;/a:Address&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/a:ReplyTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:FaultTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;a:Address&gt;http://example.com/5bab2987-4f3c-40ba-8702-0d3af7b48fa6&lt;/a:Address&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/a:FaultTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:To&gt;http://example.com/InteropService/Echo&lt;/a:To&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Body&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;EchoString
+xmlns=&quot;http://example.com/&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;EchoString&gt;echo&lt;/EchoString&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/EchoString&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Body&gt;</p>
+
+<p class=xml>&lt;/s:Envelope&gt;</p>
+
+</div>
+
+<p class=MsoNormal><i>HTTP Response:</i> HTTP 202 Accepted</p>
+
+<h3>Response Message Structure</h3>
+
+<p class=MsoNormal><i>Elements and Attributes:</i></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Name</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Present?</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Comments</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Action</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: <a
+  href="http://tempuri.org/ServicePortType/EchoFault">http://example.com/ServicePortType/EchoFault</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>RelatesTo</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The MessageID specified in the request message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp; @RelationshipType</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>If present, it MUST contain the value: <a
+  href="http://www.w3.org/2005/08/addressing/reply">http://www.w3.org/2005/08/addressing/reply</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MessageID</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A URI that is unique for each message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>To</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The URI passed in the FaultTo\Address</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Security</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>No</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Body</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A SOAP Fault</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><i>HTTP Request (Service to Client):</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=xml>&lt;s:Envelope
+xmlns:s=&quot;http://www.w3.org/2003/05/soap-envelope&quot;
+xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2005/08/addressing&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:Action
+s:mustUnderstand=&quot;1&quot;&gt;http://example.com/ServicePortType/EchoFault&lt;/a:Action&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;a:RelatesTo&gt;urn:uuid:bf121bf2-38b7-4910-b8a3-f8ca65437e33&lt;/a:RelatesTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:To&gt;http://example.com/5bab2987-4f3c-40ba-8702-0d3af7b48fa6&lt;/a:To&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Body&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;s:Fault&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;s:Code&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;s:Value&gt;s:Sender&lt;/S:Value&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/s:Code&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;s:Reason&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;s:Text
+xml:lang=&quot;en&quot;&gt;There was an error&lt;/S:Text&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/s:Reason&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;s:Detail&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;!-- Some Detail --&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/s:Detail&gt;&nbsp;&nbsp;
+</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/s:Fault&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Body&gt;</p>
+
+<p class=xml>&lt;/s:Envelope&gt;</p>
+
+</div>
+
+<p class=MsoNormal><i>HTTP Response:</i> HTTP 202 Accepted</p>
+
+<h2><a name="_Toc118514314">SOAP 1.2 Two-Way Secure Message Exchange with
+Anonymous [ReplyTo] Address</a></h2>
+
+<p class=MsoNormal>This scenario tests a two-way message exchange where both
+request and response must be signed and encrypted.&nbsp; In this scenario, the
+requester uses an anonymous [ReplyTo].</p>
+
+<h3><a name="_Toc75745456"></a><a name="_Toc75744462"></a>Message Exchange</h3>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Client sends a signed and encrypted request message to the
+     Server in a POST request</li>
+ <li class=MsoNormal>Server sends an HTTP 200 response with a signed and
+     encrypted response message to Client</li>
+</ol>
+
+<h3><a name="_Toc75745457"></a><a name="_Toc75744463"></a>Request Message
+Structure</h3>
+
+<p class=MsoNormal><i>Elements and Attributes:</i></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Name</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Present?</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Comments</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Action</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: <a
+  href="http://tempuri.org/ServicePortType/EchoString">http://example.com/ServicePortType/EchoString</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>ReplyTo</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;&nbsp; Address</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: <a
+  href="http://www.w3.org/2005/08/addressing/anonymous">http://www.w3.org/2005/08/addressing/anonymous</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;&nbsp; ReferenceParameters</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style=''><span style='font-family:"Lucida Console"'>&lt;rp1:CustomerID
+  xmlns:rp1=&quot;http://example.com/RP/Headers&quot;&gt;12&lt;/rp1:CustomerID&gt;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MessageID</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A URI that is unique for each message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>To</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The URI of the Service</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Security</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A security header containing u:TimeStamp,
+  s:BinarySecurityToken, s:EncryptedKey with encrypted symmetric key used to encrypt
+  the content of the Body, Signature over Address Headers, TimeStamp, and Body.</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Body</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: An element containing a client-defined string</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><a name="_Toc75745458"></a><a name="_Toc75744464"></a><i>HTTP
+Request:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=xml>&lt;s:Envelope </p>
+
+<p class=xml>&nbsp;
+xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2005/08/addressing&quot; </p>
+
+<p class=xml>&nbsp; xmlns:u=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;
+</p>
+
+<p class=xml>&nbsp;
+xmlns:s=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;</p>
+
+<p class=xml>&nbsp; &lt;s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;a:Action u:Id=&quot;_0&quot;
+s:mustUnderstand=&quot;1&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+http://example.com/ServicePortType/EchoString</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/a:Action&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;a:MessageID u:Id=&quot;_1&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+urn:uuid:ad6bb0e4-d83d-4600-ad15-244e291b1af6</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/a:MessageID&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;a:ReplyTo u:Id=&quot;_2&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:Address&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+http://schemas.xmlsoap.org/ws/2005/08/addressing/anonymous</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/a:Address&gt;</p>
+
+<p class=xml style='text-indent:.5in'>&lt;a:ReferenceParameters&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;rp1:CustomerID
+xmlns:rp1=&quot;http://example.com/RP/Headers&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/rp1:CustomerID&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/a:ReferenceParameters&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/a:ReplyTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;a:To u:Id=&quot;_3&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+http://localhost/pdcmtom/svc/service.svc/SecureMtom</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/a:To&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;o:Security s:mustUnderstand=&quot;1&quot; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+xmlns:o=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;u:Timestamp
+u:Id=&quot;uuid-553de6ca-99d7-4c1d-9d69-38fef21c75f8-5&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;u:Created&gt;2005-09-27T14:53:37.172Z&lt;/u:Created&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;u:Expires&gt;2005-09-27T14:58:37.172Z&lt;/u:Expires&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/u:Timestamp&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;o:BinarySecurityToken </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+u:Id=&quot;uuid-553de6ca-99d7-4c1d-9d69-38fef21c75f8-2&quot;&nbsp;&nbsp; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ValueType=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!--
+Base64 encoded client&#8217;s X509 cert --&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/o:BinarySecurityToken&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptedKey
+u:Id=&quot;_5&quot;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+xmlns:e=&quot;http://www.w3.org/2001/04/xmlenc#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptionMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#rsa-1_5&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;KeyInfo
+xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:KeyIdentifier ValueType=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509SubjectKeyIdentifier&quot;&gt;Xeg55vRyK3ZhAEhEf+YT0z986L0=&lt;/o:KeyIdentifier&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/KeyInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:CipherData&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:CipherValue&gt;DmuXbdY5n8VE/5d5DlYkhwadFlrK3krae1OGrFxzVXQCryB5LeBIp9Vu1aMsBFCpDanvG+2+ybxB0sXymHFv1te0FO98IV/oadVlXmHiJW0uxVRlllODipiaRRqtNxVRPf1cvg1fi4vDvJY+UGd3IiR8EIIlv9Zx5/kKmwtkRSA=&lt;/e:CipherValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+lang=DE>&lt;/e:CipherData&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:ReferenceList&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:DataReference URI=&quot;#_6&quot; /&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&lt;/e:ReferenceList&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/e:EncryptedKey&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Signature
+xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;SignedInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;CanonicalizationMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;SignatureMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+URI=&quot;#uuid-553de6ca-99d7-4c1d-9d69-38fef21c75f8-5&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;aS+FDYG4LKrNyntSHbGc+HxqPh8=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_0&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;p3pOg4BZw8kZsN+jonJj+cHH6oE=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_1&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;LFzaXjZ+FUftSK3qsIvc34XKUzU=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_2&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;aF7hmVRuE93WcW8oz8jWiwtcwNo=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_3&quot;&gt;</p>
+
+<p class=xml>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;LHRBiHST</p>
+
+<p class=xml>FuO3ZZ4+VzWjes6Pxwo=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_4&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;4Jivry4hy7EH7UDjrLPEjMWWF5s=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/SignedInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;SignatureValue&gt;Tav8Vri1u9h1zrinCbBpOazkr442bwgSHm2flZb+z2b0741MSDchrCPQvdCnRmvf9GxrLK16MC1wjRz3SjZqTrCWozAwDXQIbOoaAEau1Xi3jNQUGQ6LJ/8uFJBFnmSPn9fZm1btPZSmt/MfoNiWpaT5YdxqQTDFaFGm1v4Sa+I=&lt;/SignatureValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;KeyInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:Reference URI=&quot;#uuid-553de6ca-99d7-4c1d-9d69-38fef21c75f8-2&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/KeyInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Signature&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/o:Security&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Body&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptedData
+u:Id=&quot;_6&quot; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Type=&quot;http://www.w3.org/2001/04/xmlenc#Content&quot; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+xmlns:e=&quot;http://www.w3.org/2001/04/xmlenc#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptionMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#tripledes-cbc&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:CipherData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:CipherValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;!-- encrypted content of the Body </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;EchoString xmlns=&quot;http://example.com/&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;EchoString&gt;echo&lt;/EchoString&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/EchoString&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+--&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/e:CipherValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/e:CipherData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/e:EncryptedData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Body&gt;</p>
+
+<p class=xml>&nbsp; &lt;/s:Envelope&gt;</p>
+
+</div>
+
+<h3>Response Message Structure</h3>
+
+<p class=MsoNormal><i>Elements and Attributes:</i></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Name</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Present?</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Comments</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Action</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: <a
+  href="http://tempuri.org/ServicePortType/EchoStringResponse">http://example.com/ServicePortType/EchoStringResponse</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>RelatesTo</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The MessageID specified in the request message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp; @RelationshipType</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>If present, it MUST contain the value: <a
+  href="http://www.w3.org/2005/08/addressing/reply">http://www.w3.org/2005/08/addressing/reply</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MessageID</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A URI that is unique for each message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>To</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>If present, it MUST contain the value: <a
+  href="http://www.w3.org/2005/08/addressing/anonymous">http://www.w3.org/2005/08/addressing/anonymous</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Reference Parameter Headers</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style=''><span style='font-family:"Lucida Console"'>&lt;rp1:CustomerID
+  a:IsReferenceParameter=&quot;true&quot; xmlns:rp1=&quot;http://example.com/RP/Headers&quot;&gt;12&lt;/rp1:CustomerID&gt;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Security</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: Security header containing u:TimeStamp,
+  s:BinarySecurityToken, s:EncryptedKey with encrypted symmetric key used to
+  encrypt the content of the Body, Signature over addressing headers , reference
+  parameter header, TimeStamp, Body.</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Body</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: enc:EncryptedData with encrypted content of the
+  response Body </p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><i>HTTP Response:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=xml>&lt;s:Envelope </p>
+
+<p class=xml>&nbsp; xmlns:s=&quot;http://www.w3.org/2003/05/soap-envelope&quot;
+</p>
+
+<p class=xml>&nbsp; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2005/08/addressing&quot;
+</p>
+
+<p class=xml>&nbsp;
+xmlns:u=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:Action u:Id=&quot;_0&quot;
+s:mustUnderstand=&quot;1&quot;&gt;http://example.com/ServicePortType/EchoStringResponse&lt;/a:Action&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:RelatesTo
+u:Id=&quot;_1&quot;&gt;urn:uuid:ad6bb0e4-d83d-4600-ad15-244e291b1af6&lt;/a:RelatesTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:To u:Id=&quot;_2&quot;&gt;http://schemas.xmlsoap.org/ws/2005/08/addressing/anonymous&lt;/a:To&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;rp1:CustomerID
+a:IsReferenceParameter=&quot;1&quot; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u:Id=&quot;_3&quot;
+xmlns:rp1=&quot;http://example.com/RP/Headers&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/rp1:CustomerID&gt;&nbsp; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;o:Security
+s:mustUnderstand=&quot;1&quot;
+xmlns:o=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptedKey
+u:Id=&quot;_4&quot; xmlns:e=&quot;http://www.w3.org/2001/04/xmlenc#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:EncryptionMethod
+Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#rsa-1_5&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;KeyInfo
+xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:KeyIdentifier
+ValueType=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509SubjectKeyIdentifier&quot;&gt;CuJdE1B2dUFd1dkLZSzQ5vj6MYg=&lt;/o:KeyIdentifier&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/KeyInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:CipherData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:CipherValue&gt;c/N3gV8hnvMV7gTkRPO5fm2aJRaGLSzC4z3nbZf6XpyUIZx925u5OG59SgqToyFgwLq3d8xg6FEPW+k2D98jYAzU5wiVov2gaJJFtGQ1puggTjxQ0iP81la1ouDvQLbx9wJRYeluE743sO0V/lp3895Rsr6CsURMkAmUQwXBU/k=&lt;/e:CipherValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+lang=DE>&lt;/e:CipherData&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:ReferenceList&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:DataReference URI=&quot;#_5&quot; /&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&lt;/e:ReferenceList&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/e:EncryptedKey&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Signature
+xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SignedInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;CanonicalizationMethod
+Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;SignatureMethod
+Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#uuid-137b1cf1-a094-41ca-bc08-04290cd1db0d-8&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;yfFxAukMbZ0ZBUPYqZrm6oLzLVw=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_0&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;43F9sURORzByIJd8VamgAMAhiFk=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Reference
+URI=&quot;#_1&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span lang=DE>&lt;/Transforms&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DigestValue&gt;ZtF0YtOyigSi9E1t5oG3YoC7rO8=&lt;/DigestValue&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_2&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;Anbw+ul9b/IbbJsE2uYuwsvYKk0=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_3&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;<span lang=DE>&lt;Transform
+Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;jNWPUSDVJNtSAzccjkaPTBCI1Fs=&lt;/DigestValue&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_4&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;jNFGHJFDBCI1Fs=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/SignedInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;SignatureValue&gt;lll3ZF5RoW4iEyB/eMVDMYD1OuWBr5DGt9Tp8qRP7JcsPkACTXjh8wflBMBmX/jaYBFZqD6OdHWui8omUAjRKbLi9VeoQXnLMCElZjwBDmrx6yTIQBrGjuwyAWZFkZU9IVf66klZZZGZ2eJWPhk2idyBykbD4SU9oIcE+yaNUqw=&lt;/SignatureValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;KeyInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:KeyIdentifier
+ValueType=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509SubjectKeyIdentifier&quot;&gt;Xeg55vRyK3ZhAEhEf+YT0z986L0=&lt;/o:KeyIdentifier&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/KeyInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Signature&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;u:Timestamp
+u:Id=&quot;uuid-137b1cf1-a094-41ca-bc08-04290cd1db0d-8&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;u:Created&gt;2005-09-27T14:53:39.106Z&lt;/u:Created&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;u:Expires&gt;2005-09-27T14:58:39.106Z&lt;/u:Expires&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/u:Timestamp&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/o:Security&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Body&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptedData
+u:Id=&quot;_5&quot; Type=&quot;http://www.w3.org/2001/04/xmlenc#Content&quot;
+xmlns:e=&quot;http://www.w3.org/2001/04/xmlenc#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptionMethod
+Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#tripledes-cbc&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:CipherData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:CipherValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;!-- Encrypted content of the
+Body&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;EchoStringResponse
+xmlns=&quot;http://example.com/&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;EchoStringResult&gt;echo&lt;/EchoStringResult&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/EchoStringResponse&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+--&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/e:CipherValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/e:CipherData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/e:EncryptedData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Body&gt;</p>
+
+<p class=xml>&nbsp; &lt;/s:Envelope&gt;</p>
+
+</div>
+
+<h2><a name="_Toc118514315">SOAP 1.2 Two-Way Secure Message Exchange with
+Non-Anonymous [ReplyTo] Address</a></h2>
+
+<p class=MsoNormal>This scenario tests a two-way message exchange where both
+request and response must be signed and encrypted.&nbsp; In this scenario, the
+requester uses a non-anonymous [ReplyTo].</p>
+
+<h3>Message Exchange</h3>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Client sends a signed and encrypted request message to the
+     Server in a POST request</li>
+ <li class=MsoNormal>Server sends an HTTP 200 response with a signed and
+     encrypted response message to Client</li>
+</ol>
+
+<h3>Request Message Structure</h3>
+
+<p class=MsoNormal><i>Elements and Attributes:</i></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Name</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Present?</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Comments</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Action</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: <a
+  href="http://tempuri.org/ServicePortType/EchoString">http://example.com/ServicePortType/EchoString</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>ReplyTo</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;&nbsp; Address</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The URI of the endpoint expecting the response</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;&nbsp; ReferenceParameters</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style=''><span style='font-family:"Lucida Console"'>&lt;rp1:CustomerID
+  xmlns:rp1=&quot;http://example.com/RP/Headers&quot;&gt;12&lt;/rp1:CustomerID&gt;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MessageID</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A URI that is unique for each message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>To</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The URI of the Service</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Security</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A security header containing u:TimeStamp, s:BinarySecurityToken,
+  s:EncryptedKey with encrypted symmetric key used to encrypt the content of
+  the Body, Signature over Address Headers, TimeStamp, and Body.</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Body</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: An element containing a client-defined string</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><i>HTTP Request:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=xml>&lt;s:Envelope </p>
+
+<p class=xml>&nbsp;
+xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2005/08/addressing&quot; </p>
+
+<p class=xml>&nbsp;
+xmlns:u=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;
+</p>
+
+<p class=xml>&nbsp;
+xmlns:s=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;</p>
+
+<p class=xml>&nbsp; &lt;s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;a:Action u:Id=&quot;_0&quot;
+s:mustUnderstand=&quot;1&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+http://example.com/ServicePortType/EchoString</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/a:Action&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;a:MessageID u:Id=&quot;_1&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+urn:uuid:ad6bb0e4-d83d-4600-ad15-244e291b1af6</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/a:MessageID&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;a:ReplyTo u:Id=&quot;_2&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;a:Address&gt;http://example.com/5bab2987-4f3c-40ba-8702-0d3af7b48fa6&lt;/a:Address&gt;</p>
+
+<p class=xml style='text-indent:.5in'>&lt;a:ReferenceParameters&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;rp1:CustomerID
+xmlns:rp1=&quot;http://example.com/RP/Headers&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/rp1:CustomerID&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/a:ReferenceParameters&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/a:ReplyTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;a:To u:Id=&quot;_3&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+http://localhost/pdcmtom/svc/service.svc/SecureMtom</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/a:To&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;o:Security s:mustUnderstand=&quot;1&quot; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+xmlns:o=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;u:Timestamp u:Id=&quot;uuid-553de6ca-99d7-4c1d-9d69-38fef21c75f8-5&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;u:Created&gt;2005-09-27T14:53:37.172Z&lt;/u:Created&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;u:Expires&gt;2005-09-27T14:58:37.172Z&lt;/u:Expires&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/u:Timestamp&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;o:BinarySecurityToken </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+u:Id=&quot;uuid-553de6ca-99d7-4c1d-9d69-38fef21c75f8-2&quot;&nbsp;&nbsp; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ValueType=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!--
+Base64 encoded client&#8217;s X509 cert --&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/o:BinarySecurityToken&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptedKey
+u:Id=&quot;_5&quot;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xmlns:e=&quot;http://www.w3.org/2001/04/xmlenc#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptionMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#rsa-1_5&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;KeyInfo
+xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:KeyIdentifier
+ValueType=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509SubjectKeyIdentifier&quot;&gt;Xeg55vRyK3ZhAEhEf+YT0z986L0=&lt;/o:KeyIdentifier&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/KeyInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:CipherData&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:CipherValue&gt;DmuXbdY5n8VE/5d5DlYkhwadFlrK3krae1OGrFxzVXQCryB5LeBIp9Vu1aMsBFCpDanvG+2+ybxB0sXymHFv1te0FO98IV/oadVlXmHiJW0uxVRlllODipiaRRqtNxVRPf1cvg1fi4vDvJY+UGd3IiR8EIIlv9Zx5/kKmwtkRSA=&lt;/e:CipherValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+lang=DE>&lt;/e:CipherData&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:ReferenceList&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:DataReference URI=&quot;#_6&quot; /&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&lt;/e:ReferenceList&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/e:EncryptedKey&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Signature
+xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;SignedInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;CanonicalizationMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;SignatureMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+URI=&quot;#uuid-553de6ca-99d7-4c1d-9d69-38fef21c75f8-5&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DigestMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;aS+FDYG4LKrNyntSHbGc+HxqPh8=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_0&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Transform
+Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;p3pOg4BZw8kZsN+jonJj+cHH6oE=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_1&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;LFzaXjZ+FUftSK3qsIvc34XKUzU=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_2&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;aF7hmVRuE93WcW8oz8jWiwtcwNo=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_3&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;LHRBiHST</p>
+
+<p class=xml>FuO3ZZ4+VzWjes6Pxwo=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_4&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DigestMethod
+Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;4Jivry4hy7EH7UDjrLPEjMWWF5s=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/SignedInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;SignatureValue&gt;Tav8Vri1u9h1zrinCbBpOazkr442bwgSHm2flZb+z2b0741MSDchrCPQvdCnRmvf9GxrLK16MC1wjRz3SjZqTrCWozAwDXQIbOoaAEau1Xi3jNQUGQ6LJ/8uFJBFnmSPn9fZm1btPZSmt/MfoNiWpaT5YdxqQTDFaFGm1v4Sa+I=&lt;/SignatureValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;KeyInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:Reference URI=&quot;#uuid-553de6ca-99d7-4c1d-9d69-38fef21c75f8-2&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/KeyInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Signature&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/o:Security&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Body&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptedData
+u:Id=&quot;_6&quot; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Type=&quot;http://www.w3.org/2001/04/xmlenc#Content&quot; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+xmlns:e=&quot;http://www.w3.org/2001/04/xmlenc#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptionMethod </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#tripledes-cbc&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:CipherData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:CipherValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;!-- encrypted content of the Body </p>
+
+<p class=xml>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;EchoString
+xmlns=&quot;http://example.com/&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;EchoString&gt;echo&lt;/EchoString&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/EchoString&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+--&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/e:CipherValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/e:CipherData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/e:EncryptedData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Body&gt;</p>
+
+<p class=xml>&nbsp; &lt;/s:Envelope&gt;</p>
+
+</div>
+
+<h3>Response Message Structure</h3>
+
+<p class=MsoNormal><i>Elements and Attributes:</i></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Name</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Present?</b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Comments</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Action</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: <a
+  href="http://tempuri.org/ServicePortType/EchoStringResponse">http://example.com/ServicePortType/EchoStringResponse</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>RelatesTo</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The MessageID specified in the request message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp; @RelationshipType</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>If present, it MUST contain the value: <a
+  href="http://www.w3.org/2005/08/addressing/reply">http://www.w3.org/2005/08/addressing/reply</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MessageID</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: A URI that is unique for each message</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>To</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Optional</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: The URI passed into ReplyTo\Address</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Reference Parameter Headers</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style=''><span style='font-family:"Lucida Console"'>&lt;rp1:CustomerID
+  a:IsReferenceParameter=&quot;true&quot;
+  xmlns:rp1=&quot;http://example.com/RP/Headers&quot;&gt;12&lt;/rp1:CustomerID&gt;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Security</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: Security header containing u:TimeStamp, s:BinarySecurityToken,
+  s:EncryptedKey with encrypted symmetric key used to encrypt the content of
+  the Body, Signature over addressing headers , reference parameter header,
+  TimeStamp, Body.</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Body</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Yes</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Value: enc:EncryptedData with encrypted content of the
+  response Body </p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><i>HTTP Response:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=xml>&lt;s:Envelope </p>
+
+<p class=xml>&nbsp; xmlns:s=&quot;http://www.w3.org/2003/05/soap-envelope&quot;
+</p>
+
+<p class=xml>&nbsp;
+xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2005/08/addressing&quot; </p>
+
+<p class=xml>&nbsp; xmlns:u=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:Action u:Id=&quot;_0&quot;
+s:mustUnderstand=&quot;1&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+http://example.com/ServicePortType/EchoStringResponse</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/a:Action&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:RelatesTo u:Id=&quot;_1&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+urn:uuid:ad6bb0e4-d83d-4600-ad15-244e291b1af6</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/a:RelatesTo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a:To u:Id=&quot;_2&quot;&gt;http://example.com/5bab2987-4f3c-40ba-8702-0d3af7b48fa6&lt;/a:To&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;rp1:CustomerID
+a:IsReferenceParameter=&quot;1&quot; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u:Id=&quot;_3&quot; xmlns:rp1=&quot;http://example.com/RP/Headers&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/rp1:CustomerID&gt;&nbsp; </p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;o:Security
+s:mustUnderstand=&quot;1&quot;
+xmlns:o=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptedKey
+u:Id=&quot;_4&quot; xmlns:e=&quot;http://www.w3.org/2001/04/xmlenc#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:EncryptionMethod
+Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#rsa-1_5&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;KeyInfo
+xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:KeyIdentifier ValueType=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509SubjectKeyIdentifier&quot;&gt;CuJdE1B2dUFd1dkLZSzQ5vj6MYg=&lt;/o:KeyIdentifier&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/KeyInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:CipherData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;e:CipherValue&gt;c/N3gV8hnvMV7gTkRPO5fm2aJRaGLSzC4z3nbZf6XpyUIZx925u5OG59SgqToyFgwLq3d8xg6FEPW+k2D98jYAzU5wiVov2gaJJFtGQ1puggTjxQ0iP81la1ouDvQLbx9wJRYeluE743sO0V/lp3895Rsr6CsURMkAmUQwXBU/k=&lt;/e:CipherValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+lang=DE>&lt;/e:CipherData&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:ReferenceList&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;e:DataReference URI=&quot;#_5&quot; /&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&lt;/e:ReferenceList&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/e:EncryptedKey&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Signature
+xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;SignedInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;SignatureMethod
+Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#uuid-137b1cf1-a094-41ca-bc08-04290cd1db0d-8&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;yfFxAukMbZ0ZBUPYqZrm6oLzLVw=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_0&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;43F9sURORzByIJd8VamgAMAhiFk=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_1&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span lang=DE>&lt;/Transforms&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DigestMethod
+Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot; /&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;ZtF0YtOyigSi9E1t5oG3YoC7rO8=&lt;/DigestValue&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_2&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;Anbw+ul9b/IbbJsE2uYuwsvYKk0=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_3&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span lang=DE>&lt;Transform
+Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Transforms&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;jNWPUSDVJNtSAzccjkaPTBCI1Fs=&lt;/DigestValue&gt;</span></p>
+
+<p class=xml><span lang=DE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Reference URI=&quot;#_4&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Transforms&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;
+/&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DigestValue&gt;jNFGHJFDBCI1Fs=&lt;/DigestValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Reference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/SignedInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;SignatureValue&gt;lll3ZF5RoW4iEyB/eMVDMYD1OuWBr5DGt9Tp8qRP7JcsPkACTXjh8wflBMBmX/jaYBFZqD6OdHWui8omUAjRKbLi9VeoQXnLMCElZjwBDmrx6yTIQBrGjuwyAWZFkZU9IVf66klZZZGZ2eJWPhk2idyBykbD4SU9oIcE+yaNUqw=&lt;/SignatureValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;KeyInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;o:KeyIdentifier
+ValueType=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509SubjectKeyIdentifier&quot;&gt;Xeg55vRyK3ZhAEhEf+YT0z986L0=&lt;/o:KeyIdentifier&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/o:SecurityTokenReference&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/KeyInfo&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Signature&gt;</p>
+
+<p class=xml>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;u:Timestamp
+u:Id=&quot;uuid-137b1cf1-a094-41ca-bc08-04290cd1db0d-8&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;u:Created&gt;2005-09-27T14:53:39.106Z&lt;/u:Created&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;u:Expires&gt;2005-09-27T14:58:39.106Z&lt;/u:Expires&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/u:Timestamp&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/o:Security&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Header&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;s:Body&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptedData
+u:Id=&quot;_5&quot; Type=&quot;http://www.w3.org/2001/04/xmlenc#Content&quot;
+xmlns:e=&quot;http://www.w3.org/2001/04/xmlenc#&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:EncryptionMethod
+Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#tripledes-cbc&quot; /&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:CipherData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;e:CipherValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;!-- Encrypted content of the
+Body&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;EchoStringResponse xmlns=&quot;http://example.com/&quot;&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;EchoStringResult&gt;echo&lt;/EchoStringResult&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/EchoStringResponse&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+--&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/e:CipherValue&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/e:CipherData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/e:EncryptedData&gt;</p>
+
+<p class=xml>&nbsp;&nbsp;&nbsp; &lt;/s:Body&gt;</p>
+
+<p class=xml>&nbsp; &lt;/s:Envelope&gt;</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

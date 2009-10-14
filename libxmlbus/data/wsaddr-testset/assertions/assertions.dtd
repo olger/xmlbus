@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ENTITY ws-addr-core "http://www.w3.org/TR/ws-addr-core/">
+<!ENTITY ws-addr-soap "http://www.w3.org/TR/ws-addr-soap/">
+<!ENTITY ws-addr-wsdl "http://www.w3.org/TR/ws-addr-soap/">
+
+<!ELEMENT assertions (assertion+)>
+<!ELEMENT assertion (text, note)>
+<!ELEMENT note (#PCDATA)>
+<!ELEMENT text (#PCDATA)>
+
+<!ATTLIST assertions
+  xmlns CDATA "http://www.w3.org/2005/08/addressing/test-cases/assertions"
+>
+
+<!ATTLIST assertion
+  xml:id CDATA #REQUIRED
+  level (deprecated | informative | may | should | must) #REQUIRED
+  doc CDATA #REQUIRED
+  section CDATA #REQUIRED
+>
+
+

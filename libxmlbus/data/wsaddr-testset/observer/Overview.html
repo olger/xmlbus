@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="generator" content=
+"HTML Tidy for Mac OS X (vers 12 April 2005), see www.w3.org">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Web Services Addressing 1.0 - Observer</title>
+<link href="http://www.w3.org/StyleSheets/public" rel="stylesheet"
+type="text/css">
+<link href="../../../../StyleSheets/public" rel="stylesheet" type=
+"text/css">
+<link rel="stylesheet" type="text/css" href=
+"../../../wsa-style.css">
+<link rel="stylesheet" type="text/css" href=
+"../../public-style.css">
+<link href="../testsuite.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>Web Services Addressing 1.0 - Observer</h1>
+<p>
+The <a href="processor.xsl">processor.xsl</a> stylesheet may be used to check 
+a <a href="../logs/">captured log</a> of WS-Addressing SOAP messages 
+against the assertions in the <a href="../testcases/">test cases</a> document.
+</p>
+<p>
+You should use an XSLT processor which supports XPath 2.0 expressions, such as <a href="http://saxon.sourceforge.net/">Saxon 8.6</a>.
+</p>
+
+<p>How this works: <a href="mkschema.xsl">mkschema.xsl</a> uses the 
+    <a href="../testcases/">testcases</a> document to generate
+    a <a href="http://www.schematron.com/">Schematron</a> schema <a href="schema.sch">schema.sch</a>
+    which is used by the stylesheet <a href="schematron.xsl">schematron.xsl</a> 
+    to generate <a href="processor.xsl">processor.xsl</a>.
+</p>
+
+<p>
+The <a href="processor-munger.xslt">processor-munger.xslt</a> generates the
+<a href="processor-xmlout.xsl">processor-xmlout.xsl</a> which produces the
+results as XML - see <a href="output.xml">output.xml</a>.
+</p>
+
+<hr>
+<p>
+$Date: 2006/02/22 11:21:33 $</p>
+<address><a href="../">Web Services Addressing Test Suite</a><br>
+<br>
+      <a href="mailto:paul.downey@bt.com">Paul Downey</a>, 
+      <a href="mailto:david.illsley@uk.ibm.com.com">David Illsley</a>, 
+      <a href="mailto:jmarsh@microsoft.com">Jonathan Marsh</a>, 
+	Editors<br/>
+<a href="mailto:bob.freund@hitachisoftware.com">Bob Freund</a>, Chair<br/><br/>
+<a href="../../../People/Hugo/">Hugo Haas</a>, <a href=
+"../../../People/LeHegaret/">Philippe Le Hégaret</a>, W3C Team
+contacts<br></address>
+<p class="copyright"><a rel="Copyright" href=
+"/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2005
+<a href="/"><acronym title=
+"World Wide Web Consortium">W3C</acronym></a> <sup>®</sup> (
+<a href="http://www.csail.mit.edu/"><acronym title=
+"Massachusetts Institute of Technology">MIT</acronym></a> ,
+<a href="http://www.ercim.org/"><acronym title=
+"European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>
+,<a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved.
+W3C <a href=
+"/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+<a href=
+"/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>,
+<a rel="Copyright" href=
+"/Consortium/Legal/copyright-documents">document use</a> and
+<a rel="Copyright" href=
+"/Consortium/Legal/copyright-software">software licensing</a> rules
+apply. Your interactions with this site are in accordance with our
+<a href="/Consortium/Legal/privacy-statement#Public">public</a>
+and<a href="/Consortium/Legal/privacy-statement#Members">Member</a>
+privacy statements.</p>
+</body>
+</html>

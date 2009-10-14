@@ -1,0 +1,14 @@
+<?xml version='1.0' ?>
+<!-- $Id: epr2.xml,v 1.3 2005/10/24 17:57:37 pdowney Exp $ -->
+<wsa:EndpointReference xmlns:customer="http://example.org/customer"
+    xmlns:wsa="http://www.w3.org/2005/08/addressing">
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+   <wsa:ReferenceParameters>
+    <customer:CustomerKey>Key#123456789</customer:CustomerKey>
+   </wsa:ReferenceParameters>
+   <wsa:Metadata customer:total="1">
+   </wsa:Metadata>
+   <customer:Metadata>
+	<customer:extraStuff>This should be ignored</customer:extraStuff>
+   </customer:Metadata>
+</wsa:EndpointReference>

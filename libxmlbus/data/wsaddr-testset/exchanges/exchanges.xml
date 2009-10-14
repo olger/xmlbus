@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!-- 
+    Web Services Addressing Test Message Exchanges
+    $Date: 2005/09/29 17:37:41 $ 
+-->
+<message-exchanges xmlns="http://www.w3.org/2005/08/addressing/test-cases/message-exchanges">
+
+  <description>Message Exchanges are an enumerated list of concrete message exchanges which may be used
+    in conjunction with the test assertions to group, and reveal the coverage of 
+    Web Service Addressing 1.0 test cases.</description>
+  <note>This version only has HTTP as the underlying protocol and therefore doesn't expose
+	sceanrios involving a one-way transport, such as Email.</note>
+  <note>The list of WSDL 1.1 bindings, WSDL 2.0 MEPs, SOAP MEPs and SOAP bindings which may be used to describe each exchange are not yet cited. </note>
+
+  <message-exchange xml:id="SOAP11-HTTP-In-Only" addr-binding="soap11" addr-mep="twoway-inonly">
+    <messages>
+      <message from="A" to="B" content="a SOAP 1.1 message" method="HTTP POST"/>
+      <message from="B" to="A" content="no content" method="HTTP 202 (Accepted) response"/>
+    </messages>
+  </message-exchange>
+  <message-exchange xml:id="SOAP12-HTTP-In-Only" addr-binding="soap12" addr-mep="twoway-inonly">
+    <messages>
+      <message from="A" to="B" content="a SOAP 1.2 message" method="HTTP POST"/>
+      <message from="B" to="A" content="no content" method="HTTP 202 (Accepted) response"/>
+    </messages>
+  </message-exchange>
+
+  <message-exchange xml:id="SOAP11-HTTP-In-Only-Fault" addr-binding="soap11" addr-mep="twoway-robustinonly-a">
+    <messages>
+      <message from="A" to="B" content="a SOAP 1.1 message" method="HTTP POST"/>
+      <message from="B" to="A" content="a SOAP 1.1 fault" method="HTTP 500 (Internal Server Error) response"/>
+    </messages>
+  </message-exchange>
+  <message-exchange xml:id="SOAP12-HTTP-In-Only-Fault" addr-binding="soap12" addr-mep="twoway-robustinonly-a">
+    <messages>
+      <message from="A" to="B" content="a SOAP 1.2 message" method="HTTP POST"/>
+      <message from="B" to="A" content="a SOAP 1.2 fault" method="HTTP 500 (Internal Server Error) response"/>
+    </messages>
+  </message-exchange>
+
+  <message-exchange xml:id="SOAP11-HTTP-In-Out" addr-binding="soap11" addr-mep="twoway-inout-a">
+    <messages>
+      <message from="A" to="B" content="a SOAP 1.1 message" method="HTTP POST"/>
+      <message from="B" to="A" content="a SOAP 1.1 message" method="HTTP 200 (OK) response"/>
+    </messages>
+  </message-exchange>
+  <message-exchange xml:id="SOAP12-HTTP-In-Out" addr-binding="soap12" addr-mep="twoway-inout-a">
+    <messages>
+      <message from="A" to="B" content="a SOAP 1.2 message" method="HTTP POST"/>
+      <message from="B" to="A" content="a SOAP 1.2 message" method="HTTP 200 (OK) response"/>
+    </messages>
+  </message-exchange>
+
+  <message-exchange xml:id="SOAP11-HTTP-In-Out-Fault" addr-binding="soap11" addr-mep="twoway-inout-a">
+    <messages>
+      <message from="A" to="B" content="a SOAP 1.1 message" method="HTTP POST"/>
+      <message from="B" to="A" content="a SOAP 1.1 fault" method="HTTP 500 (Internal Server Error) response"/>
+    </messages>
+  </message-exchange>
+  <message-exchange xml:id="SOAP12-HTTP-In-Out-Fault" addr-binding="soap12" addr-mep="twoway-inout-a">
+    <messages>
+      <message from="A" to="B" content="a SOAP 1.2 message" method="HTTP POST"/>
+      <message from="B" to="A" content="a SOAP 1.2 fault" method="HTTP 500 (Internal Server Error) response"/>
+    </messages>
+  </message-exchange>
+
+  <message-exchange xml:id="SOAP11-HTTP-In-Out-Callback" addr-binding="soap11" addr-mep="twoway-inout-b">
+    <messages>
+      <message from="A" to="B" content="a SOAP 1.1 message" method="HTTP POST"/>
+      <message from="B" to="A" content="no content" method="HTTP 202 (Accepted) response"/>
+      <message from="B" to="A" content="a SOAP 1.1 message" method="HTTP POST"/>
+      <message from="A" to="B" content="no content" method="HTTP 202 (Accepted) response"/>
+    </messages>
+  </message-exchange>
+  <message-exchange xml:id="SOAP12-HTTP-In-Out-Callback" addr-binding="soap12" addr-mep="twoway-inout-b">
+    <messages>
+      <message from="A" to="B" content="a SOAP 1.2 message" method="HTTP POST"/>
+      <message from="B" to="A" content="no content" method="HTTP 202 (Accepted) response"/>
+      <message from="B" to="A" content="a SOAP 1.2 message" method="HTTP POST"/>
+      <message from="A" to="B" content="no content" method="HTTP 202 (Accepted) response"/>
+    </messages>
+  </message-exchange>
+
+  <message-exchange xml:id="SOAP11-HTTP-In-Out-Callback-Fault" addr-binding="soap11" addr-mep="twoway-inout-b">
+    <messages>
+      <message from="A" to="B" content="a SOAP 1.2 message" method="HTTP POST"/>
+      <message from="B" to="A" content="no content" method="HTTP 202 (Accepted) response"/>
+      <message from="B" to="A" content="a SOAP 1.2 fault" method="HTTP POST"/>
+      <message from="A" to="B" content="no content" method="HTTP 202 (Accepted) response"/>
+    </messages>
+  </message-exchange>
+  <message-exchange xml:id="SOAP12-HTTP-In-Out-Callback-Fault" addr-binding="soap12" addr-mep="twoway-inout-b">
+    <messages>
+      <message from="A" to="B" content="a SOAP 1.2 message" method="HTTP POST"/>
+      <message from="B" to="A" content="no content" method="HTTP 202 (Accepted) response"/>
+      <message from="B" to="A" content="a SOAP 1.2 fault" method="HTTP POST"/>
+      <message from="A" to="B" content="no content" method="HTTP 202 (Accepted) response"/>
+    </messages>
+  </message-exchange>
+
+</message-exchanges>

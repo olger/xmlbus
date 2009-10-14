@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- $Id: test1205-1request.xml,v 1.4 2006/01/19 06:05:31 hugo Exp $ -->
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:To>http://example.org/node/B</wsa:To>
+    <wsa:FaultTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+    </wsa:FaultTo>
+<!-- The following is a header which will not be understood -->
+    <alertcontrol:alertcontrol xmlns:alertcontrol="http://example.org/alertcontrol" env:mustUnderstand="true">
+      <alertcontrol:priority>1</alertcontrol:priority>
+      <alertcontrol:expires>2001-06-22T14:00:00-05:00</alertcontrol:expires>
+    </alertcontrol:alertcontrol>
+    <wsa:MessageID>urn:uuid:35A2EA45-8F2D-42EE-AD28-14F55D7E15D7</wsa:MessageID>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>

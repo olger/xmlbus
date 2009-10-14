@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rollup.xslt"?>
+<test-rollup>
+    <name>WS-Addressing Test Results, Mon Mar 20 12:42:43 2006 UTC</name>
+    <participants>
+        <vendor>Axis</vendor>
+        <vendor>IBM</vendor>
+        <vendor>JBoss</vendor>
+        <vendor>Microsoft</vendor>
+        <vendor>Sun</vendor>
+        <vendor>WSO2</vendor>
+    </participants>
+	<log href="IBM-IBM-Axis.xml" results="IBM-IBM-Axis-results.xml" source="IBM" client="IBM" server="Axis"/>
+	<log href="IBM-IBM-IBM.xml" results="IBM-IBM-IBM-results.xml" source="IBM" client="IBM" server="IBM"/>
+	<log href="IBM-IBM-JBoss.xml" results="IBM-IBM-JBoss-results.xml" source="IBM" client="IBM" server="JBoss"/>
+	<log href="IBM-IBM-Microsoft.xml" results="IBM-IBM-Microsoft-results.xml" source="IBM" client="IBM" server="Microsoft"/>
+	<log href="IBM-IBM-Sun.xml" results="IBM-IBM-Sun-results.xml" source="IBM" client="IBM" server="Sun"/>
+	<log href="WSO2-IBM-WSO2.xml" results="WSO2-IBM-WSO2-results.xml" source="WSO2" client="IBM" server="WSO2"/>
+	<log href="JBoss-JBoss-Axis.xml" results="JBoss-JBoss-Axis-results.xml" source="JBoss" client="JBoss" server="Axis"/>
+	<log href="JBoss-JBoss-IBM.xml" results="JBoss-JBoss-IBM-results.xml" source="JBoss" client="JBoss" server="IBM"/>
+	<log href="JBoss-JBoss-JBoss.xml" results="JBoss-JBoss-JBoss-results.xml" source="JBoss" client="JBoss" server="JBoss"/>
+	<log href="JBoss-JBoss-Microsoft.xml" results="JBoss-JBoss-Microsoft-results.xml" source="JBoss" client="JBoss" server="Microsoft"/>
+	<log href="JBoss-JBoss-Sun.xml" results="JBoss-JBoss-Sun-results.xml" source="JBoss" client="JBoss" server="Sun"/>
+	<log href="JBoss-JBoss-WSO2.xml" results="JBoss-JBoss-WSO2-results.xml" source="JBoss" client="JBoss" server="WSO2"/>
+	<log href="Microsoft-Microsoft-Axis.xml" results="Microsoft-Microsoft-Axis-results.xml" source="Microsoft" client="Microsoft" server="Axis"/>
+	<log href="Microsoft-Microsoft-IBM.xml" results="Microsoft-Microsoft-IBM-results.xml" source="Microsoft" client="Microsoft" server="IBM"/>
+	<log href="Microsoft-Microsoft-JBoss.xml" results="Microsoft-Microsoft-JBoss-results.xml" source="Microsoft" client="Microsoft" server="JBoss"/>
+	<log href="Microsoft-Microsoft-Microsoft.xml" results="Microsoft-Microsoft-Microsoft-results.xml" source="Microsoft" client="Microsoft" server="Microsoft"/>
+	<log href="Microsoft-Microsoft-Sun.xml" results="Microsoft-Microsoft-Sun-results.xml" source="Microsoft" client="Microsoft" server="Sun"/>
+	<log href="Microsoft-Microsoft-WSO2.xml" results="Microsoft-Microsoft-WSO2-results.xml" source="Microsoft" client="Microsoft" server="WSO2"/>
+	<log href="IBM-Sun-Axis.xml" results="IBM-Sun-Axis-results.xml" source="IBM" client="Sun" server="Axis"/>
+	<log href="IBM-Sun-IBM.xml" results="IBM-Sun-IBM-results.xml" source="IBM" client="Sun" server="IBM"/>
+	<log href="IBM-Sun-JBoss.xml" results="IBM-Sun-JBoss-results.xml" source="IBM" client="Sun" server="JBoss"/>
+	<log href="IBM-Sun-Microsoft.xml" results="IBM-Sun-Microsoft-results.xml" source="IBM" client="Sun" server="Microsoft"/>
+	<log href="Sun-Sun-Sun.xml" results="Sun-Sun-Sun-results.xml" source="Sun" client="Sun" server="Sun"/>
+	<log href="WSO2-Sun-WSO2.xml" results="WSO2-Sun-WSO2-results.xml" source="WSO2" client="Sun" server="WSO2"/>
+	<log href="WSO2-WSO2-Axis.xml" results="WSO2-WSO2-Axis-results.xml" source="WSO2" client="WSO2" server="Axis"/>
+	<log href="WSO2-WSO2-IBM.xml" results="WSO2-WSO2-IBM-results.xml" source="WSO2" client="WSO2" server="IBM"/>
+	<log href="WSO2-WSO2-JBoss.xml" results="WSO2-WSO2-JBoss-results.xml" source="WSO2" client="WSO2" server="JBoss"/>
+	<log href="WSO2-WSO2-Microsoft.xml" results="WSO2-WSO2-Microsoft-results.xml" source="WSO2" client="WSO2" server="Microsoft"/>
+	<log href="WSO2-WSO2-Sun.xml" results="WSO2-WSO2-Sun-results.xml" source="WSO2" client="WSO2" server="Sun"/>
+	<log href="WSO2-WSO2-WSO2.xml" results="WSO2-WSO2-WSO2-results.xml" source="WSO2" client="WSO2" server="WSO2"/>
+</test-rollup>

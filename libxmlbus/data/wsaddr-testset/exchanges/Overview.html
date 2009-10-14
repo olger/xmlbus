@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:s=
+"http://www.w3.org/2005/08/addressing/test-cases/message-exchanges"
+xmlns:tc="http://www.w3.org/2002/ws/addr/testsuite/testcases/">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Mac OS X (vers 12 April 2005), see www.w3.org">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Web Services Addressing 1.0 - Test Message Exchanges</title>
+<link href="../testsuite.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>Web Services Addressing 1.0 - Test Message Exchanges</h1>
+<p>Message Exchanges are an enumerated list of concrete message
+exchanges which may be used in conjunction with the test assertions
+to group, and reveal the coverage of Web Service Addressing 1.0
+test cases.</p>
+<ul>
+<li><a href="#SOAP11-HTTP-In-Only">SOAP11-HTTP-In-Only</a> {
+<a href="../testcases/#test1100">test1100</a> <a href=
+"../testcases/#test1101">test1101</a> <a href=
+"../testcases/#test1102">test1102</a> <a href=
+"../testcases/#test1103">test1103</a> <a href=
+"../testcases/#test1104">test1104</a> <a href=
+"../testcases/#test1106">test1106</a> <a href=
+"../testcases/#test1107">test1107</a> <a href=
+"../testcases/#test1108">test1108</a> }</li>
+<li><a href="#SOAP12-HTTP-In-Only">SOAP12-HTTP-In-Only</a> {
+<a href="../testcases/#test1200">test1200</a> <a href=
+"../testcases/#test1201">test1201</a> <a href=
+"../testcases/#test1202">test1202</a> <a href=
+"../testcases/#test1203">test1203</a> <a href=
+"../testcases/#test1204">test1204</a> <a href=
+"../testcases/#test1206">test1206</a> <a href=
+"../testcases/#test1207">test1207</a> <a href=
+"../testcases/#test1208">test1208</a> }</li>
+<li><a href=
+"#SOAP11-HTTP-In-Only-Fault">SOAP11-HTTP-In-Only-Fault</a> { }</li>
+<li><a href=
+"#SOAP12-HTTP-In-Only-Fault">SOAP12-HTTP-In-Only-Fault</a> {
+<a href="../testcases/#test1238">test1238</a> }</li>
+<li><a href="#SOAP11-HTTP-In-Out">SOAP11-HTTP-In-Out</a> { <a href=
+"../testcases/#test1130">test1130</a> <a href=
+"../testcases/#test1131">test1131</a> <a href=
+"../testcases/#test1132">test1132</a> <a href=
+"../testcases/#test1170">test1170</a> }</li>
+<li><a href="#SOAP12-HTTP-In-Out">SOAP12-HTTP-In-Out</a> { <a href=
+"../testcases/#test1230">test1230</a> <a href=
+"../testcases/#test1231">test1231</a> <a href=
+"../testcases/#test1232">test1232</a> <a href=
+"../testcases/#test1236">test1236</a> <a href=
+"../testcases/#test1237">test1237</a> <a href=
+"../testcases/#test1270">test1270</a> }</li>
+<li><a href=
+"#SOAP11-HTTP-In-Out-Fault">SOAP11-HTTP-In-Out-Fault</a> { <a href=
+"../testcases/#test1133">test1133</a> <a href=
+"../testcases/#test1134">test1134</a> <a href=
+"../testcases/#test1140">test1140</a> <a href=
+"../testcases/#test1141">test1141</a> <a href=
+"../testcases/#test1142">test1142</a> <a href=
+"../testcases/#test1143">test1143</a> <a href=
+"../testcases/#test1144">test1144</a> <a href=
+"../testcases/#test1146">test1146</a> <a href=
+"../testcases/#test1147">test1147</a> <a href=
+"../testcases/#test1149">test1149</a> }</li>
+<li><a href=
+"#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a> { <a href=
+"../testcases/#test1233">test1233</a> <a href=
+"../testcases/#test1234">test1234</a> <a href=
+"../testcases/#test1235">test1235</a> <a href=
+"../testcases/#test1240">test1240</a> <a href=
+"../testcases/#test1241">test1241</a> <a href=
+"../testcases/#test1242">test1242</a> <a href=
+"../testcases/#test1243">test1243</a> <a href=
+"../testcases/#test1244">test1244</a> <a href=
+"../testcases/#test1246">test1246</a> <a href=
+"../testcases/#test1247">test1247</a> <a href=
+"../testcases/#test1248">test1248</a> <a href=
+"../testcases/#test1249">test1249</a> }</li>
+<li><a href=
+"#SOAP11-HTTP-In-Out-Callback">SOAP11-HTTP-In-Out-Callback</a> {
+<a href="../testcases/#test1150">test1150</a> <a href=
+"../testcases/#test1152">test1152</a> }</li>
+<li><a href=
+"#SOAP12-HTTP-In-Out-Callback">SOAP12-HTTP-In-Out-Callback</a> {
+<a href="../testcases/#test1250">test1250</a> <a href=
+"../testcases/#test1251">test1251</a> <a href=
+"../testcases/#test1252">test1252</a> <a href=
+"../testcases/#test1260">test1260</a> }</li>
+<li><a href=
+"#SOAP11-HTTP-In-Out-Callback-Fault">SOAP11-HTTP-In-Out-Callback-Fault</a>
+{ }</li>
+<li><a href=
+"#SOAP12-HTTP-In-Out-Callback-Fault">SOAP12-HTTP-In-Out-Callback-Fault</a>
+{ }</li>
+</ul>
+<p><i>This version only has HTTP as the underlying protocol and
+therefore doesn't expose sceanrios involving a one-way transport,
+such as Email.</i></p>
+<p><i>The list of WSDL 1.1 bindings, WSDL 2.0 MEPs, SOAP MEPs and
+SOAP bindings which may be used to describe each exchange are not
+yet cited.</i></p>
+<div class="message-exchange soap11"><a name="SOAP11-HTTP-In-Only"
+id="SOAP11-HTTP-In-Only"></a><a href=
+"#SOAP11-HTTP-In-Only">SOAP11-HTTP-In-Only</a> (<b>soap11</b>)
+<p><img alt="twoway-inonly" src=
+"../diagrams/twoway-inonly.png"></p>
+<div class="description">
+<ol>
+<li>A sends B a HTTP POST with a SOAP 1.1 message</li>
+<li>B sends A a HTTP 202 (Accepted) response with no content</li>
+</ol>
+</div>
+<div class="tests">
+<p>{ <a href="../testcases/#test1100">test1100</a> <a href=
+"../testcases/#test1101">test1101</a> <a href=
+"../testcases/#test1102">test1102</a> <a href=
+"../testcases/#test1103">test1103</a> <a href=
+"../testcases/#test1104">test1104</a> <a href=
+"../testcases/#test1106">test1106</a> <a href=
+"../testcases/#test1107">test1107</a> <a href=
+"../testcases/#test1108">test1108</a> }</p>
+</div>
+</div>
+<div class="message-exchange soap12"><a name="SOAP12-HTTP-In-Only"
+id="SOAP12-HTTP-In-Only"></a><a href=
+"#SOAP12-HTTP-In-Only">SOAP12-HTTP-In-Only</a> (<b>soap12</b>)
+<p><img alt="twoway-inonly" src=
+"../diagrams/twoway-inonly.png"></p>
+<div class="description">
+<ol>
+<li>A sends B a HTTP POST with a SOAP 1.2 message</li>
+<li>B sends A a HTTP 202 (Accepted) response with no content</li>
+</ol>
+</div>
+<div class="tests">
+<p>{ <a href="../testcases/#test1200">test1200</a> <a href=
+"../testcases/#test1201">test1201</a> <a href=
+"../testcases/#test1202">test1202</a> <a href=
+"../testcases/#test1203">test1203</a> <a href=
+"../testcases/#test1204">test1204</a> <a href=
+"../testcases/#test1206">test1206</a> <a href=
+"../testcases/#test1207">test1207</a> <a href=
+"../testcases/#test1208">test1208</a> }</p>
+</div>
+</div>
+<div class="message-exchange soap11"><a name=
+"SOAP11-HTTP-In-Only-Fault" id=
+"SOAP11-HTTP-In-Only-Fault"></a><a href=
+"#SOAP11-HTTP-In-Only-Fault">SOAP11-HTTP-In-Only-Fault</a>
+(<b>soap11</b>)
+<p><img alt="twoway-robustinonly-a" src=
+"../diagrams/twoway-robustinonly-a.png"></p>
+<div class="description">
+<ol>
+<li>A sends B a HTTP POST with a SOAP 1.1 message</li>
+<li>B sends A a HTTP 500 (Internal Server Error) response with a
+SOAP 1.1 fault</li>
+</ol>
+</div>
+<div class="tests">
+<p>{ }</p>
+</div>
+</div>
+<div class="message-exchange soap12"><a name=
+"SOAP12-HTTP-In-Only-Fault" id=
+"SOAP12-HTTP-In-Only-Fault"></a><a href=
+"#SOAP12-HTTP-In-Only-Fault">SOAP12-HTTP-In-Only-Fault</a>
+(<b>soap12</b>)
+<p><img alt="twoway-robustinonly-a" src=
+"../diagrams/twoway-robustinonly-a.png"></p>
+<div class="description">
+<ol>
+<li>A sends B a HTTP POST with a SOAP 1.2 message</li>
+<li>B sends A a HTTP 500 (Internal Server Error) response with a
+SOAP 1.2 fault</li>
+</ol>
+</div>
+<div class="tests">
+<p>{ <a href="../testcases/#test1238">test1238</a> }</p>
+</div>
+</div>
+<div class="message-exchange soap11"><a name="SOAP11-HTTP-In-Out"
+id="SOAP11-HTTP-In-Out"></a><a href=
+"#SOAP11-HTTP-In-Out">SOAP11-HTTP-In-Out</a> (<b>soap11</b>)
+<p><img alt="twoway-inout-a" src=
+"../diagrams/twoway-inout-a.png"></p>
+<div class="description">
+<ol>
+<li>A sends B a HTTP POST with a SOAP 1.1 message</li>
+<li>B sends A a HTTP 200 (OK) response with a SOAP 1.1 message</li>
+</ol>
+</div>
+<div class="tests">
+<p>{ <a href="../testcases/#test1130">test1130</a> <a href=
+"../testcases/#test1131">test1131</a> <a href=
+"../testcases/#test1132">test1132</a> <a href=
+"../testcases/#test1170">test1170</a> }</p>
+</div>
+</div>
+<div class="message-exchange soap12"><a name="SOAP12-HTTP-In-Out"
+id="SOAP12-HTTP-In-Out"></a><a href=
+"#SOAP12-HTTP-In-Out">SOAP12-HTTP-In-Out</a> (<b>soap12</b>)
+<p><img alt="twoway-inout-a" src=
+"../diagrams/twoway-inout-a.png"></p>
+<div class="description">
+<ol>
+<li>A sends B a HTTP POST with a SOAP 1.2 message</li>
+<li>B sends A a HTTP 200 (OK) response with a SOAP 1.2 message</li>
+</ol>
+</div>
+<div class="tests">
+<p>{ <a href="../testcases/#test1230">test1230</a> <a href=
+"../testcases/#test1231">test1231</a> <a href=
+"../testcases/#test1232">test1232</a> <a href=
+"../testcases/#test1236">test1236</a> <a href=
+"../testcases/#test1237">test1237</a> <a href=
+"../testcases/#test1270">test1270</a> }</p>
+</div>
+</div>
+<div class="message-exchange soap11"><a name=
+"SOAP11-HTTP-In-Out-Fault" id=
+"SOAP11-HTTP-In-Out-Fault"></a><a href=
+"#SOAP11-HTTP-In-Out-Fault">SOAP11-HTTP-In-Out-Fault</a>
+(<b>soap11</b>)
+<p><img alt="twoway-inout-a" src=
+"../diagrams/twoway-inout-a.png"></p>
+<div class="description">
+<ol>
+<li>A sends B a HTTP POST with a SOAP 1.1 message</li>
+<li>B sends A a HTTP 500 (Internal Server Error) response with a
+SOAP 1.1 fault</li>
+</ol>
+</div>
+<div class="tests">
+<p>{ <a href="../testcases/#test1133">test1133</a> <a href=
+"../testcases/#test1134">test1134</a> <a href=
+"../testcases/#test1140">test1140</a> <a href=
+"../testcases/#test1141">test1141</a> <a href=
+"../testcases/#test1142">test1142</a> <a href=
+"../testcases/#test1143">test1143</a> <a href=
+"../testcases/#test1144">test1144</a> <a href=
+"../testcases/#test1146">test1146</a> <a href=
+"../testcases/#test1147">test1147</a> <a href=
+"../testcases/#test1149">test1149</a> }</p>
+</div>
+</div>
+<div class="message-exchange soap12"><a name=
+"SOAP12-HTTP-In-Out-Fault" id=
+"SOAP12-HTTP-In-Out-Fault"></a><a href=
+"#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a>
+(<b>soap12</b>)
+<p><img alt="twoway-inout-a" src=
+"../diagrams/twoway-inout-a.png"></p>
+<div class="description">
+<ol>
+<li>A sends B a HTTP POST with a SOAP 1.2 message</li>
+<li>B sends A a HTTP 500 (Internal Server Error) response with a
+SOAP 1.2 fault</li>
+</ol>
+</div>
+<div class="tests">
+<p>{ <a href="../testcases/#test1233">test1233</a> <a href=
+"../testcases/#test1234">test1234</a> <a href=
+"../testcases/#test1235">test1235</a> <a href=
+"../testcases/#test1240">test1240</a> <a href=
+"../testcases/#test1241">test1241</a> <a href=
+"../testcases/#test1242">test1242</a> <a href=
+"../testcases/#test1243">test1243</a> <a href=
+"../testcases/#test1244">test1244</a> <a href=
+"../testcases/#test1246">test1246</a> <a href=
+"../testcases/#test1247">test1247</a> <a href=
+"../testcases/#test1248">test1248</a> <a href=
+"../testcases/#test1249">test1249</a> }</p>
+</div>
+</div>
+<div class="message-exchange soap11"><a name=
+"SOAP11-HTTP-In-Out-Callback" id=
+"SOAP11-HTTP-In-Out-Callback"></a><a href=
+"#SOAP11-HTTP-In-Out-Callback">SOAP11-HTTP-In-Out-Callback</a>
+(<b>soap11</b>)
+<p><img alt="twoway-inout-b" src=
+"../diagrams/twoway-inout-b.png"></p>
+<div class="description">
+<ol>
+<li>A sends B a HTTP POST with a SOAP 1.1 message</li>
+<li>B sends A a HTTP 202 (Accepted) response with no content</li>
+<li>B sends A a HTTP POST with a SOAP 1.1 message</li>
+<li>A sends B a HTTP 202 (Accepted) response with no content</li>
+</ol>
+</div>
+<div class="tests">
+<p>{ <a href="../testcases/#test1150">test1150</a> <a href=
+"../testcases/#test1152">test1152</a> }</p>
+</div>
+</div>
+<div class="message-exchange soap12"><a name=
+"SOAP12-HTTP-In-Out-Callback" id=
+"SOAP12-HTTP-In-Out-Callback"></a><a href=
+"#SOAP12-HTTP-In-Out-Callback">SOAP12-HTTP-In-Out-Callback</a>
+(<b>soap12</b>)
+<p><img alt="twoway-inout-b" src=
+"../diagrams/twoway-inout-b.png"></p>
+<div class="description">
+<ol>
+<li>A sends B a HTTP POST with a SOAP 1.2 message</li>
+<li>B sends A a HTTP 202 (Accepted) response with no content</li>
+<li>B sends A a HTTP POST with a SOAP 1.2 message</li>
+<li>A sends B a HTTP 202 (Accepted) response with no content</li>
+</ol>
+</div>
+<div class="tests">
+<p>{ <a href="../testcases/#test1250">test1250</a> <a href=
+"../testcases/#test1251">test1251</a> <a href=
+"../testcases/#test1252">test1252</a> <a href=
+"../testcases/#test1260">test1260</a> }</p>
+</div>
+</div>
+<div class="message-exchange soap11"><a name=
+"SOAP11-HTTP-In-Out-Callback-Fault" id=
+"SOAP11-HTTP-In-Out-Callback-Fault"></a><a href=
+"#SOAP11-HTTP-In-Out-Callback-Fault">SOAP11-HTTP-In-Out-Callback-Fault</a>
+(<b>soap11</b>)
+<p><img alt="twoway-inout-b" src=
+"../diagrams/twoway-inout-b.png"></p>
+<div class="description">
+<ol>
+<li>A sends B a HTTP POST with a SOAP 1.2 message</li>
+<li>B sends A a HTTP 202 (Accepted) response with no content</li>
+<li>B sends A a HTTP POST with a SOAP 1.2 fault</li>
+<li>A sends B a HTTP 202 (Accepted) response with no content</li>
+</ol>
+</div>
+<div class="tests">
+<p>{ }</p>
+</div>
+</div>
+<div class="message-exchange soap12"><a name=
+"SOAP12-HTTP-In-Out-Callback-Fault" id=
+"SOAP12-HTTP-In-Out-Callback-Fault"></a><a href=
+"#SOAP12-HTTP-In-Out-Callback-Fault">SOAP12-HTTP-In-Out-Callback-Fault</a>
+(<b>soap12</b>)
+<p><img alt="twoway-inout-b" src=
+"../diagrams/twoway-inout-b.png"></p>
+<div class="description">
+<ol>
+<li>A sends B a HTTP POST with a SOAP 1.2 message</li>
+<li>B sends A a HTTP 202 (Accepted) response with no content</li>
+<li>B sends A a HTTP POST with a SOAP 1.2 fault</li>
+<li>A sends B a HTTP 202 (Accepted) response with no content</li>
+</ol>
+</div>
+<div class="tests">
+<p>{ }</p>
+</div>
+</div>
+<hr>
+<p>Generated from <a href="exchanges.xml">exchanges.xml</a> using
+<a href="exchanges.xsl">exchanges.xsl</a>.<br>
+$Date: 2005/10/26 22:45:13 $</p>
+<address><a href="../">Web Services Addressing Test Suite</a><br>
+<br>
+<a href="mailto:paul.downey@bt.com">Paul Downey</a>, <a href=
+"mailto:david.illsley@uk.ibm.com.com">David Illsley</a>, <a href=
+"mailto:jmarsh@microsoft.com">Jonathan Marsh</a>, Editors<br>
+<a href="mailto:bob.freund@hitachisoftware.com">Bob Freund</a>,
+Chair<br>
+<br>
+<a href="/People/Hugo/">Hugo Haas</a>, <a href=
+"/People/LeHegaret/">Philippe Le Hégaret</a>, W3C Team
+contacts<br></address>
+<p class="copyright"><a rel="Copyright" href=
+"/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2006
+<a href="/"><acronym title=
+"World Wide Web Consortium">W3C</acronym></a> <sup>®</sup> (
+<a href="http://www.csail.mit.edu/"><acronym title=
+"Massachusetts Institute of Technology">MIT</acronym></a> ,
+<a href="http://www.ercim.org/"><acronym title=
+"European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>
+,<a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved.
+W3C <a href=
+"/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+<a href=
+"/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>,
+<a rel="Copyright" href=
+"/Consortium/Legal/copyright-documents">document use</a> and
+<a rel="Copyright" href=
+"/Consortium/Legal/copyright-software">software licensing</a> rules
+apply. Your interactions with this site are in accordance with our
+<a href="/Consortium/Legal/privacy-statement#Public">public</a>
+and<a href="/Consortium/Legal/privacy-statement#Members">Member</a>
+privacy statements.</p>
+</body>
+</html>

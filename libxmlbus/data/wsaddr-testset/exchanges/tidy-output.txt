@@ -1,0 +1,35 @@
+line 2 column 1 - Warning: <html> proprietary attribute "xmlns:s"
+line 2 column 1 - Warning: <html> proprietary attribute "xmlns:tc"
+line 78 column 4 - Warning: trimming empty <i>
+line 78 column 1 - Warning: trimming empty <p>
+line 96 column 4 - Warning: trimming empty <i>
+line 96 column 1 - Warning: trimming empty <p>
+line 114 column 4 - Warning: trimming empty <i>
+line 114 column 1 - Warning: trimming empty <p>
+line 132 column 4 - Warning: trimming empty <i>
+line 132 column 1 - Warning: trimming empty <p>
+line 150 column 4 - Warning: trimming empty <i>
+line 150 column 1 - Warning: trimming empty <p>
+line 168 column 4 - Warning: trimming empty <i>
+line 168 column 1 - Warning: trimming empty <p>
+line 186 column 4 - Warning: trimming empty <i>
+line 186 column 1 - Warning: trimming empty <p>
+line 204 column 4 - Warning: trimming empty <i>
+line 204 column 1 - Warning: trimming empty <p>
+line 228 column 4 - Warning: trimming empty <i>
+line 228 column 1 - Warning: trimming empty <p>
+line 252 column 4 - Warning: trimming empty <i>
+line 252 column 1 - Warning: trimming empty <p>
+line 276 column 4 - Warning: trimming empty <i>
+line 276 column 1 - Warning: trimming empty <p>
+line 300 column 4 - Warning: trimming empty <i>
+line 300 column 1 - Warning: trimming empty <p>
+Info: Doctype given is "-//W3C//DTD HTML 4.01 Transitional//EN"
+Info: Document content looks like HTML 4.01 Strict
+26 warnings, 0 errors were found!
+
+
+To learn more about HTML Tidy see http://tidy.sourceforge.net
+Please send bug reports to html-tidy@w3.org
+HTML and CSS specifications are available from http://www.w3.org/
+Lobby your company to join W3C, see http://www.w3.org/Consortium

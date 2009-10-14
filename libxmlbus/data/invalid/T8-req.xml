@@ -1,0 +1,11 @@
+<?xml version='1.0' ?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"> 
+	<env:Header>
+		<test:echoOk xmlns:test="http://example.org/ts-tests"
+			     env:role="http://www.w3.org/2003/05/soap-envelope/role/none">
+			foo
+		</test:echoOk>
+	</env:Header>
+	<soap:Body xmlns:soap="http://xmlbus.org/faultyspace">
+	</soap:Body>
+</env:Envelope>

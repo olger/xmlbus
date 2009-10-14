@@ -1,0 +1,2468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<l:log xmlns:l="http://www.w3.org/2002/ws/addressing/logs/" 
+    xmlns:s="http://www.w3.org/2002/ws/addr/testsuite/testcases/">
+    <l:message testcase="test1100" message="1" context="wso2-test1100">
+	<l:content href="wso2-Test1100-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1100</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1101" message="1" context="wso2-test1101">
+	<l:content href="wso2-Test1101-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:MessageID>urn:uuid:3a3c98d8-ace3-4784-a47c-6db3c75f9d16</a:MessageID>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1101</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1102" message="1" context="wso2-test1102">
+	<l:content href="wso2-Test1102-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1102</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1103" message="1" context="wso2-test1103">
+	<l:content href="wso2-Test1103-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1103</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1104" message="1" context="wso2-test1104">
+	<l:content href="wso2-Test1104-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1104</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1106" message="1" context="wso2-test1106">
+	<l:content href="wso2-Test1106-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1106</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1107" message="1" context="wso2-test1107">
+	<l:content href="wso2-Test1107-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1107</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1108" message="1" context="wso2-test1108">
+	<l:content href="wso2-Test1108-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters d4p1:level="premium" xmlns:d4p1="http://example.org/customer">
+        <d4p1:CustomerKey>Key#123456789</d4p1:CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata customer:total="1" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:customer="http://example.org/customer">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+      <customer:Metadata xmlns:customer="http://example.org/customer">
+        <customer:extraStuff>This should be ignored</customer:extraStuff>
+      </customer:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1108</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1130" message="1" context="wso2-test1130">
+	<l:content href="wso2-Test1130-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:eaaef3f2-9901-42c3-a9c3-749d93755657</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1130</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1130" message="2" context="wso2-test1130">
+	<l:content href="wso2-Test1130-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:From xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:From>
+    <wsa:FaultTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:FaultTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834741975713</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="wsa:Reply">urn:uuid:eaaef3f2-9901-42c3-a9c3-749d93755657</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns1:echoOut xmlns:ns1="http://example.org/echo">test1130</ns1:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1131" message="1" context="wso2-test1131">
+	<l:content href="wso2-Test1131-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:4cf082ab-155b-4eca-b548-68cffc4d1d6a</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1131</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1131" message="2" context="wso2-test1131">
+	<l:content href="wso2-Test1131-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:From xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:From>
+    <wsa:FaultTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:FaultTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834743782717</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="wsa:Reply">urn:uuid:4cf082ab-155b-4eca-b548-68cffc4d1d6a</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns1:echoOut xmlns:ns1="http://example.org/echo">test1131</ns1:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1132" message="1" context="wso2-test1132">
+	<l:content href="wso2-Test1132-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:3a31b49c-f54f-483d-aac3-110ec270db01</a:MessageID>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1132</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1132" message="2" context="wso2-test1132">
+	<l:content href="wso2-Test1132-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey xmlns="http://example.org/customer" wsa:IsReferenceParameter="true">Key#123456789</CustomerKey>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:From xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:From>
+    <wsa:FaultTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:FaultTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834746070721</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="wsa:Reply">urn:uuid:3a31b49c-f54f-483d-aac3-110ec270db01</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns1:echoOut xmlns:ns1="http://example.org/echo">test1132</ns1:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1133" message="1" context="wso2-test1133">
+	<l:content href="wso2-Test1133-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:6abcdfc8-67d4-439b-9003-0df7ad408cd2</a:MessageID>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1133</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1133" message="2" context="wso2-test1133">
+	<l:content href="wso2-Test1133-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey xmlns="http://example.org/customer" wsa:IsReferenceParameter="true">Fault#123456789</CustomerKey>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834747898726</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:6abcdfc8-67d4-439b-9003-0df7ad408cd2</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault xmlns:echo="http://example.org/echo">
+      <faultcode>echo:EmptyEchoString</faultcode>
+      <faultstring>Received empty string</faultstring>
+      <detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: Received empty string
+	at org.apache.axis2.WsaTestPortTypeSkeleton.echo(WsaTestPortTypeSkeleton.java:51)
+	at org.apache.axis2.WsaTestPortTypeMessageReceiverInOut.invokeBusinessLogic(WsaTestPortTypeMessageReceiverInOut.java:50)
+	at org.apache.axis2.receivers.AbstractInOutSyncMessageReceiver.receive(AbstractInOutSyncMessageReceiver.java:37)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:382)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1134" message="1" context="wso2-test1134">
+	<l:content href="wso2-Test1134-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:37cae931-dd9b-4ef4-89e9-c506c30ed9d5</a:MessageID>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1134</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1134" message="2" context="wso2-test1134">
+	<l:content href="wso2-Test1134-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey xmlns="http://example.org/customer" wsa:IsReferenceParameter="true">Key#123456789</CustomerKey>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834749744732</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:37cae931-dd9b-4ef4-89e9-c506c30ed9d5</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault xmlns:echo="http://example.org/echo">
+      <faultcode>echo:EmptyEchoString</faultcode>
+      <faultstring>Received empty string</faultstring>
+      <detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: Received empty string
+	at org.apache.axis2.WsaTestPortTypeSkeleton.echo(WsaTestPortTypeSkeleton.java:51)
+	at org.apache.axis2.WsaTestPortTypeMessageReceiverInOut.invokeBusinessLogic(WsaTestPortTypeMessageReceiverInOut.java:50)
+	at org.apache.axis2.receivers.AbstractInOutSyncMessageReceiver.receive(AbstractInOutSyncMessageReceiver.java:37)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:382)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1135" message="1" context="wso2-test1135">
+	<l:content href="wso2-Test1135-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.microsoft.com/</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+    <a:MessageID>urn:uuid:23b13c3a-9006-427e-84ab-5ada2a500b45</a:MessageID>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1135</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1135" message="2" context="wso2-test1135">
+	<l:content href="wso2-Test1135-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey xmlns="http://example.org/customer" wsa:IsReferenceParameter="true">Fault#123456789</CustomerKey>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834751601738</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:23b13c3a-9006-427e-84ab-5ada2a500b45</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault xmlns:echo="http://example.org/echo">
+      <faultcode>echo:EmptyEchoString</faultcode>
+      <faultstring>Received empty string</faultstring>
+      <detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: Received empty string
+	at org.apache.axis2.WsaTestPortTypeSkeleton.echo(WsaTestPortTypeSkeleton.java:51)
+	at org.apache.axis2.WsaTestPortTypeMessageReceiverInOut.invokeBusinessLogic(WsaTestPortTypeMessageReceiverInOut.java:50)
+	at org.apache.axis2.receivers.AbstractInOutSyncMessageReceiver.receive(AbstractInOutSyncMessageReceiver.java:37)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:382)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1140" message="1" context="wso2-test1140">
+	<l:content href="wso2-Test1140-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:3036cfdb-fa03-4833-bbae-0957dcc80757</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1140</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1140" message="2" context="wso2-test1140">
+	<l:content href="wso2-Test1140-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834753497744</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:3036cfdb-fa03-4833-bbae-0957dcc80757</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:3036cfdb-fa03-4833-bbae-0957dcc80757</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring>A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+      <detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.hasDuplicateHeaders(AddressingInHandler.java:144)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:98)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:To</wsa:ProblemHeaderQName>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1141" message="1" context="wso2-test1141">
+	<l:content href="wso2-Test1141-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:8b65130b-6735-4ab4-b43f-c1dc2e24e0c2</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1141</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1141" message="2" context="wso2-test1141">
+	<l:content href="wso2-Test1141-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834754434745</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:8b65130b-6735-4ab4-b43f-c1dc2e24e0c2</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:ReplyTo</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:8b65130b-6735-4ab4-b43f-c1dc2e24e0c2</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring>A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+      <detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.hasDuplicateHeaders(AddressingInHandler.java:144)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:106)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:ReplyTo</wsa:ProblemHeaderQName>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1142" message="1" context="wso2-test1142">
+	<l:content href="wso2-Test1142-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:FaultTo>
+    <a:FaultTo>
+      <a:Address>http://duplicate/</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:05cf870e-59f4-441f-9942-6b3481ad7a08</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1142</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1142" message="2" context="wso2-test1142">
+	<l:content href="wso2-Test1142-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834755095746</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:FaultTo</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:05cf870e-59f4-441f-9942-6b3481ad7a08</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring>A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+      <detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.hasDuplicateHeaders(AddressingInHandler.java:144)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:110)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:FaultTo</wsa:ProblemHeaderQName>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1143" message="1" context="wso2-test1143">
+	<l:content href="wso2-Test1143-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:Action>duplicate-action</a:Action>
+    <a:MessageID>urn:uuid:9f97bdfb-f661-432d-80c5-2ef7370a1bb3</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1143</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1143" message="2" context="wso2-test1143">
+	<l:content href="wso2-Test1143-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834755754747</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9f97bdfb-f661-432d-80c5-2ef7370a1bb3</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring>A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+      <detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.hasDuplicateHeaders(AddressingInHandler.java:144)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:119)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:Action</wsa:ProblemHeaderQName>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1144" message="1" context="wso2-test1144">
+	<l:content href="wso2-Test1144-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:55a25384-28f4-4ec7-a8d2-2f954b250dfd</a:MessageID>
+    <a:MessageID>urn:uuid:2affcd73-7acf-4354-9cc0-5b14e62cb9c6</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1144</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1144" message="2" context="wso2-test1144">
+	<l:content href="wso2-Test1144-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834756412748</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:55a25384-28f4-4ec7-a8d2-2f954b250dfd</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:MessageID</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:55a25384-28f4-4ec7-a8d2-2f954b250dfd</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring>A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+      <detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.hasDuplicateHeaders(AddressingInHandler.java:144)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:114)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:MessageID</wsa:ProblemHeaderQName>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1146" message="1" context="wso2-test1146">
+	<l:content href="wso2-Test1146-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:3e0595e4-85ec-452d-b68c-3c8ddf69803c</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1146</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1146" message="2" context="wso2-test1146">
+	<l:content href="wso2-Test1146-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834757073749</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:3e0595e4-85ec-452d-b68c-3c8ddf69803c</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:3e0595e4-85ec-452d-b68c-3c8ddf69803c</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring>A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+      <detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.hasDuplicateHeaders(AddressingInHandler.java:144)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:98)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:To</wsa:ProblemHeaderQName>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1147" message="1" context="wso2-test1147">
+	<l:content href="wso2-Test1147-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:MessageID>urn:uuid:3e8e6f41-080d-4694-abdc-6525d67ed4b6</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1147</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1147" message="2" context="wso2-test1147">
+	<l:content href="wso2-Test1147-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834757744750</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:3e8e6f41-080d-4694-abdc-6525d67ed4b6</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:3e8e6f41-080d-4694-abdc-6525d67ed4b6</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>wsa:MessageAddressingHeaderRequired</faultcode>
+      <faultstring>A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+      <detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.checkForMandatoryHeaders(AddressingInHandler.java:138)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:131)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:Action</wsa:ProblemHeaderQName>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1150" message="1" context="wso2-test1150">
+	<l:content href="wso2-Test1150-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:53c05d13-bb0a-4424-b353-c3963f99ffa4</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/17099175-2642-4bc4-91e8-93cdb1e30646/17d1dd97-5b27-4d16-b6e1-9f45a90bed22</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">7</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1150</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1150" message="3" context="wso2-test1150">
+	<l:content href="wso2-Test1150-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://131.107.72.15:8000/17099175-2642-4bc4-91e8-93cdb1e30646/17d1dd97-5b27-4d16-b6e1-9f45a90bed22</wsa:To>
+    <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex" wsa:IsReferenceParameter="true">7</ChannelInstance>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:From xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:From>
+    <wsa:FaultTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:FaultTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834766364760</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="wsa:Reply">urn:uuid:53c05d13-bb0a-4424-b353-c3963f99ffa4</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns1:echoOut xmlns:ns1="http://example.org/echo">test1150</ns1:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1152" message="1" context="wso2-test1152">
+	<l:content href="wso2-Test1152-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:e03c0b28-5d98-4c7c-9800-c8b0adab33d6</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/5d59cf18-139b-4340-bc81-a16bd76d35e2/a864f509-21ae-47cd-8a00-8da713d3901a</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">10</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1152</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1170" message="1" context="wso2-test1170">
+	<l:content href="wso2-Test1170-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:From s:mustUnderstand="true">
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:From>
+    <a:MessageID>urn:uuid:42519a71-c817-4e20-a9f3-099c5f39b2e4</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1170</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1170" message="2" context="wso2-test1170">
+	<l:content href="wso2-Test1170-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:From xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:From>
+    <wsa:FaultTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:FaultTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834784144772</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="wsa:Reply">urn:uuid:42519a71-c817-4e20-a9f3-099c5f39b2e4</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns1:echoOut xmlns:ns1="http://example.org/echo">test1170</ns1:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1200" message="1" context="wso2-test1200">
+	<l:content href="wso2-Test1200-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1200</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1201" message="1" context="wso2-test1201">
+	<l:content href="wso2-Test1201-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:MessageID>urn:uuid:ffb425c2-5e00-422b-a5ac-fd8126777731</a:MessageID>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1201</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1202" message="1" context="wso2-test1202">
+	<l:content href="wso2-Test1202-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1202</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1203" message="1" context="wso2-test1203">
+	<l:content href="wso2-Test1203-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1203</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1204" message="1" context="wso2-test1204">
+	<l:content href="wso2-Test1204-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1204</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1206" message="1" context="wso2-test1206">
+	<l:content href="wso2-Test1206-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1206</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1207" message="1" context="wso2-test1207">
+	<l:content href="wso2-Test1207-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1207</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1208" message="1" context="wso2-test1208">
+	<l:content href="wso2-Test1208-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters d4p1:level="premium" xmlns:d4p1="http://example.org/customer">
+        <d4p1:CustomerKey>Key#123456789</d4p1:CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata customer:total="1" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:customer="http://example.org/customer">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+      <customer:Metadata xmlns:customer="http://example.org/customer">
+        <customer:extraStuff>This should be ignored</customer:extraStuff>
+      </customer:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1208</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1230" message="1" context="wso2-test1230">
+	<l:content href="wso2-Test1230-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:a4e9543f-8385-4e63-8324-7f3fa0c62b28</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1230</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1230" message="2" context="wso2-test1230">
+	<l:content href="wso2-Test1230-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:From xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:From>
+    <wsa:FaultTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:FaultTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834742884715</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="wsa:Reply">urn:uuid:a4e9543f-8385-4e63-8324-7f3fa0c62b28</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns1:echoOut xmlns:ns1="http://example.org/echo">test1230</ns1:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1231" message="1" context="wso2-test1231">
+	<l:content href="wso2-Test1231-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:73b74476-0dcd-486d-afbe-65f8a85e402d</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1231</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1231" message="2" context="wso2-test1231">
+	<l:content href="wso2-Test1231-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:From xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:From>
+    <wsa:FaultTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:FaultTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834744677719</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="wsa:Reply">urn:uuid:73b74476-0dcd-486d-afbe-65f8a85e402d</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns1:echoOut xmlns:ns1="http://example.org/echo">test1231</ns1:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1232" message="1" context="wso2-test1232">
+	<l:content href="wso2-Test1232-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:4dc45e56-b047-4d5e-8af4-bd6bc66881db</a:MessageID>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1232</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1232" message="2" context="wso2-test1232">
+	<l:content href="wso2-Test1232-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey xmlns="http://example.org/customer" wsa:IsReferenceParameter="true">Key#123456789</CustomerKey>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:From xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:From>
+    <wsa:FaultTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:FaultTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834746971723</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="wsa:Reply">urn:uuid:4dc45e56-b047-4d5e-8af4-bd6bc66881db</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns1:echoOut xmlns:ns1="http://example.org/echo">test1232</ns1:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1233" message="1" context="wso2-test1233">
+	<l:content href="wso2-Test1233-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:217e6d45-ebf9-455d-8c39-3492bb9f8f3a</a:MessageID>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1233</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1233" message="2" context="wso2-test1233">
+	<l:content href="wso2-Test1233-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey xmlns="http://example.org/customer" wsa:IsReferenceParameter="true">Fault#123456789</CustomerKey>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834748822729</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:217e6d45-ebf9-455d-8c39-3492bb9f8f3a</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value xmlns:echo="http://example.org/echo">echo:EmptyEchoString</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US">Received empty string</soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: Received empty string
+	at org.apache.axis2.WsaTestPortTypeSkeleton.echo(WsaTestPortTypeSkeleton.java:49)
+	at org.apache.axis2.WsaTestPortTypeMessageReceiverInOut.invokeBusinessLogic(WsaTestPortTypeMessageReceiverInOut.java:50)
+	at org.apache.axis2.receivers.AbstractInOutSyncMessageReceiver.receive(AbstractInOutSyncMessageReceiver.java:37)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:382)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1234" message="1" context="wso2-test1234">
+	<l:content href="wso2-Test1234-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:b2f57371-cf35-4efe-ab73-957f3090c9b7</a:MessageID>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1234</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1234" message="2" context="wso2-test1234">
+	<l:content href="wso2-Test1234-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey xmlns="http://example.org/customer" wsa:IsReferenceParameter="true">Key#123456789</CustomerKey>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834750668735</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:b2f57371-cf35-4efe-ab73-957f3090c9b7</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value xmlns:echo="http://example.org/echo">echo:EmptyEchoString</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US">Received empty string</soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: Received empty string
+	at org.apache.axis2.WsaTestPortTypeSkeleton.echo(WsaTestPortTypeSkeleton.java:49)
+	at org.apache.axis2.WsaTestPortTypeMessageReceiverInOut.invokeBusinessLogic(WsaTestPortTypeMessageReceiverInOut.java:50)
+	at org.apache.axis2.receivers.AbstractInOutSyncMessageReceiver.receive(AbstractInOutSyncMessageReceiver.java:37)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:382)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1235" message="1" context="wso2-test1235">
+	<l:content href="wso2-Test1235-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.microsoft.com/</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+    <a:MessageID>urn:uuid:1de66e6f-3ad4-4bdc-a550-b451ea201cb2</a:MessageID>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1235</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1235" message="2" context="wso2-test1235">
+	<l:content href="wso2-Test1235-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <CustomerKey xmlns="http://example.org/customer" wsa:IsReferenceParameter="true">Fault#123456789</CustomerKey>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834752252741</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:1de66e6f-3ad4-4bdc-a550-b451ea201cb2</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value xmlns:echo="http://example.org/echo">echo:EmptyEchoString</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US">Received empty string</soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: Received empty string
+	at org.apache.axis2.WsaTestPortTypeSkeleton.echo(WsaTestPortTypeSkeleton.java:49)
+	at org.apache.axis2.WsaTestPortTypeMessageReceiverInOut.invokeBusinessLogic(WsaTestPortTypeMessageReceiverInOut.java:50)
+	at org.apache.axis2.receivers.AbstractInOutSyncMessageReceiver.receive(AbstractInOutSyncMessageReceiver.java:37)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:382)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1236" message="1" context="wso2-test1236">
+	<l:content href="wso2-Test1236-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:6ddd5d03-4578-436a-b387-b84605ece071</a:MessageID>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1236</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1240" message="1" context="wso2-test1240">
+	<l:content href="wso2-Test1240-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:632a1a90-8be1-4730-aa36-caee8d5e47d0</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1240</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1240" message="2" context="wso2-test1240">
+	<l:content href="wso2-Test1240-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834759196751</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:632a1a90-8be1-4730-aa36-caee8d5e47d0</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:632a1a90-8be1-4730-aa36-caee8d5e47d0</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+          <soapenv:Subcode>
+            <soapenv:Value>wsa:InvalidCardinality</soapenv:Value>
+          </soapenv:Subcode>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US">A header representing a Message Addressing Property is not valid and the message cannot be processed</soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.hasDuplicateHeaders(AddressingInHandler.java:144)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:98)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:To</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1241" message="1" context="wso2-test1241">
+	<l:content href="wso2-Test1241-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:fc719133-9fa7-41d5-8b17-9683a016f7de</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1241</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1241" message="2" context="wso2-test1241">
+	<l:content href="wso2-Test1241-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834760165752</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:fc719133-9fa7-41d5-8b17-9683a016f7de</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:ReplyTo</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:fc719133-9fa7-41d5-8b17-9683a016f7de</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+          <soapenv:Subcode>
+            <soapenv:Value>wsa:InvalidCardinality</soapenv:Value>
+          </soapenv:Subcode>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US">A header representing a Message Addressing Property is not valid and the message cannot be processed</soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.hasDuplicateHeaders(AddressingInHandler.java:144)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:106)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:ReplyTo</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1242" message="1" context="wso2-test1242">
+	<l:content href="wso2-Test1242-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:FaultTo>
+    <a:FaultTo>
+      <a:Address>http://duplicate/</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:a75c0418-0964-4733-88a2-241b4ed1c8b2</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1242</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1242" message="2" context="wso2-test1242">
+	<l:content href="wso2-Test1242-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834761100753</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:FaultTo</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:a75c0418-0964-4733-88a2-241b4ed1c8b2</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+          <soapenv:Subcode>
+            <soapenv:Value>wsa:InvalidCardinality</soapenv:Value>
+          </soapenv:Subcode>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US">A header representing a Message Addressing Property is not valid and the message cannot be processed</soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.hasDuplicateHeaders(AddressingInHandler.java:144)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:110)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:FaultTo</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1243" message="1" context="wso2-test1243">
+	<l:content href="wso2-Test1243-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:Action>duplicate-action</a:Action>
+    <a:MessageID>urn:uuid:e323b160-defe-496f-bfa6-20911b08c165</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1243</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1243" message="2" context="wso2-test1243">
+	<l:content href="wso2-Test1243-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834762023754</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:e323b160-defe-496f-bfa6-20911b08c165</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+          <soapenv:Subcode>
+            <soapenv:Value>wsa:InvalidCardinality</soapenv:Value>
+          </soapenv:Subcode>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US">A header representing a Message Addressing Property is not valid and the message cannot be processed</soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.hasDuplicateHeaders(AddressingInHandler.java:144)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:119)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:Action</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1244" message="1" context="wso2-test1244">
+	<l:content href="wso2-Test1244-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:50adb9c5-cc7b-4f73-ad2e-62d3c58184d1</a:MessageID>
+    <a:MessageID>urn:uuid:f3085ac1-e492-4be1-8910-046916496f85</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1244</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1244" message="2" context="wso2-test1244">
+	<l:content href="wso2-Test1244-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834762943755</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:50adb9c5-cc7b-4f73-ad2e-62d3c58184d1</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:MessageID</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:50adb9c5-cc7b-4f73-ad2e-62d3c58184d1</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+          <soapenv:Subcode>
+            <soapenv:Value>wsa:InvalidCardinality</soapenv:Value>
+          </soapenv:Subcode>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US">A header representing a Message Addressing Property is not valid and the message cannot be processed</soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.hasDuplicateHeaders(AddressingInHandler.java:144)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:114)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:MessageID</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1246" message="1" context="wso2-test1246">
+	<l:content href="wso2-Test1246-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:3381b232-a419-45b0-9f81-83784474cd7d</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1246</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1246" message="2" context="wso2-test1246">
+	<l:content href="wso2-Test1246-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834763860756</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:3381b232-a419-45b0-9f81-83784474cd7d</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:3381b232-a419-45b0-9f81-83784474cd7d</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+          <soapenv:Subcode>
+            <soapenv:Value>wsa:InvalidCardinality</soapenv:Value>
+          </soapenv:Subcode>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US">A header representing a Message Addressing Property is not valid and the message cannot be processed</soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.hasDuplicateHeaders(AddressingInHandler.java:144)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:98)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:To</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1247" message="1" context="wso2-test1247">
+	<l:content href="wso2-Test1247-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:53e27b7d-3c06-4eaf-9d6c-8455b3c2294e</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1247</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1247" message="2" context="wso2-test1247">
+	<l:content href="wso2-Test1247-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834764777757</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:53e27b7d-3c06-4eaf-9d6c-8455b3c2294e</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:53e27b7d-3c06-4eaf-9d6c-8455b3c2294e</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:InvalidAddressingHeader</soapenv:Value>
+          <soapenv:Subcode>
+            <soapenv:Value>wsa:InvalidCardinality</soapenv:Value>
+          </soapenv:Subcode>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US">A header representing a Message Addressing Property is not valid and the message cannot be processed</soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.hasDuplicateHeaders(AddressingInHandler.java:144)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:98)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:To</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1248" message="1" context="wso2-test1248">
+	<l:content href="wso2-Test1248-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:MessageID>urn:uuid:95a8b702-7ff4-4594-887c-69bd6ead7b21</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1248</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1248" message="2" context="wso2-test1248">
+	<l:content href="wso2-Test1248-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834765696758</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:95a8b702-7ff4-4594-887c-69bd6ead7b21</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:95a8b702-7ff4-4594-887c-69bd6ead7b21</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <soapenv:Fault>
+      <soapenv:Code>
+        <soapenv:Value>soapenv:Sender</soapenv:Value>
+        <soapenv:Subcode>
+          <soapenv:Value>wsa:MessageAddressingHeaderRequired</soapenv:Value>
+        </soapenv:Subcode>
+      </soapenv:Code>
+      <soapenv:Reason>
+        <soapenv:Text xml:lang="en-US">A header representing a Message Addressing Property is not valid and the message cannot be processed</soapenv:Text>
+      </soapenv:Reason>
+      <soapenv:Detail>
+        <Exception xmlns="">org.apache.axis2.AxisFault: A header representing a Message Addressing Property is not valid and the message cannot be processed
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.throwFault(AddressingInHandler.java:168)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.checkForMandatoryHeaders(AddressingInHandler.java:138)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.extractAddressingInformation(AddressingInHandler.java:131)
+	at org.apache.axis2.handlers.addressing.AddressingInHandler.invoke(AddressingInHandler.java:75)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:380)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:402)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:373)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:282)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:160)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:667)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:534)
+</Exception>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:Action</wsa:ProblemHeaderQName>
+      </soapenv:Detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1250" message="1" context="wso2-test1250">
+	<l:content href="wso2-Test1250-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:f1ed5190-a069-489a-9f39-f06108f2fc49</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/a53b7b26-26ef-485d-b9ab-4a772becf2e6/03ac888a-fcfb-4028-aa65-61630dd3a236</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">8</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1250</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1250" message="3" context="wso2-test1250">
+	<l:content href="wso2-Test1250-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://131.107.72.15:8000/a53b7b26-26ef-485d-b9ab-4a772becf2e6/03ac888a-fcfb-4028-aa65-61630dd3a236</wsa:To>
+    <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex" wsa:IsReferenceParameter="true">8</ChannelInstance>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:From xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:From>
+    <wsa:FaultTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:FaultTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834768604762</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="wsa:Reply">urn:uuid:f1ed5190-a069-489a-9f39-f06108f2fc49</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns1:echoOut xmlns:ns1="http://example.org/echo">test1250</ns1:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1251" message="1" context="wso2-test1251">
+	<l:content href="wso2-Test1251-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo s:role="http://www.w3.org/2003/05/soap-envelope/role/none">
+      <a:Address>http://www.microsoft.com/</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:e673c835-46c2-4bfc-9716-d61c2a960727</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/ae2a37c3-a3ee-401d-8143-178016805850/5f3a63c7-a511-4d3e-b21b-a4079ee55827</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">9</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1251</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1251" message="3" context="wso2-test1251">
+	<l:content href="wso2-Test1251-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://131.107.72.15:8000/ae2a37c3-a3ee-401d-8143-178016805850/5f3a63c7-a511-4d3e-b21b-a4079ee55827</wsa:To>
+    <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex" wsa:IsReferenceParameter="true">9</ChannelInstance>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:From xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:From>
+    <wsa:FaultTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:FaultTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834772696764</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="wsa:Reply">urn:uuid:e673c835-46c2-4bfc-9716-d61c2a960727</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns1:echoOut xmlns:ns1="http://example.org/echo">test1251</ns1:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1252" message="1" context="wso2-test1252">
+	<l:content href="wso2-Test1252-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:b6621867-08e5-4acf-b41b-ba8f67c53ff1</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/70329f0b-c1a4-487e-9113-102b8f03f381/dc9ca429-ec83-43af-8811-d7fe3aac2bef</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">11</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1252</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1270" message="1" context="wso2-test1270">
+	<l:content href="wso2-Test1270-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:From s:mustUnderstand="true">
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:From>
+    <a:MessageID>urn:uuid:4952b257-2ec5-4b3a-a792-9a1a4e42f76b</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://www-lk.wso2.com:5049/axis2/services/wsaTestService</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1270</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1270" message="2" context="wso2-test1270">
+	<l:content href="wso2-Test1270-Response.xml">
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:From xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:From>
+    <wsa:FaultTo xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://www-lk.wso2.com:5049/axis2/services/wsaTestService</wsa:Address>
+    </wsa:FaultTo>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9FF27D24558AFB23BB1141834785037774</wsa:MessageID>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:RelationshipType="wsa:Reply">urn:uuid:4952b257-2ec5-4b3a-a792-9a1a4e42f76b</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns1:echoOut xmlns:ns1="http://example.org/echo">test1270</ns1:echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+	</l:content>
+    </l:message>
+</l:log>

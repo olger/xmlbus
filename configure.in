@@ -1,0 +1,21 @@
+AC_INIT(configure.in)
+AC_CONFIG_AUX_DIR(config)
+AM_CONFIG_HEADER(config.h)
+AM_INIT_AUTOMAKE(xmlbus, 1.0)
+
+AC_LANG_C
+AC_PROG_CC
+AC_LIBTOOL_WIN32_DLL
+AM_PROG_LIBTOOL
+AM_PATH_CHECK
+AM_WITH_DMALLOC
+AM_PATH_PYTHON
+AC_PYTHON__DEVEL
+
+AC_SUBST(ac_aux_dir)
+AM_CONDITIONAL(DEBUG, test "$enable_debug" = yes)
+XMLBUS_REQUIRE_LIBXML2
+XMLBUS_REQUIRE_DNSSD
+AM_PATH_LOG4C
+
+AC_OUTPUT(Makefile libxmlbus/Makefile libxmlbus/src/Makefile libxmlbus/test/Makefile support/Makefile support/unzip/Makefile support/testsupport/Makefile support/testsupport/src/Makefile support/unzip/src/Makefile support/unzip/test/Makefile libxmlbus/transports/Makefile libxmlbus/transports/tcpworker/Makefile libxmlbus/transports/tcpworker/src/Makefile libxmlbus/transports/tcpworker/test/Makefile server/Makefile server/xmlbusd/Makefile server/xmlbusd/src/Makefile server/xmlbusd/test/Makefile server/xmlbusd/data/Makefile server/xmlbusd/cdlrunner/Makefile server/xmlbusd/pyrunner/Makefile services/Makefile services/testservice/Makefile services/testservice/src/Makefile services/testservice/test/Makefile services/testservice/data/Makefile libxmlbus/pipelines/Makefile libxmlbus/pipelines/testpipeline/Makefile libxmlbus/pipelines/testpipeline/src/Makefile libxmlbus/registry/Makefile libxmlbus/registry/testpublishregistry/Makefile libxmlbus/registry/mdnspublishregistry/Makefile libxmlbus/registry/mdnsresolveregistry/Makefile client/Makefile client/xbb/Makefile libxmlbus/python/Makefile libxmlbus/src/xmlbus/Makefile support/testsupport/src/testsupport/Makefile)

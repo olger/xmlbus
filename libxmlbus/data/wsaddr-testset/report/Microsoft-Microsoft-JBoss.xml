@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<l:log xmlns:l="http://www.w3.org/2002/ws/addressing/logs/" 
+    xmlns:s="http://www.w3.org/2002/ws/addr/testsuite/testcases/">
+    <l:message testcase="test1100" message="1" context="jboss-test1100">
+	<l:content href="jboss-Test1100-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1100</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1101" message="1" context="jboss-test1101">
+	<l:content href="jboss-Test1101-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:MessageID>urn:uuid:cba2ce64-d77d-4d03-885e-a4f092ab2c16</a:MessageID>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1101</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1102" message="1" context="jboss-test1102">
+	<l:content href="jboss-Test1102-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1102</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1103" message="1" context="jboss-test1103">
+	<l:content href="jboss-Test1103-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1103</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1104" message="1" context="jboss-test1104">
+	<l:content href="jboss-Test1104-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1104</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1106" message="1" context="jboss-test1106">
+	<l:content href="jboss-Test1106-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1106</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1107" message="1" context="jboss-test1107">
+	<l:content href="jboss-Test1107-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1107</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1108" message="1" context="jboss-test1108">
+	<l:content href="jboss-Test1108-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters d4p1:level="premium" xmlns:d4p1="http://example.org/customer">
+        <d4p1:CustomerKey>Key#123456789</d4p1:CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata customer:total="1" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:customer="http://example.org/customer">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+      <customer:Metadata xmlns:customer="http://example.org/customer">
+        <customer:extraStuff>This should be ignored</customer:extraStuff>
+      </customer:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1108</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1130" message="1" context="jboss-test1130">
+	<l:content href="jboss-Test1130-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:208d6f34-3a5f-463d-8195-bebf3dd8e3b3</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1130</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1130" message="2" context="jboss-test1130">
+	<l:content href="jboss-Test1130-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:1572d726651c88b4</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:208d6f34-3a5f-463d-8195-bebf3dd8e3b3</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <echo:echoOut xmlns:echo="http://example.org/echo">test1130</echo:echoOut>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1131" message="1" context="jboss-test1131">
+	<l:content href="jboss-Test1131-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:2ddc6cc6-29a2-454b-8461-78977d13f77a</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1131</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1131" message="2" context="jboss-test1131">
+	<l:content href="jboss-Test1131-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:c770dc534e1bc0df</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:2ddc6cc6-29a2-454b-8461-78977d13f77a</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <echo:echoOut xmlns:echo="http://example.org/echo">test1131</echo:echoOut>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1132" message="1" context="jboss-test1132">
+	<l:content href="jboss-Test1132-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:2a0051f4-a5a8-4873-9a78-3c5a56294c6f</a:MessageID>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1132</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1132" message="2" context="jboss-test1132">
+	<l:content href="jboss-Test1132-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:8694f6b640f1e3fa</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:2a0051f4-a5a8-4873-9a78-3c5a56294c6f</wsa:RelatesTo>
+    <CustomerKey xmlns="http://example.org/customer" xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:IsReferenceParameter="true">Key#123456789</CustomerKey>
+  </soap:Header>
+  <soap:Body>
+    <echo:echoOut xmlns:echo="http://example.org/echo">test1132</echo:echoOut>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1133" message="1" context="jboss-test1133">
+	<l:content href="jboss-Test1133-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:4b160f5b-3bff-41a7-b26e-52baac8ff031</a:MessageID>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1133</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1133" message="2" context="jboss-test1133">
+	<l:content href="jboss-Test1133-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:d2514a5d777d4ef6</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:4b160f5b-3bff-41a7-b26e-52baac8ff031</wsa:RelatesTo>
+    <CustomerKey xmlns="http://example.org/customer" xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:IsReferenceParameter="true">Fault#123456789</CustomerKey>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault xmlns:echo="http://example.org/echo">
+      <faultcode>echo:EmptyEchoString</faultcode>
+      <faultstring>Empty echo string</faultstring>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1134" message="1" context="jboss-test1134">
+	<l:content href="jboss-Test1134-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:cc830dbd-9f54-4031-ba81-918e00765079</a:MessageID>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1134</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1134" message="2" context="jboss-test1134">
+	<l:content href="jboss-Test1134-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:b77b17c6e92a3113</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:cc830dbd-9f54-4031-ba81-918e00765079</wsa:RelatesTo>
+    <CustomerKey xmlns="http://example.org/customer" xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:IsReferenceParameter="true">Key#123456789</CustomerKey>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault xmlns:echo="http://example.org/echo">
+      <faultcode>echo:EmptyEchoString</faultcode>
+      <faultstring>Empty echo string</faultstring>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1135" message="1" context="jboss-test1135">
+	<l:content href="jboss-Test1135-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.microsoft.com/</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+    <a:MessageID>urn:uuid:b088cf53-0c22-4131-a8a4-b1f520f2dfd0</a:MessageID>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1135</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1135" message="2" context="jboss-test1135">
+	<l:content href="jboss-Test1135-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:853d7a0300b1dd9</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:b088cf53-0c22-4131-a8a4-b1f520f2dfd0</wsa:RelatesTo>
+    <CustomerKey xmlns="http://example.org/customer" xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:IsReferenceParameter="true">Fault#123456789</CustomerKey>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault xmlns:echo="http://example.org/echo">
+      <faultcode>echo:EmptyEchoString</faultcode>
+      <faultstring>Empty echo string</faultstring>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1140" message="1" context="jboss-test1140">
+	<l:content href="jboss-Test1140-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:f22d4d7e-1d9d-4c2d-b7de-1a797bc7796e</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1140</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1140" message="2" context="jboss-test1140">
+	<l:content href="jboss-Test1140-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:94c6de051366e006</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:f22d4d7e-1d9d-4c2d-b7de-1a797bc7796e</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+      <wsa:ProblemHeader>
+        <wsa:To soap:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</wsa:To>
+      </wsa:ProblemHeader>
+    </wsa:FaultDetail>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring>Duplicate Addressing Header</faultstring>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1141" message="1" context="jboss-test1141">
+	<l:content href="jboss-Test1141-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:7c73a3cc-bf74-4226-a9d1-ab3ff4819ada</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1141</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1141" message="2" context="jboss-test1141">
+	<l:content href="jboss-Test1141-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:43463be32ad29f99</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:7c73a3cc-bf74-4226-a9d1-ab3ff4819ada</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:ReplyTo</wsa:ProblemHeaderQName>
+      <wsa:ProblemHeader>
+        <wsa:ReplyTo>
+          <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+        </wsa:ReplyTo>
+      </wsa:ProblemHeader>
+    </wsa:FaultDetail>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring>Duplicate Addressing Header</faultstring>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1142" message="1" context="jboss-test1142">
+	<l:content href="jboss-Test1142-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:FaultTo>
+    <a:FaultTo>
+      <a:Address>http://duplicate/</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:cee6f3b4-40ae-4a28-b6d5-6af0c5d98fe7</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1142</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1142" message="2" context="jboss-test1142">
+	<l:content href="jboss-Test1142-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:b88a6babede44ed2</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:cee6f3b4-40ae-4a28-b6d5-6af0c5d98fe7</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:FaultTo</wsa:ProblemHeaderQName>
+      <wsa:ProblemHeader>
+        <wsa:FaultTo>
+          <wsa:Address>http://duplicate/</wsa:Address>
+        </wsa:FaultTo>
+      </wsa:ProblemHeader>
+    </wsa:FaultDetail>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring>Duplicate Addressing Header</faultstring>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1143" message="1" context="jboss-test1143">
+	<l:content href="jboss-Test1143-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:Action>duplicate-action</a:Action>
+    <a:MessageID>urn:uuid:1d0af7d7-65fa-47b8-99dc-27da798b94d3</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1143</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1143" message="2" context="jboss-test1143">
+	<l:content href="jboss-Test1143-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:5a981268a7bbcda0</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:1d0af7d7-65fa-47b8-99dc-27da798b94d3</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+      <wsa:ProblemHeader>
+        <wsa:Action>duplicate-action</wsa:Action>
+      </wsa:ProblemHeader>
+    </wsa:FaultDetail>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring>Duplicate Addressing Header</faultstring>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1144" message="1" context="jboss-test1144">
+	<l:content href="jboss-Test1144-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:9240a974-540a-4cc1-b70c-bc32b644b7b7</a:MessageID>
+    <a:MessageID>urn:uuid:ff792777-fbf4-4a20-b0df-cf760dd0d64b</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1144</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1144" message="2" context="jboss-test1144">
+	<l:content href="jboss-Test1144-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:4c1e644139b44eca</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:9240a974-540a-4cc1-b70c-bc32b644b7b7</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:MessageID</wsa:ProblemHeaderQName>
+      <wsa:ProblemHeader>
+        <wsa:MessageID>urn:uuid:ff792777-fbf4-4a20-b0df-cf760dd0d64b</wsa:MessageID>
+      </wsa:ProblemHeader>
+    </wsa:FaultDetail>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring>Duplicate Addressing Header</faultstring>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1146" message="1" context="jboss-test1146">
+	<l:content href="jboss-Test1146-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:30adf887-9393-4001-8701-6c1f3519dda3</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1146</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1146" message="2" context="jboss-test1146">
+	<l:content href="jboss-Test1146-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:1d8f39ef5df348ff</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:30adf887-9393-4001-8701-6c1f3519dda3</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+      <wsa:ProblemHeader>
+        <wsa:To soap:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</wsa:To>
+      </wsa:ProblemHeader>
+    </wsa:FaultDetail>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <faultcode>wsa:InvalidAddressingHeader</faultcode>
+      <faultstring>Duplicate Addressing Header</faultstring>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1147" message="1" context="jboss-test1147">
+	<l:content href="jboss-Test1147-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:MessageID>urn:uuid:29cbe9a3-8fad-4b3d-99b1-1445abd62462</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1147</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1147" message="2" context="jboss-test1147">
+	<l:content href="jboss-Test1147-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:a19e5e8c9b9974cb</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:29cbe9a3-8fad-4b3d-99b1-1445abd62462</wsa:RelatesTo>
+    <wsa:FaultDetail xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <faultcode>wsa:MessageAddressingHeaderRequired</faultcode>
+      <faultstring>Missing Addressing Header</faultstring>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1150" message="1" context="jboss-test1150">
+	<l:content href="jboss-Test1150-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:8e797470-b60b-40ef-be4f-830981bbef62</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/65d8b14f-3983-4866-8e62-da26d3d51fe1/fd2c4388-d985-4185-9823-6fb7f1596cf9</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">31</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1150</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1150" message="3" context="jboss-test1150">
+	<l:content href="jboss-Test1150-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://131.107.72.15:8000/65d8b14f-3983-4866-8e62-da26d3d51fe1/fd2c4388-d985-4185-9823-6fb7f1596cf9</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:49404fd331eca007</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:8e797470-b60b-40ef-be4f-830981bbef62</wsa:RelatesTo>
+    <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex" xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:IsReferenceParameter="true">31</ChannelInstance>
+  </soap:Header>
+  <soap:Body>
+    <echo:echoOut xmlns:echo="http://example.org/echo">test1150</echo:echoOut>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1152" message="1" context="jboss-test1152">
+	<l:content href="jboss-Test1152-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:4bf3d437-bb2b-48f1-947d-c32f9048b9d6</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/96804264-7012-4298-a045-e07acf444eff/0191532b-8f3c-4c5d-94a9-d5b45c2d4a60</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">34</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1152</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1170" message="1" context="jboss-test1170">
+	<l:content href="jboss-Test1170-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:From s:mustUnderstand="true">
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:From>
+    <a:MessageID>urn:uuid:08d4c896-4223-4ab9-9d2e-37bc97923a40</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1170</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1170" message="2" context="jboss-test1170">
+	<l:content href="jboss-Test1170-Response.xml">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:da2cf97394187fe4</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:08d4c896-4223-4ab9-9d2e-37bc97923a40</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <echo:echoOut xmlns:echo="http://example.org/echo">test1170</echo:echoOut>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1200" message="1" context="jboss-test1200">
+	<l:content href="jboss-Test1200-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1200</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1201" message="1" context="jboss-test1201">
+	<l:content href="jboss-Test1201-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:MessageID>urn:uuid:8d6b71b4-c428-4ff5-a430-5d26eb51a7da</a:MessageID>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1201</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1202" message="1" context="jboss-test1202">
+	<l:content href="jboss-Test1202-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1202</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1203" message="1" context="jboss-test1203">
+	<l:content href="jboss-Test1203-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1203</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1204" message="1" context="jboss-test1204">
+	<l:content href="jboss-Test1204-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1204</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1206" message="1" context="jboss-test1206">
+	<l:content href="jboss-Test1206-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1206</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1207" message="1" context="jboss-test1207">
+	<l:content href="jboss-Test1207-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1207</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1208" message="1" context="jboss-test1208">
+	<l:content href="jboss-Test1208-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters d4p1:level="premium" xmlns:d4p1="http://example.org/customer">
+        <d4p1:CustomerKey>Key#123456789</d4p1:CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata customer:total="1" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:customer="http://example.org/customer">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+      <customer:Metadata xmlns:customer="http://example.org/customer">
+        <customer:extraStuff>This should be ignored</customer:extraStuff>
+      </customer:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1208</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1230" message="1" context="jboss-test1230">
+	<l:content href="jboss-Test1230-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:fe651a34-53de-4c4e-a340-10dbedacd291</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1230</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1230" message="2" context="jboss-test1230">
+	<l:content href="jboss-Test1230-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:6de8cacfdab1d299</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:fe651a34-53de-4c4e-a340-10dbedacd291</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <echo:echoOut xmlns:echo="http://example.org/echo">test1230</echo:echoOut>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1231" message="1" context="jboss-test1231">
+	<l:content href="jboss-Test1231-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:edfe2eee-7a17-418c-a130-3ea1af2489bd</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1231</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1231" message="2" context="jboss-test1231">
+	<l:content href="jboss-Test1231-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:10587c7a2f24967e</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:edfe2eee-7a17-418c-a130-3ea1af2489bd</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <echo:echoOut xmlns:echo="http://example.org/echo">test1231</echo:echoOut>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1232" message="1" context="jboss-test1232">
+	<l:content href="jboss-Test1232-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:3c3bde8b-6c5f-42e3-bbc9-382f1e02b50c</a:MessageID>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1232</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1232" message="2" context="jboss-test1232">
+	<l:content href="jboss-Test1232-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:7edfb5ca6822456b</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:3c3bde8b-6c5f-42e3-bbc9-382f1e02b50c</wsa:RelatesTo>
+    <CustomerKey xmlns="http://example.org/customer" xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:IsReferenceParameter="true">Key#123456789</CustomerKey>
+  </soap:Header>
+  <soap:Body>
+    <echo:echoOut xmlns:echo="http://example.org/echo">test1232</echo:echoOut>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1233" message="1" context="jboss-test1233">
+	<l:content href="jboss-Test1233-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:1d6b06ea-b2e8-4cf9-838d-506187e03e8d</a:MessageID>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1233</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1233" message="2" context="jboss-test1233">
+	<l:content href="jboss-Test1233-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:1a1fbdca5f3e7b50</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:1d6b06ea-b2e8-4cf9-838d-506187e03e8d</wsa:RelatesTo>
+    <CustomerKey xmlns="http://example.org/customer" xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:IsReferenceParameter="true">Fault#123456789</CustomerKey>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <soap:Code>
+        <soap:Value>soap:Sender</soap:Value>
+        <soap:Subcode>
+          <soap:Value xmlns:echo="http://example.org/echo">echo:EmptyEchoString</soap:Value>
+        </soap:Subcode>
+      </soap:Code>
+      <soap:Reason>
+        <soap:Text xml:lang="en">Empty echo string</soap:Text>
+      </soap:Reason>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1234" message="1" context="jboss-test1234">
+	<l:content href="jboss-Test1234-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:1a68e145-46b5-4637-950d-4ab60166a105</a:MessageID>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1234</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1234" message="2" context="jboss-test1234">
+	<l:content href="jboss-Test1234-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:dfd1936c4a7b9692</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:1a68e145-46b5-4637-950d-4ab60166a105</wsa:RelatesTo>
+    <CustomerKey xmlns="http://example.org/customer" xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:IsReferenceParameter="true">Key#123456789</CustomerKey>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <soap:Code>
+        <soap:Value>soap:Sender</soap:Value>
+        <soap:Subcode>
+          <soap:Value xmlns:echo="http://example.org/echo">echo:EmptyEchoString</soap:Value>
+        </soap:Subcode>
+      </soap:Code>
+      <soap:Reason>
+        <soap:Text xml:lang="en">Empty echo string</soap:Text>
+      </soap:Reason>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1235" message="1" context="jboss-test1235">
+	<l:content href="jboss-Test1235-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.microsoft.com/</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+    <a:MessageID>urn:uuid:08182203-de27-4159-9482-ca22e0298130</a:MessageID>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1235</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1235" message="2" context="jboss-test1235">
+	<l:content href="jboss-Test1235-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:9903ed6dbad20719</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:08182203-de27-4159-9482-ca22e0298130</wsa:RelatesTo>
+    <CustomerKey xmlns="http://example.org/customer" xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:IsReferenceParameter="true">Fault#123456789</CustomerKey>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <soap:Code>
+        <soap:Value>soap:Sender</soap:Value>
+        <soap:Subcode>
+          <soap:Value xmlns:echo="http://example.org/echo">echo:EmptyEchoString</soap:Value>
+        </soap:Subcode>
+      </soap:Code>
+      <soap:Reason>
+        <soap:Text xml:lang="en">Empty echo string</soap:Text>
+      </soap:Reason>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1236" message="1" context="jboss-test1236">
+	<l:content href="jboss-Test1236-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:bfe65144-c647-4838-9755-1a0c19b2a65d</a:MessageID>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1236</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1240" message="1" context="jboss-test1240">
+	<l:content href="jboss-Test1240-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:b636ca60-b0d9-4a5d-9446-d71b27e89ef6</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1240</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1240" message="2" context="jboss-test1240">
+	<l:content href="jboss-Test1240-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:dfaf68684c324116</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:b636ca60-b0d9-4a5d-9446-d71b27e89ef6</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <soap:Code>
+        <soap:Value>soap:Sender</soap:Value>
+        <soap:Subcode>
+          <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidAddressingHeader</soap:Value>
+          <soap:Subcode>
+            <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidCardinality</soap:Value>
+          </soap:Subcode>
+        </soap:Subcode>
+      </soap:Code>
+      <soap:Reason>
+        <soap:Text xml:lang="en">Duplicate Addressing Header</soap:Text>
+      </soap:Reason>
+      <soap:Detail>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:To</wsa:ProblemHeaderQName>
+        <wsa:ProblemHeader xmlns:wsa="http://www.w3.org/2005/08/addressing">
+          <wsa:To soap:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</wsa:To>
+        </wsa:ProblemHeader>
+      </soap:Detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1241" message="1" context="jboss-test1241">
+	<l:content href="jboss-Test1241-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:3d950f97-b7fc-469d-8cfa-a6df42a551c2</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1241</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1241" message="2" context="jboss-test1241">
+	<l:content href="jboss-Test1241-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:494275c8d7b52cf3</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:3d950f97-b7fc-469d-8cfa-a6df42a551c2</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <soap:Code>
+        <soap:Value>soap:Sender</soap:Value>
+        <soap:Subcode>
+          <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidAddressingHeader</soap:Value>
+          <soap:Subcode>
+            <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidCardinality</soap:Value>
+          </soap:Subcode>
+        </soap:Subcode>
+      </soap:Code>
+      <soap:Reason>
+        <soap:Text xml:lang="en">Duplicate Addressing Header</soap:Text>
+      </soap:Reason>
+      <soap:Detail>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:ReplyTo</wsa:ProblemHeaderQName>
+        <wsa:ProblemHeader xmlns:wsa="http://www.w3.org/2005/08/addressing">
+          <wsa:ReplyTo>
+            <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+          </wsa:ReplyTo>
+        </wsa:ProblemHeader>
+      </soap:Detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1242" message="1" context="jboss-test1242">
+	<l:content href="jboss-Test1242-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:FaultTo>
+    <a:FaultTo>
+      <a:Address>http://duplicate/</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:31ac38fb-7596-44c6-a2a4-f35f98c80b64</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1242</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1242" message="2" context="jboss-test1242">
+	<l:content href="jboss-Test1242-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:842ef248f7706c40</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:31ac38fb-7596-44c6-a2a4-f35f98c80b64</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <soap:Code>
+        <soap:Value>soap:Sender</soap:Value>
+        <soap:Subcode>
+          <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidAddressingHeader</soap:Value>
+          <soap:Subcode>
+            <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidCardinality</soap:Value>
+          </soap:Subcode>
+        </soap:Subcode>
+      </soap:Code>
+      <soap:Reason>
+        <soap:Text xml:lang="en">Duplicate Addressing Header</soap:Text>
+      </soap:Reason>
+      <soap:Detail>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:FaultTo</wsa:ProblemHeaderQName>
+        <wsa:ProblemHeader xmlns:wsa="http://www.w3.org/2005/08/addressing">
+          <wsa:FaultTo>
+            <wsa:Address>http://duplicate/</wsa:Address>
+          </wsa:FaultTo>
+        </wsa:ProblemHeader>
+      </soap:Detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1243" message="1" context="jboss-test1243">
+	<l:content href="jboss-Test1243-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:Action>duplicate-action</a:Action>
+    <a:MessageID>urn:uuid:836dbe20-54a1-4e68-96ef-727dbebae934</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1243</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1243" message="2" context="jboss-test1243">
+	<l:content href="jboss-Test1243-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:46f747c99b1f73f4</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:836dbe20-54a1-4e68-96ef-727dbebae934</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <soap:Code>
+        <soap:Value>soap:Sender</soap:Value>
+        <soap:Subcode>
+          <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidAddressingHeader</soap:Value>
+          <soap:Subcode>
+            <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidCardinality</soap:Value>
+          </soap:Subcode>
+        </soap:Subcode>
+      </soap:Code>
+      <soap:Reason>
+        <soap:Text xml:lang="en">Duplicate Addressing Header</soap:Text>
+      </soap:Reason>
+      <soap:Detail>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:Action</wsa:ProblemHeaderQName>
+        <wsa:ProblemHeader xmlns:wsa="http://www.w3.org/2005/08/addressing">
+          <wsa:Action>duplicate-action</wsa:Action>
+        </wsa:ProblemHeader>
+      </soap:Detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1244" message="1" context="jboss-test1244">
+	<l:content href="jboss-Test1244-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:378ff86c-b58c-44f7-a124-572562cefd42</a:MessageID>
+    <a:MessageID>urn:uuid:c06ce9fb-6bdc-41f6-a837-826bc052fedc</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1244</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1244" message="2" context="jboss-test1244">
+	<l:content href="jboss-Test1244-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:35126f073b625847</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:378ff86c-b58c-44f7-a124-572562cefd42</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <soap:Code>
+        <soap:Value>soap:Sender</soap:Value>
+        <soap:Subcode>
+          <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidAddressingHeader</soap:Value>
+          <soap:Subcode>
+            <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidCardinality</soap:Value>
+          </soap:Subcode>
+        </soap:Subcode>
+      </soap:Code>
+      <soap:Reason>
+        <soap:Text xml:lang="en">Duplicate Addressing Header</soap:Text>
+      </soap:Reason>
+      <soap:Detail>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:MessageID</wsa:ProblemHeaderQName>
+        <wsa:ProblemHeader xmlns:wsa="http://www.w3.org/2005/08/addressing">
+          <wsa:MessageID>urn:uuid:c06ce9fb-6bdc-41f6-a837-826bc052fedc</wsa:MessageID>
+        </wsa:ProblemHeader>
+      </soap:Detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1246" message="1" context="jboss-test1246">
+	<l:content href="jboss-Test1246-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:37a59578-4a96-4d7b-b48d-3d6410112181</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1246</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1246" message="2" context="jboss-test1246">
+	<l:content href="jboss-Test1246-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:c20ed572e84ed50e</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:37a59578-4a96-4d7b-b48d-3d6410112181</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <soap:Code>
+        <soap:Value>soap:Sender</soap:Value>
+        <soap:Subcode>
+          <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidAddressingHeader</soap:Value>
+          <soap:Subcode>
+            <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidCardinality</soap:Value>
+          </soap:Subcode>
+        </soap:Subcode>
+      </soap:Code>
+      <soap:Reason>
+        <soap:Text xml:lang="en">Duplicate Addressing Header</soap:Text>
+      </soap:Reason>
+      <soap:Detail>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:To</wsa:ProblemHeaderQName>
+        <wsa:ProblemHeader xmlns:wsa="http://www.w3.org/2005/08/addressing">
+          <wsa:To soap:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</wsa:To>
+        </wsa:ProblemHeader>
+      </soap:Detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1247" message="1" context="jboss-test1247">
+	<l:content href="jboss-Test1247-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:95450ae6-a7f8-48c1-8b4f-191735ed9c91</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1247</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1247" message="2" context="jboss-test1247">
+	<l:content href="jboss-Test1247-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:d02048b99351bf25</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:95450ae6-a7f8-48c1-8b4f-191735ed9c91</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <soap:Code>
+        <soap:Value>soap:Sender</soap:Value>
+        <soap:Subcode>
+          <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidAddressingHeader</soap:Value>
+          <soap:Subcode>
+            <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:InvalidCardinality</soap:Value>
+          </soap:Subcode>
+        </soap:Subcode>
+      </soap:Code>
+      <soap:Reason>
+        <soap:Text xml:lang="en">Duplicate Addressing Header</soap:Text>
+      </soap:Reason>
+      <soap:Detail>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:To</wsa:ProblemHeaderQName>
+        <wsa:ProblemHeader xmlns:wsa="http://www.w3.org/2005/08/addressing">
+          <wsa:To soap:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</wsa:To>
+        </wsa:ProblemHeader>
+      </soap:Detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1248" message="1" context="jboss-test1248">
+	<l:content href="jboss-Test1248-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:MessageID>urn:uuid:2f957a79-9ec1-49b8-b800-a8cffe27f6ce</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1248</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1248" message="2" context="jboss-test1248">
+	<l:content href="jboss-Test1248-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:35dcb03a292513c3</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:2f957a79-9ec1-49b8-b800-a8cffe27f6ce</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <soap:Code>
+        <soap:Value>soap:Sender</soap:Value>
+        <soap:Subcode>
+          <soap:Value xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:MessageAddressingHeaderRequired</soap:Value>
+        </soap:Subcode>
+      </soap:Code>
+      <soap:Reason>
+        <soap:Text xml:lang="en">Missing Addressing Header</soap:Text>
+      </soap:Reason>
+      <soap:Detail>
+        <wsa:ProblemHeaderQName xmlns:wsa="http://www.w3.org/2005/08/addressing">wsa:Action</wsa:ProblemHeaderQName>
+      </soap:Detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1250" message="1" context="jboss-test1250">
+	<l:content href="jboss-Test1250-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:e1590a5c-df7c-47f7-ad2c-dbfb0a769ef1</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/ab6c4713-f7d1-4eeb-a8dc-f5fc563800cf/0e6db3be-ed90-4f02-8539-2d6658d56053</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">32</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1250</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1250" message="3" context="jboss-test1250">
+	<l:content href="jboss-Test1250-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://131.107.72.15:8000/ab6c4713-f7d1-4eeb-a8dc-f5fc563800cf/0e6db3be-ed90-4f02-8539-2d6658d56053</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:ccd86b7b10c93599</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:e1590a5c-df7c-47f7-ad2c-dbfb0a769ef1</wsa:RelatesTo>
+    <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex" xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:IsReferenceParameter="true">32</ChannelInstance>
+  </soap:Header>
+  <soap:Body>
+    <echo:echoOut xmlns:echo="http://example.org/echo">test1250</echo:echoOut>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1251" message="1" context="jboss-test1251">
+	<l:content href="jboss-Test1251-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo s:role="http://www.w3.org/2003/05/soap-envelope/role/none">
+      <a:Address>http://www.microsoft.com/</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:bdc3de08-c7b6-41b7-bfd5-294cdc3aff7b</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/317d21f8-245a-4b18-ae3b-0939fd538ada/2caa95b0-8a9a-48fa-8abd-0bcd92a055fe</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">33</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1251</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1251" message="3" context="jboss-test1251">
+	<l:content href="jboss-Test1251-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">http://131.107.72.15:8000/317d21f8-245a-4b18-ae3b-0939fd538ada/2caa95b0-8a9a-48fa-8abd-0bcd92a055fe</wsa:To>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:4185ba7c84d8280c</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:bdc3de08-c7b6-41b7-bfd5-294cdc3aff7b</wsa:RelatesTo>
+    <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex" xmlns:wsa="http://www.w3.org/2005/08/addressing" wsa:IsReferenceParameter="true">33</ChannelInstance>
+  </soap:Header>
+  <soap:Body>
+    <echo:echoOut xmlns:echo="http://example.org/echo">test1251</echo:echoOut>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1252" message="1" context="jboss-test1252">
+	<l:content href="jboss-Test1252-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:b38a092c-01d9-4bdd-a686-66d4d0481dc8</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/a8190b17-d185-4fca-8932-b6ba0eca03f8/f2062fec-1eba-470a-82be-043d20724c0d</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">35</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1252</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1270" message="1" context="jboss-test1270">
+	<l:content href="jboss-Test1270-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:From s:mustUnderstand="true">
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:From>
+    <a:MessageID>urn:uuid:067e4108-7c14-4bbf-ab6e-98734ab7654f</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://213.162.124.157:8080/interop/soap/InteropTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1270</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1270" message="2" context="jboss-test1270">
+	<l:content href="jboss-Test1270-Response.xml">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">auid:cb21b97618725d28</wsa:MessageID>
+    <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:067e4108-7c14-4bbf-ab6e-98734ab7654f</wsa:RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <echo:echoOut xmlns:echo="http://example.org/echo">test1270</echo:echoOut>
+  </soap:Body>
+</soap:Envelope>
+	</l:content>
+    </l:message>
+</l:log>

@@ -1,0 +1,29 @@
+<!-- Apache Ant script to build spec.
+     Marc Hadley, Sun Microsystems -->
+<!-- Updated to apply to single file and output
+     to Overview.html by David Illsley, IBM -->
+     
+<project name="WS-Addr-Issues" default="all" basedir=".">
+
+  <property name="dist.home" value="."/>
+  <property name="test_doc.home" value="."/>
+  <property name="style.home" value="../../issues"/>
+  <property name="stylesheet" value="${style.home}/IssuesDocToHtml.xsl"/>
+  
+  <target name="clean">
+  </target>
+  
+  <target name="prepare">
+  </target>
+  
+  <target name="test" depends="prepare">
+    <style 
+      basedir="${test_doc.home}"
+      in="TestingIssues.xml"
+      out="Overview.html"
+      style="${stylesheet}"/>
+  </target>
+
+  <target name="all" depends="clean,test"/>
+
+</project>

@@ -1,0 +1,1737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<log xmlns="http://www.w3.org/2002/ws/addressing/logs/" xmlns:s="http://www.w3.org/2002/ws/addr/testsuite/testcases/">
+  <message testcase="test1100" message="1" context="13">
+    <content href="../documents/notify/soap11/message0.xml">
+<!-- $Id: message0.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1200" message="1" context="14">
+    <content href="../documents/notify/soap12/message0.xml">
+<!-- $Id: message0.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1101" message="1" context="15">
+    <content href="../documents/notify/soap11/message1.xml">
+<!-- $Id: message1.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:MessageID>urn:uuid:279372E6-3CD2-11DA-9ADE-001124761548</wsa:MessageID>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 1</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1201" message="1" context="16">
+    <content href="../documents/notify/soap12/message1.xml">
+<!-- $Id: message1.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:MessageID>urn:uuid:279372E6-3CD2-11DA-9ADE-001124761548</wsa:MessageID>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 1</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1102" message="1" context="17">
+    <content href="../documents/notify/soap11/message2.xml">
+<!-- $Id: message2.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:ReplyTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+  </wsa:ReplyTo>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 2</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1202" message="1" context="18">
+    <content href="../documents/notify/soap12/message2.xml">
+<!-- $Id: message2.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:ReplyTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+  </wsa:ReplyTo>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 2</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1103" message="1" context="19">
+    <content href="../documents/notify/soap11/message3.xml">
+<!-- $Id: message3.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:FaultTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+  </wsa:FaultTo>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 3</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1203" message="1" context="20">
+    <content href="../documents/notify/soap12/message3.xml">
+<!-- $Id: message3.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:FaultTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+  </wsa:FaultTo>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 3</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1104" message="1" context="21">
+    <content href="../documents/notify/soap11/message4.xml">
+<!-- $Id: message4.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:ReplyTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+  </wsa:ReplyTo>
+  <wsa:FaultTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+  </wsa:FaultTo>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 4</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1204" message="1" context="22">
+    <content href="../documents/notify/soap12/message4.xml">
+<!-- $Id: message4.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:ReplyTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+  </wsa:ReplyTo>
+  <wsa:FaultTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+  </wsa:FaultTo>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 4</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1106" message="1" context="23">
+    <content href="../documents/notify/soap11/message7.xml">
+<!-- $Id: message7.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:ReplyTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+   <wsa:ReferenceParameters xmlns:customer="http://example.org/customer">
+    <customer:CustomerKey>Key#123456789</customer:CustomerKey>
+   </wsa:ReferenceParameters>
+  </wsa:ReplyTo>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 2</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1206" message="1" context="24">
+    <content href="../documents/notify/soap12/message7.xml">
+<!-- $Id: message7.xml,v 1.4 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:ReplyTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+   <wsa:ReferenceParameters xmlns:customer="http://example.org/customer">
+    <customer:CustomerKey>Key#123456789</customer:CustomerKey>
+   </wsa:ReferenceParameters>
+  </wsa:ReplyTo>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 2</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1107" message="1" context="25">
+    <content href="../documents/notify/soap11/message8.xml">
+<!-- $Id: message8.xml,v 1.5 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:ReplyTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+   <wsa:Metadata>
+	<definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+		<!-- TBD: insert WSDL 1.1 here! -->
+	</definitions>
+	<description xmlns="http://www.w3.org/2006/01/wsdl">
+		<!-- TBD: insert WSDL 2.0 here! -->
+	</description>
+   </wsa:Metadata>
+  </wsa:ReplyTo>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 2</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1207" message="1" context="26">
+    <content href="../documents/notify/soap12/message8.xml">
+<!-- $Id: message8.xml,v 1.6 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:ReplyTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+   <wsa:Metadata>
+	<definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+		<!-- TBD: insert WSDL 1.1 here! -->
+	</definitions>
+	<description xmlns="http://www.w3.org/2006/01/wsdl">
+		<!-- TBD: insert WSDL 2.0 here! -->
+	</description>
+   </wsa:Metadata>
+  </wsa:ReplyTo>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 2</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1108" message="1" context="27">
+    <content href="../documents/notify/soap11/message9.xml">
+<!-- $Id: message9.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:customer="http://example.org/customer">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:ReplyTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+   <wsa:ReferenceParameters customer:level="premium"> 
+    <customer:CustomerKey>Key#123456789</customer:CustomerKey>
+   </wsa:ReferenceParameters>
+   <wsa:Metadata customer:total="1">
+   </wsa:Metadata>
+   <customer:Metadata>
+	<customer:extraStuff>This should be ignored</customer:extraStuff>
+   </customer:Metadata>
+  </wsa:ReplyTo>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 2</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1208" message="1" context="28">
+    <content href="../documents/notify/soap12/message9.xml">
+<!-- $Id: message9.xml,v 1.5 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:customer="http://example.org/customer">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:ReplyTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+   <wsa:ReferenceParameters customer:level="premium"> 
+    <customer:CustomerKey>Key#123456789</customer:CustomerKey>
+   </wsa:ReferenceParameters>
+   <wsa:Metadata customer:total="1">
+   </wsa:Metadata>
+   <customer:Metadata>
+	<customer:extraStuff>This should be ignored</customer:extraStuff>
+   </customer:Metadata>
+  </wsa:ReplyTo>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 2</m:notify>
+ </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1130" message="1" context="29">
+    <content href="../documents/echo/soap11/message1.xml">
+<!-- $Id: message1.xml,v 1.6 2006/01/19 06:05:30 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:B5756A05-3B9B-43B8-B2EA-AB58DDF25303</wsa:MessageID>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1130" message="2" context="29">
+    <content href="../documents/echo/soap11/reply1.xml">
+<!-- $Id: reply1.xml,v 1.6 2006/01/19 06:05:30 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID>urn:uuid:D666E4D6-2DB6-45DA-BB45-C7406B2AFE9E</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:B5756A05-3B9B-43B8-B2EA-AB58DDF25303</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">Echo This Text</m:echoOut>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1230" message="1" context="30">
+    <content href="../documents/echo/soap12/message1.xml">
+<!-- $Id: message1.xml,v 1.7 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:6175992B-1EC9-42AA-9C18-C0C9F2E6B9DD</wsa:MessageID>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1230" message="2" context="30">
+    <content href="../documents/echo/soap12/reply1.xml">
+<!-- $Id: reply1.xml,v 1.7 2006/01/19 06:05:31 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID>urn:uuid:192B04AC-60BD-44E4-971A-113D3DB170D3</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:6175992B-1EC9-42AA-9C18-C0C9F2E6B9DD</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">Echo This Text</m:echoOut>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1131" message="1" context="31">
+    <content href="../documents/echo/soap11/message2.xml">
+<!-- $Id: message2.xml,v 1.6 2006/01/19 06:05:30 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:DAF81D9F-D1B3-47F8-9074-158BDD85E518</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1131" message="2" context="31">
+    <content href="../documents/echo/soap11/reply1-1.xml">
+<!-- $Id: reply1-1.xml,v 1.3 2006/01/19 06:05:30 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID>urn:uuid:CEC86616-85DD-4DC3-BCF3-0A0A8AF07AE8</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:DAF81D9F-D1B3-47F8-9074-158BDD85E518</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">Echo This Text</m:echoOut>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1231" message="1" context="32">
+    <content href="../documents/echo/soap12/message2.xml">
+<!-- $Id: message2.xml,v 1.7 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:05C9A7C0-56F9-407E-8544-3D5DE47FA984</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1231" message="2" context="32">
+    <content href="../documents/echo/soap12/reply1-1.xml">
+<!-- $Id: reply1-1.xml,v 1.3 2006/01/19 06:05:31 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID>urn:uuid:D6C21225-8E7B-454E-9750-821622C099DB</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:05C9A7C0-56F9-407E-8544-3D5DE47FA984</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">Echo This Text</m:echoOut>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1132" message="1" context="33">
+    <content href="../documents/echo/soap11/message7.xml">
+<!-- $Id: message7.xml,v 1.5 2006/01/19 06:05:30 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>D6202742-D9D9-4023-8167-EF0AB81042EC</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+      <wsa:ReferenceParameters xmlns:customer="http://example.org/customer">
+        <customer:CustomerKey>Key#123456789</customer:CustomerKey>
+      </wsa:ReferenceParameters>
+    </wsa:ReplyTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1132" message="2" context="33">
+    <content href="../documents/echo/soap11/reply2.xml">
+<!-- $Id: reply2.xml,v 1.5 2006/03/05 19:42:40 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <customer:CustomerKey xmlns:customer="http://example.org/customer" wsa:IsReferenceParameter="true">Key#123456789</customer:CustomerKey>
+    <wsa:RelatesTo>D6202742-D9D9-4023-8167-EF0AB81042EC</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">Echo This Text</m:echoOut>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1232" message="1" context="34">
+    <content href="../documents/echo/soap12/message7.xml">
+<!-- $Id: message7.xml,v 1.10 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:B4D743BD-6023-4173-B63C-4C29CB4350F2</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+      <wsa:ReferenceParameters xmlns:customer="http://example.org/customer">
+        <customer:CustomerKey>Key#123456789</customer:CustomerKey>
+      </wsa:ReferenceParameters>
+    </wsa:ReplyTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1232" message="2" context="34">
+    <content href="../documents/echo/soap12/reply2.xml">
+<!-- $Id: reply2.xml,v 1.10 2006/01/19 06:05:31 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID>urn:uuid:C92E7FB6-67A1-420B-AE19-D89245F97164</wsa:MessageID>
+    <customer:CustomerKey xmlns:customer="http://example.org/customer" wsa:IsReferenceParameter="true">Key#123456789</customer:CustomerKey>
+    <wsa:RelatesTo>urn:uuid:B4D743BD-6023-4173-B63C-4C29CB4350F2</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">Echo This Text</m:echoOut>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1133" message="1" context="35">
+    <content href="../documents/echo/soap11/message9.xml">
+<!-- $Id: message9.xml,v 1.4 2006/01/19 06:05:30 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:MessageID>urn:uuid:BAB79B77-E9AE-4B9F-A8B4-624BB9E7E919</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+      <wsa:ReferenceParameters xmlns:customer="http://example.org/customer">
+        <customer:CustomerKey>Key#123456789</customer:CustomerKey>
+      </wsa:ReferenceParameters>
+    </wsa:ReplyTo>
+    <wsa:FaultTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+      <wsa:ReferenceParameters xmlns:customer="http://example.org/customer">
+        <customer:CustomerKey>Fault#123456789</customer:CustomerKey>
+      </wsa:ReferenceParameters>
+    </wsa:FaultTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo"/>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1133" message="2" context="35">
+    <content href="../documents/echo/soap11/fault1.xml">
+<!-- $Id: fault1.xml,v 1.7 2006/01/19 06:05:30 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:echo="http://example.org/echo">
+  <env:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <customer:CustomerKey xmlns:customer="http://example.org/customer" wsa:IsReferenceParameter="true">Fault#123456789</customer:CustomerKey>
+    <wsa:MessageID>urn:uuid:243D4581-5103-4909-A38F-982C7A406FF9</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:BAB79B77-E9AE-4B9F-A8B4-624BB9E7E919</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <env:Fault>
+      <faultcode xmlns="">echo:EmptyEchoString</faultcode>
+      <faultstring xmlns="">The echo string was empty.</faultstring>
+    </env:Fault>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1233" message="1" context="36">
+    <content href="../documents/echo/soap12/message9.xml">
+<!-- $Id: message9.xml,v 1.5 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:MessageID>urn:uuid:C5BBE4F7-418A-4282-B985-F20555BEBDE9</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+      <wsa:ReferenceParameters xmlns:customer="http://example.org/customer">
+        <customer:CustomerKey>Key#123456789</customer:CustomerKey>
+      </wsa:ReferenceParameters>
+    </wsa:ReplyTo>
+    <wsa:FaultTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+      <wsa:ReferenceParameters xmlns:customer="http://example.org/customer">
+        <customer:CustomerKey>Fault#123456789</customer:CustomerKey>
+      </wsa:ReferenceParameters>
+    </wsa:FaultTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo"/>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1233" message="2" context="36">
+    <content href="../documents/echo/soap12/fault1.xml">
+<!-- $Id: fault1.xml,v 1.12 2006/02/04 11:20:21 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:echo="http://example.org/echo">
+  <env:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <customer:CustomerKey xmlns:customer="http://example.org/customer" wsa:IsReferenceParameter="true">Fault#123456789</customer:CustomerKey>
+    <wsa:MessageID>urn:uuid:6169244C-8D05-48A4-8914-76D0DD4755A9</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:C5BBE4F7-418A-4282-B985-F20555BEBDE9</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <env:Fault>
+      <env:Code>
+        <env:Value>soapenv:Sender</env:Value>  
+        <env:Subcode> 
+	  <env:Value>echo:EmptyEchoString</env:Value> 
+        </env:Subcode>  
+      </env:Code>
+      <env:Reason>
+        <env:Text xml:lang="en-US">The echo string was empty.</env:Text>
+      </env:Reason>
+    </env:Fault>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1134" message="1" context="37">
+    <content href="../documents/echo/soap11/message8.xml">
+<!-- $Id: message8.xml,v 1.7 2006/01/19 06:05:30 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:MessageID>urn:uuid:9AE4B05F-0A6F-4E19-B04C-B4FCCBA656DA</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+      <wsa:ReferenceParameters xmlns:customer="http://example.org/customer">
+        <customer:CustomerKey>Key#123456789</customer:CustomerKey>
+      </wsa:ReferenceParameters>
+    </wsa:ReplyTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo"/>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1134" message="2" context="37">
+    <content href="../documents/echo/soap11/fault2.xml">
+<!-- $Id: fault2.xml,v 1.7 2006/01/19 06:05:30 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:echo="http://example.org/echo">
+  <env:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <customer:CustomerKey xmlns:customer="http://example.org/customer" wsa:IsReferenceParameter="true">Key#123456789</customer:CustomerKey>
+    <wsa:MessageID>urn:uuid:3C8E5964-DFC1-4BCA-A13C-B7B2CCD1684B</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:9AE4B05F-0A6F-4E19-B04C-B4FCCBA656DA</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <env:Fault>
+      <faultcode xmlns="">echo:EmptyEchoString</faultcode>
+      <faultstring xmlns="">The echo string was empty.</faultstring>
+    </env:Fault>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1234" message="1" context="38">
+    <content href="../documents/echo/soap12/message8.xml">
+<!-- $Id: message8.xml,v 1.10 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:MessageID>urn:uuid:92319D72-70F0-4757-8D76-78559B692C94</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+      <wsa:ReferenceParameters xmlns:customer="http://example.org/customer">
+        <customer:CustomerKey>Key#123456789</customer:CustomerKey>
+      </wsa:ReferenceParameters>
+    </wsa:ReplyTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo"/>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1234" message="2" context="38">
+    <content href="../documents/echo/soap12/fault2.xml">
+<!-- $Id: fault2.xml,v 1.12 2006/02/04 11:20:21 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:echo="http://example.org/echo">
+  <env:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <customer:CustomerKey xmlns:customer="http://example.org/customer" wsa:IsReferenceParameter="true">Key#123456789</customer:CustomerKey>
+    <wsa:MessageID>urn:uuid:CA2144F4-3C6C-411A-B264-EE5EC24E378C</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:92319D72-70F0-4757-8D76-78559B692C94</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <env:Fault>
+      <env:Code>
+        <env:Value>soapenv:Sender</env:Value>  
+        <env:Subcode> 
+	  <env:Value>echo:EmptyEchoString</env:Value> 
+        </env:Subcode>  
+      </env:Code>
+      <env:Reason>
+        <env:Text xml:lang="en-US">The echo string was empty.</env:Text>
+      </env:Reason>
+    </env:Fault>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1235" message="1" context="39">
+    <content href="../documents/echo/soap12/test1235request.xml">
+<!-- $Id: test1235request.xml,v 1.5 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:MessageID>urn:uuid:C69CBC5A-F6E9-416E-90DD-E8909CCEC051</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://example.org/node/A</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:FaultTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+      <wsa:ReferenceParameters xmlns:customer="http://example.org/customer">
+        <customer:CustomerKey>Fault#123456789</customer:CustomerKey>
+      </wsa:ReferenceParameters>
+    </wsa:FaultTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo"/>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1235" message="2" context="39">
+    <content href="../documents/echo/soap12/fault1-1.xml">
+<!-- $Id: fault1-1.xml,v 1.4 2006/02/04 11:20:21 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:echo="http://example.org/echo">
+  <env:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <customer:CustomerKey xmlns:customer="http://example.org/customer" wsa:IsReferenceParameter="true">Fault#123456789</customer:CustomerKey>
+    <wsa:MessageID>urn:uuid:36959C33-EB44-4ED1-93D5-C3BD9A678588</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:C69CBC5A-F6E9-416E-90DD-E8909CCEC051</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <env:Fault>
+      <env:Code>
+        <env:Value>soapenv:Sender</env:Value>  
+        <env:Subcode> 
+	  <env:Value>echo:EmptyEchoString</env:Value> 
+        </env:Subcode>  
+      </env:Code>
+      <env:Reason>
+        <env:Text xml:lang="en-US">The echo string was empty.</env:Text>
+      </env:Reason>
+    </env:Fault>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1236" message="1" context="40">
+    <content href="../documents/echo/soap12/test1236request.xml">
+<!-- $Id: test1236request.xml,v 1.3 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:C85E3BB7-EA14-4221-8293-BF0C3CE485F3</wsa:MessageID>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+    </wsa:ReplyTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1237" message="1" context="41">
+    <content href="../documents/echo/soap12/test1236-1request.xml">
+<!-- $Id: test1236-1request.xml,v 1.3 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:C85E3BB7-EA14-4221-8293-BF0C3CE485F3</wsa:MessageID>
+    <wsa:ReplyTo env:role="http://www.w3.org/2003/05/soap-envelope/role/next">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+    </wsa:ReplyTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1238" message="1" context="42">
+    <content href="../documents/echo/soap12/test1205-1request.xml">
+<!-- $Id: test1205-1request.xml,v 1.4 2006/01/19 06:05:31 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:To>http://example.org/node/B</wsa:To>
+    <wsa:FaultTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+    </wsa:FaultTo>
+<!-- The following is a header which will not be understood -->
+    <alertcontrol:alertcontrol xmlns:alertcontrol="http://example.org/alertcontrol" env:mustUnderstand="true">
+      <alertcontrol:priority>1</alertcontrol:priority>
+      <alertcontrol:expires>2001-06-22T14:00:00-05:00</alertcontrol:expires>
+    </alertcontrol:alertcontrol>
+    <wsa:MessageID>urn:uuid:35A2EA45-8F2D-42EE-AD28-14F55D7E15D7</wsa:MessageID>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1238" message="2" context="42">
+    <content href="../documents/notify/soap12/fault5.xml">
+<!-- $Id: fault5.xml,v 1.5 2006/01/19 01:02:02 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+  <env:Header>
+    <env:NotUnderstood xmlns:alertcontrol="http://example.org/alertcontrol" qname="alertcontrol:alertcontrol"/>
+  </env:Header>
+  <env:Body>
+    <env:Fault>
+      <env:Code>
+        <env:Value>env:MustUnderstand</env:Value>
+      </env:Code>
+      <env:Reason>
+        <env:Text xml:lang="en-US">Header not understood</env:Text>
+      </env:Reason>
+    </env:Fault>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1140" message="1" context="43">
+    <content href="../documents/echo/soap11/duplicateToRequest.xml">
+<!-- $Id: duplicateToRequest.xml,v 1.5 2006/01/19 06:05:30 hugo Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:BCF59302-0E0B-4EF8-B581-6F2DAFF007AF</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+  </soap11:Header>
+  <soap11:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1140" message="2" context="43">
+    <content href="../documents/echo/soap11/duplicateToFault.xml">
+<!-- $Id: duplicateToFault.xml,v 1.5 2006/03/05 19:42:40 pdowney Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:FaultDetail>
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:MessageID>urn:uuid:246E7BEE-03AB-4D87-B95C-9B43F468F83E</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:BCF59302-0E0B-4EF8-B581-6F2DAFF007AF</wsa:RelatesTo>
+  </soap11:Header>
+  <soap11:Body>
+    <soap11:Fault>
+      <faultcode xmlns="">wsa:InvalidAddressingHeader</faultcode>
+      <faultstring xmlns="" xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+    </soap11:Fault>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1141" message="1" context="44">
+    <content href="../documents/echo/soap11/duplicateReplyToRequest.xml">
+<!-- $Id: duplicateReplyToRequest.xml,v 1.6 2006/02/20 16:01:17 pdowney Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:A4A96CCF-8366-4724-88E6-56BB9926CB35</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+  </soap11:Header>
+  <soap11:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1141" message="2" context="44">
+    <content href="../documents/echo/soap11/duplicateReplyToFault.xml">
+<!-- $Id: duplicateReplyToFault.xml,v 1.4 2006/01/19 06:05:30 hugo Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:FaultDetail>
+      <wsa:ProblemHeaderQName>wsa:ReplyTo</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:MessageID>urn:uuid:BDD74739-A421-47B9-9817-2808D7D6A5AC</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:A4A96CCF-8366-4724-88E6-56BB9926CB35</wsa:RelatesTo>
+  </soap11:Header>
+  <soap11:Body>
+    <soap11:Fault>
+      <faultcode xmlns="">wsa:InvalidAddressingHeader</faultcode>
+      <faultstring xmlns="" xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+    </soap11:Fault>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1142" message="1" context="45">
+    <content href="../documents/echo/soap11/duplicateFaultToRequest.xml">
+<!-- $Id: duplicateFaultToRequest.xml,v 1.6 2006/02/20 16:01:17 pdowney Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:BC1040CF-EC46-4483-82FD-51D86A10D0FA</wsa:MessageID>
+    <wsa:FaultTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:FaultTo>
+    <wsa:FaultTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:FaultTo>
+  </soap11:Header>
+  <soap11:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1142" message="2" context="45">
+    <content href="../documents/echo/soap11/duplicateFaultToFault.xml">
+<!-- $Id: duplicateFaultToFault.xml,v 1.4 2006/01/19 06:05:30 hugo Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:FaultDetail>
+      <wsa:ProblemHeaderQName>wsa:FaultTo</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:MessageID>urn:uuid:7EE82C4F-AE1A-4779-BB19-571F2314DD7D</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:BC1040CF-EC46-4483-82FD-51D86A10D0FA</wsa:RelatesTo>
+  </soap11:Header>
+  <soap11:Body>
+    <soap11:Fault>
+      <faultcode xmlns="">wsa:InvalidAddressingHeader</faultcode>
+      <faultstring xmlns="" xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+    </soap11:Fault>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1143" message="1" context="46">
+    <content href="../documents/echo/soap11/duplicateActionRequest.xml">
+<!-- $Id: duplicateActionRequest.xml,v 1.6 2006/02/20 16:01:17 pdowney Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:D447F2F4-9980-4012-93A4-5F0C9F7630ED</wsa:MessageID>
+  </soap11:Header>
+  <soap11:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1143" message="2" context="46">
+    <content href="../documents/echo/soap11/duplicateActionFault.xml">
+<!-- $Id: duplicateActionFault.xml,v 1.4 2006/01/19 06:05:30 hugo Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:FaultDetail>
+      <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:MessageID>urn:uuid:0293E1C3-3C60-455C-820A-CDF70D0795D1</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:D447F2F4-9980-4012-93A4-5F0C9F7630ED</wsa:RelatesTo>
+  </soap11:Header>
+  <soap11:Body>
+    <soap11:Fault>
+      <faultcode xmlns="">wsa:InvalidAddressingHeader</faultcode>
+      <faultstring xmlns="" xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+    </soap11:Fault>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1144" message="1" context="47">
+    <content href="../documents/echo/soap11/duplicateMessageIDRequest.xml">
+<!-- $Id: duplicateMessageIDRequest.xml,v 1.4 2006/02/20 16:01:17 pdowney Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>http://message.id/test</wsa:MessageID>
+    <wsa:MessageID>http://message.id/test</wsa:MessageID>
+  </soap11:Header>
+  <soap11:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1144" message="2" context="47">
+    <content href="../documents/echo/soap11/duplicateMessageIDFault.xml">
+<!-- $Id: duplicateMessageIDFault.xml,v 1.2 2006/01/19 06:05:30 hugo Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:FaultDetail>
+      <wsa:ProblemHeaderQName>wsa:MessageID</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+  </soap11:Header>
+  <soap11:Body>
+    <soap11:Fault>
+      <faultcode xmlns="">wsa:InvalidAddressingHeader</faultcode>
+      <faultstring xmlns="" xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+    </soap11:Fault>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1146" message="1" context="48">
+    <content href="../documents/echo/soap11/duplicateToRequest.xml">
+<!-- $Id: duplicateToRequest.xml,v 1.5 2006/01/19 06:05:30 hugo Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:BCF59302-0E0B-4EF8-B581-6F2DAFF007AF</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+  </soap11:Header>
+  <soap11:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1146" message="2" context="48">
+    <content href="../documents/echo/soap11/duplicateToFault-1.xml">
+<!-- $Id: duplicateToFault-1.xml,v 1.3 2006/01/19 06:05:30 hugo Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:FaultDetail>
+      <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo>urn:uuid:BCF59302-0E0B-4EF8-B581-6F2DAFF007AF</wsa:RelatesTo>
+    <wsa:MessageID>urn:uuid:48F61A13-5449-42DA-AA08-E58774F13F2A</wsa:MessageID>
+  </soap11:Header>
+  <soap11:Body>
+    <soap11:Fault>
+      <faultcode xmlns="">wsa:InvalidAddressingHeader</faultcode>
+      <faultstring xmlns="" xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</faultstring>
+    </soap11:Fault>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1147" message="1" context="49">
+    <content href="../documents/echo/soap11/noActionRequest.xml">
+<!-- $Id: noActionRequest.xml,v 1.4 2006/02/20 16:01:17 pdowney Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:MessageID>urn:uuid:A6332C1B-1469-4448-A860-71059F20C111</wsa:MessageID>
+  </soap11:Header>
+  <soap11:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1147" message="2" context="49">
+    <content href="../documents/echo/soap11/noActionFault.xml">
+<!-- $Id: noActionFault.xml,v 1.3 2006/01/19 06:05:30 hugo Exp $ -->
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:FaultDetail>
+      <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+    </wsa:FaultDetail>
+    <wsa:RelatesTo>urn:uuid:A6332C1B-1469-4448-A860-71059F20C111</wsa:RelatesTo>
+    <wsa:MessageID>urn:uuid:F1575880-7929-4787-B786-B1A06E181C75</wsa:MessageID>
+  </soap11:Header>
+  <soap11:Body>
+    <soap11:Fault>
+      <faultcode xmlns="">wsa:MessageAddressingHeaderRequired</faultcode>
+      <faultstring xmlns="" xml:lang="en">A required header representing a Message Addressing Property is not present</faultstring>
+    </soap11:Fault>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1149" message="1" context="50">
+    <content href="../documents/echo/soap11/duplicateToReplyToNone.xml">
+      <soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap11:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:BCF59302-0E0B-4EF8-B581-6F2DAFF007AF</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo>
+	<wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+    </wsa:ReplyTo>
+  </soap11:Header>
+  <soap11:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap11:Body>
+</soap11:Envelope>
+    </content>
+  </message>
+  <message testcase="test1240" message="1" context="51">
+    <content href="../documents/echo/soap12/duplicateToRequest.xml">
+<!-- $Id: duplicateToRequest.xml,v 1.5 2006/01/19 06:05:31 hugo Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:3FA30C1C-7CC0-4D0E-AA2E-50D082989797</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+  </soap12:Header>
+  <soap12:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1240" message="2" context="51">
+    <content href="../documents/echo/soap12/duplicateToFault.xml">
+<!-- $Id: duplicateToFault.xml,v 1.5 2006/03/05 19:42:40 pdowney Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID>urn:uuid:F9A26702-DF88-4EB0-BC3B-DAB775793B14</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:3FA30C1C-7CC0-4D0E-AA2E-50D082989797</wsa:RelatesTo>
+  </soap12:Header>
+  <soap12:Body>
+    <soap12:Fault>
+      <soap12:Code>
+        <soap12:Value>soap12:Sender</soap12:Value>
+        <soap12:Subcode>
+          <soap12:Value>wsa:InvalidAddressingHeader</soap12:Value>
+        </soap12:Subcode>
+      </soap12:Code>
+      <soap12:Reason>
+        <soap12:Text xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</soap12:Text>
+      </soap12:Reason>
+      <soap12:Detail>
+        <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+      </soap12:Detail>
+    </soap12:Fault>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1241" message="1" context="52">
+    <content href="../documents/echo/soap12/duplicateReplyToRequest.xml">
+<!-- $Id: duplicateReplyToRequest.xml,v 1.6 2006/02/20 16:01:17 pdowney Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:34AAAA7C-EC8E-40C4-8DD8-63FCA2282806</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+  </soap12:Header>
+  <soap12:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1241" message="2" context="52">
+    <content href="../documents/echo/soap12/duplicateReplyToFault.xml">
+<!-- $Id: duplicateReplyToFault.xml,v 1.4 2006/01/19 06:05:31 hugo Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID>urn:uuid:9044A05B-B3FF-449C-82E1-1402D200C945</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:34AAAA7C-EC8E-40C4-8DD8-63FCA2282806</wsa:RelatesTo>
+  </soap12:Header>
+  <soap12:Body>
+    <soap12:Fault>
+      <soap12:Code>
+        <soap12:Value>soap12:Sender</soap12:Value>
+        <soap12:Subcode>
+          <soap12:Value>wsa:InvalidAddressingHeader</soap12:Value>
+        </soap12:Subcode>
+      </soap12:Code>
+      <soap12:Reason>
+        <soap12:Text xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</soap12:Text>
+      </soap12:Reason>
+      <soap12:Detail>
+        <wsa:ProblemHeaderQName>wsa:ReplyTo</wsa:ProblemHeaderQName>
+      </soap12:Detail>
+    </soap12:Fault>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1242" message="1" context="53">
+    <content href="../documents/echo/soap12/duplicateFaultToRequest.xml">
+<!-- $Id: duplicateFaultToRequest.xml,v 1.6 2006/02/20 16:01:17 pdowney Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:70095F58-5D7E-4049-B351-60B77D11016A</wsa:MessageID>
+    <wsa:FaultTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:FaultTo>
+    <wsa:FaultTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:FaultTo>
+  </soap12:Header>
+  <soap12:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1242" message="2" context="53">
+    <content href="../documents/echo/soap12/duplicateFaultToFault.xml">
+<!-- $Id: duplicateFaultToFault.xml,v 1.5 2006/01/19 06:05:30 hugo Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID>urn:uuid:AD8FB1FC-9958-40E5-A9F7-625B74591777</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:70095F58-5D7E-4049-B351-60B77D11016A</wsa:RelatesTo>
+  </soap12:Header>
+  <soap12:Body>
+    <soap12:Fault>
+      <soap12:Code>
+        <soap12:Value>soap12:Sender</soap12:Value>
+        <soap12:Subcode>
+          <soap12:Value>wsa:InvalidAddressingHeader</soap12:Value>
+        </soap12:Subcode>
+      </soap12:Code>
+      <soap12:Reason>
+        <soap12:Text xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</soap12:Text>
+      </soap12:Reason>
+      <soap12:Detail>
+        <wsa:ProblemHeaderQName>wsa:FaultTo</wsa:ProblemHeaderQName>
+      </soap12:Detail>
+    </soap12:Fault>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1243" message="1" context="54">
+    <content href="../documents/echo/soap12/duplicateActionRequest.xml">
+<!-- $Id: duplicateActionRequest.xml,v 1.6 2006/02/20 16:01:17 pdowney Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:71E96B56-117C-43E8-BBF2-3ACEFA90B747</wsa:MessageID>
+  </soap12:Header>
+  <soap12:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1243" message="2" context="54">
+    <content href="../documents/echo/soap12/duplicateActionFault.xml">
+<!-- $Id: duplicateActionFault.xml,v 1.4 2006/01/19 06:05:30 hugo Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID>urn:uuid:0F99C7AC-2589-4925-A866-7C61109F3DD5</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:71E96B56-117C-43E8-BBF2-3ACEFA90B747</wsa:RelatesTo>
+  </soap12:Header>
+  <soap12:Body>
+    <soap12:Fault>
+      <soap12:Code>
+        <soap12:Value>soap12:Sender</soap12:Value>
+        <soap12:Subcode>
+          <soap12:Value>wsa:InvalidAddressingHeader</soap12:Value>
+        </soap12:Subcode>
+      </soap12:Code>
+      <soap12:Reason>
+        <soap12:Text xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</soap12:Text>
+      </soap12:Reason>
+      <soap12:Detail>
+        <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+      </soap12:Detail>
+    </soap12:Fault>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1244" message="1" context="55">
+    <content href="../documents/echo/soap12/duplicateMessageIDRequest.xml">
+<!-- $Id: duplicateMessageIDRequest.xml,v 1.5 2006/02/20 16:01:17 pdowney Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>http://message.id/test</wsa:MessageID>
+    <wsa:MessageID>http://message.id/test</wsa:MessageID>
+  </soap12:Header>
+  <soap12:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1244" message="2" context="55">
+    <content href="../documents/echo/soap12/duplicateMessageIDFault.xml">
+<!-- $Id: duplicateMessageIDFault.xml,v 1.3 2006/01/19 06:05:31 hugo Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+  </soap12:Header>
+  <soap12:Body>
+    <soap12:Fault>
+      <soap12:Code>
+        <soap12:Value>soap12:Sender</soap12:Value>
+        <soap12:Subcode>
+          <soap12:Value>wsa:InvalidAddressingHeader</soap12:Value>
+        </soap12:Subcode>
+      </soap12:Code>
+      <soap12:Reason>
+        <soap12:Text xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</soap12:Text>
+      </soap12:Reason>
+      <soap12:Detail>
+        <wsa:ProblemHeaderQName>wsa:MessageID</wsa:ProblemHeaderQName>
+      </soap12:Detail>
+    </soap12:Fault>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1246" message="1" context="56">
+    <content href="../documents/echo/soap12/duplicateToRequest.xml">
+<!-- $Id: duplicateToRequest.xml,v 1.5 2006/01/19 06:05:31 hugo Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:3FA30C1C-7CC0-4D0E-AA2E-50D082989797</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+  </soap12:Header>
+  <soap12:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1246" message="2" context="56">
+    <content href="../documents/echo/soap12/duplicateToFault-1.xml">
+<!-- $Id: duplicateToFault-1.xml,v 1.4 2006/03/05 19:42:40 pdowney Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID>urn:uuid:783C8BC0-1B5C-42D8-8D0C-080D0FBABF07</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:3FA30C1C-7CC0-4D0E-AA2E-50D082989797</wsa:RelatesTo>
+  </soap12:Header>
+  <soap12:Body>
+    <soap12:Fault>
+      <soap12:Code>
+        <soap12:Value>soap12:Sender</soap12:Value>
+        <soap12:Subcode>
+          <soap12:Value>wsa:InvalidAddressingHeader</soap12:Value>
+        </soap12:Subcode>
+      </soap12:Code>
+      <soap12:Reason>
+        <soap12:Text xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</soap12:Text>
+      </soap12:Reason>
+      <soap12:Detail>
+        <wsa:ProblemHeaderQName>wsa:To</wsa:ProblemHeaderQName>
+      </soap12:Detail>
+    </soap12:Fault>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1247" message="1" context="57">
+    <content href="../documents/echo/soap12/duplicateToRequest.xml">
+<!-- $Id: duplicateToRequest.xml,v 1.5 2006/01/19 06:05:31 hugo Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:3FA30C1C-7CC0-4D0E-AA2E-50D082989797</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+  </soap12:Header>
+  <soap12:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1247" message="2" context="57">
+    <content href="../documents/echo/soap12/duplicateToFault_2.xml">
+<!-- $Id: duplicateToFault_2.xml,v 1.3 2006/01/19 06:05:31 hugo Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID>urn:uuid:4FF8A541-383A-4EA0-AB22-A828887B4F25</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:3FA30C1C-7CC0-4D0E-AA2E-50D082989797</wsa:RelatesTo>
+  </soap12:Header>
+  <soap12:Body>
+    <soap12:Fault>
+      <soap12:Code>
+        <soap12:Value>soap12:Sender</soap12:Value>
+        <soap12:Subcode>
+          <soap12:Value>wsa:InvalidAddressingHeader</soap12:Value>
+          <soap12:Subcode>
+            <soap12:Value>wsa:InvalidCardinality</soap12:Value>
+          </soap12:Subcode>
+        </soap12:Subcode>
+      </soap12:Code>
+      <soap12:Reason>
+        <soap12:Text xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</soap12:Text>
+      </soap12:Reason>
+    </soap12:Fault>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1248" message="1" context="58">
+    <content href="../documents/echo/soap12/noActionRequest.xml">
+<!-- $Id: noActionRequest.xml,v 1.4 2006/02/20 16:01:17 pdowney Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:MessageID>urn:uuid:877D71FB-9309-417A-91FD-17473E28D1D0</wsa:MessageID>
+  </soap12:Header>
+  <soap12:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1248" message="2" context="58">
+    <content href="../documents/echo/soap12/noActionFault.xml">
+<!-- $Id: noActionFault.xml,v 1.3 2006/01/19 06:05:31 hugo Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID>urn:uuid:436906E5-D724-42A8-BDE1-A963B01676A1</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:877D71FB-9309-417A-91FD-17473E28D1D0</wsa:RelatesTo>
+  </soap12:Header>
+  <soap12:Body>
+    <soap12:Fault>
+      <soap12:Code>
+        <soap12:Value>soap12:Sender</soap12:Value>
+        <soap12:Subcode>
+          <soap12:Value>wsa:MessageAddressingHeaderRequired</soap12:Value>
+        </soap12:Subcode>
+      </soap12:Code>
+      <soap12:Reason>
+        <soap12:Text xml:lang="en">A header representing a Message Addressing Property is not valid and the message cannot be processed</soap12:Text>
+      </soap12:Reason>
+      <soap12:Detail>
+        <wsa:ProblemHeaderQName>wsa:Action</wsa:ProblemHeaderQName>
+      </soap12:Detail>
+    </soap12:Fault>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1249" message="1" context="59">
+    <content href="../documents/echo/soap12/duplicateToReplyToNone.xml">
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:BCF59302-0E0B-4EF8-B581-6F2DAFF007AF</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:ReplyTo>
+	<wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+    </wsa:ReplyTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1150" message="1" context="60">
+    <content href="../documents/echo/soap11/test1150request.xml">
+<!-- $Id: test1150request.xml,v 1.5 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:F835F375-80FE-4D1A-B6A0-6941C7D9BFC1</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://example.org/node/A</wsa:Address>
+    </wsa:ReplyTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1150" message="3" context="60">
+    <content href="../documents/echo/soap11/reply1-2.xml">
+<!-- $Id: reply1-2.xml,v 1.3 2006/01/19 06:05:30 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:RelatesTo>urn:uuid:F835F375-80FE-4D1A-B6A0-6941C7D9BFC1</wsa:RelatesTo>
+    <wsa:MessageID>urn:uuid:22DAE843-3F5B-4815-904E-32BA670DE337</wsa:MessageID>
+  </env:Header>
+  <env:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">Echo This Text</m:echoOut>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1250" message="1" context="61">
+    <content href="../documents/echo/soap12/test1250request.xml">
+<!-- $Id: test1250request.xml,v 1.5 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:F6003B5B-31EF-49F2-93DB-AA8040E76082</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://example.org/node/A</wsa:Address>
+    </wsa:ReplyTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1250" message="3" context="61">
+    <content href="../documents/echo/soap12/reply1-2.xml">
+<!-- $Id: reply1-2.xml,v 1.4 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://example.org/node/B</wsa:To>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID>urn:uuid:48E8E1AF-351B-4D23-8E78-DF9FB37A311F</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:F6003B5B-31EF-49F2-93DB-AA8040E76082</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">Echo This Text</m:echoOut>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1251" message="1" context="62">
+    <content href="../documents/echo/soap12/test1251request.xml">
+<!-- $Id: test1251request.xml,v 1.4 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:B434668D-6300-494C-B276-B634FA1FF19B</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://example.org/node/A</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:ReplyTo env:role="http://www.w3.org/2003/05/soap-envelope/role/none">
+      <wsa:Address>http://example.org/node/A</wsa:Address>
+    </wsa:ReplyTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1251" message="3" context="62">
+    <content href="../documents/echo/soap12/reply1-3.xml">
+<!-- $Id: reply1-3.xml,v 1.4 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://example.org/node/B</wsa:To>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID>urn:uuid:4D3FEF4A-7B7A-4DDE-BA50-04DE2C57070E</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:B434668D-6300-494C-B276-B634FA1FF19B</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">Echo This Text</m:echoOut>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1152" message="1" context="63">
+    <content href="../documents/echo/soap11/test1152request.xml">
+<!-- $Id: test1152request.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:BF442C41-9D3E-443D-A394-AD46742D25F8</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://example.org/node/A</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:FaultTo>
+	<wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+    </wsa:FaultTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1252" message="1" context="64">
+    <content href="../documents/echo/soap12/test1252request.xml">
+<!-- $Id: test1252request.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:BF442C41-9D3E-443D-A394-AD46742D25F8</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://example.org/node/A</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:FaultTo>
+	<wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+    </wsa:FaultTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1260" message="1" context="65">
+    <content href="../documents/echo/soap12/test1260request.xml">
+<!-- $Id: test1260request.xml,v 1.4 2006/02/20 16:01:17 pdowney Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:F7DF93B0-AF85-4518-B3D3-B3A4D2591229</wsa:MessageID>
+    <wsa:ReplyTo>
+      <wsa:Address>http://example.org/unreachable</wsa:Address>
+    </wsa:ReplyTo>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1260" message="3" context="65">
+    <content href="../documents/echo/soap12/test1260fault.xml">
+<!-- $Id: test1260fault.xml,v 1.3 2006/01/19 06:05:31 hugo Exp $ -->
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap12:Header>
+    <wsa:Action>http://www.w3.org/2005/08/addressing/fault</wsa:Action>
+    <wsa:MessageID>urn:uuid:B49F5E7A-1931-4015-902F-DEEE171E95B7</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:F7DF93B0-AF85-4518-B3D3-B3A4D2591229</wsa:RelatesTo>
+  </soap12:Header>
+  <soap12:Body>
+    <soap12:Fault>
+      <soap12:Code>
+        <soap12:Value>soap12:Sender</soap12:Value>
+        <soap12:Subcode>
+          <soap12:Value>wsa:DestinationUnreachable</soap12:Value>
+        </soap12:Subcode>
+      </soap12:Code>
+      <soap12:Reason>
+        <soap12:Text xml:lang="en">No route can be determined to reach http://example.org/unreachable</soap12:Text>
+      </soap12:Reason>
+      <soap12:Detail>
+        <wsa:ProblemIRI>http://example.org/unreachable</wsa:ProblemIRI>
+      </soap12:Detail>
+    </soap12:Fault>
+  </soap12:Body>
+</soap12:Envelope>
+    </content>
+  </message>
+  <message testcase="test1170" message="1" context="66">
+    <content href="../documents/echo/soap11/message1-70.xml">
+<!-- $Id: message1-70.xml,v 1.1 2006/03/03 09:33:38 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:B5756A05-3B9B-43B8-B2EA-AB58DDF25303</wsa:MessageID>
+    <wsa:From env:mustUnderstand="true">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:From>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1170" message="2" context="66">
+    <content href="../documents/echo/soap11/reply1.xml">
+<!-- $Id: reply1.xml,v 1.6 2006/01/19 06:05:30 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID>urn:uuid:D666E4D6-2DB6-45DA-BB45-C7406B2AFE9E</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:B5756A05-3B9B-43B8-B2EA-AB58DDF25303</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">Echo This Text</m:echoOut>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1270" message="1" context="67">
+    <content href="../documents/echo/soap12/message1-70.xml">
+<!-- $Id: message1-70.xml,v 1.1 2006/03/03 09:34:03 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:To>http://example.org/node/A</wsa:To>
+    <wsa:Action>http://example.org/action/echoIn</wsa:Action>
+    <wsa:MessageID>urn:uuid:6175992B-1EC9-42AA-9C18-C0C9F2E6B9DD</wsa:MessageID>
+    <wsa:From env:mustUnderstand="true">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:From>
+  </env:Header>
+  <env:Body>
+    <m:echoIn xmlns:m="http://example.org/echo">Echo This Text</m:echoIn>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+  <message testcase="test1270" message="2" context="67">
+    <content href="../documents/echo/soap12/reply1.xml">
+<!-- $Id: reply1.xml,v 1.7 2006/01/19 06:05:31 hugo Exp $ -->
+      <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <env:Header>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:MessageID>urn:uuid:192B04AC-60BD-44E4-971A-113D3DB170D3</wsa:MessageID>
+    <wsa:RelatesTo>urn:uuid:6175992B-1EC9-42AA-9C18-C0C9F2E6B9DD</wsa:RelatesTo>
+  </env:Header>
+  <env:Body>
+    <m:echoOut xmlns:m="http://example.org/echo">Echo This Text</m:echoOut>
+  </env:Body>
+</env:Envelope>
+    </content>
+  </message>
+</log>

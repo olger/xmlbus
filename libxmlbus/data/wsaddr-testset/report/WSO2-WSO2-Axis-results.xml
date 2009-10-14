@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results xmlns:sch="http://www.ascc.net/xml/schematron" xmlns:wsdl20="http://www.w3.org/2006/01/wsdl" xmlns:customer="http://example.org/customer" xmlns:wsdl11="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2005/03/addressing/wsdl" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:log="http://www.w3.org/2002/ws/addressing/logs/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:echo="http://example.org/echo" xmlns:notify="http://example.org/notify" xmlns:alertcontrol="http://example.org/alertcontrol">
+   <assertion xpath="soap12:Envelope/soap12:Header/alertcontrol:alertcontrol/@soap12:mustUnderstand" against="test1238" message="1" result="failed"/>
+   <assertion xpath="soap12:Envelope/soap12:Header/alertcontrol:alertcontrol/@soap12:mustUnderstand and soap12:Envelope/soap12:Header/alertcontrol:alertcontrol/@soap12:mustUnderstand cast as xs:boolean = true()" against="test1238" message="1" result="failed"/>
+   <assertion xpath="not(soap12:Envelope/soap12:Header/soap12:NotUnderstood) or soap12:Envelope/soap12:Header/soap12:NotUnderstood/@qname/(resolve-QName(.,parent::node()) = xs:QName('alertcontrol:alertcontrol'))" against="test1238" message="2" result="failed"/>
+   <assertion xpath="all required messages present" against="test1260" message="3" result="failed"/>
+</results>

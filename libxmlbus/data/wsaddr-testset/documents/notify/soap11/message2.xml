@@ -1,0 +1,15 @@
+<?xml version='1.0' ?>
+<!-- $Id: message2.xml,v 1.2 2006/02/20 16:01:17 pdowney Exp $ -->
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:wsa="http://www.w3.org/2005/08/addressing">
+ <env:Header>
+  <wsa:To>http://example.org/node/A</wsa:To>
+  <wsa:Action>http://example.org/action/notify</wsa:Action>
+  <wsa:ReplyTo>
+   <wsa:Address>http://www.w3.org/2005/08/addressing/none</wsa:Address>
+  </wsa:ReplyTo>
+ </env:Header>
+ <env:Body>
+  <m:notify xmlns:m="http://example.org/notify">Message 2</m:notify>
+ </env:Body>
+</env:Envelope>

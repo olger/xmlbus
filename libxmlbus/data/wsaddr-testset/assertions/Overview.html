@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:a=
+"http://www.w3.org/2005/08/addressing/test-cases/assertions">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Mac OS X (vers 12 April 2005), see www.w3.org">
+<meta http-equiv="Content-Type" content=
+"text/html; charset=us-ascii">
+<title>Web Services Addressing 1.0 - Test Assertions</title>
+<link href="../testsuite.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>Web Services Addressing 1.0 - Test Assertions</h1>
+<div class="assertion may"><a name="SOAP12-Feature-MEP" id=
+"SOAP12-Feature-MEP"></a><a href=
+"SOAP12-Feature-MEP">SOAP12-Feature-MEP</a> (<b>may</b>)
+<div class="description">
+<blockquote>[the SOAP 1.2 Addressing] feature may be used with any
+SOAP MEP.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12featuredesc">http://www.w3.org/TR/ws-addr-soap/#s12featuredesc</a></p>
+<p><i>TBD: Need to expand to enumerate SOAP MEPs under
+test.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion must"><a name="SOAP12-Properties" id=
+"SOAP12-Properties"></a><a href=
+"SOAP12-Properties">SOAP12-Properties</a> (<b>must</b>)
+<div class="description">
+<blockquote>A binding that supports [the SOAP 1.2 Addressing]
+feature MUST provide a means to transmit the properties [listed]
+and to reconstitute their values on receipt of a
+message.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12featuredesc">http://www.w3.org/TR/ws-addr-soap/#s12featuredesc</a></p>
+<p><i>Not directly testable, enumerated below. Expect to split each
+property into separate, multiple assertions for format, cadinality,
+etc.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion must"><a name="SOAP12-Property-Destination"
+id="SOAP12-Property-Destination"></a><a href=
+"SOAP12-Property-Destination">SOAP12-Property-Destination</a>
+(<b>must</b>)
+<div class="description">
+<blockquote>Corresponds to the abstract [destination]
+property.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12featureprops">http://www.w3.org/TR/ws-addr-soap/#s12featureprops</a></p>
+<p><i>Negative test cases for cardinatlity (1..1), non IRI
+format.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name="SOAP12-Property-SourceEndpoint"
+id="SOAP12-Property-SourceEndpoint"></a><a href=
+"SOAP12-Property-SourceEndpoint">SOAP12-Property-SourceEndpoint</a>
+(<b>may</b>)
+<div class="description">
+<blockquote>Corresponds to the abstract [source endpoint] property.
+[feature at risk]</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12featureprops">http://www.w3.org/TR/ws-addr-soap/#s12featureprops</a></p>
+<p><i>Test cases for cardinality (0..1).</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name="SOAP12-Property-ReplyEndpoint"
+id="SOAP12-Property-ReplyEndpoint"></a><a href=
+"SOAP12-Property-ReplyEndpoint">SOAP12-Property-ReplyEndpoint</a>
+(<b>may</b>)
+<div class="description">
+<blockquote>Corresponds to the abstract [reply endpoint]
+property.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12featureprops">http://www.w3.org/TR/ws-addr-soap/#s12featureprops</a></p>
+<p><i>Test cases for cardinatlity (0..1).</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name="SOAP12-Property-FaultEndpoint"
+id="SOAP12-Property-FaultEndpoint"></a><a href=
+"SOAP12-Property-FaultEndpoint">SOAP12-Property-FaultEndpoint</a>
+(<b>may</b>)
+<div class="description">
+<blockquote>Corresponds to the abstract [reply endpoint]
+property.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12featureprops">http://www.w3.org/TR/ws-addr-soap/#s12featureprops</a></p>
+<p><i>Tests with FaultEndpoint which succeed and fail. Tests which
+fault, but for which FaultEndpoint is missing. Test cases for
+cardinatlity (0..1).</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name="SOAP12-Property-Action" id=
+"SOAP12-Property-Action"></a><a href=
+"SOAP12-Property-Action">SOAP12-Property-Action</a> (<b>may</b>)
+<div class="description">
+<blockquote>Corresponds to the abstract [action]
+property.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12featureprops">http://www.w3.org/TR/ws-addr-soap/#s12featureprops</a></p>
+<p><i>Negative tests with invalid IRI. Test cases for cardinatlity
+(1..1).</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name="SOAP12-Property-MessageID" id=
+"SOAP12-Property-MessageID"></a><a href=
+"SOAP12-Property-MessageID">SOAP12-Property-MessageID</a>
+(<b>may</b>)
+<div class="description">
+<blockquote>Corresponds to the abstract [message id]
+property.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12featureprops">http://www.w3.org/TR/ws-addr-soap/#s12featureprops</a></p>
+<p><i>Negative tests with invalid IRI. Test cases with duplicated
+IRI values (results unlcear)? Test cases for cardinatlity
+(0..1).</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name="SOAP12-Property-Relationship"
+id="SOAP12-Property-Relationship"></a><a href=
+"SOAP12-Property-Relationship">SOAP12-Property-Relationship</a>
+(<b>may</b>)
+<div class="description">
+<blockquote>Corresponds to the abstract [relationship]
+property.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12featureprops">http://www.w3.org/TR/ws-addr-soap/#s12featureprops</a></p>
+<p><i>Negative tests with invalid IRI values. Test cases with
+addressing reply type IRI. Test cases with unspecified message
+value IRI.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name=
+"SOAP12-Property-ReferenceParameters" id=
+"SOAP12-Property-ReferenceParameters"></a><a href=
+"SOAP12-Property-ReferenceParameters">SOAP12-Property-ReferenceParameters</a>
+(<b>may</b>)
+<div class="description">
+<blockquote>Corresponds to the abstract [reference parameters]
+property.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12featureprops">http://www.w3.org/TR/ws-addr-soap/#s12featureprops</a></p>
+<p><i>Complex XML. Test cases for cardinatlity
+(0..unbounded).</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name="SOAP12-Feature-MEP" id=
+"SOAP12-Feature-MEP"></a><a href=
+"SOAP12-Feature-MEP">SOAP12-Feature-MEP</a> (<b>may</b>)
+<div class="description">
+<blockquote>[extensibility of SOAP headers]</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12featuredesc">http://www.w3.org/TR/ws-addr-soap/#s12featuredesc</a></p>
+<p><i>I'm sure the schema alows for attribute extensibility, but is
+this explicity stated?</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion must"><a name="SOAP12-Feature-Action" id=
+"SOAP12-Feature-Action"></a><a href=
+"SOAP12-Feature-Action">SOAP12-Feature-Action</a> (<b>must</b>)
+<div class="description">
+<blockquote>If the
+http://www.w3.org/2003/05/soap/features/action/Action property of
+the SOAP Action feature has a value, then the value of [action]
+property of the SOAP 1.2 Addressing 1.0 feature MUST be identical
+to it. Failure to have an identical value results in an Invalid
+Addressing Header fault.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12featureinteractions">http://www.w3.org/TR/ws-addr-soap/#s12featureinteractions</a></p>
+<p><i>Easily testable.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion informative"><a name=
+"SOAP12-Feature-Targeting" id=
+"SOAP12-Feature-Targeting"></a><a href=
+"SOAP12-Feature-Targeting">SOAP12-Feature-Targeting</a>
+(<b>informative</b>)
+<div class="description">
+<blockquote>By default, the resulting header blocks are targeted at
+the ultimate recipient in the SOAP message path (note that
+extensions to WS-Addressing could be written to specify different
+targetting).</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12featuredesc">http://www.w3.org/TR/ws-addr-soap/#s12featuredesc</a></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion must"><a name="SOAP12-Module-Cardinality" id=
+"SOAP12-Module-Cardinality"></a><a href=
+"SOAP12-Module-Cardinality">SOAP12-Module-Cardinality</a>
+(<b>must</b>)
+<div class="description">
+<blockquote>A message MUST NOT contain more than one wsa:To,
+wsa:ReplyTo, wsa:FaultTo, wsa:Action, or wsa:MessageID header
+targeted at a recipient. A recipient MUST generate a
+wsa:InvalidAddressingHeader fault if such a message is
+received.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12moduledesc">http://www.w3.org/TR/ws-addr-soap/#s12moduledesc</a></p>
+<p><i>Easily testable.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion informative"><a name=
+"SOAP12-Module-Targeting" id="SOAP12-Module-Targeting"></a><a href=
+"SOAP12-Module-Targeting">SOAP12-Module-Targeting</a>
+(<b>informative</b>)
+<div class="description">
+<blockquote>The SOAP processing model dictates that message
+addressing properties targeted at an intermediary do not normally
+get relayed as message addressing properties when the message is
+forwarded along the message path.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12moduledesc">http://www.w3.org/TR/ws-addr-soap/#s12moduledesc</a></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion informative"><a name=
+"SOAP12-Module-HeaderBehaviour" id=
+"SOAP12-Module-HeaderBehaviour"></a><a href=
+"SOAP12-Module-HeaderBehaviour">SOAP12-Module-HeaderBehaviour</a>
+(<b>informative</b>)
+<div class="description">
+<blockquote>The specification for a SOAP header used as a reference
+property can override {SOAP12-Module-MAP-Targeting}.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12moduledesc">http://www.w3.org/TR/ws-addr-soap/#s12moduledesc</a></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion informative"><a name=
+"SOAP12-Module-SOAPRelay" id="SOAP12-Module-SOAPRelay"></a><a href=
+"SOAP12-Module-SOAPRelay">SOAP12-Module-SOAPRelay</a>
+(<b>informative</b>)
+<div class="description">
+<blockquote>The the soap:relay attribute can override
+{SOAP12-Module-MAP-Targeting}.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#s12moduledesc">http://www.w3.org/TR/ws-addr-soap/#s12moduledesc</a></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion must"><a name="SOAP12-Module-Binding-MAPs"
+id="SOAP12-Module-Binding-MAPs"></a><a href=
+"SOAP12-Module-Binding-MAPs">SOAP12-Module-Binding-MAPs</a>
+(<b>must</b>)
+<div class="description">
+<blockquote>When a message is to be addressed to an endpoint, the
+XML Infoset representation of each message addressing property that
+has been assigned a value is inserted into the message as a SOAP
+header block subject to {SOAP12-Module-Binding-MAPs-Header},
+{SOAP12-Module-isReferenceParameter}</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#bindingrefp">http://www.w3.org/TR/ws-addr-soap/#bindingrefp</a></p>
+<p><i>Whole raft of tests possible in this area, not least
+inclusion of Reference Properties which clash with those from other
+sources.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion must"><a name=
+"SOAP12-Module-Binding-MAPs-Header" id=
+"SOAP12-Module-Binding-MAPs-Header"></a><a href=
+"SOAP12-Module-Binding-MAPs-Header">SOAP12-Module-Binding-MAPs-Header</a>
+(<b>must</b>)
+<div class="description">
+<blockquote>The value, if any, of the [reference parameters]
+property is added to the SOAP message header: the element
+information item of each of the [reference parameters] (including
+all of its [children], [attributes] and [in-scope namespaces]) is
+added as a SOAP header block in the new message.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#bindingrefp">http://www.w3.org/TR/ws-addr-soap/#bindingrefp</a></p>
+<p><i>Easily testible</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion must"><a name=
+"SOAP12-Module-isReferenceParameter" id=
+"SOAP12-Module-isReferenceParameter"></a><a href=
+"SOAP12-Module-isReferenceParameter">SOAP12-Module-isReferenceParameter</a>
+(<b>must</b>)
+<div class="description">
+<blockquote>Each header block added as a result of
+{SOAP12-Module-MAP-Binding} is annotated with a
+wsa:IsReferenceParameter attribute whose value is a valid
+xs:boolean representaion of true</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#bindingrefp">http://www.w3.org/TR/ws-addr-soap/#bindingrefp</a></p>
+<p><i>Easily testible</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion must"><a name=
+"SOAP12-Module-Existing-isReferenceParameter" id=
+"SOAP12-Module-Existing-isReferenceParameter"></a><a href=
+"SOAP12-Module-Existing-isReferenceParameter">SOAP12-Module-Existing-isReferenceParameter</a>
+(<b>must</b>)
+<div class="description">
+<blockquote>[When processing] {SOAP12-Module-MAP-Binding]} any
+existing wsa:IsReferenceParameter attribute on the header block is
+replaced.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#additionalinfoset">http://www.w3.org/TR/ws-addr-soap/#additionalinfoset</a></p>
+<p><i>Test case with existing wsa:IsReferenceParameter in the
+EPR.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name=
+"SOAP12-Module-Anonymous-Address-ReplyTo" id=
+"SOAP12-Module-Anonymous-Address-ReplyTo"></a><a href=
+"SOAP12-Module-Anonymous-Address-ReplyTo">SOAP12-Module-Anonymous-Address-ReplyTo</a>
+(<b>may</b>)
+<div class="description">
+<blockquote>When [the anonymous URI] is specified as the address of
+the ReplyTo EPR, the underlying SOAP protocol binding provides a
+channel to the specified endpoint. Any underlying protocol binding
+supporting the SOAP request-response message exchange pattern
+provides such a channel. For instance, the SOAP 1.2 HTTP binding
+puts the reply message in the HTTP response.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#soaphttp">http://www.w3.org/TR/ws-addr-soap/#soaphttp</a></p>
+<p><i>Test cases for SOAP over HTTP with anonymous address in
+ReplyTo EPR.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name=
+"SOAP12-Module-Anonymous-Address-FaultTo" id=
+"SOAP12-Module-Anonymous-Address-FaultTo"></a><a href=
+"SOAP12-Module-Anonymous-Address-FaultTo">SOAP12-Module-Anonymous-Address-FaultTo</a>
+(<b>may</b>)
+<div class="description">
+<blockquote>{SOAP-Module-Anonymous-Address-FaultTo} [applied to
+FaultTo EPR]</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#soaphttp">http://www.w3.org/TR/ws-addr-soap/#soaphttp</a></p>
+<p><i>Test cases for SOAP over HTTP with anonymous address in
+FaultTo EPR.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion must"><a name="SOAP11-Module-HTTP-SOAPAction"
+id="SOAP11-Module-HTTP-SOAPAction"></a><a href=
+"SOAP11-Module-HTTP-SOAPAction">SOAP11-Module-HTTP-SOAPAction</a>
+(<b>must</b>)
+<div class="description">
+<blockquote>Use of the SOAPAction HTTP header is required when
+using the SOAP 1.1 HTTP binding. The value of the SOAPAction HTTP
+header MUST either be identical to the value of the wsa:Action
+header, or be empty. [snip] Failure to have an identical value, or
+an empty value for SOAPAction, results in an Invalid Message
+Addressing Property fault.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#soaphttp">http://www.w3.org/TR/ws-addr-soap/#soaphttp</a></p>
+<p><i>Positive test case for SOAP 1.1 over HTTP with identical and
+empty SOAPAction values. Negative test cases for SOAP 1.1 over HTTP
+with non-identical and empty SOAPAction values.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name="SOAP12-Security" id=
+"SOAP12-Security"></a><a href="SOAP12-Security">SOAP12-Security</a>
+(<b>may</b>)
+<div class="description">
+<blockquote>[...]</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#securityconsiderations">http://www.w3.org/TR/ws-addr-soap/#securityconsiderations</a></p>
+<p><i>Test cases composed with WS-Security.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name="SOAP12-Fault-RetryAfter" id=
+"SOAP12-Fault-RetryAfter"></a><a href=
+"SOAP12-Fault-RetryAfter">SOAP12-Fault-RetryAfter</a> (<b>may</b>)
+<div class="description">
+<blockquote>[The RetryAfter] element (whose content is of type
+xs:unsignedLong) is a suggested minimum duration in milliseconds to
+wait before retransmitting the message. Omission of this element
+indicates that a retry is never likely to succeed.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#faultdetailelements">http://www.w3.org/TR/ws-addr-soap/#faultdetailelements</a></p>
+<p><i>Test cases for retrying.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name=
+"SOAP12-Fault-RetryAfter-Extensibility" id=
+"SOAP12-Fault-RetryAfter-Extensibility"></a><a href=
+"SOAP12-Fault-RetryAfter-Extensibility">SOAP12-Fault-RetryAfter-Extensibility</a>
+(<b>may</b>)
+<div class="description">
+<blockquote>[The RetryAfter element is open to] Optional
+extensibility attributes that do not affect
+processing.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#faultdetailelements">http://www.w3.org/TR/ws-addr-soap/#faultdetailelements</a></p>
+<p><i>Test cases for retrying including extra attributes.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion may"><a name="SOAP12-Fault-SubCodes" id=
+"SOAP12-Fault-SubCodes"></a><a href=
+"SOAP12-Fault-SubCodes">SOAP12-Fault-SubCodes</a> (<b>may</b>)
+<div class="description">
+<blockquote>[enumerated fault sub-codes]</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-soap/#faultdetailelements">http://www.w3.org/TR/ws-addr-soap/#faultdetailelements</a></p>
+<p><i>Undecided if these are separate assertions, or may be tied to
+existing assertions as a possible outcome ..</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion must"><a name=
+"CORE-Property-Destination-Format" id=
+"CORE-Property-Destination-Format"></a><a href=
+"CORE-Property-Destination-Format">CORE-Property-Destination-Format</a>
+(<b>must</b>)
+<div class="description">
+<blockquote>An absolute IRI representing the address of the
+intended receiver of this message.</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-core/#abstractmaps">http://www.w3.org/TR/ws-addr-core/#abstractmaps</a></p>
+<p><i>Negative test cases for non IRI format.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<div class="assertion must"><a name=
+"CORE-Property-Destination-Cardinality" id=
+"CORE-Property-Destination-Cardinality"></a><a href=
+"CORE-Property-Destination-Cardinality">CORE-Property-Destination-Cardinality</a>
+(<b>must</b>)
+<div class="description">
+<blockquote>IRI (1..1)</blockquote>
+<p><a href=
+"http://www.w3.org/TR/ws-addr-core/#abstractmaps">http://www.w3.org/TR/ws-addr-core/#abstractmaps</a></p>
+<p><i>Test cases for cardinatlity.</i></p>
+</div>
+<div class="tests"></div>
+</div>
+<address><a href="mailto:paul.downey@bt.com">Paul Downey</a><br>
+Generated from <a href="assertions.xml">assertions.xml</a> using
+<a href="assertions.xsl">assertions.xsl</a>.<br>
+<small>$Date: 2005/09/29 18:09:01 $</small></address>
+<p class="copyright"><a rel="Copyright" href=
+"/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+&Acirc;&copy; 2004-2005 <a href="/"><acronym title=
+"World Wide Web Consortium">W3C</acronym></a><sup>&Acirc;&reg;</sup>
+(<a href="http://www.csail.mit.edu/"><acronym title=
+"Massachusetts Institute of Technology">MIT</acronym></a>, <a href=
+"http://www.ercim.org/"><acronym title=
+"European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>,
+<a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved.
+W3C <a href=
+"/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+<a href=
+"/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>,
+<a rel="Copyright" href=
+"/Consortium/Legal/copyright-documents">document use</a> and
+<a rel="Copyright" href=
+"/Consortium/Legal/copyright-software">software licensing</a> rules
+apply. Your interactions with this site are in accordance with our
+<a href="/Consortium/Legal/privacy-statement#Public">public</a> and
+<a href="/Consortium/Legal/privacy-statement#Members">Member</a>
+privacy statements.</p>
+</body>
+</html>

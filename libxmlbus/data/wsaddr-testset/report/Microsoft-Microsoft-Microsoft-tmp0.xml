@@ -1,0 +1,1630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<l:log xmlns:l="http://www.w3.org/2002/ws/addressing/logs/" 
+    xmlns:s="http://www.w3.org/2002/ws/addr/testsuite/testcases/">
+    <l:message testcase="test1100" message="1" context="wcf-test1100">
+	<l:content href="wcf-Test1100-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1100</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1101" message="1" context="wcf-test1101">
+	<l:content href="wcf-Test1101-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:MessageID>urn:uuid:8dcfc2c0-681c-454c-8c48-94416173d79d</a:MessageID>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1101</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1102" message="1" context="wcf-test1102">
+	<l:content href="wcf-Test1102-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1102</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1103" message="1" context="wcf-test1103">
+	<l:content href="wcf-Test1103-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1103</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1104" message="1" context="wcf-test1104">
+	<l:content href="wcf-Test1104-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1104</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1106" message="1" context="wcf-test1106">
+	<l:content href="wcf-Test1106-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1106</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1107" message="1" context="wcf-test1107">
+	<l:content href="wcf-Test1107-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1107</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1108" message="1" context="wcf-test1108">
+	<l:content href="wcf-Test1108-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters d4p1:level="premium" xmlns:d4p1="http://example.org/customer">
+        <d4p1:CustomerKey>Key#123456789</d4p1:CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata customer:total="1" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:customer="http://example.org/customer">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+      <customer:Metadata xmlns:customer="http://example.org/customer">
+        <customer:extraStuff>This should be ignored</customer:extraStuff>
+      </customer:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1108</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1130" message="1" context="wcf-test1130">
+	<l:content href="wcf-Test1130-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:83eaaf80-d4f0-40b8-b44a-98a924a65ce9</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1130</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1130" message="2" context="wcf-test1130">
+	<l:content href="wcf-Test1130-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoOut</a:Action>
+    <a:RelatesTo>urn:uuid:83eaaf80-d4f0-40b8-b44a-98a924a65ce9</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <echoOut xmlns="http://example.org/echo">test1130</echoOut>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1131" message="1" context="wcf-test1131">
+	<l:content href="wcf-Test1131-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:a7d81fc7-cc43-4fd8-b4d1-031bfccf9636</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1131</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1131" message="2" context="wcf-test1131">
+	<l:content href="wcf-Test1131-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoOut</a:Action>
+    <a:RelatesTo>urn:uuid:a7d81fc7-cc43-4fd8-b4d1-031bfccf9636</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <echoOut xmlns="http://example.org/echo">test1131</echoOut>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1132" message="1" context="wcf-test1132">
+	<l:content href="wcf-Test1132-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:dbc9c5ed-0ce2-4788-8efc-2bff9c3a651d</a:MessageID>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1132</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1132" message="2" context="wcf-test1132">
+	<l:content href="wcf-Test1132-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoOut</a:Action>
+    <a:RelatesTo>urn:uuid:dbc9c5ed-0ce2-4788-8efc-2bff9c3a651d</a:RelatesTo>
+    <CustomerKey a:IsReferenceParameter="true" xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+  </s:Header>
+  <s:Body>
+    <echoOut xmlns="http://example.org/echo">test1132</echoOut>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1133" message="1" context="wcf-test1133">
+	<l:content href="wcf-Test1133-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:19d79fae-9d2e-4024-bef1-b89106fe3e9e</a:MessageID>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1133</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1133" message="2" context="wcf-test1133">
+	<l:content href="wcf-Test1133-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:RelatesTo>urn:uuid:19d79fae-9d2e-4024-bef1-b89106fe3e9e</a:RelatesTo>
+    <CustomerKey a:IsReferenceParameter="true" xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <faultcode xmlns:a="http://example.org/echo">a:EmptyEchoString</faultcode>
+      <faultstring xml:lang="en-US">The supplied string was of zero length.</faultstring>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1134" message="1" context="wcf-test1134">
+	<l:content href="wcf-Test1134-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:9b03ce98-9d91-42a4-bb71-699ae4cdb2ff</a:MessageID>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1134</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1134" message="2" context="wcf-test1134">
+	<l:content href="wcf-Test1134-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:RelatesTo>urn:uuid:9b03ce98-9d91-42a4-bb71-699ae4cdb2ff</a:RelatesTo>
+    <CustomerKey a:IsReferenceParameter="true" xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <faultcode xmlns:a="http://example.org/echo">a:EmptyEchoString</faultcode>
+      <faultstring xml:lang="en-US">The supplied string was of zero length.</faultstring>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1135" message="1" context="wcf-test1135">
+	<l:content href="wcf-Test1135-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.microsoft.com/</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11/Manual</a:To>
+    <a:MessageID>urn:uuid:16e9cc02-d116-42bd-86c3-5c80c93d7000</a:MessageID>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1135</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1135" message="2" context="wcf-test1135">
+	<l:content href="wcf-Test1135-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <CustomerKey a:IsReferenceParameter="true" xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+    <a:RelatesTo>urn:uuid:16e9cc02-d116-42bd-86c3-5c80c93d7000</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <faultcode xmlns:a="http://example.org/echo">a:EmptyEchoString</faultcode>
+      <faultstring xml:lang="en-US">The supplied string was of zero length.</faultstring>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1140" message="1" context="wcf-test1140">
+	<l:content href="wcf-Test1140-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:ff35a78b-95cb-4a17-bb13-c215ef9eafee</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1140</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1140" message="2" context="wcf-test1140">
+	<l:content href="wcf-Test1140-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:FaultDetail>
+      <a:ProblemHeaderQName>a:To</a:ProblemHeaderQName>
+    </a:FaultDetail>
+    <a:RelatesTo>urn:uuid:ff35a78b-95cb-4a17-bb13-c215ef9eafee</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <faultcode>a:InvalidAddressingHeader</faultcode>
+      <faultstring xml:lang="en-US">Multiple headers with name 'To' and namespace 'http://www.w3.org/2005/08/addressing' found.</faultstring>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1141" message="1" context="wcf-test1141">
+	<l:content href="wcf-Test1141-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:e506e63d-6735-4661-8050-5c6a982c9e3f</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1141</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1141" message="2" context="wcf-test1141">
+	<l:content href="wcf-Test1141-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:FaultDetail>
+      <a:ProblemHeaderQName>a:ReplyTo</a:ProblemHeaderQName>
+    </a:FaultDetail>
+    <a:RelatesTo>urn:uuid:e506e63d-6735-4661-8050-5c6a982c9e3f</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <faultcode>a:InvalidAddressingHeader</faultcode>
+      <faultstring xml:lang="en-US">Multiple headers with name 'ReplyTo' and namespace 'http://www.w3.org/2005/08/addressing' found.</faultstring>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1142" message="1" context="wcf-test1142">
+	<l:content href="wcf-Test1142-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:FaultTo>
+    <a:FaultTo>
+      <a:Address>http://duplicate/</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:f20da81e-aad8-46ba-8873-fd8374dea6d7</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1142</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1142" message="2" context="wcf-test1142">
+	<l:content href="wcf-Test1142-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:FaultDetail>
+      <a:ProblemHeaderQName>a:FaultTo</a:ProblemHeaderQName>
+    </a:FaultDetail>
+    <a:RelatesTo>urn:uuid:f20da81e-aad8-46ba-8873-fd8374dea6d7</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <faultcode>a:InvalidAddressingHeader</faultcode>
+      <faultstring xml:lang="en-US">Multiple headers with name 'FaultTo' and namespace 'http://www.w3.org/2005/08/addressing' found.</faultstring>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1143" message="1" context="wcf-test1143">
+	<l:content href="wcf-Test1143-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:Action>duplicate-action</a:Action>
+    <a:MessageID>urn:uuid:d867bae8-57b9-4f3e-ae7b-2d1967e73faa</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1143</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1143" message="2" context="wcf-test1143">
+	<l:content href="wcf-Test1143-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:FaultDetail>
+      <a:ProblemHeaderQName>a:Action</a:ProblemHeaderQName>
+    </a:FaultDetail>
+    <a:RelatesTo>urn:uuid:d867bae8-57b9-4f3e-ae7b-2d1967e73faa</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <faultcode>a:InvalidAddressingHeader</faultcode>
+      <faultstring xml:lang="en-US">Multiple headers with name 'Action' and namespace 'http://www.w3.org/2005/08/addressing' found.</faultstring>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1144" message="1" context="wcf-test1144">
+	<l:content href="wcf-Test1144-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:355c4f93-88e7-4706-aa91-8def2accb44e</a:MessageID>
+    <a:MessageID>urn:uuid:a4f58779-2b85-46d4-b0d1-6450491d268c</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1144</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1144" message="2" context="wcf-test1144">
+	<l:content href="wcf-Test1144-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:FaultDetail>
+      <a:ProblemHeaderQName>a:MessageID</a:ProblemHeaderQName>
+    </a:FaultDetail>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <faultcode>a:InvalidAddressingHeader</faultcode>
+      <faultstring xml:lang="en-US">Multiple headers with name 'MessageID' and namespace 'http://www.w3.org/2005/08/addressing' found.</faultstring>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1146" message="1" context="wcf-test1146">
+	<l:content href="wcf-Test1146-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:edecac83-8ecc-4596-b1db-27b6d5dc731f</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1146</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1146" message="2" context="wcf-test1146">
+	<l:content href="wcf-Test1146-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:FaultDetail>
+      <a:ProblemHeaderQName>a:To</a:ProblemHeaderQName>
+    </a:FaultDetail>
+    <a:RelatesTo>urn:uuid:edecac83-8ecc-4596-b1db-27b6d5dc731f</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <faultcode>a:InvalidAddressingHeader</faultcode>
+      <faultstring xml:lang="en-US">Multiple headers with name 'To' and namespace 'http://www.w3.org/2005/08/addressing' found.</faultstring>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1147" message="1" context="wcf-test1147">
+	<l:content href="wcf-Test1147-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:MessageID>urn:uuid:5ebdef49-d252-43f5-8c63-25a272ac8327</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1147</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1147" message="2" context="wcf-test1147">
+	<l:content href="wcf-Test1147-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:FaultDetail>
+      <a:ProblemHeaderQName>a:Action</a:ProblemHeaderQName>
+    </a:FaultDetail>
+    <a:RelatesTo>urn:uuid:5ebdef49-d252-43f5-8c63-25a272ac8327</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <faultcode>a:MessageAddressingHeaderRequired</faultcode>
+      <faultstring xml:lang="en-US">Required Action header not found in namespace 'http://www.w3.org/2005/08/addressing'.</faultstring>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1150" message="1" context="wcf-test1150">
+	<l:content href="wcf-Test1150-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:0eb7ccb3-308a-4c75-b1b8-a597bc585564</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/3085db5a-a14b-4ab9-9d60-40db3d5b7103/27c04d6c-85e5-4b1d-85b2-38a1929b01c7</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">2</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11/Duplex</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1150</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1150" message="3" context="wcf-test1150">
+	<l:content href="wcf-Test1150-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoOut</a:Action>
+    <a:RelatesTo>urn:uuid:0eb7ccb3-308a-4c75-b1b8-a597bc585564</a:RelatesTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15:8000/3085db5a-a14b-4ab9-9d60-40db3d5b7103/27c04d6c-85e5-4b1d-85b2-38a1929b01c7</a:To>
+    <ChannelInstance a:IsReferenceParameter="true" xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">2</ChannelInstance>
+  </s:Header>
+  <s:Body>
+    <echoOut xmlns="http://example.org/echo">test1150</echoOut>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1152" message="1" context="wcf-test1152">
+	<l:content href="wcf-Test1152-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:75c5bdd3-dab2-48aa-9935-a890cbce09e6</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/6adf8373-f4c1-4caf-a9fb-2ba519f40317/eb25120d-6412-4819-b79e-2ed327c22782</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">5</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11/Duplex</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1152</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1170" message="1" context="wcf-test1170">
+	<l:content href="wcf-Test1170-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:From s:mustUnderstand="true">
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:From>
+    <a:MessageID>urn:uuid:cf76eb8d-fdfc-4d6b-baf5-9e407265e756</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap11</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1170</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1170" message="2" context="wcf-test1170">
+	<l:content href="wcf-Test1170-Response.xml">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoOut</a:Action>
+    <a:RelatesTo>urn:uuid:cf76eb8d-fdfc-4d6b-baf5-9e407265e756</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <echoOut xmlns="http://example.org/echo">test1170</echoOut>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1200" message="1" context="wcf-test1200">
+	<l:content href="wcf-Test1200-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1200</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1201" message="1" context="wcf-test1201">
+	<l:content href="wcf-Test1201-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:MessageID>urn:uuid:74944621-3e1e-42f7-ae78-9436deac04f4</a:MessageID>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1201</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1202" message="1" context="wcf-test1202">
+	<l:content href="wcf-Test1202-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1202</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1203" message="1" context="wcf-test1203">
+	<l:content href="wcf-Test1203-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1203</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1204" message="1" context="wcf-test1204">
+	<l:content href="wcf-Test1204-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1204</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1206" message="1" context="wcf-test1206">
+	<l:content href="wcf-Test1206-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1206</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1207" message="1" context="wcf-test1207">
+	<l:content href="wcf-Test1207-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1207</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1208" message="1" context="wcf-test1208">
+	<l:content href="wcf-Test1208-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters d4p1:level="premium" xmlns:d4p1="http://example.org/customer">
+        <d4p1:CustomerKey>Key#123456789</d4p1:CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata customer:total="1" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:customer="http://example.org/customer">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+      <customer:Metadata xmlns:customer="http://example.org/customer">
+        <customer:extraStuff>This should be ignored</customer:extraStuff>
+      </customer:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">test1208</notify>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1230" message="1" context="wcf-test1230">
+	<l:content href="wcf-Test1230-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:08db40d3-6ede-48f7-99a9-aa51412ea04f</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1230</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1230" message="2" context="wcf-test1230">
+	<l:content href="wcf-Test1230-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoOut</a:Action>
+    <a:RelatesTo>urn:uuid:08db40d3-6ede-48f7-99a9-aa51412ea04f</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <echoOut xmlns="http://example.org/echo">test1230</echoOut>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1231" message="1" context="wcf-test1231">
+	<l:content href="wcf-Test1231-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:74c347cb-dc04-405f-9aec-cbd24f99600d</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1231</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1231" message="2" context="wcf-test1231">
+	<l:content href="wcf-Test1231-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoOut</a:Action>
+    <a:RelatesTo>urn:uuid:74c347cb-dc04-405f-9aec-cbd24f99600d</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <echoOut xmlns="http://example.org/echo">test1231</echoOut>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1232" message="1" context="wcf-test1232">
+	<l:content href="wcf-Test1232-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:d62d8a08-e120-435d-a23b-18347983429f</a:MessageID>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1232</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1232" message="2" context="wcf-test1232">
+	<l:content href="wcf-Test1232-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoOut</a:Action>
+    <a:RelatesTo>urn:uuid:d62d8a08-e120-435d-a23b-18347983429f</a:RelatesTo>
+    <CustomerKey a:IsReferenceParameter="true" xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+  </s:Header>
+  <s:Body>
+    <echoOut xmlns="http://example.org/echo">test1232</echoOut>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1233" message="1" context="wcf-test1233">
+	<l:content href="wcf-Test1233-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:2bbaf5ab-7430-47ed-a085-355ddacc3d9f</a:MessageID>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1233</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1233" message="2" context="wcf-test1233">
+	<l:content href="wcf-Test1233-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:RelatesTo>urn:uuid:2bbaf5ab-7430-47ed-a085-355ddacc3d9f</a:RelatesTo>
+    <CustomerKey a:IsReferenceParameter="true" xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <s:Code>
+        <s:Value>s:Sender</s:Value>
+        <s:Subcode>
+          <s:Value xmlns:a="http://example.org/echo">a:EmptyEchoString</s:Value>
+        </s:Subcode>
+      </s:Code>
+      <s:Reason>
+        <s:Text xml:lang="en-US">The supplied string was of zero length.</s:Text>
+      </s:Reason>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1234" message="1" context="wcf-test1234">
+	<l:content href="wcf-Test1234-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:e1fed712-f921-45b8-9b4b-0b5d1052d64f</a:MessageID>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1234</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1234" message="2" context="wcf-test1234">
+	<l:content href="wcf-Test1234-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:RelatesTo>urn:uuid:e1fed712-f921-45b8-9b4b-0b5d1052d64f</a:RelatesTo>
+    <CustomerKey a:IsReferenceParameter="true" xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <s:Code>
+        <s:Value>s:Sender</s:Value>
+        <s:Subcode>
+          <s:Value xmlns:a="http://example.org/echo">a:EmptyEchoString</s:Value>
+        </s:Subcode>
+      </s:Code>
+      <s:Reason>
+        <s:Text xml:lang="en-US">The supplied string was of zero length.</s:Text>
+      </s:Reason>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1235" message="1" context="wcf-test1235">
+	<l:content href="wcf-Test1235-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.microsoft.com/</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12/Manual</a:To>
+    <a:MessageID>urn:uuid:a59d6e40-df10-4469-8dd3-9185a08c553a</a:MessageID>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1235</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1235" message="2" context="wcf-test1235">
+	<l:content href="wcf-Test1235-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <CustomerKey a:IsReferenceParameter="true" xmlns="http://example.org/customer">Fault#123456789</CustomerKey>
+    <a:RelatesTo>urn:uuid:a59d6e40-df10-4469-8dd3-9185a08c553a</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <s:Code>
+        <s:Value>s:Sender</s:Value>
+        <s:Subcode>
+          <s:Value xmlns:a="http://example.org/echo">a:EmptyEchoString</s:Value>
+        </s:Subcode>
+      </s:Code>
+      <s:Reason>
+        <s:Text xml:lang="en-US">The supplied string was of zero length.</s:Text>
+      </s:Reason>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1236" message="1" context="wcf-test1236">
+	<l:content href="wcf-Test1236-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:ddd7fd55-b85b-4ffc-bd21-7f1ce0815fd6</a:MessageID>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1236</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1240" message="1" context="wcf-test1240">
+	<l:content href="wcf-Test1240-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:49b9344b-b33d-4f8d-bb9d-1873068ca079</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1240</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1240" message="2" context="wcf-test1240">
+	<l:content href="wcf-Test1240-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:RelatesTo>urn:uuid:49b9344b-b33d-4f8d-bb9d-1873068ca079</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <s:Code>
+        <s:Value>s:Sender</s:Value>
+        <s:Subcode>
+          <s:Value>a:InvalidAddressingHeader</s:Value>
+          <s:Subcode>
+            <s:Value>a:InvalidCardinality</s:Value>
+          </s:Subcode>
+        </s:Subcode>
+      </s:Code>
+      <s:Reason>
+        <s:Text xml:lang="en-US">Multiple headers with name 'To' and namespace 'http://www.w3.org/2005/08/addressing' found.</s:Text>
+      </s:Reason>
+      <s:Detail>
+        <a:ProblemHeaderQName>a:To</a:ProblemHeaderQName>
+      </s:Detail>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1241" message="1" context="wcf-test1241">
+	<l:content href="wcf-Test1241-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:04ea064b-95db-4b46-88b2-b6a92838ae44</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1241</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1241" message="2" context="wcf-test1241">
+	<l:content href="wcf-Test1241-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:RelatesTo>urn:uuid:04ea064b-95db-4b46-88b2-b6a92838ae44</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <s:Code>
+        <s:Value>s:Sender</s:Value>
+        <s:Subcode>
+          <s:Value>a:InvalidAddressingHeader</s:Value>
+          <s:Subcode>
+            <s:Value>a:InvalidCardinality</s:Value>
+          </s:Subcode>
+        </s:Subcode>
+      </s:Code>
+      <s:Reason>
+        <s:Text xml:lang="en-US">Multiple headers with name 'ReplyTo' and namespace 'http://www.w3.org/2005/08/addressing' found.</s:Text>
+      </s:Reason>
+      <s:Detail>
+        <a:ProblemHeaderQName>a:ReplyTo</a:ProblemHeaderQName>
+      </s:Detail>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1242" message="1" context="wcf-test1242">
+	<l:content href="wcf-Test1242-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:FaultTo>
+    <a:FaultTo>
+      <a:Address>http://duplicate/</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:9a12693f-b475-4bb1-b26f-63ee564d540f</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1242</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1242" message="2" context="wcf-test1242">
+	<l:content href="wcf-Test1242-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:RelatesTo>urn:uuid:9a12693f-b475-4bb1-b26f-63ee564d540f</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <s:Code>
+        <s:Value>s:Sender</s:Value>
+        <s:Subcode>
+          <s:Value>a:InvalidAddressingHeader</s:Value>
+          <s:Subcode>
+            <s:Value>a:InvalidCardinality</s:Value>
+          </s:Subcode>
+        </s:Subcode>
+      </s:Code>
+      <s:Reason>
+        <s:Text xml:lang="en-US">Multiple headers with name 'FaultTo' and namespace 'http://www.w3.org/2005/08/addressing' found.</s:Text>
+      </s:Reason>
+      <s:Detail>
+        <a:ProblemHeaderQName>a:FaultTo</a:ProblemHeaderQName>
+      </s:Detail>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1243" message="1" context="wcf-test1243">
+	<l:content href="wcf-Test1243-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:Action>duplicate-action</a:Action>
+    <a:MessageID>urn:uuid:00fe7186-ee40-4eb7-a878-257f9f8aa1ac</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1243</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1243" message="2" context="wcf-test1243">
+	<l:content href="wcf-Test1243-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:RelatesTo>urn:uuid:00fe7186-ee40-4eb7-a878-257f9f8aa1ac</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <s:Code>
+        <s:Value>s:Sender</s:Value>
+        <s:Subcode>
+          <s:Value>a:InvalidAddressingHeader</s:Value>
+          <s:Subcode>
+            <s:Value>a:InvalidCardinality</s:Value>
+          </s:Subcode>
+        </s:Subcode>
+      </s:Code>
+      <s:Reason>
+        <s:Text xml:lang="en-US">Multiple headers with name 'Action' and namespace 'http://www.w3.org/2005/08/addressing' found.</s:Text>
+      </s:Reason>
+      <s:Detail>
+        <a:ProblemHeaderQName>a:Action</a:ProblemHeaderQName>
+      </s:Detail>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1244" message="1" context="wcf-test1244">
+	<l:content href="wcf-Test1244-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:0c6475c8-827a-48c5-a30a-8e8848d3bf8f</a:MessageID>
+    <a:MessageID>urn:uuid:2fd6b39a-477f-41dc-9db6-53692e7d029e</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1244</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1244" message="2" context="wcf-test1244">
+	<l:content href="wcf-Test1244-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <s:Code>
+        <s:Value>s:Sender</s:Value>
+        <s:Subcode>
+          <s:Value>a:InvalidAddressingHeader</s:Value>
+          <s:Subcode>
+            <s:Value>a:InvalidCardinality</s:Value>
+          </s:Subcode>
+        </s:Subcode>
+      </s:Code>
+      <s:Reason>
+        <s:Text xml:lang="en-US">Multiple headers with name 'MessageID' and namespace 'http://www.w3.org/2005/08/addressing' found.</s:Text>
+      </s:Reason>
+      <s:Detail>
+        <a:ProblemHeaderQName>a:MessageID</a:ProblemHeaderQName>
+      </s:Detail>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1246" message="1" context="wcf-test1246">
+	<l:content href="wcf-Test1246-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:4e81ba69-ec2f-4205-841a-4b980a1de915</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1246</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1246" message="2" context="wcf-test1246">
+	<l:content href="wcf-Test1246-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:RelatesTo>urn:uuid:4e81ba69-ec2f-4205-841a-4b980a1de915</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <s:Code>
+        <s:Value>s:Sender</s:Value>
+        <s:Subcode>
+          <s:Value>a:InvalidAddressingHeader</s:Value>
+          <s:Subcode>
+            <s:Value>a:InvalidCardinality</s:Value>
+          </s:Subcode>
+        </s:Subcode>
+      </s:Code>
+      <s:Reason>
+        <s:Text xml:lang="en-US">Multiple headers with name 'To' and namespace 'http://www.w3.org/2005/08/addressing' found.</s:Text>
+      </s:Reason>
+      <s:Detail>
+        <a:ProblemHeaderQName>a:To</a:ProblemHeaderQName>
+      </s:Detail>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1247" message="1" context="wcf-test1247">
+	<l:content href="wcf-Test1247-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:To>http://www.w3.org/2005/08/addressing/anonymous</a:To>
+    <a:MessageID>urn:uuid:bffca00a-bc94-44d4-b8cb-c4c01f8e773a</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1247</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1247" message="2" context="wcf-test1247">
+	<l:content href="wcf-Test1247-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:RelatesTo>urn:uuid:bffca00a-bc94-44d4-b8cb-c4c01f8e773a</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <s:Code>
+        <s:Value>s:Sender</s:Value>
+        <s:Subcode>
+          <s:Value>a:InvalidAddressingHeader</s:Value>
+          <s:Subcode>
+            <s:Value>a:InvalidCardinality</s:Value>
+          </s:Subcode>
+        </s:Subcode>
+      </s:Code>
+      <s:Reason>
+        <s:Text xml:lang="en-US">Multiple headers with name 'To' and namespace 'http://www.w3.org/2005/08/addressing' found.</s:Text>
+      </s:Reason>
+      <s:Detail>
+        <a:ProblemHeaderQName>a:To</a:ProblemHeaderQName>
+      </s:Detail>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1248" message="1" context="wcf-test1248">
+	<l:content href="wcf-Test1248-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:MessageID>urn:uuid:0529bc31-1cbb-4842-a296-7417f7ae15d3</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1248</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1248" message="2" context="wcf-test1248">
+	<l:content href="wcf-Test1248-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/fault</a:Action>
+    <a:RelatesTo>urn:uuid:0529bc31-1cbb-4842-a296-7417f7ae15d3</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <s:Fault>
+      <s:Code>
+        <s:Value>s:Sender</s:Value>
+        <s:Subcode>
+          <s:Value>a:MessageAddressingHeaderRequired</s:Value>
+        </s:Subcode>
+      </s:Code>
+      <s:Reason>
+        <s:Text xml:lang="en-US">Required Action header not found in namespace 'http://www.w3.org/2005/08/addressing'.</s:Text>
+      </s:Reason>
+      <s:Detail>
+        <a:ProblemHeaderQName>a:Action</a:ProblemHeaderQName>
+      </s:Detail>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1250" message="1" context="wcf-test1250">
+	<l:content href="wcf-Test1250-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:c916bdc3-fa1a-486b-a457-d01195c648da</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/738cf456-011e-4208-92e9-e7ad2e84d903/9f867c63-5a04-4260-8388-86f085400521</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">3</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12/Duplex</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1250</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1250" message="3" context="wcf-test1250">
+	<l:content href="wcf-Test1250-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoOut</a:Action>
+    <a:RelatesTo>urn:uuid:c916bdc3-fa1a-486b-a457-d01195c648da</a:RelatesTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15:8000/738cf456-011e-4208-92e9-e7ad2e84d903/9f867c63-5a04-4260-8388-86f085400521</a:To>
+    <ChannelInstance a:IsReferenceParameter="true" xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">3</ChannelInstance>
+  </s:Header>
+  <s:Body>
+    <echoOut xmlns="http://example.org/echo">test1250</echoOut>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1251" message="1" context="wcf-test1251">
+	<l:content href="wcf-Test1251-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo s:role="http://www.w3.org/2003/05/soap-envelope/role/none">
+      <a:Address>http://www.microsoft.com/</a:Address>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:3022d9e4-f901-4ee5-be65-bfede5938ba1</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/bfedca33-60cc-420f-8215-5d3f467aa919/a4bb8ccb-2316-4f0f-9fd9-04c2572c310d</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">4</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12/Duplex</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1251</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1251" message="3" context="wcf-test1251">
+	<l:content href="wcf-Test1251-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoOut</a:Action>
+    <a:RelatesTo>urn:uuid:3022d9e4-f901-4ee5-be65-bfede5938ba1</a:RelatesTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15:8000/bfedca33-60cc-420f-8215-5d3f467aa919/a4bb8ccb-2316-4f0f-9fd9-04c2572c310d</a:To>
+    <ChannelInstance a:IsReferenceParameter="true" xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">4</ChannelInstance>
+  </s:Header>
+  <s:Body>
+    <echoOut xmlns="http://example.org/echo">test1251</echoOut>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1252" message="1" context="wcf-test1252">
+	<l:content href="wcf-Test1252-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:MessageID>urn:uuid:77b0e9b8-622e-49e3-98a9-7b72b1cce30c</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://131.107.72.15:8000/e792c8dc-0010-4140-b953-64c0eccbef65/6d74de29-b41c-4e99-826c-26ba3f9dcd37</a:Address>
+      <a:ReferenceParameters>
+        <ChannelInstance xmlns="http://schemas.microsoft.com/ws/2005/02/duplex">6</ChannelInstance>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12/Duplex</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">faulttest1252</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1270" message="1" context="wcf-test1270">
+	<l:content href="wcf-Test1270-Request.xml">
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:From s:mustUnderstand="true">
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:From>
+    <a:MessageID>urn:uuid:49dea0fa-ba92-4c8d-a98b-ec5ad2ea01cc</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://131.107.72.15/WSAddressingCR_Service_WCF/WSAddressing10.svc/Soap12</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">test1270</echoIn>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+    <l:message testcase="test1270" message="2" context="wcf-test1270">
+	<l:content href="wcf-Test1270-Response.xml">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoOut</a:Action>
+    <a:RelatesTo>urn:uuid:49dea0fa-ba92-4c8d-a98b-ec5ad2ea01cc</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <echoOut xmlns="http://example.org/echo">test1270</echoOut>
+  </s:Body>
+</s:Envelope>
+	</l:content>
+    </l:message>
+</l:log>

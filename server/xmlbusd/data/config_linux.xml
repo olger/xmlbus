@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<xmlbusd>
+  <outboundtransports>
+<!-- outbound transports can be available a number of times -->
+    <outboundtransport>
+      <implementation>libtcpworker-transport.so</implementation>
+      <configuration>
+        <empty/>
+      </configuration>
+    </outboundtransport>
+  </outboundtransports>
+  <services>
+    <service>
+      <implementation>libtestservice.so</implementation>
+      <inboundtransport>
+<!-- there is only one per service -->
+        <implementation>libtcpworker-transport.so</implementation>
+        <configuration>
+          <port>6789</port>
+        </configuration>
+      </inboundtransport>
+      <configuration>
+        <testentry>test</testentry>
+      </configuration>
+      <inboundpipeline>
+        <filter>
+          <implementation>libtestpipeline.so</implementation>
+          <configuration>
+            <empty/>
+          </configuration>
+        </filter>
+      </inboundpipeline>
+      <outboundpipeline/>
+    </service>
+  </services>
+</xmlbusd>

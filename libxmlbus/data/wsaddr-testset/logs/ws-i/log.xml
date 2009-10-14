@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="log.xsl" type="text/xsl" ?>
+<log timestamp="2006-01-17T22:26:10.578"
+    xmlns="http://www.ws-i.org/testing/2003/03/log/"
+    xmlns:wsi-monConfig="http://www.ws-i.org/testing/2003/03/monitorConfig/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <monitor version="1.0.0" releaseDate="2005-07-04">
+    <implementer name="WS-I Organization" location="http://www.ws-i.org"/>
+    <environment>
+      <runtime name="Java(TM) 2 Runtime Environment, Standard Edition" version="1.4.2"/>
+      <operatingSystem name="Windows XP" version="5.1"/>
+      <xmlParser name="Apache Xerces" version="XML4J 4.3.4"/>
+    </environment>
+    <wsi-monConfig:configuration>
+    <wsi-monConfig:comment>This configuration file is used to test the WS-I sample applications running on a single system.</wsi-monConfig:comment>
+      <wsi-monConfig:logFile replace="true" location="log.xml">
+      <wsi-monConfig:addStyleSheet href="../common/xsl/log.xsl" type="text/xsl" />
+    </wsi-monConfig:logFile>
+      <wsi-monConfig:logDuration>600</wsi-monConfig:logDuration>
+      <wsi-monConfig:cleanupTimeoutSeconds>3</wsi-monConfig:cleanupTimeoutSeconds>
+      <wsi-monConfig:manInTheMiddle>
+        <wsi-monConfig:redirect>
+    <wsi-monConfig:comment>This is a redirect example for local Retailer Sample App on port 9080.</wsi-monConfig:comment>
+
+          <wsi-monConfig:listenPort>8001</wsi-monConfig:listenPort>
+          <wsi-monConfig:schemeAndHostPort>http://localhost:9080</wsi-monConfig:schemeAndHostPort>
+          <wsi-monConfig:maxConnections>1000</wsi-monConfig:maxConnections>
+          <wsi-monConfig:readTimeoutSeconds>15</wsi-monConfig:readTimeoutSeconds>
+        </wsi-monConfig:redirect>
+      </wsi-monConfig:manInTheMiddle>
+    </wsi-monConfig:configuration>
+  </monitor>
+
+<messageEntry xsi:type="httpMessageEntry" ID="1" conversationID="1" type="request" timestamp="2006-01-17T22:26:20.234">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79C79B-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1100&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/notify&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 783&#xd;
+Date: Tue, 17 Jan 2006 22:26:19 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="2" conversationID="1" type="response" timestamp="2006-01-17T22:26:20.359">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:20 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="3" conversationID="1" type="request" timestamp="2006-01-17T22:26:20.625">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79C857-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1200&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/notify&quot;;&#xd;
+Content-Length: 779&#xd;
+Date: Tue, 17 Jan 2006 22:26:19 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="4" conversationID="1" type="response" timestamp="2006-01-17T22:26:20.656">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:20 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="5" conversationID="1" type="request" timestamp="2006-01-17T22:26:20.734">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79C9AE-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1101&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/notify&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 783&#xd;
+Date: Tue, 17 Jan 2006 22:26:19 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="6" conversationID="1" type="response" timestamp="2006-01-17T22:26:20.781">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:20 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="7" conversationID="1" type="request" timestamp="2006-01-17T22:26:20.859">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79C9FC-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1201&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/notify&quot;;&#xd;
+Content-Length: 779&#xd;
+Date: Tue, 17 Jan 2006 22:26:19 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="8" conversationID="1" type="response" timestamp="2006-01-17T22:26:21.000">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:20 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="9" conversationID="1" type="request" timestamp="2006-01-17T22:26:21.062">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79CAE7-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1102&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/notify&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 783&#xd;
+Date: Tue, 17 Jan 2006 22:26:19 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="10" conversationID="1" type="response" timestamp="2006-01-17T22:26:21.094">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:20 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="11" conversationID="1" type="request" timestamp="2006-01-17T22:26:21.156">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79CB45-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1202&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/notify&quot;;&#xd;
+Content-Length: 779&#xd;
+Date: Tue, 17 Jan 2006 22:26:19 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="12" conversationID="1" type="response" timestamp="2006-01-17T22:26:21.188">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:20 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="13" conversationID="1" type="request" timestamp="2006-01-17T22:26:21.266">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79CBA2-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:FaultTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:FaultTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1103&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/notify&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 976&#xd;
+Date: Tue, 17 Jan 2006 22:26:19 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="14" conversationID="1" type="response" timestamp="2006-01-17T22:26:21.312">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:20 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="15" conversationID="1" type="request" timestamp="2006-01-17T22:26:21.375">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79CC1F-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:FaultTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:FaultTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1203&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/notify&quot;;&#xd;
+Content-Length: 972&#xd;
+Date: Tue, 17 Jan 2006 22:26:21 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="16" conversationID="1" type="response" timestamp="2006-01-17T22:26:21.438">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:20 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="17" conversationID="1" type="request" timestamp="2006-01-17T22:26:21.625">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79CD0A-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:FaultTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:FaultTo&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1104&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/notify&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 1169&#xd;
+Date: Tue, 17 Jan 2006 22:26:21 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="18" conversationID="1" type="response" timestamp="2006-01-17T22:26:21.688">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:20 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="19" conversationID="1" type="request" timestamp="2006-01-17T22:26:21.766">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79CDA6-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:FaultTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:FaultTo&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1204&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/notify&quot;;&#xd;
+Content-Length: 1165&#xd;
+Date: Tue, 17 Jan 2006 22:26:21 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="20" conversationID="1" type="response" timestamp="2006-01-17T22:26:21.844">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:20 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="21" conversationID="1" type="request" timestamp="2006-01-17T22:26:21.922">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;alertcontrol:alertcontrol soapenv:mustUnderstand=&quot;true&quot; xmlns:alertcontrol=&quot;http://example.org/alertcontrol&quot; xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&lt;alertcontrol:priority&gt;1&lt;/alertcontrol:priority&gt;&lt;alertcontrol:expires&gt;2001-06-22T14:00:00-05:00&lt;/alertcontrol:expires&gt;&lt;/alertcontrol:alertcontrol&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79CE33-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:FaultTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:FaultTo&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;faulttest1205&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/notify&quot;;&#xd;
+Content-Length: 1482&#xd;
+Date: Tue, 17 Jan 2006 22:26:21 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="22" conversationID="1" type="response" timestamp="2006-01-17T22:26:22.062">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header&gt;&lt;NotUnderstood qname=&quot;alertcontrol:alertcontrol&quot; xmlns=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:alertcontrol=&quot;http://example.org/alertcontrol&quot;/&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;soapenv:Code&gt;&lt;soapenv:Value&gt;soapenv:MustUnderstand&lt;/soapenv:Value&gt;&lt;/soapenv:Code&gt;&lt;soapenv:Reason&gt;&lt;soapenv:Text xml:lang=&quot;en-US&quot;&gt;&lt;![CDATA[WSWS3173E: Error: Did not understand &quot;MustUnderstand&quot; header(s):{http://example.org/alertcontrol}alertcontrol]]&gt;&lt;/soapenv:Text&gt;&lt;/soapenv:Reason&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 500 Internal Server Error&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Content-Length: 774&#xd;
+Date: Tue, 17 Jan 2006 22:26:20 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="23" conversationID="1" type="request" timestamp="2006-01-17T22:26:22.141">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79CF1D-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1106&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/notify&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 1179&#xd;
+Date: Tue, 17 Jan 2006 22:26:21 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="24" conversationID="1" type="response" timestamp="2006-01-17T22:26:22.234">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:20 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="25" conversationID="1" type="request" timestamp="2006-01-17T22:26:22.297">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79CFB9-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1206&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/notify&quot;;&#xd;
+Content-Length: 1175&#xd;
+Date: Tue, 17 Jan 2006 22:26:21 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="26" conversationID="1" type="response" timestamp="2006-01-17T22:26:22.375">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:22 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="27" conversationID="1" type="request" timestamp="2006-01-17T22:26:22.672">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D075-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:FaultTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:FaultTo&gt;&lt;wsa:ReplyTo customer:level=&quot;premium&quot; xmlns:customer=&quot;http://example.org/customer&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;definitions targetNamespace=&quot;http://example.com/wsaTestService&quot; xmlns=&quot;http://schemas.xmlsoap.org/wsdl/&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:s0=&quot;http://example.com/notify/&quot; xmlns:s1=&quot;http://example.com/echo/&quot; xmlns:service=&quot;http://example.com/wsaTestService&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+
+  &lt;types&gt;
+    &lt;xs:schema attributeFormDefault=&quot;unqualified&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://example.com/notify/&quot;&gt;
+	&lt;xs:element name=&quot;notify&quot; type=&quot;xs:string&quot;/&gt;
+    &lt;/xs:schema&gt;
+
+    &lt;xs:schema attributeFormDefault=&quot;unqualified&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://example.com/echo/&quot;&gt;
+	&lt;xs:element name=&quot;echoIn&quot; type=&quot;xs:string&quot;/&gt;
+	&lt;xs:element name=&quot;echoOut&quot; type=&quot;xs:string&quot;/&gt;
+    &lt;/xs:schema&gt;
+  &lt;/types&gt;
+
+  &lt;message name=&quot;wsaNotifyMessage&quot;&gt;
+    &lt;part element=&quot;s0:notify&quot; name=&quot;wsaNotifyMessagePart&quot;/&gt;
+  &lt;/message&gt;
+
+  &lt;message name=&quot;wsaEchoInMessage&quot;&gt;
+    &lt;part element=&quot;s1:echoIn&quot; name=&quot;wsaEchoInPart&quot;/&gt;
+  &lt;/message&gt;
+	
+  &lt;message name=&quot;wsaEchoOutMessage&quot;&gt;
+    &lt;part element=&quot;s1:echoOut&quot; name=&quot;wsaEchoOutPart&quot;/&gt;
+  &lt;/message&gt;
+	
+  &lt;portType name=&quot;wsaTestPortType&quot;&gt;
+    &lt;operation name=&quot;notify&quot;&gt;
+      &lt;input message=&quot;service:wsaNotifyMessage&quot;/&gt;
+    &lt;/operation&gt;
+
+    &lt;operation name=&quot;echoIn&quot;&gt;
+      &lt;input message=&quot;service:wsaEchoInMessage&quot;/&gt;
+    &lt;/operation&gt;
+
+    &lt;operation name=&quot;echoOut&quot;&gt;
+      &lt;input message=&quot;service:wsaEchoOutMessage&quot;/&gt;
+    &lt;/operation&gt;
+
+    &lt;operation name=&quot;echo&quot;&gt;
+      &lt;input message=&quot;service:wsaEchoInMessage&quot;/&gt;
+      &lt;output message=&quot;service:wsaEchoOutMessage&quot;/&gt;
+    &lt;/operation&gt;
+  &lt;/portType&gt;
+	
+  &lt;binding name=&quot;wsaTestSoap11Binding&quot; type=&quot;service:wsaTestPortType&quot;&gt;
+    &lt;soap:binding style=&quot;document&quot; transport=&quot;http://schemas.xmlsoap.org/soap/http&quot;/&gt;
+	&lt;operation name=&quot;notify&quot;&gt;
+	  &lt;soap:operation soapAction=&quot;&quot; style=&quot;document&quot;/&gt;
+	  &lt;input&gt;
+	      &lt;soap:body use=&quot;literal&quot;/&gt;
+	  &lt;/input&gt;
+	&lt;/operation&gt;
+
+	&lt;operation name=&quot;echoIn&quot;&gt;
+	  &lt;soap:operation soapAction=&quot;&quot; style=&quot;document&quot;/&gt;
+	  &lt;input&gt;
+	      &lt;soap:body use=&quot;literal&quot;/&gt;
+	  &lt;/input&gt;
+	&lt;/operation&gt;
+
+	&lt;operation name=&quot;echoOut&quot;&gt;
+	  &lt;soap:operation soapAction=&quot;&quot; style=&quot;document&quot;/&gt;
+	  &lt;input&gt;
+	      &lt;soap:body use=&quot;literal&quot;/&gt;
+	  &lt;/input&gt;
+	&lt;/operation&gt;
+
+	&lt;operation name=&quot;echo&quot;&gt;
+	  &lt;soap:operation soapAction=&quot;&quot; style=&quot;document&quot;/&gt;
+	  &lt;input&gt;
+	      &lt;soap:body use=&quot;literal&quot;/&gt;
+	  &lt;/input&gt;
+	  &lt;output&gt;
+	      &lt;soap:body use=&quot;literal&quot;/&gt;
+	  &lt;/output&gt;
+	&lt;/operation&gt;
+
+    &lt;/binding&gt;
+    
+    &lt;service name=&quot;wsaTestService&quot;&gt;
+      &lt;port binding=&quot;service:wsaTestSoap11Binding&quot; name=&quot;wsaTestPort&quot;&gt;
+	  &lt;soap:address location=&quot;http://example.com/node/B&quot;/&gt;
+      &lt;/port&gt;
+    &lt;/service&gt;
+&lt;/definitions&gt;&lt;description targetNamespace=&quot;http://example.com/wsaTestService&quot; xmlns=&quot;http://www.w3.org/2005/08/wsdl&quot; xmlns:echo=&quot;http://example.com/echo/&quot; xmlns:notify=&quot;http://example.com/notify/&quot; xmlns:service=&quot;http://example.com/wsaTestService&quot; xmlns:whttp=&quot;http://www.w3.org/2005/08/wsdl/http&quot; xmlns:wsdlx=&quot;http://www.w3.org/2005/08/wsdl-extensions&quot; xmlns:wsoap=&quot;http://www.w3.org/2005/08/wsdl/soap&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+
+  &lt;types&gt;
+    &lt;xs:schema attributeFormDefault=&quot;unqualified&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://example.com/notify/&quot;&gt;
+	&lt;xs:element name=&quot;notify&quot; type=&quot;xs:string&quot;/&gt;
+    &lt;/xs:schema&gt;
+    &lt;xs:schema attributeFormDefault=&quot;unqualified&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://example.com/echo/&quot;&gt;
+	&lt;xs:element name=&quot;echoIn&quot; type=&quot;xs:string&quot;/&gt;
+	&lt;xs:element name=&quot;echoOut&quot; type=&quot;xs:string&quot;/&gt;
+    &lt;/xs:schema&gt;
+  &lt;/types&gt;
+
+  &lt;interface name=&quot;wsaTestService&quot;&gt;
+    &lt;fault name=&quot;service:EmptyEchoString&quot;/&gt;
+    &lt;operation name=&quot;notify&quot; pattern=&quot;http://www.w3.org/2005/08/wsdl/in-only&quot;&gt;
+      &lt;input element=&quot;notify:notify&quot; messageLabel=&quot;In&quot;/&gt;
+    &lt;/operation&gt;
+    &lt;operation name=&quot;echoIn&quot; pattern=&quot;http://www.w3.org/2005/08/wsdl/robust-in-only&quot;&gt;
+      &lt;input element=&quot;s1:echoIn&quot; messageLabel=&quot;In&quot;/&gt;
+      &lt;outfault messageLabel=&quot;Out&quot; ref=&quot;service:EmptyEchoString&quot;/&gt;
+    &lt;/operation&gt;
+    &lt;operation name=&quot;echoOut&quot; pattern=&quot;http://www.w3.org/2005/08/wsdl/robust-in-only&quot;&gt;
+      &lt;input element=&quot;s1:echoOut&quot; messageLabel=&quot;In&quot;/&gt;
+      &lt;outfault messageLabel=&quot;Out&quot; ref=&quot;service:EmptyEchoString&quot;/&gt;
+    &lt;/operation&gt;
+    &lt;operation name=&quot;echo&quot; pattern=&quot;http://www.w3.org/2005/08/wsdl/in-out&quot;&gt;
+      &lt;input element=&quot;s1:echoIn&quot; messageLabel=&quot;In&quot;/&gt;
+      &lt;output element=&quot;s1:echoOut&quot; messageLabel=&quot;Out&quot;/&gt;
+      &lt;outfault messageLabel=&quot;Out&quot; ref=&quot;service:EmptyEchoString&quot;/&gt;
+    &lt;/operation&gt;
+  &lt;/interface&gt;
+ 
+  &lt;binding interface=&quot;wsaTestService&quot; name=&quot;wsaTestSoap11Binding&quot; type=&quot;http://www.w3.org/2005/08/wsdl/soap&quot; wsoap:version=&quot;1.1&quot;&gt;
+	    wsoap:protocol=&amp;quot;http://www.w3.org/2003/05/soap/bindings/HTTP&amp;quot;&amp;gt;
+    &lt;operation ref=&quot;notify&quot;/&gt;
+    &lt;operation ref=&quot;echoIn&quot;/&gt;
+    &lt;operation ref=&quot;echoOut&quot;/&gt;
+    &lt;operation ref=&quot;echo&quot;/&gt;
+    &lt;fault ref=&quot;service:EmptyEchoString&quot; wsoap:code=&quot;echo:EmptyEchoString&quot;/&gt;
+  &lt;/binding&gt;
+
+  &lt;binding interface=&quot;wsaTestService&quot; name=&quot;wsaTestSoap12Binding&quot; type=&quot;http://www.w3.org/2005/08/wsdl/soap&quot; wsoap:version=&quot;1.2&quot;&gt;
+	    wsoap:protocol=&amp;quot;http://www.w3.org/2003/05/soap/bindings/HTTP&amp;quot;&amp;gt;
+    &lt;!-- Note: the request only SOAP MEP doesn&amp;apos;t actually exist! --&gt;
+    &lt;operation ref=&quot;notify&quot; wsoap:mep=&quot;http://www.w3.org/2003/05/soap/mep/request&quot;/&gt;
+    &lt;operation ref=&quot;echoIn&quot; wsoap:mep=&quot;http://www.w3.org/2003/05/soap/mep/request&quot;/&gt;
+    &lt;operation ref=&quot;echoOut&quot; wsoap:mep=&quot;http://www.w3.org/2003/05/soap/mep/request&quot;/&gt;
+    &lt;operation ref=&quot;echo&quot; wsoap:mep=&quot;http://www.w3.org/2003/05/soap/mep/request-response&quot;/&gt;
+    &lt;fault ref=&quot;service:EmptyEchoString&quot; wsoap:code=&quot;echo:EmptyEchoString&quot;/&gt;
+  &lt;/binding&gt;
+
+  &lt;service interface=&quot;service:wsaTestService&quot; name=&quot;wsaTestService&quot;&gt;
+    &lt;endpoint address=&quot;http://example.com/node/B&quot; binding=&quot;service:wsaTestSoap11Binding&quot; name=&quot;wsaTestSoap11Endpoint&quot;/&gt;
+    &lt;endpoint address=&quot;http://example.com/node/B&quot; binding=&quot;service:wsaTestSoap12Binding&quot; name=&quot;wsaTestSoap12Endpoint&quot;/&gt;
+  &lt;/service&gt;
+  
+&lt;/description&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1107&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/notify&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 7463&#xd;
+Date: Tue, 17 Jan 2006 22:26:21 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="28" conversationID="1" type="response" timestamp="2006-01-17T22:26:22.969">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:22 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="29" conversationID="1" type="request" timestamp="2006-01-17T22:26:23.188">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D2D6-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:FaultTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;/wsa:FaultTo&gt;&lt;wsa:ReplyTo customer:level=&quot;premium&quot; xmlns:customer=&quot;http://example.org/customer&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;definitions targetNamespace=&quot;http://example.com/wsaTestService&quot; xmlns=&quot;http://schemas.xmlsoap.org/wsdl/&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:s0=&quot;http://example.com/notify/&quot; xmlns:s1=&quot;http://example.com/echo/&quot; xmlns:service=&quot;http://example.com/wsaTestService&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+
+  &lt;types&gt;
+    &lt;xs:schema attributeFormDefault=&quot;unqualified&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://example.com/notify/&quot;&gt;
+	&lt;xs:element name=&quot;notify&quot; type=&quot;xs:string&quot;/&gt;
+    &lt;/xs:schema&gt;
+
+    &lt;xs:schema attributeFormDefault=&quot;unqualified&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://example.com/echo/&quot;&gt;
+	&lt;xs:element name=&quot;echoIn&quot; type=&quot;xs:string&quot;/&gt;
+	&lt;xs:element name=&quot;echoOut&quot; type=&quot;xs:string&quot;/&gt;
+    &lt;/xs:schema&gt;
+  &lt;/types&gt;
+
+  &lt;message name=&quot;wsaNotifyMessage&quot;&gt;
+    &lt;part element=&quot;s0:notify&quot; name=&quot;wsaNotifyMessagePart&quot;/&gt;
+  &lt;/message&gt;
+
+  &lt;message name=&quot;wsaEchoInMessage&quot;&gt;
+    &lt;part element=&quot;s1:echoIn&quot; name=&quot;wsaEchoInPart&quot;/&gt;
+  &lt;/message&gt;
+	
+  &lt;message name=&quot;wsaEchoOutMessage&quot;&gt;
+    &lt;part element=&quot;s1:echoOut&quot; name=&quot;wsaEchoOutPart&quot;/&gt;
+  &lt;/message&gt;
+	
+  &lt;portType name=&quot;wsaTestPortType&quot;&gt;
+    &lt;operation name=&quot;notify&quot;&gt;
+      &lt;input message=&quot;service:wsaNotifyMessage&quot;/&gt;
+    &lt;/operation&gt;
+
+    &lt;operation name=&quot;echoIn&quot;&gt;
+      &lt;input message=&quot;service:wsaEchoInMessage&quot;/&gt;
+    &lt;/operation&gt;
+
+    &lt;operation name=&quot;echoOut&quot;&gt;
+      &lt;input message=&quot;service:wsaEchoOutMessage&quot;/&gt;
+    &lt;/operation&gt;
+
+    &lt;operation name=&quot;echo&quot;&gt;
+      &lt;input message=&quot;service:wsaEchoInMessage&quot;/&gt;
+      &lt;output message=&quot;service:wsaEchoOutMessage&quot;/&gt;
+    &lt;/operation&gt;
+  &lt;/portType&gt;
+	
+  &lt;binding name=&quot;wsaTestSoap11Binding&quot; type=&quot;service:wsaTestPortType&quot;&gt;
+    &lt;soap:binding style=&quot;document&quot; transport=&quot;http://schemas.xmlsoap.org/soap/http&quot;/&gt;
+	&lt;operation name=&quot;notify&quot;&gt;
+	  &lt;soap:operation soapAction=&quot;&quot; style=&quot;document&quot;/&gt;
+	  &lt;input&gt;
+	      &lt;soap:body use=&quot;literal&quot;/&gt;
+	  &lt;/input&gt;
+	&lt;/operation&gt;
+
+	&lt;operation name=&quot;echoIn&quot;&gt;
+	  &lt;soap:operation soapAction=&quot;&quot; style=&quot;document&quot;/&gt;
+	  &lt;input&gt;
+	      &lt;soap:body use=&quot;literal&quot;/&gt;
+	  &lt;/input&gt;
+	&lt;/operation&gt;
+
+	&lt;operation name=&quot;echoOut&quot;&gt;
+	  &lt;soap:operation soapAction=&quot;&quot; style=&quot;document&quot;/&gt;
+	  &lt;input&gt;
+	      &lt;soap:body use=&quot;literal&quot;/&gt;
+	  &lt;/input&gt;
+	&lt;/operation&gt;
+
+	&lt;operation name=&quot;echo&quot;&gt;
+	  &lt;soap:operation soapAction=&quot;&quot; style=&quot;document&quot;/&gt;
+	  &lt;input&gt;
+	      &lt;soap:body use=&quot;literal&quot;/&gt;
+	  &lt;/input&gt;
+	  &lt;output&gt;
+	      &lt;soap:body use=&quot;literal&quot;/&gt;
+	  &lt;/output&gt;
+	&lt;/operation&gt;
+
+    &lt;/binding&gt;
+    
+    &lt;service name=&quot;wsaTestService&quot;&gt;
+      &lt;port binding=&quot;service:wsaTestSoap11Binding&quot; name=&quot;wsaTestPort&quot;&gt;
+	  &lt;soap:address location=&quot;http://example.com/node/B&quot;/&gt;
+      &lt;/port&gt;
+    &lt;/service&gt;
+&lt;/definitions&gt;&lt;description targetNamespace=&quot;http://example.com/wsaTestService&quot; xmlns=&quot;http://www.w3.org/2005/08/wsdl&quot; xmlns:echo=&quot;http://example.com/echo/&quot; xmlns:notify=&quot;http://example.com/notify/&quot; xmlns:service=&quot;http://example.com/wsaTestService&quot; xmlns:whttp=&quot;http://www.w3.org/2005/08/wsdl/http&quot; xmlns:wsdlx=&quot;http://www.w3.org/2005/08/wsdl-extensions&quot; xmlns:wsoap=&quot;http://www.w3.org/2005/08/wsdl/soap&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+
+  &lt;types&gt;
+    &lt;xs:schema attributeFormDefault=&quot;unqualified&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://example.com/notify/&quot;&gt;
+	&lt;xs:element name=&quot;notify&quot; type=&quot;xs:string&quot;/&gt;
+    &lt;/xs:schema&gt;
+    &lt;xs:schema attributeFormDefault=&quot;unqualified&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://example.com/echo/&quot;&gt;
+	&lt;xs:element name=&quot;echoIn&quot; type=&quot;xs:string&quot;/&gt;
+	&lt;xs:element name=&quot;echoOut&quot; type=&quot;xs:string&quot;/&gt;
+    &lt;/xs:schema&gt;
+  &lt;/types&gt;
+
+  &lt;interface name=&quot;wsaTestService&quot;&gt;
+    &lt;fault name=&quot;service:EmptyEchoString&quot;/&gt;
+    &lt;operation name=&quot;notify&quot; pattern=&quot;http://www.w3.org/2005/08/wsdl/in-only&quot;&gt;
+      &lt;input element=&quot;notify:notify&quot; messageLabel=&quot;In&quot;/&gt;
+    &lt;/operation&gt;
+    &lt;operation name=&quot;echoIn&quot; pattern=&quot;http://www.w3.org/2005/08/wsdl/robust-in-only&quot;&gt;
+      &lt;input element=&quot;s1:echoIn&quot; messageLabel=&quot;In&quot;/&gt;
+      &lt;outfault messageLabel=&quot;Out&quot; ref=&quot;service:EmptyEchoString&quot;/&gt;
+    &lt;/operation&gt;
+    &lt;operation name=&quot;echoOut&quot; pattern=&quot;http://www.w3.org/2005/08/wsdl/robust-in-only&quot;&gt;
+      &lt;input element=&quot;s1:echoOut&quot; messageLabel=&quot;In&quot;/&gt;
+      &lt;outfault messageLabel=&quot;Out&quot; ref=&quot;service:EmptyEchoString&quot;/&gt;
+    &lt;/operation&gt;
+    &lt;operation name=&quot;echo&quot; pattern=&quot;http://www.w3.org/2005/08/wsdl/in-out&quot;&gt;
+      &lt;input element=&quot;s1:echoIn&quot; messageLabel=&quot;In&quot;/&gt;
+      &lt;output element=&quot;s1:echoOut&quot; messageLabel=&quot;Out&quot;/&gt;
+      &lt;outfault messageLabel=&quot;Out&quot; ref=&quot;service:EmptyEchoString&quot;/&gt;
+    &lt;/operation&gt;
+  &lt;/interface&gt;
+ 
+  &lt;binding interface=&quot;wsaTestService&quot; name=&quot;wsaTestSoap11Binding&quot; type=&quot;http://www.w3.org/2005/08/wsdl/soap&quot; wsoap:version=&quot;1.1&quot;&gt;
+	    wsoap:protocol=&amp;quot;http://www.w3.org/2003/05/soap/bindings/HTTP&amp;quot;&amp;gt;
+    &lt;operation ref=&quot;notify&quot;/&gt;
+    &lt;operation ref=&quot;echoIn&quot;/&gt;
+    &lt;operation ref=&quot;echoOut&quot;/&gt;
+    &lt;operation ref=&quot;echo&quot;/&gt;
+    &lt;fault ref=&quot;service:EmptyEchoString&quot; wsoap:code=&quot;echo:EmptyEchoString&quot;/&gt;
+  &lt;/binding&gt;
+
+  &lt;binding interface=&quot;wsaTestService&quot; name=&quot;wsaTestSoap12Binding&quot; type=&quot;http://www.w3.org/2005/08/wsdl/soap&quot; wsoap:version=&quot;1.2&quot;&gt;
+	    wsoap:protocol=&amp;quot;http://www.w3.org/2003/05/soap/bindings/HTTP&amp;quot;&amp;gt;
+    &lt;!-- Note: the request only SOAP MEP doesn&amp;apos;t actually exist! --&gt;
+    &lt;operation ref=&quot;notify&quot; wsoap:mep=&quot;http://www.w3.org/2003/05/soap/mep/request&quot;/&gt;
+    &lt;operation ref=&quot;echoIn&quot; wsoap:mep=&quot;http://www.w3.org/2003/05/soap/mep/request&quot;/&gt;
+    &lt;operation ref=&quot;echoOut&quot; wsoap:mep=&quot;http://www.w3.org/2003/05/soap/mep/request&quot;/&gt;
+    &lt;operation ref=&quot;echo&quot; wsoap:mep=&quot;http://www.w3.org/2003/05/soap/mep/request-response&quot;/&gt;
+    &lt;fault ref=&quot;service:EmptyEchoString&quot; wsoap:code=&quot;echo:EmptyEchoString&quot;/&gt;
+  &lt;/binding&gt;
+
+  &lt;service interface=&quot;service:wsaTestService&quot; name=&quot;wsaTestService&quot;&gt;
+    &lt;endpoint address=&quot;http://example.com/node/B&quot; binding=&quot;service:wsaTestSoap11Binding&quot; name=&quot;wsaTestSoap11Endpoint&quot;/&gt;
+    &lt;endpoint address=&quot;http://example.com/node/B&quot; binding=&quot;service:wsaTestSoap12Binding&quot; name=&quot;wsaTestSoap12Endpoint&quot;/&gt;
+  &lt;/service&gt;
+  
+&lt;/description&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1207&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/notify&quot;;&#xd;
+Content-Length: 7459&#xd;
+Date: Tue, 17 Jan 2006 22:26:21 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="30" conversationID="1" type="response" timestamp="2006-01-17T22:26:23.469">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:23 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="31" conversationID="1" type="request" timestamp="2006-01-17T22:26:23.703">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D509-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:FaultTo customer:level=&quot;premium&quot; xmlns:customer=&quot;http://example.org/customer&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;wsa:Metadata customer:total=&quot;1&quot; xmlns:customer=&quot;http://example.org/customer&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;/&gt;&lt;customer:MetaData xmlns:customer=&quot;http://example.org/customer&quot;&gt;&lt;customer:extraStuff&gt;This should be ignored.&lt;/customer:extraStuff&gt;&lt;/customer:MetaData&gt;&lt;/wsa:FaultTo&gt;&lt;wsa:ReplyTo customer:level=&quot;premium&quot; xmlns:customer=&quot;http://example.org/customer&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;wsa:Metadata customer:total=&quot;1&quot; xmlns:customer=&quot;http://example.org/customer&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;/&gt;&lt;customer:MetaData xmlns:customer=&quot;http://example.org/customer&quot;&gt;&lt;customer:extraStuff&gt;This should be ignored.&lt;/customer:extraStuff&gt;&lt;/customer:MetaData&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1108&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/notify&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 2271&#xd;
+Date: Tue, 17 Jan 2006 22:26:23 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="32" conversationID="1" type="response" timestamp="2006-01-17T22:26:23.844">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:22 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="33" conversationID="1" type="request" timestamp="2006-01-17T22:26:23.984">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/notify&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D622-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:FaultTo customer:level=&quot;premium&quot; xmlns:customer=&quot;http://example.org/customer&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;wsa:Metadata customer:total=&quot;1&quot; xmlns:customer=&quot;http://example.org/customer&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;/&gt;&lt;customer:MetaData xmlns:customer=&quot;http://example.org/customer&quot;&gt;&lt;customer:extraStuff&gt;This should be ignored.&lt;/customer:extraStuff&gt;&lt;/customer:MetaData&gt;&lt;/wsa:FaultTo&gt;&lt;wsa:ReplyTo customer:level=&quot;premium&quot; xmlns:customer=&quot;http://example.org/customer&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/none&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;wsa:Metadata customer:total=&quot;1&quot; xmlns:customer=&quot;http://example.org/customer&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;/&gt;&lt;customer:MetaData xmlns:customer=&quot;http://example.org/customer&quot;&gt;&lt;customer:extraStuff&gt;This should be ignored.&lt;/customer:extraStuff&gt;&lt;/customer:MetaData&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:notify xmlns:m=&quot;http://example.org/notify&quot;&gt;test1208&lt;/m:notify&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/notify&quot;;&#xd;
+Content-Length: 2267&#xd;
+Date: Tue, 17 Jan 2006 22:26:23 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="34" conversationID="1" type="response" timestamp="2006-01-17T22:26:24.125">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:22 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="35" conversationID="1" type="request" timestamp="2006-01-17T22:26:24.188">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D71C-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoIn xmlns:m=&quot;http://example.org/echo&quot;&gt;test1130&lt;/m:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/echoIn&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 781&#xd;
+Date: Tue, 17 Jan 2006 22:26:23 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="36" conversationID="1" type="response" timestamp="2006-01-17T22:26:24.266">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D76A-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D71C-0108-4000-E000-1700C0A80145&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoOut xmlns:m=&quot;http://example.org/echo&quot;&gt;test1130&lt;/m:echoOut&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Content-Length: 889&#xd;
+Date: Tue, 17 Jan 2006 22:26:23 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="37" conversationID="1" type="request" timestamp="2006-01-17T22:26:24.453">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D7C8-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoIn xmlns:m=&quot;http://example.org/echo&quot;&gt;test1230&lt;/m:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/echoIn&quot;;&#xd;
+Content-Length: 777&#xd;
+Date: Tue, 17 Jan 2006 22:26:24 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="38" conversationID="1" type="response" timestamp="2006-01-17T22:26:24.547">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D883-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D7C8-0108-4000-E000-1700C0A80145&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoOut xmlns:m=&quot;http://example.org/echo&quot;&gt;test1230&lt;/m:echoOut&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Content-Length: 885&#xd;
+Date: Tue, 17 Jan 2006 22:26:24 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="39" conversationID="1" type="request" timestamp="2006-01-17T22:26:24.641">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D8E1-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoIn xmlns:m=&quot;http://example.org/echo&quot;&gt;test1131&lt;/m:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/echoIn&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 979&#xd;
+Date: Tue, 17 Jan 2006 22:26:24 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="40" conversationID="1" type="response" timestamp="2006-01-17T22:26:24.734">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D93F-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D8E1-0108-4000-E000-1700C0A80145&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoOut xmlns:m=&quot;http://example.org/echo&quot;&gt;test1131&lt;/m:echoOut&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Content-Length: 889&#xd;
+Date: Tue, 17 Jan 2006 22:26:24 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="41" conversationID="1" type="request" timestamp="2006-01-17T22:26:24.828">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D99C-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoIn xmlns:m=&quot;http://example.org/echo&quot;&gt;test1231&lt;/m:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/echoIn&quot;;&#xd;
+Content-Length: 975&#xd;
+Date: Tue, 17 Jan 2006 22:26:24 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="42" conversationID="1" type="response" timestamp="2006-01-17T22:26:24.922">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DA0A-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79D99C-0108-4000-E000-1700C0A80145&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoOut xmlns:m=&quot;http://example.org/echo&quot;&gt;test1231&lt;/m:echoOut&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Content-Length: 885&#xd;
+Date: Tue, 17 Jan 2006 22:26:24 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="43" conversationID="1" type="request" timestamp="2006-01-17T22:26:25.031">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DA68-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoIn xmlns:m=&quot;http://example.org/echo&quot;&gt;test1232&lt;/m:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/echoIn&quot;;&#xd;
+Content-Length: 1178&#xd;
+Date: Tue, 17 Jan 2006 22:26:24 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="44" conversationID="1" type="response" timestamp="2006-01-17T22:26:25.156">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;customer:CustomerKey wsa:IsReferenceParameter=&quot;true&quot; xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DAE5-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DA68-0108-4000-E000-1700C0A80145&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoOut xmlns:m=&quot;http://example.org/echo&quot;&gt;test1232&lt;/m:echoOut&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Content-Length: 1020&#xd;
+Date: Tue, 17 Jan 2006 22:26:24 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="45" conversationID="1" type="request" timestamp="2006-01-17T22:26:25.281">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DB52-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:FaultTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Fault#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;/wsa:FaultTo&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoIn xmlns:m=&quot;http://example.org/echo&quot;&gt;faulttest1133&lt;/m:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/echoIn&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 1590&#xd;
+Date: Tue, 17 Jan 2006 22:26:24 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="46" conversationID="1" type="response" timestamp="2006-01-17T22:26:25.578">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;customer:CustomerKey wsa:IsReferenceParameter=&quot;true&quot; xmlns:customer=&quot;http://example.org/customer&quot;&gt;Fault#123456789&lt;/customer:CustomerKey&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DC7B-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DB52-0108-4000-E000-1700C0A80145&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:p158=&quot;http://example.org/echo&quot;&gt;p158:echoIn&lt;/faultcode&gt;&lt;faultstring&gt;&lt;![CDATA[faulttest1133]]&gt;&lt;/faultstring&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 500 Internal Server Error&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Content-Length: 1115&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="47" conversationID="1" type="request" timestamp="2006-01-17T22:26:25.688">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DCE8-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:FaultTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Fault#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;/wsa:FaultTo&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoIn xmlns:m=&quot;http://example.org/echo&quot;&gt;faulttest1233&lt;/m:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/echoIn&quot;;&#xd;
+Content-Length: 1586&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="48" conversationID="1" type="response" timestamp="2006-01-17T22:26:25.891">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;customer:CustomerKey wsa:IsReferenceParameter=&quot;true&quot; xmlns:customer=&quot;http://example.org/customer&quot;&gt;Fault#123456789&lt;/customer:CustomerKey&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DDB3-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DCE8-0108-4000-E000-1700C0A80145&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;soapenv:Code&gt;&lt;soapenv:Value&gt;soapenv:Sender&lt;/soapenv:Value&gt;&lt;soapenv:Subcode&gt;&lt;soapenv:Value xmlns:echo=&quot;http://example.org/echo&quot;&gt;echo:echoIn&lt;/soapenv:Value&gt;&lt;/soapenv:Subcode&gt;&lt;/soapenv:Code&gt;&lt;soapenv:Reason&gt;&lt;soapenv:Text xml:lang=&quot;en-US&quot;&gt;&lt;![CDATA[faulttest1233]]&gt;&lt;/soapenv:Text&gt;&lt;/soapenv:Reason&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 500 Internal Server Error&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Content-Length: 1280&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="49" conversationID="1" type="request" timestamp="2006-01-17T22:26:25.984">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DE21-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoIn xmlns:m=&quot;http://example.org/echo&quot;&gt;faulttest1134&lt;/m:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/echoIn&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 1187&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="50" conversationID="1" type="response" timestamp="2006-01-17T22:26:26.156">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;customer:CustomerKey wsa:IsReferenceParameter=&quot;true&quot; xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DEBD-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DE21-0108-4000-E000-1700C0A80145&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:p158=&quot;http://example.org/echo&quot;&gt;p158:echoIn&lt;/faultcode&gt;&lt;faultstring&gt;&lt;![CDATA[faulttest1134]]&gt;&lt;/faultstring&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 500 Internal Server Error&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Content-Length: 1113&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="51" conversationID="1" type="request" timestamp="2006-01-17T22:26:26.344">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DF2A-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;wsa:ReferenceParameters xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;customer:CustomerKey xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;/wsa:ReferenceParameters&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoIn xmlns:m=&quot;http://example.org/echo&quot;&gt;faulttest1234&lt;/m:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/echoIn&quot;;&#xd;
+Content-Length: 1183&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="52" conversationID="1" type="response" timestamp="2006-01-17T22:26:26.516">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;customer:CustomerKey wsa:IsReferenceParameter=&quot;true&quot; xmlns:customer=&quot;http://example.org/customer&quot;&gt;Key#123456789&lt;/customer:CustomerKey&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79E024-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79DF2A-0108-4000-E000-1700C0A80145&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;soapenv:Code&gt;&lt;soapenv:Value&gt;soapenv:Sender&lt;/soapenv:Value&gt;&lt;soapenv:Subcode&gt;&lt;soapenv:Value xmlns:echo=&quot;http://example.org/echo&quot;&gt;echo:echoIn&lt;/soapenv:Value&gt;&lt;/soapenv:Subcode&gt;&lt;/soapenv:Code&gt;&lt;soapenv:Reason&gt;&lt;soapenv:Text xml:lang=&quot;en-US&quot;&gt;&lt;![CDATA[faulttest1234]]&gt;&lt;/soapenv:Text&gt;&lt;/soapenv:Reason&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 500 Internal Server Error&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Content-Length: 1278&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="53" conversationID="1" type="request" timestamp="2006-01-17T22:26:26.609">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79E092-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoIn xmlns:m=&quot;http://example.org/echo&quot;&gt;faulttest1140&lt;/m:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/echoIn&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 1133&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="54" conversationID="1" type="response" timestamp="2006-01-17T22:26:26.734">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:FaultDetail xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:ProblemHeaderQName&gt;wsa:ReplyTo&lt;/wsa:ProblemHeaderQName&gt;&lt;/wsa:FaultDetail&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/fault&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79E0FF-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79E092-0108-4000-E000-1700C0A80145&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode&gt;wsa:InvalidAddressingHeader&lt;/faultcode&gt;&lt;faultstring&gt;&lt;![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]&gt;&lt;/faultstring&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 500 Internal Server Error&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Content-Length: 1197&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="55" conversationID="1" type="request" timestamp="2006-01-17T22:26:26.828">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;/wsa:To&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79E16C-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoIn xmlns:m=&quot;http://example.org/echo&quot;&gt;faulttest1240&lt;/m:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/echoIn&quot;;&#xd;
+Content-Length: 1119&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="56" conversationID="1" type="response" timestamp="2006-01-17T22:26:26.969">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:FaultDetail xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:ProblemHeaderQName&gt;wsa:To&lt;/wsa:ProblemHeaderQName&gt;&lt;/wsa:FaultDetail&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://www.w3.org/2005/08/addressing/fault&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79E1E9-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79E16C-0108-4000-E000-1700C0A80145&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;soapenv:Code&gt;&lt;soapenv:Value&gt;soapenv:Sender&lt;/soapenv:Value&gt;&lt;soapenv:Subcode&gt;&lt;soapenv:Value&gt;wsa:InvalidAddressingHeader&lt;/soapenv:Value&gt;&lt;/soapenv:Subcode&gt;&lt;/soapenv:Code&gt;&lt;soapenv:Reason&gt;&lt;soapenv:Text xml:lang=&quot;en-US&quot;&gt;&lt;![CDATA[A header representing a Message Addressing Property is not valid and the message cannot be processed]]&gt;&lt;/soapenv:Text&gt;&lt;/soapenv:Reason&gt;&lt;soapenv:Detail&gt;&lt;wsa:ProblemHeaderQName&gt;wsa:To&lt;/wsa:ProblemHeaderQName&gt;&lt;/soapenv:Detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 500 Internal Server Error&#xd;
+Content-Type: application/soap+xml; charset=utf-8&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Content-Length: 1445&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="57" conversationID="1" type="request" timestamp="2006-01-17T22:26:27.062">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79E257-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://localhost:8001/wsaiop/services/wsaTestCallBackPort&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoIn xmlns:m=&quot;http://example.org/echo&quot;&gt;test1150&lt;/m:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;http://example.org/action/echoIn&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 990&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="58" conversationID="1" type="response" timestamp="2006-01-17T22:26:27.141">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 202 Accepted&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="59" conversationID="2" type="request" timestamp="2006-01-17T22:26:27.203">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://localhost:8001/wsaiop/services/wsaTestCallBackPort&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79E2D4-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79E257-0108-4000-E000-1700C0A80145&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoOut xmlns:m=&quot;http://example.org/echo&quot;&gt;test1150&lt;/m:echoOut&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3438</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestCallBackPort HTTP/1.1&#xd;
+Host: localhost:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+SOAPAction: &quot;&quot;&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+Content-Length: 900&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="60" conversationID="2" type="response" timestamp="2006-01-17T22:26:27.250">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3438</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:25 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="61" conversationID="1" type="request" timestamp="2006-01-17T22:26:27.797">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://192.168.1.69:8001/wsaiop/services/wsaTestSoap11Endpoint&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoIn&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79E535-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:ReplyTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://localhost:8001/wsaiop/services/wsaTestCallBackPort&lt;/wsa:Address&gt;&lt;/wsa:ReplyTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoIn xmlns:m=&quot;http://example.org/echo&quot;&gt;test1250&lt;/m:echoIn&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>192.168.1.69:3436</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestSoap11Endpoint HTTP/1.1&#xd;
+Host: 192.168.1.69:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;http://example.org/action/echoIn&quot;;&#xd;
+Content-Length: 986&#xd;
+Date: Tue, 17 Jan 2006 22:26:27 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="62" conversationID="1" type="response" timestamp="2006-01-17T22:26:27.859">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>192.168.1.69:3436</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 202 Accepted&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:27 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="63" conversationID="2" type="request" timestamp="2006-01-17T22:26:27.938">
+<messageContent>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:soapenc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;soapenv:Header&gt;&lt;wsa:To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://localhost:8001/wsaiop/services/wsaTestCallBackPort&lt;/wsa:To&gt;&lt;wsa:Action xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;http://example.org/action/echoOut&lt;/wsa:Action&gt;&lt;wsa:MessageID xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79E5A3-0108-4000-E000-1700C0A80145&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;uuid:DA79E535-0108-4000-E000-1700C0A80145&lt;/wsa:RelatesTo&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;m:echoOut xmlns:m=&quot;http://example.org/echo&quot;&gt;test1250&lt;/m:echoOut&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</messageContent>
+<senderHostAndPort>127.0.0.1:3438</senderHostAndPort>
+<receiverHostAndPort>localhost:9080</receiverHostAndPort>
+<httpHeaders>POST /wsaiop/services/wsaTestCallBackPort HTTP/1.1&#xd;
+Host: localhost:8001&#xd;
+Accept: application/soap+xml,multipart/related,text/*&#xd;
+User-Agent: IBM WebServices/1.0&#xd;
+Cache-Control: no-cache&#xd;
+Pragma: no-cache&#xd;
+Connection: Keep-Alive&#xd;
+Content-Type: application/soap+xml; charset=utf-8;action=&quot;&quot;;&#xd;
+Content-Length: 896&#xd;
+Date: Tue, 17 Jan 2006 22:26:27 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+<messageEntry xsi:type="httpMessageEntry" ID="64" conversationID="2" type="response" timestamp="2006-01-17T22:26:27.969">
+<messageContent></messageContent>
+<senderHostAndPort>localhost:9080</senderHostAndPort>
+<receiverHostAndPort>127.0.0.1:3438</receiverHostAndPort>
+<httpHeaders>HTTP/1.1 200 OK&#xd;
+Content-Length: 0&#xd;
+Content-Language: en-GB&#xd;
+Server: WebSphere Application Server/7.0&#xd;
+Date: Tue, 17 Jan 2006 22:26:27 GMT&#xd;
+&#xd;
+</httpHeaders>
+</messageEntry>
+</log>

@@ -1,0 +1,165 @@
+line 2 column 1 - Warning: <html> proprietary attribute "xmlns:s"
+line 179 column 62 - Warning: <a> attribute "href" lacks value
+line 198 column 62 - Warning: <a> attribute "href" lacks value
+line 217 column 62 - Warning: <a> attribute "href" lacks value
+line 239 column 62 - Warning: <a> attribute "href" lacks value
+line 261 column 62 - Warning: <a> attribute "href" lacks value
+line 283 column 62 - Warning: <a> attribute "href" lacks value
+line 305 column 62 - Warning: <a> attribute "href" lacks value
+line 327 column 62 - Warning: <a> attribute "href" lacks value
+line 349 column 62 - Warning: <a> attribute "href" lacks value
+line 372 column 62 - Warning: <a> attribute "href" lacks value
+line 395 column 62 - Warning: <a> attribute "href" lacks value
+line 418 column 62 - Warning: <a> attribute "href" lacks value
+line 441 column 62 - Warning: <a> attribute "href" lacks value
+line 465 column 62 - Warning: <a> attribute "href" lacks value
+line 489 column 62 - Warning: <a> attribute "href" lacks value
+line 515 column 62 - Warning: <a> attribute "href" lacks value
+line 541 column 62 - Warning: <a> attribute "href" lacks value
+line 578 column 62 - Warning: <a> attribute "href" lacks value
+line 615 column 62 - Warning: <a> attribute "href" lacks value
+line 650 column 62 - Warning: <a> attribute "href" lacks value
+line 685 column 62 - Warning: <a> attribute "href" lacks value
+line 723 column 62 - Warning: <a> attribute "href" lacks value
+line 761 column 62 - Warning: <a> attribute "href" lacks value
+line 802 column 62 - Warning: <a> attribute "href" lacks value
+line 843 column 62 - Warning: <a> attribute "href" lacks value
+line 882 column 62 - Warning: <a> attribute "href" lacks value
+line 1625 column 62 - Warning: <a> attribute "href" lacks value
+line 1678 column 62 - Warning: <a> attribute "href" lacks value
+line 1731 column 62 - Warning: <a> attribute "href" lacks value
+line 1781 column 62 - Warning: <a> attribute "href" lacks value
+line 1817 column 62 - Warning: <a> attribute "href" lacks value
+line 1853 column 62 - Warning: <a> attribute "href" lacks value
+line 10 column 1 - Warning: trimming empty <p>
+line 194 column 4 - Warning: trimming empty <i>
+line 194 column 1 - Warning: trimming empty <p>
+line 213 column 4 - Warning: trimming empty <i>
+line 213 column 1 - Warning: trimming empty <p>
+line 235 column 4 - Warning: trimming empty <i>
+line 235 column 1 - Warning: trimming empty <p>
+line 257 column 4 - Warning: trimming empty <i>
+line 257 column 1 - Warning: trimming empty <p>
+line 279 column 4 - Warning: trimming empty <i>
+line 279 column 1 - Warning: trimming empty <p>
+line 301 column 4 - Warning: trimming empty <i>
+line 301 column 1 - Warning: trimming empty <p>
+line 323 column 4 - Warning: trimming empty <i>
+line 323 column 1 - Warning: trimming empty <p>
+line 345 column 4 - Warning: trimming empty <i>
+line 345 column 1 - Warning: trimming empty <p>
+line 368 column 4 - Warning: trimming empty <i>
+line 368 column 1 - Warning: trimming empty <p>
+line 391 column 4 - Warning: trimming empty <i>
+line 391 column 1 - Warning: trimming empty <p>
+line 414 column 4 - Warning: trimming empty <i>
+line 414 column 1 - Warning: trimming empty <p>
+line 437 column 4 - Warning: trimming empty <i>
+line 437 column 1 - Warning: trimming empty <p>
+line 461 column 4 - Warning: trimming empty <i>
+line 461 column 1 - Warning: trimming empty <p>
+line 485 column 4 - Warning: trimming empty <i>
+line 485 column 1 - Warning: trimming empty <p>
+line 511 column 4 - Warning: trimming empty <i>
+line 511 column 1 - Warning: trimming empty <p>
+line 537 column 4 - Warning: trimming empty <i>
+line 537 column 1 - Warning: trimming empty <p>
+line 574 column 4 - Warning: trimming empty <i>
+line 574 column 1 - Warning: trimming empty <p>
+line 611 column 4 - Warning: trimming empty <i>
+line 611 column 1 - Warning: trimming empty <p>
+line 646 column 4 - Warning: trimming empty <i>
+line 646 column 1 - Warning: trimming empty <p>
+line 681 column 4 - Warning: trimming empty <i>
+line 681 column 1 - Warning: trimming empty <p>
+line 719 column 4 - Warning: trimming empty <i>
+line 719 column 1 - Warning: trimming empty <p>
+line 757 column 4 - Warning: trimming empty <i>
+line 757 column 1 - Warning: trimming empty <p>
+line 798 column 4 - Warning: trimming empty <i>
+line 798 column 1 - Warning: trimming empty <p>
+line 839 column 4 - Warning: trimming empty <i>
+line 839 column 1 - Warning: trimming empty <p>
+line 878 column 4 - Warning: trimming empty <i>
+line 878 column 1 - Warning: trimming empty <p>
+line 917 column 4 - Warning: trimming empty <i>
+line 917 column 1 - Warning: trimming empty <p>
+line 958 column 4 - Warning: trimming empty <i>
+line 958 column 1 - Warning: trimming empty <p>
+line 981 column 4 - Warning: trimming empty <i>
+line 981 column 1 - Warning: trimming empty <p>
+line 1005 column 4 - Warning: trimming empty <i>
+line 1005 column 1 - Warning: trimming empty <p>
+line 1041 column 4 - Warning: trimming empty <i>
+line 1041 column 1 - Warning: trimming empty <p>
+line 1075 column 4 - Warning: trimming empty <i>
+line 1075 column 1 - Warning: trimming empty <p>
+line 1109 column 4 - Warning: trimming empty <i>
+line 1109 column 1 - Warning: trimming empty <p>
+line 1143 column 4 - Warning: trimming empty <i>
+line 1143 column 1 - Warning: trimming empty <p>
+line 1177 column 4 - Warning: trimming empty <i>
+line 1177 column 1 - Warning: trimming empty <p>
+line 1209 column 4 - Warning: trimming empty <i>
+line 1209 column 1 - Warning: trimming empty <p>
+line 1243 column 4 - Warning: trimming empty <i>
+line 1243 column 1 - Warning: trimming empty <p>
+line 1277 column 4 - Warning: trimming empty <i>
+line 1277 column 1 - Warning: trimming empty <p>
+line 1307 column 25 - Warning: trimming empty <ul>
+line 1310 column 4 - Warning: trimming empty <i>
+line 1310 column 1 - Warning: trimming empty <p>
+line 1345 column 4 - Warning: trimming empty <i>
+line 1345 column 1 - Warning: trimming empty <p>
+line 1380 column 4 - Warning: trimming empty <i>
+line 1380 column 1 - Warning: trimming empty <p>
+line 1415 column 4 - Warning: trimming empty <i>
+line 1415 column 1 - Warning: trimming empty <p>
+line 1450 column 4 - Warning: trimming empty <i>
+line 1450 column 1 - Warning: trimming empty <p>
+line 1483 column 4 - Warning: trimming empty <i>
+line 1483 column 1 - Warning: trimming empty <p>
+line 1518 column 4 - Warning: trimming empty <i>
+line 1518 column 1 - Warning: trimming empty <p>
+line 1553 column 4 - Warning: trimming empty <i>
+line 1553 column 1 - Warning: trimming empty <p>
+line 1588 column 4 - Warning: trimming empty <i>
+line 1588 column 1 - Warning: trimming empty <p>
+line 1618 column 25 - Warning: trimming empty <ul>
+line 1621 column 4 - Warning: trimming empty <i>
+line 1621 column 1 - Warning: trimming empty <p>
+line 1652 column 25 - Warning: trimming empty <ul>
+line 1671 column 25 - Warning: trimming empty <ul>
+line 1674 column 4 - Warning: trimming empty <i>
+line 1674 column 1 - Warning: trimming empty <p>
+line 1705 column 25 - Warning: trimming empty <ul>
+line 1724 column 25 - Warning: trimming empty <ul>
+line 1727 column 4 - Warning: trimming empty <i>
+line 1727 column 1 - Warning: trimming empty <p>
+line 1759 column 25 - Warning: trimming empty <ul>
+line 1774 column 25 - Warning: trimming empty <ul>
+line 1777 column 4 - Warning: trimming empty <i>
+line 1777 column 1 - Warning: trimming empty <p>
+line 1810 column 25 - Warning: trimming empty <ul>
+line 1813 column 4 - Warning: trimming empty <i>
+line 1813 column 1 - Warning: trimming empty <p>
+line 1846 column 25 - Warning: trimming empty <ul>
+line 1849 column 4 - Warning: trimming empty <i>
+line 1849 column 1 - Warning: trimming empty <p>
+line 1878 column 25 - Warning: trimming empty <ul>
+line 1898 column 25 - Warning: trimming empty <ul>
+line 1901 column 4 - Warning: trimming empty <i>
+line 1901 column 1 - Warning: trimming empty <p>
+line 1938 column 4 - Warning: trimming empty <i>
+line 1938 column 1 - Warning: trimming empty <p>
+line 1975 column 4 - Warning: trimming empty <i>
+line 1975 column 1 - Warning: trimming empty <p>
+Info: Doctype given is "-//W3C//DTD HTML 4.01 Transitional//EN"
+Info: Document content looks like HTML 4.01 Strict
+156 warnings, 0 errors were found!
+
+
+To learn more about HTML Tidy see http://tidy.sourceforge.net
+Please send bug reports to html-tidy@w3.org
+HTML and CSS specifications are available from http://www.w3.org/
+Lobby your company to join W3C, see http://www.w3.org/Consortium

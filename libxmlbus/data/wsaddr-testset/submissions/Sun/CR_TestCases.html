@@ -1,0 +1,365 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<html>
+
+<head>
+
+<meta http-equiv="Content-Language" content="en-us">
+<title>Web Services Addressing 1.0 Core and SOAP Binding Test Cases</title>
+<style type="text/css" media="screen">
+<!--
+.testcase { display: block; padding: 8pt }
+-->
+</style>
+</head>
+
+<body>
+
+<h1> Web Services Addressing 1.0 Core and SOAP Binding Test Cases</h1>
+
+<b>
+<a href="http://www.google.co.uk/search?hs=Zyo&hl=en&client=firefox-a&rls=org.mozilla%3Aen-US%3Aofficial&q=w3c+TAG+minutes&btnG=Search&meta=">Test cases</a> from Arun Gupta (Sun) interleaved with <a href="http://www.w3.org/2002/ws/addr/testsuite/features/">Mark's features</a> ticked off against the <a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/">Web Services Addressing Test Suite Testcases</a>
+</b>
+
+
+<h2> Core</h2>
+<ol>
+  <li>&quot;none&quot; URI (2.1) - REQUIRED
+    <ol>
+      <li>For a request-response primitive using SOAP/HTTP, a service endpoint
+        receives a message with wsa:ReplyTo set to &quot;none&quot; URI.
+        The service endpoint MUST not send a protocol response back and generate
+        an HTTP 202 response only.
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1200">t1200</a></span></li>
+
+    </ol>
+  </li>
+  <li>Endpoint Reference Infoset Representation (2.2) - REQUIRED
+    <ol>
+      <li>Create an EPR &quot;eprReply&quot; as given below<p><code>&lt;wsa:EndpointReference&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &lt;/wsa:EndpointReference&gt;</code><p>The client sets [reply endpoint]
+        to &quot;eprReply&quot; and invokes the service endpoint. Verify that
+        the wsa:Reply-To is set to<p><code>&lt;wsa:Reply-To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing/&quot;&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &lt;/wsa:Reply-To&gt;</code>
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1202">t1202</a></span></li>
+
+      <li><p><code>Add &quot;eprFault&quot;</code>
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1203">t1203</a></span></li>
+
+
+      <li><p>Create an EPR &quot;eprReply&quot; as given below<p><code>&lt;wsa:EndpointReference&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:ReferenceParameters&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;fabrikam:CustomerKey&gt;123456789&lt;/fabrikam:CustomerKey&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;/wsa:ReferenceParameters&gt;<br>
+        &lt;/wsa:EndpointReference&gt;</code><p>The client sets [reply endpoint]
+        to &quot;eprReply&quot; and invokes the service endpoint. Verify that
+        the wsa:Reply-To is set to<p><code>&lt;wsa:Reply-To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing/&quot;&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:ReferenceParameters&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;fabrikam:CustomerKey&gt;123456789&lt;/fabrikam:CustomerKey&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;/wsa:ReferenceParameters&gt;<br>
+        &lt;/wsa:Reply-To&gt;</code>
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1206">t1206</a></span></li>
+
+      <li><p>Create an EPR &quot;eprReply&quot; as given below<p><code>&lt;wsa:EndpointReference&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:ReferenceParameters&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;fabrikam:CustomerKey&gt;123456789&lt;/fabrikam:CustomerKey&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;/wsa:ReferenceParameters&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Metadata&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;wsdl:definitions&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/wsdl:definitions&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;/wsa:Metadata&gt;<br>
+        &lt;/wsa:EndpointReference&gt;</code><p>The client sets [reply endpoint]
+        to &quot;eprReply&quot; and invokes the service endpoint. Verify that
+        the wsa:Reply-To is set to<p><code>&lt;wsa:Reply-To xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing/&quot;&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:ReferenceParameters&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;fabrikam:CustomerKey&gt;123456789&lt;/fabrikam:CustomerKey&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;/wsa:ReferenceParameters&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Metadata&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;wsdl:definitions&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/wsdl:definitions&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;/wsa:Metadata&gt;<br>
+        &lt;/wsa:Reply-To&gt;</code>
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1207">t1207</a></span></li>
+
+    </ol>
+  </li>
+
+
+  <li>Endpoint Reference Extensibility (2.5) - REQUIRED
+    <ol>
+      <li>Create an EPR &quot;eprReply&quot; as given below<p><code>&lt;wsa:EndpointReference
+        xmlns:fabrikam=&quot;...&quot; fabrikam:name=&quot;reply endpoint&quot;&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:ReferenceParameters fabrikam:total=&quot;1&quot;&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;fabrikam:CustomerKey&gt;123456789&lt;/fabrikam:CustomerKey&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;/wsa:ReferenceParameters&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Metadata fabrikam:total=&quot;1&quot;&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;wsdl:definitions&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/wsdl:definitions&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;/wsa:Metadata&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;fabrikam:otherMetadata&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;/fabrikam:otherMetadata&gt;<br>
+        &lt;/wsa:EndpointReference&gt;</code>
+        <p>The client sets [reply endpoint] to &quot;eprReply&quot; and invokes
+        the service endpoint. Verify that
+    service endpoint is able to process the [reply endpoint] EPR correctly.
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1208">t1208</a></span></li>
+
+    </ol>
+  </li>
+
+
+  <li>XML Infoset Representation of Message Addressing Properties (3.2) -  REQUIRED
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/">To Be Defined</a></span></li>
+
+
+  <li>wsa:To defaulting (3.2) - REQUIRED
+    <ol>
+      <li> For a request/response primitive using SOAP/HTTP, configure the service
+        endpoint such that wsa:To is not generated in the response message. The client should receive
+        the response using the channel specified by the SOAP protocol binding.
+        For instance, SOAP 1.1/1.2 puts the reply message in HTTP response.
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1230">t1230</a></span></li>
+
+    </ol>
+  </li>
+
+
+  <li>wsa:ReplyTo defaulting (3.2) - REQUIRED
+    <ol>
+      <li>For a request/response primitive using SOAP/HTTP, configure the client such
+        that wsa:Reply-To is not generated (this may not be easy unless a
+        hand-crafted message is used). The client should receive the response
+        using the channel specified by the SOAP protocol binding. For instance,
+        SOAP 1.1/1.2 puts the reply message in HTTP response.
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1230">t1230</a></span></li>
+
+    </ol>
+  </li>
+  <li>wsa:RelatesTo/@RelationshipType defaulting (3.2) - REQUIRED
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/">To Be Defined</a></span></li>
+
+  <li>Comparing IRIs (3.2.1) - REQUIRED</li>
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/">To Be Defined</a></span></li>
+
+
+  <li>Formulating a normal Reply (3.3) - REQUIRED
+    <ol>
+      <li>Create an EPR &quot;eprReply<code>&quot; </code>as given below
+        <p><code>&lt;wsa:EndpointReference xmlns:fabrikam=&quot;...&quot; &gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:ReferenceParameters&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;fabrikam:success
+        wsa:isReferenceParameter=&quot;true&quot;&gt;123456789&lt;fabrikam:success&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;/wsa:ReferenceParameters&gt;<br>
+        &lt;/wsa:EndpointReference&gt;</code></p>
+        <p>The client sets [reply endpoint] to &quot;eprReply&quot; and invokes
+        the service endpoint. The expected behavior is:
+        <ul>
+      <li>Service endpoint sends the normal response back to the client in the
+        HTTP response.</li>
+      <li>On the client, validate the reference
+        parameter received is <code>&lt;fabrikam:success
+        wsa:isReferenceParameter=&quot;true&quot;&gt;123456789&lt;fabrikam:success&gt;</code>.
+
+
+
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1232">t1232</a></span></li>
+
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>Formulating a Fault Reply (3.3) - REQUIRED
+    <ol>
+      <li>Create an EPR &quot;eprFault&quot; with
+        <p><code>&lt;wsa:EndpointReference xmlns:fabrikam=&quot;...&quot; &gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:ReferenceParameters&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;fabrikam:failure&gt;123456789&lt;fabrikam:failure&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;/wsa:ReferenceParameters&gt;<br>
+        &lt;/wsa:EndpointReference&gt;</code></p>
+        <p>The client sets [fault
+        endpoint] to &quot;eprFault&quot; and invokes the service endpoint. The
+        expected behavior is:
+        <ul>
+          <li>Service endpoint sends a fault response back to the client in the
+            HTTP response.</li>
+          <li>On the client, validate the reference parameter
+        received is <code>&lt;fabrikam:failure wsa:isReferenceParameter=&quot;true&quot;&gt;123456789&lt;fabrikam:failure&gt;.</code>
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1233">t1233</a></span></li>
+        </ul>
+      </li>
+      <li>Create an EPR &quot;eprReply<code>&quot; </code>with
+        <p><code>&lt;wsa:EndpointReference xmlns:fabrikam=&quot;...&quot; &gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:ReferenceParameters&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;fabrikam:success
+        wsa:isReferenceParameter=&quot;true&quot;&gt;123456789&lt;fabrikam:success&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;/wsa:ReferenceParameters&gt;<br>
+        &lt;/wsa:EndpointReference&gt;</code></p>
+        <p>The client sets [reply endpoint] to &quot;eprReply&quot;, does not
+        set [fault endpoint] and invokes the service endpoint. The expected
+        behavior is:
+        <ul>
+      <li>Service endpoint sends a fault response back to the client in the HTTP
+        response.</li>
+      <li>On the client, validate the reference
+        parameter received is <code>&lt;fabrikam:success
+        wsa:isReferenceParameter=&quot;true&quot;&gt;123456789&lt;fabrikam:success&gt;</code>.
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1234">t1234</a></span></li>
+
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ol>
+<p>&nbsp;</p>
+<h2><br>
+ SOAP Binding</h2>
+<ol>
+  <li> SOAP 1.2 Feature interaction with Action (2.4) - REQUIRED
+    <ol>
+      <li>From the client, generate a SOAP 1.2 message where http://www.w3.org/2003/05/soap/features/action/Action
+    feature has a non-null value. On the service endpoint, http://www.w3.org/20050/08/addressing/features/Action
+    feature should exactly match that value.
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1201">t1201</a></span></li>
+
+    </ol>
+  </li>
+  <li>SOAP 1.2 Message Addressing Property binding (3.4) - REQUIRED
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/">To Be Defined</a></span></li>
+
+  <li>SOAP 1.2 Anonymous Address (3.5) - REQUIRED
+    <ol>
+      <li>Create an EPR &quot;eprReply<code>&quot; </code>as given below
+        <p><code>&lt;wsa:EndpointReference&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &lt;/wsa:EndpointReference&gt;</code></p>
+        <p>The client sets [reply endpoint] to &quot;eprReply&quot; and invokes
+        the service endpoint. The expected behavior is:
+        <ul>
+      <li>Service endpoint sends the normal response back to the client in the
+        HTTP response.</li>
+        </ul>
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1231">t1231</a></span></li>
+
+      <li>Create an EPR &quot;eprFault<code>&quot; </code>as given below
+        <p><code>&lt;wsa:EndpointReference&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &lt;/wsa:EndpointReference&gt;</code></p>
+        <p>The client sets [fault endpoint] to &quot;eprFault&quot; and invokes
+        the service endpoint. The expected behavior is:
+        <ul>
+      <li>Service endpoint sends the fault response back to the client in the
+        HTTP response.</li>
+        </ul>
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/#t1233">t1233</a></span></li>
+
+    </ol>
+  </li>
+  <li>SOAP 1.1 Message Addressing Property binding (4.2) - REQUIRED
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/">To Be Defined</a></span></li>
+
+  <li>SOAP 1.1 interaction with Action (4.2) - REQUIRED
+    <ol>
+      <li>From the client, generate a SOAP 1.1 message with non-null [action] message addressing property. On the service endpoint, SOAPAction HTTP header
+    must match the [action] property value.</li>
+      <li>From the client, generate a SOAP 1.1 message with empty [action]
+    message addressing property. On the service endpoint, SOAPAction HTTP header
+    must match the [action] property value. (??)</li>
+    </ol>
+  </li>
+  <li>SOAP 1.1 Anonymous Address (3.5) - REQUIRED
+    <ol>
+      <li>Create an EPR &quot;eprReply<code>&quot; </code>as given below
+        <p><code>&lt;wsa:EndpointReference&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &lt;/wsa:EndpointReference&gt;</code></p>
+        <p>The client sets [reply endpoint] to &quot;eprReply&quot; and invokes
+        the service endpoint. The expected behavior is:
+        <ul>
+      <li>Service endpoint sends the normal response back to the client in the
+        HTTP response.</li>
+        </ul>
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/">To Be Defined</a></span></li>
+
+
+      <li>Create an EPR &quot;eprFault<code>&quot; </code>as given below
+        <p><code>&lt;wsa:EndpointReference&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;wsa:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address&gt;<br>
+        &lt;/wsa:EndpointReference&gt;</code></p>
+        <p>The client sets [fault endpoint] to &quot;eprFault&quot; and invokes
+        the service endpoint. The expected behavior is:
+        <ul>
+      <li>Service endpoint sends the fault response back to the client in the
+        HTTP response.</li>
+        </ul>
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/">To Be Defined</a></span></li>
+
+    </ol>
+  </li>
+  <li>Faults (5) - OPTIONAL (except as below)
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/">To Be Defined</a></span></li>
+
+  <li>InvalidAddressingFailure Fault (5, 3.2) - REQUIRED
+    <ol>
+          <li> Generate request messages with exactly one of
+            the following properties duplicate in each message:
+            <ul>
+              <li>[source endpoint]</li>
+              <li>[destination]</li>
+              <li>[reply endpoint]</li>
+              <li>[fault endpoint]</li>
+              <li>[action]</li>
+              <li>[message id]</li>
+            </ul>
+            <p>In each case, the service endpoint must generate a fault with
+            following properties:
+            <p>[Code] <code>S:Sender<br>
+            </code>[Subcode] <code>wsa:InvalidAddressingHeader<br>
+            </code>[Subsubcode] <code>wsa:InvalidCardinality<br>
+            </code>[Reason] &quot;A header representing a Message Addressing Property is not valid and the message cannot be processed&quot;<br>
+            [Details] <code>&lt;wsa:ProblemHeader&gt;</code> element that
+            conveys a copy of the offending header<br>
+
+<span class="testcase"><a href="http://www.w3.org/2002/ws/addr/testsuite/testcases/">To Be Defined</a></span></li>
+    </ol>
+  </li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p>Last updated: <i>October 14, 2005 02:54 PM
+</i> - <i>pdowney</i></p>
+
+</body>
+
+</html>

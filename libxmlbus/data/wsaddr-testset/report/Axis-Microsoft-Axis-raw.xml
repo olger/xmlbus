@@ -1,0 +1,520 @@
+<l:log xmlns:l='http://www.w3.org/2002/ws/addressing/logs/'>
+ <l:message testcase='test1100' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1100</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1200' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1200</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1101' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:MessageID>urn:uuid:6f730376-a82e-40df-a8d1-918b65fd3ff3</a:MessageID>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1101</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1201' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:MessageID>urn:uuid:e4235bdd-d91c-45ad-9ffe-f8f215bb3d33</a:MessageID>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1201</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1102' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1102</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1202' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1202</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1103' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1103</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1203' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1203</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1104' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1104</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1204' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:ReplyTo>
+    <a:FaultTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+    </a:FaultTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1204</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1106' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1106</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1206' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1206</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1107' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1107</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1207' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1207</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1108' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters d4p1:level="premium" xmlns:d4p1="http://example.org/customer">
+        <d4p1:CustomerKey>Key#123456789</d4p1:CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata customer:total="1" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:customer="http://example.org/customer">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+      <customer:Metadata xmlns:customer="http://example.org/customer">
+        <customer:extraStuff>This should be ignored</customer:extraStuff>
+      </customer:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1108</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1208' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/notify</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/none</a:Address>
+      <a:ReferenceParameters d4p1:level="premium" xmlns:d4p1="http://example.org/customer">
+        <d4p1:CustomerKey>Key#123456789</d4p1:CustomerKey>
+      </a:ReferenceParameters>
+      <wsa:Metadata customer:total="1" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:customer="http://example.org/customer">
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/">
+        </definitions>
+        <description xmlns="http://www.w3.org/2006/01/wsdl">
+        </description>
+      </wsa:Metadata>
+      <customer:Metadata xmlns:customer="http://example.org/customer">
+        <customer:extraStuff>This should be ignored</customer:extraStuff>
+      </customer:Metadata>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <notify xmlns="http://example.org/notify">Test1208</notify>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1130' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:02da5b5e-7b12-4ff7-9bb4-a41e79960193</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">Test1130</echoIn>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1130' message='2'>
+  <l:content>
+   <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:MessageID>uuid:fa5e43c0-a9fe-11da-9bd8-a997d1a44cb4</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:From xmlns="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://webservices.sonicsw.com:8080/interop/services/wsaTest</wsa:Address>
+    </wsa:From>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:02da5b5e-7b12-4ff7-9bb4-a41e79960193</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <echoOut xmlns="http://example.org/echo">Test1130</echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1230' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:e4991d9c-e1dd-47be-9fae-918e1c7b0a94</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">Test1230</echoIn>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1230' message='2'>
+  <l:content>
+   <soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:MessageID>uuid:fbc8a930-a9fe-11da-9bd8-a997d1a44cb4</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:From xmlns="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://webservices.sonicsw.com:8080/interop/services/wsaTest</wsa:Address>
+    </wsa:From>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:e4991d9c-e1dd-47be-9fae-918e1c7b0a94</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <echoOut xmlns="http://example.org/echo">Test1230</echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1131' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:bc117579-448e-4a15-bb03-84680e2fcb0f</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">Test1131</echoIn>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1131' message='2'>
+  <l:content>
+   <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:MessageID>uuid:fd5def30-a9fe-11da-9bd8-a997d1a44cb4</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:From xmlns="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://webservices.sonicsw.com:8080/interop/services/wsaTest</wsa:Address>
+    </wsa:From>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:bc117579-448e-4a15-bb03-84680e2fcb0f</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <echoOut xmlns="http://example.org/echo">Test1131</echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1231' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:MessageID>urn:uuid:f26f22e5-f4d5-4ffd-a07b-e28f50372ad7</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">Test1231</echoIn>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1231' message='2'>
+  <l:content>
+   <soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:MessageID>uuid:fefcd220-a9fe-11da-9bd8-a997d1a44cb4</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:From xmlns="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://webservices.sonicsw.com:8080/interop/services/wsaTest</wsa:Address>
+    </wsa:From>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:f26f22e5-f4d5-4ffd-a07b-e28f50372ad7</wsa:RelatesTo>
+  </soapenv:Header>
+  <soapenv:Body>
+    <echoOut xmlns="http://example.org/echo">Test1231</echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1132' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:8b6c970d-b4fc-4b02-a652-842cacc1024d</a:MessageID>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">Test1132</echoIn>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1132' message='2'>
+  <l:content>
+   <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:MessageID>uuid:005b50b0-a9ff-11da-9bd8-a997d1a44cb4</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:From xmlns="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://webservices.sonicsw.com:8080/interop/services/wsaTest</wsa:Address>
+    </wsa:From>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:8b6c970d-b4fc-4b02-a652-842cacc1024d</wsa:RelatesTo>
+    <ns1:CustomerKey xmlns="http://example.org/customer" wsa:IsReferenceParameter="true" xmlns:ns1="http://example.org/customer">Key#123456789</ns1:CustomerKey>
+  </soapenv:Header>
+  <soapenv:Body>
+    <echoOut xmlns="http://example.org/echo">Test1132</echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1232' message='1'>
+  <l:content>
+   <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://example.org/action/echoIn</a:Action>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      <a:ReferenceParameters>
+        <CustomerKey xmlns="http://example.org/customer">Key#123456789</CustomerKey>
+      </a:ReferenceParameters>
+    </a:ReplyTo>
+    <a:MessageID>urn:uuid:f096791d-0653-42b8-a585-382a631f4560</a:MessageID>
+    <a:To s:mustUnderstand="1">http://webservices.sonicsw.com:8080/interop/services/wsaTest</a:To>
+  </s:Header>
+  <s:Body>
+    <echoIn xmlns="http://example.org/echo">Test1232</echoIn>
+  </s:Body>
+</s:Envelope>
+  </l:content>
+ </l:message>
+ <l:message testcase='test1232' message='2'>
+  <l:content>
+   <soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:MessageID>uuid:017bdbe0-a9ff-11da-9bd8-a997d1a44cb4</wsa:MessageID>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:Action>http://example.org/action/echoOut</wsa:Action>
+    <wsa:From xmlns="http://www.w3.org/2005/08/addressing">
+      <wsa:Address>http://webservices.sonicsw.com:8080/interop/services/wsaTest</wsa:Address>
+    </wsa:From>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">urn:uuid:f096791d-0653-42b8-a585-382a631f4560</wsa:RelatesTo>
+    <ns1:CustomerKey xmlns="http://example.org/customer" wsa:IsReferenceParameter="true" xmlns:ns1="http://example.org/customer">Key#123456789</ns1:CustomerKey>
+  </soapenv:Header>
+  <soapenv:Body>
+    <echoOut xmlns="http://example.org/echo">Test1232</echoOut>
+  </soapenv:Body>
+</soapenv:Envelope>
+  </l:content>
+ </l:message>
+</l:log>

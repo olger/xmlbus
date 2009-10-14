@@ -1,0 +1,8 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<m:getQuote xmlns:m="urn:stockquote">
+<symbol>IBM</symbol>
+</m:getQuote>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

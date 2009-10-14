@@ -1,0 +1,24 @@
+
+div.assertion { border: double #555; padding: 0.5em;margin-bottom: 0.2em; }
+div.must {border: solid black}
+div.informative { border: double silver }
+
+.may {}
+.should {}
+.informative {}
+.deprecated {}
+
+blockquote {background-color: #eee}
+
+div.message-exchange { border: double #555; padding: 0.5em; margin-bottom: 0.2em; }
+div.soap11 { background-color: #eef }
+div.soap12 { background-color: #efe }
+
+.soap11 {}
+.soap12 {}
+
+div.scenario { border: double #555; padding: 0.5em;margin-bottom: 0.2em; }
+div.MessagePassing { background-color: #eef }
+
+
+/* */

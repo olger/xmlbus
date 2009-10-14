@@ -1,0 +1,2614 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:s=
+"http://www.w3.org/2002/ws/addr/testsuite/testcases/">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Mac OS X (vers 12 April 2005), see www.w3.org">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Web Services Addressing 1.0 - Test Cases</title>
+<link href="../testsuite.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>Web Services Addressing 1.0 - Test Cases</h1>
+<ul>
+<li><a href="#test1100">test1100</a> - SOAP 1.1 one-way
+message</li>
+<li><a href="#test1200">test1200</a> - SOAP 1.2 one-way
+message</li>
+<li><a href="#test1101">test1101</a> - SOAP 1.1 one-way defaulted
+with a MessageID value</li>
+<li><a href="#test1201">test1201</a> - SOAP 1.2 one-way defaulted
+with a MessageID value</li>
+<li><a href="#test1102">test1102</a> - SOAP 1.1 one-way message
+with a ReplyTo address of none</li>
+<li><a href="#test1202">test1202</a> - SOAP 1.2 one-way message
+with a ReplyTo address of none</li>
+<li><a href="#test1103">test1103</a> - SOAP 1.1 one-way message
+with a FaultTo address of none</li>
+<li><a href="#test1203">test1203</a> - SOAP 1.2 one-way message
+with a FaultTo address of none</li>
+<li><a href="#test1104">test1104</a> - SOAP 1.1 one-way message
+with a ReplyTo and FaultTo address of none</li>
+<li><a href="#test1204">test1204</a> - SOAP 1.2 one-way message
+with a ReplyTo and FaultTo address of none</li>
+<li><a href="#test1106">test1106</a> - SOAP 1.1 one-way message
+with ReplyTo containing a Reference Parameter</li>
+<li><a href="#test1206">test1206</a> - SOAP 1.2 one-way message
+with ReplyTo containing a Reference Parameter</li>
+<li><a href="#test1107">test1107</a> - SOAP 1.1 one-way message
+with ReplyTo containing WSDL Metadata</li>
+<li><a href="#test1207">test1207</a> - SOAP 1.2 one-way message
+with ReplyTo containing WSDL Metadata</li>
+<li><a href="#test1108">test1108</a> - SOAP 1.1 one-way message
+with ReplyTo containing EPR extensions</li>
+<li><a href="#test1208">test1208</a> - SOAP 1.2 one-way message
+with ReplyTo containing EPR extensions</li>
+<li><a href="#test1130">test1130</a> - SOAP 1.1 two-way
+message.</li>
+<li><a href="#test1230">test1230</a> - SOAP 1.2 two-way
+message.</li>
+<li><a href="#test1131">test1131</a> - SOAP 1.1 two-way message
+with ReplyTo address of anonymous.</li>
+<li><a href="#test1231">test1231</a> - SOAP 1.2 two-way message
+with ReplyTo address of anonymous.</li>
+<li><a href="#test1132">test1132</a> - SOAP 1.1 two-way message
+with ReplyTo address containing Reference Parameters.</li>
+<li><a href="#test1232">test1232</a> - SOAP 1.2 two-way message
+with ReplyTo address containing Reference Parameters.</li>
+<li><a href="#test1133">test1133</a> - SOAP 1.1 two-way message
+with fault. ReplyTo and FaultTo addresses containing Reference
+Parameters.</li>
+<li><a href="#test1233">test1233</a> - SOAP 1.2 two-way message
+with fault. ReplyTo and FaultTo addresses containing Reference
+Parameters.</li>
+<li><a href="#test1134">test1134</a> - SOAP 1.1 two-way message
+with fault. FaultTo is defaulted, ReplyTo address contains
+Reference Parameters.</li>
+<li><a href="#test1234">test1234</a> - SOAP 1.2 two-way message
+with fault. FaultTo is defaulted, ReplyTo address contains
+Reference Parameters.</li>
+<li><a href="#test1235">test1235</a> - SOAP 1.2 two-way message
+with fault. FaultTo is anonymous, ReplyTo is non-anonymous.</li>
+<li><a href="#test1236">test1236</a> - SOAP 1.2 two-way message
+with a ReplyTo address of none.</li>
+<li><a href="#test1237">test1237</a> - SOAP 1.2 two-way message
+with a ReplyTo address of none and a role of '/next'.</li>
+<li><a href="#test1238">test1238</a> - SOAP 1.2 two-way message
+triggers mustUnderstand fault</li>
+<li><a href="#test1140">test1140</a> - SOAP 1.1 two-way message
+with a duplicate To header.</li>
+<li><a href="#test1141">test1141</a> - SOAP 1.1 two-way message
+with a duplicate Reply-To header.</li>
+<li><a href="#test1142">test1142</a> - SOAP 1.1 two-way message
+with a duplicate Fault-To header.</li>
+<li><a href="#test1143">test1143</a> - SOAP 1.1 two-way message
+with a duplicate action header.</li>
+<li><a href="#test1144">test1144</a> - SOAP 1.1 two-way message
+with a duplicate message ID header.</li>
+<li><a href="#test1146">test1146</a> - SOAP 1.1 two-way message
+with a duplicate To header.</li>
+<li><a href="#test1147">test1147</a> - SOAP 1.1 two-way message
+with no action header.</li>
+<li><a href="#test1149">test1149</a> - SOAP 1.1 two-way message
+with a duplicate To header and a ReplyTo of none.</li>
+<li><a href="#test1240">test1240</a> - SOAP 1.2 two-way message
+with a duplicate To header.</li>
+<li><a href="#test1241">test1241</a> - SOAP 1.2 two-way message
+with a duplicate Reply-To header.</li>
+<li><a href="#test1242">test1242</a> - SOAP 1.2 two-way message
+with a duplicate Fault-To header.</li>
+<li><a href="#test1243">test1243</a> - SOAP 1.2 two-way message
+with a duplicate action header.</li>
+<li><a href="#test1244">test1244</a> - SOAP 1.2 two-way message
+with a duplicate message ID header.</li>
+<li><a href="#test1246">test1246</a> - SOAP 1.2 two-way message
+with a duplicate To header.</li>
+<li><a href="#test1247">test1247</a> - SOAP 1.2 two-way message
+with a duplicate To header.</li>
+<li><a href="#test1248">test1248</a> - SOAP 1.2 two-way message
+with no action header.</li>
+<li><a href="#test1249">test1249</a> - SOAP 1.2 two-way message
+with a duplicate To header and a ReplyTo of none.</li>
+<li><a href="#test1150">test1150</a> - SOAP 1.1 two-way message
+with a non-anonymous ReplyTo address.</li>
+<li><a href="#test1250">test1250</a> - SOAP 1.2 two-way message
+with a non-anonymous ReplyTo address.</li>
+<li><a href="#test1251">test1251</a> - SOAP 1.2 two-way message
+with a non-anonymous ReplyTo address and a Reply targeted to
+none.</li>
+<li><a href="#test1152">test1152</a> - SOAP 1.1 two-way message
+with a non-anonymous ReplyTo address and a FaultTo targeted to
+none.</li>
+<li><a href="#test1252">test1252</a> - SOAP 1.2 two-way message
+with a non-anonymous ReplyTo address and a FaultTo targeted to
+none.</li>
+<li><a href="#test1260">test1260</a> - SOAP 1.2 two-way message
+with an unreachable ReplyTo address.</li>
+<li><a href="#test1170">test1170</a> - SOAP 1.1 two-way message
+with wsa:From.</li>
+<li><a href="#test1270">test1270</a> - SOAP 1.2 two-way message
+with wsa:From.</li>
+</ul>
+<div class="testcase cr-REQUIRED"><a name="test1100" id=
+"test1100"></a><a href="#test1100">test1100</a> - <b><a href=
+"">SOAP 1.1 one-way message</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core01">core01</a></b>
+<b><a href="../features/#soap05">soap05</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing an Action
+header. Everything else is defaulted.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Only">SOAP11-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap11/message0.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1200" id=
+"test1200"></a><a href="#test1200">test1200</a> - <b><a href=
+"">SOAP 1.2 one-way message</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core01">core01</a></b>
+<b><a href="../features/#soap01">soap01</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing an Action
+header. Everything else is defaulted.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Only">SOAP12-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap12/message0.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1101" id=
+"test1101"></a><a href="#test1101">test1101</a> - <b><a href=
+"">SOAP 1.1 one-way defaulted with a MessageID value</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core02">core02</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing a MessageID.
+ReplyTo and FaultTo are defaulted.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Only">SOAP11-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap11/message1.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1201" id=
+"test1201"></a><a href="#test1201">test1201</a> - <b><a href=
+"">SOAP 1.2 one-way defaulted with a MessageID value</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core02">core02</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing a MessageID.
+ReplyTo and FaultTo are defaulted.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Only">SOAP12-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap12/message1.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1102" id=
+"test1102"></a><a href="#test1102">test1102</a> - <b><a href=
+"">SOAP 1.1 one-way message with a ReplyTo address of none</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core02">core02</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing a ReplyTo
+address value of none.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Only">SOAP11-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap11/message2.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1202" id=
+"test1202"></a><a href="#test1202">test1202</a> - <b><a href=
+"">SOAP 1.2 one-way message with a ReplyTo address of none</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core02">core02</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing a ReplyTo
+address value of none.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Only">SOAP12-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap12/message2.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1103" id=
+"test1103"></a><a href="#test1103">test1103</a> - <b><a href=
+"">SOAP 1.1 one-way message with a FaultTo address of none</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core02">core02</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing a FaultTo
+address value of none.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Only">SOAP11-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap11/message3.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:FaultTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1203" id=
+"test1203"></a><a href="#test1203">test1203</a> - <b><a href=
+"">SOAP 1.2 one-way message with a FaultTo address of none</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core02">core02</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing a FaultTo
+address value of none.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Only">SOAP12-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap12/message3.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1104" id=
+"test1104"></a><a href="#test1104">test1104</a> - <b><a href=
+"">SOAP 1.1 one-way message with a ReplyTo and FaultTo address of
+none</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core01">core01</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing none ReplyTo
+and FaultTo address values.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Only">SOAP11-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap11/message4.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:FaultTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1204" id=
+"test1204"></a><a href="#test1204">test1204</a> - <b><a href=
+"">SOAP 1.2 one-way message with a ReplyTo and FaultTo address of
+none</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core01">core01</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing none ReplyTo
+and FaultTo address values.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Only">SOAP12-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap12/message4.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1106" id=
+"test1106"></a><a href="#test1106">test1106</a> - <b><a href=
+"">SOAP 1.1 one-way message with ReplyTo containing a Reference
+Parameter</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core02">core02</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing none ReplyTo
+address with Reference Parameter.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Only">SOAP11-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap11/message7.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey
+= 'Key#123456789'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1206" id=
+"test1206"></a><a href="#test1206">test1206</a> - <b><a href=
+"">SOAP 1.2 one-way message with ReplyTo containing a Reference
+Parameter</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core02">core02</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing none ReplyTo
+address with Reference Parameter.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Only">SOAP12-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap12/message7.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey
+= 'Key#123456789'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1107" id=
+"test1107"></a><a href="#test1107">test1107</a> - <b><a href=
+"">SOAP 1.1 one-way message with ReplyTo containing WSDL
+Metadata</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core02">core02</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing none ReplyTo
+address with a WSDL 1.1 and WSDL 2.0 documents appearing in the
+Metadata.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Only">SOAP11-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap11/message8.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Metadata/wsdl11:definitions</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Metadata/wsdl20:description</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1207" id=
+"test1207"></a><a href="#test1207">test1207</a> - <b><a href=
+"">SOAP 1.2 one-way message with ReplyTo containing WSDL
+Metadata</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core02">core02</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing none ReplyTo
+address with a WSDL 1.1 and WSDL 2.0 documents appearing in the
+Metadata.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Only">SOAP12-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap12/message8.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Metadata/wsdl11:definitions</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Metadata/wsdl20:description</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1108" id=
+"test1108"></a><a href="#test1108">test1108</a> - <b><a href=
+"">SOAP 1.1 one-way message with ReplyTo containing EPR
+extensions</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core03">core03</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing a ReplyTo
+address with an element extension and an attribute extension of the
+ReferenceParameters and Metadata elements.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Only">SOAP11-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap11/message9.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:ReferenceParameters/@customer:level
+= 'premium'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey
+= 'Key#123456789'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Metadata/@customer:total
+= '1'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/customer:Metadata</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1208" id=
+"test1208"></a><a href="#test1208">test1208</a> - <b><a href=
+"">SOAP 1.2 one-way message with ReplyTo containing EPR
+extensions</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core03">core03</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">One-way message containing a ReplyTo
+address with an element extension and an attribute extension of the
+ReferenceParameters and Metadata elements.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Only">SOAP12-HTTP-In-Only</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/notify/soap12/message9.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/notify'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:ReferenceParameters/@customer:level
+= 'premium'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey
+= 'Key#123456789'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Metadata/@customer:total
+= '1'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/customer:Metadata</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1130" id=
+"test1130"></a><a href="#test1130">test1130</a> - <b><a href=
+"">SOAP 1.1 two-way message.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core05">core05</a></b>
+<b><a href="../features/#core06">core06</a></b> <b><a href=
+"../features/#core09">core09</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action. All other fields are defaulted. The presence of a MessageID
+in the first message and of the corresponding RelatesTo in the
+second message is tested.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out">SOAP11-HTTP-In-Out</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/message1.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/reply1.xml">reply</a> to A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/echoOut'</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1230" id=
+"test1230"></a><a href="#test1230">test1230</a> - <b><a href=
+"">SOAP 1.2 two-way message.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core05">core05</a></b>
+<b><a href="../features/#core06">core06</a></b> <b><a href=
+"../features/#core09">core09</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action. All other fields are defaulted. The presence of a MessageID
+in the first message and of the corresponding RelatesTo in the
+second message is tested.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out">SOAP12-HTTP-In-Out</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/message1.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/reply1.xml">reply</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoOut'</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1131" id=
+"test1131"></a><a href="#test1131">test1131</a> - <b><a href=
+"">SOAP 1.1 two-way message with ReplyTo address of
+anonymous.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core04">core04</a></b>
+<b><a href="../features/#core05">core05</a></b> <b><a href=
+"../features/#soap04">soap04</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action, MessageID and a ReplyTo of anonymous. All other fields are
+defaulted.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out">SOAP11-HTTP-In-Out</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/message2.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous'</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/reply1-1.xml">reply</a> to A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/echoOut'</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1231" id=
+"test1231"></a><a href="#test1231">test1231</a> - <b><a href=
+"">SOAP 1.2 two-way message with ReplyTo address of
+anonymous.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core04">core04</a></b>
+<b><a href="../features/#core05">core05</a></b> <b><a href=
+"../features/#soap02">soap02</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action, MessageID and a ReplyTo of anonymous. All other fields are
+defaulted.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out">SOAP12-HTTP-In-Out</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/message2.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous'</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/reply1-1.xml">reply</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoOut'</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1132" id=
+"test1132"></a><a href="#test1132">test1132</a> - <b><a href=
+"">SOAP 1.1 two-way message with ReplyTo address containing
+Reference Parameters.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core09">core09</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action and a ReplyTo with the address set to anonymous. The ReplyTo
+contains at least one Reference Parameter value. The reply message
+is returned on the HTTP response with the Reference Parameter value
+as a first class SOAP header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out">SOAP11-HTTP-In-Out</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/message7.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey
+= 'Key#123456789'</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/reply2.xml">reply</a> to A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/echoOut'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/customer:CustomerKey =
+'Key#123456789'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+and
+soap11:Envelope/soap11:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+cast as xs:boolean = true()</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1232" id=
+"test1232"></a><a href="#test1232">test1232</a> - <b><a href=
+"">SOAP 1.2 two-way message with ReplyTo address containing
+Reference Parameters.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core09">core09</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action and a ReplyTo with the address set to anonymous. The ReplyTo
+contains at least one Reference Parameter value. The reply message
+is returned on the HTTP response with the Reference Parameter value
+as a first class SOAP header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out">SOAP12-HTTP-In-Out</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/message7.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey
+= 'Key#123456789'</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/reply2.xml">reply</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoOut'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/customer:CustomerKey =
+'Key#123456789'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+and
+soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+cast as xs:boolean = true()</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1133" id=
+"test1133"></a><a href="#test1133">test1133</a> - <b><a href=
+"">SOAP 1.1 two-way message with fault. ReplyTo and FaultTo
+addresses containing Reference Parameters.</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core10">core10</a></b>
+<b><a href="../features/#soap06">soap06</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action. The ReplyTo and FaultTo addresses are both anonymous. The
+ReplyTo and FaultTo contain at least one Reference Parameter value
+which are different. A fault message is returned on the HTTP
+response with the FaultTo Reference Parameter value as a first
+class SOAP header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out-Fault">SOAP11-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/message9.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey
+= 'Key#123456789'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:FaultTo/wsa:ReferenceParameters/customer:CustomerKey
+= 'Fault#123456789'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:FaultTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous'</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/fault1.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault' or
+soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/fault'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/customer:CustomerKey =
+'Fault#123456789'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+and
+soap11:Envelope/soap11:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+cast as xs:boolean = true()</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('echo:EmptyEchoString')) or
+soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('soap11:Sender'))</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1233" id=
+"test1233"></a><a href="#test1233">test1233</a> - <b><a href=
+"">SOAP 1.2 two-way message with fault. ReplyTo and FaultTo
+addresses containing Reference Parameters.</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core10">core10</a></b>
+<b><a href="../features/#soap03">soap03</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action. The ReplyTo and FaultTo addresses are both anonymous. The
+ReplyTo and FaultTo contain at least one Reference Parameter value
+which are different. A fault message is returned on the HTTP
+response with the FaultTo Reference Parameter value as a first
+class SOAP header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/message9.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey
+= 'Key#123456789'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:ReferenceParameters/customer:CustomerKey
+= 'Fault#123456789'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous'</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/fault1.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault' or
+soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/fault'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/customer:CustomerKey =
+'Fault#123456789'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+and
+soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+cast as xs:boolean = true()</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.)
+= xs:QName('echo:EmptyEchoString'))</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1134" id=
+"test1134"></a><a href="#test1134">test1134</a> - <b><a href=
+"">SOAP 1.1 two-way message with fault. FaultTo is defaulted,
+ReplyTo address contains Reference Parameters.</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core10">core10</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action and a ReplyTo address, but no FaultTo EPR. The ReplyTo
+address is anonymous. The ReplyTo contains at least one Reference
+Parameter value. A fault message is returned on the HTTP response
+with the ReplyTo Reference Parameter value as a first class SOAP
+header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out-Fault">SOAP11-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/message8.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:ReplyTo) or
+soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey
+= 'Key#123456789'</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/fault2.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault' or
+soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/fault'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/customer:CustomerKey =
+'Key#123456789'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+and
+soap11:Envelope/soap11:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+cast as xs:boolean = true()</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('echo:EmptyEchoString')) or
+soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('soap11:Sender'))</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1234" id=
+"test1234"></a><a href="#test1234">test1234</a> - <b><a href=
+"">SOAP 1.2 two-way message with fault. FaultTo is defaulted,
+ReplyTo address contains Reference Parameters.</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core10">core10</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action and a ReplyTo address, but no FaultTo EPR. The ReplyTo
+address is anonymous. The ReplyTo contains at least one Reference
+Parameter value. A fault message is returned on the HTTP response
+with the ReplyTo Reference Parameter value as a first class SOAP
+header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/message8.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:ReplyTo) or
+soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:ReferenceParameters/customer:CustomerKey
+= 'Key#123456789'</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/fault2.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault' or
+soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/fault'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/customer:CustomerKey =
+'Key#123456789'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+and
+soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+cast as xs:boolean = true()</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.)
+= xs:QName('echo:EmptyEchoString'))</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1235" id=
+"test1235"></a><a href="#test1235">test1235</a> - <b><a href=
+"mailto:hugo@w3.org">SOAP 1.2 two-way message with fault. FaultTo
+is anonymous, ReplyTo is non-anonymous.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core10">core10</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action, a ReplyTo EPR, and a FaultTo EPR. The ReplyTo address is
+not anonymous. The FaultTo address is anonymous. The FaultTo
+contains at least one Reference Parameter value. A fault message is
+returned on the HTTP response.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/test1235request.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'')</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous')</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:ReferenceParameters/customer:CustomerKey
+= 'Fault#123456789'</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/fault1-1.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/customer:CustomerKey =
+'Fault#123456789'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+and
+soap12:Envelope/soap12:Header/customer:CustomerKey/@wsa:IsReferenceParameter
+cast as xs:boolean = true()</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.)
+= xs:QName('echo:EmptyEchoString'))</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1236" id=
+"test1236"></a><a href="#test1236">test1236</a> - <b><a href=
+"mailto:hugo@w3.org">SOAP 1.2 two-way message with a ReplyTo
+address of none.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core01">core01</a></b>
+<b><a href="../features/#core09">core09</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+ReplyTo EPR. The Reply-To EPR is has a value of
+http://www.w3.org/2005/08/addressing/none. No message is sent
+back.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out">SOAP12-HTTP-In-Out</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/test1236request.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">not(../following-sibling::log:message[@testcase=current()/../@testcase
+and @message!='1']) or
+count(../following-sibling::log:message[@testcase=current()/../@testcase
+and @message!='1']/log:content/*) = 0</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-INFORMATIONAL"><a name="test1237" id=
+"test1237"></a><a href="#test1237">test1237</a> - <b><a href=
+"mailto:hugo@w3.org">SOAP 1.2 two-way message with a ReplyTo
+address of none and a role of '/next'.</a></b>
+(<b>INFORMATIONAL</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core01">core01</a></b>
+<b><a href="../features/#core09">core09</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+ReplyTo EPR. The Reply-To EPR is has a value of
+"http://www.w3.org/2005/08/addressing/none" and a role of
+"http://www.w3.org/2003/05/soap-envelope/role/next". No message is
+sent back.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out">SOAP12-HTTP-In-Out</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/test1236-1request.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/@soap12:role =
+'http://www.w3.org/2003/05/soap-envelope/role/next'</span></li>
+<li><span class=
+"xpath">not(../following-sibling::log:message[@testcase=current()/../@testcase
+and @message!='1']) or
+count(../following-sibling::log:message[@testcase=current()/../@testcase
+and @message!='1']/log:content/*) = 0</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-INFORMATIONAL"><a name="test1238" id=
+"test1238"></a><a href="#test1238">test1238</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Aug/0000.html">
+SOAP 1.2 two-way message triggers mustUnderstand fault</a></b>
+(<b>INFORMATIONAL</b>)
+<div class="features">
+<p>Features:</p>
+</div>
+<div class="description">
+<p class="test-description">A SOAP header marked with
+@mustUndertand="1" and a FaultTo address of none. The header isn't
+understood and a mustUnderstand fault is generated by the
+underlying SOAP processing model and sent back to the node A.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Only-Fault">SOAP12-HTTP-In-Only-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/test1205-1request.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/alertcontrol:alertcontrol/@soap12:mustUnderstand</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/alertcontrol:alertcontrol/@soap12:mustUnderstand
+and
+soap12:Envelope/soap12:Header/alertcontrol:alertcontrol/@soap12:mustUnderstand
+cast as xs:boolean = true()</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/notify/soap12/fault5.xml">fault</a> to A.
+<ul>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/soap12:NotUnderstood) or
+soap12:Envelope/soap12:Header/soap12:NotUnderstood/@qname/(resolve-QName(.,parent::node())
+= xs:QName('alertcontrol:alertcontrol'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.)
+= xs:QName('soap12:MustUnderstand'))</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1140" id=
+"test1140"></a><a href="#test1140">test1140</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.1 two-way message with a duplicate To header.</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate To header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out-Fault">SOAP11-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/duplicateToRequest.xml">message</a> to B.
+<ul>
+<li><span class="xpath">count(soap11:Envelope/soap11:Header/wsa:To)
+= 2</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/duplicateToFault.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidAddressingHeader')) or
+soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidCardinality'))</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeader/wsa:To
+= 'http://www.w3.org/2005/08/addressing/anonymous' or
+soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:To'))</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1141" id=
+"test1141"></a><a href="#test1141">test1141</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.1 two-way message with a duplicate Reply-To header.</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate Reply-To header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out-Fault">SOAP11-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/duplicateReplyToRequest.xml">message</a>
+to B.
+<ul>
+<li><span class=
+"xpath">count(soap11:Envelope/soap11:Header/wsa:ReplyTo) =
+2</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/duplicateReplyToFault.xml">fault</a> to
+A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidAddressingHeader')) or
+soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidCardinality'))</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeader/wsa:ReplyTo/wsa:Address
+= 'http://www.w3.org/2005/08/addressing/anonymous' or
+soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:ReplyTo'))</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1142" id=
+"test1142"></a><a href="#test1142">test1142</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.1 two-way message with a duplicate Fault-To header.</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate Fault-To header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out-Fault">SOAP11-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/duplicateFaultToRequest.xml">message</a>
+to B.
+<ul>
+<li><span class=
+"xpath">count(soap11:Envelope/soap11:Header/wsa:FaultTo) =
+2</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/duplicateFaultToFault.xml">fault</a> to
+A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidAddressingHeader')) or
+soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidCardinality'))</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeader/wsa:FaultTo/wsa:Address
+= 'http://www.w3.org/2005/08/addressing/anonymous' or
+soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:FaultTo'))</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1143" id=
+"test1143"></a><a href="#test1143">test1143</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.1 two-way message with a duplicate action header.</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate action header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out-Fault">SOAP11-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/duplicateActionRequest.xml">message</a>
+to B.
+<ul>
+<li><span class=
+"xpath">count(soap11:Envelope/soap11:Header/wsa:Action) =
+2</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/duplicateActionFault.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidAddressingHeader')) or
+soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidCardinality'))</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeader/wsa:Action
+= 'http://message.id/test' or
+soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:Action'))</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-INFORMATIONAL"><a name="test1144" id=
+"test1144"></a><a href="#test1144">test1144</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.1 two-way message with a duplicate message ID
+header.</a></b> (<b>INFORMATIONAL</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate message ID header. The RelatesTo is in essence
+meaningless, hence this test being informational.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out-Fault">SOAP11-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/duplicateMessageIDRequest.xml">message</a>
+to B.
+<ul>
+<li><span class=
+"xpath">count(soap11:Envelope/soap11:Header/wsa:MessageID) =
+2</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/duplicateMessageIDFault.xml">fault</a> to
+A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidAddressingHeader')) or
+soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidCardinality'))</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeader/wsa:MessageID
+= 'http://message.id/test' or
+soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:MessageID'))</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-OPTIONAL"><a name="test1146" id=
+"test1146"></a><a href="#test1146">test1146</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.1 two-way message with a duplicate To header.</a></b>
+(<b>OPTIONAL</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate To header, generating a ProblemHeaderQName fault
+detail.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out-Fault">SOAP11-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/duplicateToRequest.xml">message</a> to B.
+<ul>
+<li><span class="xpath">count(soap11:Envelope/soap11:Header/wsa:To)
+= 2</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/duplicateToFault-1.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidAddressingHeader')) or
+soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidCardinality'))</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:To'))</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-OPTIONAL"><a name="test1147" id=
+"test1147"></a><a href="#test1147">test1147</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.1 two-way message with no action header.</a></b>
+(<b>OPTIONAL</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap07">soap07</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing no
+action header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out-Fault">SOAP11-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/noActionRequest.xml">message</a> to B.
+<ul>
+<li><span class=
+"xpath">count(soap11:Envelope/soap11:Header/wsa:Action) =
+0</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/noActionFault.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Body/soap11:Fault/faultcode/(resolve-QName(.,.)
+= xs:QName('wsa:MessageAddressingHeaderRequired'))</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:FaultDetail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:Action'))</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-INFORMATIONAL"><a name="test1149" id=
+"test1149"></a><a href="#test1149">test1149</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2006Mar/0224.html">
+SOAP 1.1 two-way message with a duplicate To header and a ReplyTo
+of none.</a></b> (<b>INFORMATIONAL</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b>
+<b><a href="../features/#core10">core10</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate To header and ReplyTo of none. An InvalidAddressingHeader
+fault should be generated, but not sent due to the ReplyTo
+header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out-Fault">SOAP11-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/duplicateToReplyToNone.xml">message</a>
+to B.
+<ul>
+<li><span class="xpath">count(soap11:Envelope/soap11:Header/wsa:To)
+= 2</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">not(../following-sibling::log:message[@testcase=current()/../@testcase
+and @message!='1']) or
+count(../following-sibling::log:message[@testcase=current()/../@testcase
+and @message!='1']/log:content/*) = 0</span></li>
+</ul>
+</li>
+<li>B sends an [empty] message to A.</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1240" id=
+"test1240"></a><a href="#test1240">test1240</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.2 two-way message with a duplicate To header.</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate To header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/duplicateToRequest.xml">message</a> to B.
+<ul>
+<li><span class="xpath">count(soap12:Envelope/soap12:Header/wsa:To)
+= 2</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/duplicateToFault.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.)
+= xs:QName('soap12:Sender'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidAddressingHeader'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:To
+= 'http://www.w3.org/2005/08/addressing/anonymous' or
+soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:To'))</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1241" id=
+"test1241"></a><a href="#test1241">test1241</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.2 two-way message with a duplicate Reply-To header.</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate Reply-To header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/duplicateReplyToRequest.xml">message</a>
+to B.
+<ul>
+<li><span class=
+"xpath">count(soap12:Envelope/soap12:Header/wsa:ReplyTo) =
+2</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/duplicateReplyToFault.xml">fault</a> to
+A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.)
+= xs:QName('soap12:Sender'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidAddressingHeader'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:ReplyTo/wsa:Address
+= 'http://www.w3.org/2005/08/addressing/anonymous' or
+soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:ReplyTo'))</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1242" id=
+"test1242"></a><a href="#test1242">test1242</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.2 two-way message with a duplicate Fault-To header.</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate Fault-To header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/duplicateFaultToRequest.xml">message</a>
+to B.
+<ul>
+<li><span class=
+"xpath">count(soap12:Envelope/soap12:Header/wsa:FaultTo) =
+2</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/duplicateFaultToFault.xml">fault</a> to
+A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.)
+= xs:QName('soap12:Sender'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidAddressingHeader'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:FaultTo/wsa:Address
+= 'http://www.w3.org/2005/08/addressing/anonymous' or
+soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:FaultTo'))</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1243" id=
+"test1243"></a><a href="#test1243">test1243</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.2 two-way message with a duplicate action header.</a></b>
+(<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate action header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/duplicateActionRequest.xml">message</a>
+to B.
+<ul>
+<li><span class=
+"xpath">count(soap12:Envelope/soap12:Header/wsa:Action) =
+2</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/duplicateActionFault.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.)
+= xs:QName('soap12:Sender'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidAddressingHeader'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:Action
+= 'http://message.id/test' or
+soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:Action'))</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1244" id=
+"test1244"></a><a href="#test1244">test1244</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.2 two-way message with a duplicate message ID
+header.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate message ID header. RelatesTo in the reply is in essence
+meaningless, hence this test being informational.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/duplicateMessageIDRequest.xml">message</a>
+to B.
+<ul>
+<li><span class=
+"xpath">count(soap12:Envelope/soap12:Header/wsa:MessageID) =
+2</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/duplicateMessageIDFault.xml">fault</a> to
+A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.)
+= xs:QName('soap12:Sender'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidAddressingHeader'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeader/wsa:MessageID
+= 'http://message.id/test' or
+soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:MessageID'))</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-OPTIONAL"><a name="test1246" id=
+"test1246"></a><a href="#test1246">test1246</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.2 two-way message with a duplicate To header.</a></b>
+(<b>OPTIONAL</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate To header, generating a ProblemHeaderQName fault
+detail.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/duplicateToRequest.xml">message</a> to B.
+<ul>
+<li><span class="xpath">count(soap12:Envelope/soap12:Header/wsa:To)
+= 2</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/duplicateToFault-1.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.)
+= xs:QName('soap12:Sender'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidAddressingHeader'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:To'))</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-OPTIONAL"><a name="test1247" id=
+"test1247"></a><a href="#test1247">test1247</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.2 two-way message with a duplicate To header.</a></b>
+(<b>OPTIONAL</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate To header, generating an InvalidCardinality
+subcode/subcode.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/duplicateToRequest.xml">message</a> to B.
+<ul>
+<li><span class="xpath">count(soap12:Envelope/soap12:Header/wsa:To)
+= 2</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/duplicateToFault_2.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.)
+= xs:QName('soap12:Sender'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidAddressingHeader'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Subcode/soap12:Value/(resolve-QName(.,.)
+= xs:QName('wsa:InvalidCardinality'))</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-OPTIONAL"><a name="test1248" id=
+"test1248"></a><a href="#test1248">test1248</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2005Nov/0004.html">
+SOAP 1.2 two-way message with no action header.</a></b>
+(<b>OPTIONAL</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap07">soap07</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing no
+action header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/noActionRequest.xml">message</a> to B.
+<ul>
+<li><span class=
+"xpath">count(soap12:Envelope/soap12:Header/wsa:Action) =
+0</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/noActionFault.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.)
+= xs:QName('soap12:Sender'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.)
+= xs:QName('wsa:MessageAddressingHeaderRequired'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemHeaderQName/(resolve-QName(.,.)
+= xs:QName('wsa:Action'))</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-INFORMATIONAL"><a name="test1249" id=
+"test1249"></a><a href="#test1249">test1249</a> - <b><a href=
+"http://lists.w3.org/Archives/Public/public-ws-addressing-tests/2006Mar/0224.html">
+SOAP 1.2 two-way message with a duplicate To header and a ReplyTo
+of none.</a></b> (<b>INFORMATIONAL</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#soap08">soap08</a></b>
+<b><a href="../features/#core10">core10</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing a
+duplicate To header and ReplyTo of none. An InvalidAddressingHeader
+fault should be generated, but not sent due to the ReplyTo
+header.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Fault">SOAP12-HTTP-In-Out-Fault</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/duplicateToReplyToNone.xml">message</a>
+to B.
+<ul>
+<li><span class="xpath">count(soap12:Envelope/soap12:Header/wsa:To)
+= 2</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">not(../following-sibling::log:message[@testcase=current()/../@testcase
+and @message!='1']) or
+count(../following-sibling::log:message[@testcase=current()/../@testcase
+and @message!='1']/log:content/*) = 0</span></li>
+</ul>
+</li>
+<li>B sends an [empty] message to A.</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1150" id=
+"test1150"></a><a href="#test1150">test1150</a> - <b><a href=
+"">SOAP 1.1 two-way message with a non-anonymous ReplyTo
+address.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core04">core04</a></b>
+<b><a href="../features/#core05">core05</a></b> <b><a href=
+"../features/#soap04">soap04</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action and a ReplyTo identifying an endpoint. All other fields are
+defaulted.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out-Callback">SOAP11-HTTP-In-Out-Callback</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/test1150request.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'')</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous')</span></li>
+</ul>
+</li>
+<li>B sends an [empty] message to A.</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/reply1-2.xml">reply</a> to A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/echoOut'</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+<li>A sends an [empty] message to B.</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1250" id=
+"test1250"></a><a href="#test1250">test1250</a> - <b><a href=
+"">SOAP 1.2 two-way message with a non-anonymous ReplyTo
+address.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core04">core04</a></b>
+<b><a href="../features/#core05">core05</a></b> <b><a href=
+"../features/#soap02">soap02</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action and a ReplyTo identifying an endpoint. All other fields are
+defaulted.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Callback">SOAP12-HTTP-In-Out-Callback</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/test1250request.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'')</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous')</span></li>
+</ul>
+</li>
+<li>B sends an [empty] message to A.</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/reply1-2.xml">reply</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoOut'</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+<li>A sends an [empty] message to B.</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1251" id=
+"test1251"></a><a href="#test1251">test1251</a> - <b><a href=
+"">SOAP 1.2 two-way message with a non-anonymous ReplyTo address
+and a Reply targeted to none.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core04">core04</a></b>
+<b><a href="../features/#core05">core05</a></b> <b><a href=
+"../features/#soap02">soap02</a></b> <b><a href=
+"../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action, a ReplyTo identifying an endpoint, and a ReplyTo targeted
+to none. All other fields are defaulted.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Callback">SOAP12-HTTP-In-Out-Callback</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/test1251request.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'')</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:ReplyTo[not(@soap12:role)]/wsa:Address
+= 'http://www.w3.org/2005/08/addressing/anonymous')</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo[@soap12:role='http://www.w3.org/2003/05/soap-envelope/role/none']/wsa:Address</span></li>
+</ul>
+</li>
+<li>B sends an [empty] message to A.</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/reply1-3.xml">reply</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoOut'</span></li>
+</ul>
+</li>
+<li>A sends an [empty] message to B.</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1152" id=
+"test1152"></a><a href="#test1152">test1152</a> - <b><a href=
+"">SOAP 1.1 two-way message with a non-anonymous ReplyTo address
+and a FaultTo targeted to none.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core04">core04</a></b>
+<b><a href="../features/#core05">core05</a></b> <b><a href=
+"../features/#soap02">soap02</a></b> <b><a href=
+"../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action, a ReplyTo identifying an endpoint, and a FaultTo targeted
+to none. All other fields are defaulted. Intended to simulate an
+application fault, so ReplyTo won't be used.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out-Callback">SOAP11-HTTP-In-Out-Callback</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/test1152request.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'')</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous')</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:FaultTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">not(../following-sibling::log:message[@testcase=current()/../@testcase
+and @message!='1']) or
+count(../following-sibling::log:message[@testcase=current()/../@testcase
+and @message!='1']/log:content/*) = 0</span></li>
+</ul>
+</li>
+<li>B sends an [empty] message to A.</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-REQUIRED"><a name="test1252" id=
+"test1252"></a><a href="#test1252">test1252</a> - <b><a href=
+"">SOAP 1.2 two-way message with a non-anonymous ReplyTo address
+and a FaultTo targeted to none.</a></b> (<b>REQUIRED</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core04">core04</a></b>
+<b><a href="../features/#core05">core05</a></b> <b><a href=
+"../features/#soap02">soap02</a></b> <b><a href=
+"../features/#soap08">soap08</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action, a ReplyTo identifying an endpoint, and a FaultTo targeted
+to none. All other fields are defaulted. Intended to simulate an
+application fault, so ReplyTo won't be used.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Callback">SOAP12-HTTP-In-Out-Callback</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/test1252request.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'')</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/anonymous')</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:FaultTo/wsa:Address =
+'http://www.w3.org/2005/08/addressing/none'</span></li>
+<li><span class=
+"xpath">not(../following-sibling::log:message[@testcase=current()/../@testcase
+and @message!='1']) or
+count(../following-sibling::log:message[@testcase=current()/../@testcase
+and @message!='1']/log:content/*) = 0</span></li>
+</ul>
+</li>
+<li>B sends an [empty] message to A.</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-INFORMATIONAL"><a name="test1260" id=
+"test1260"></a><a href="#test1260">test1260</a> - <b><a href=
+"">SOAP 1.2 two-way message with an unreachable ReplyTo
+address.</a></b> (<b>INFORMATIONAL</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core04">core04</a></b>
+<b><a href="../features/#core05">core05</a></b> <b><a href=
+"../features/#soap02">soap02</a></b> <b><a href=
+"../features/#soap07">soap07</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action and a ReplyTo identifying an unreachable endpoint. All other
+fields are defaulted.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out-Callback">SOAP12-HTTP-In-Out-Callback</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/test1260request.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:ReplyTo/wsa:Address =
+'http://example.org/unreachable'</span></li>
+</ul>
+</li>
+<li>B sends an [empty] message to A.</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/test1260fault.xml">fault</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://www.w3.org/2005/08/addressing/fault'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Value/(resolve-QName(.,.)
+= xs:QName('soap12:Sender'))</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Body/soap12:Fault/soap12:Code/soap12:Subcode/soap12:Value/(resolve-QName(.,.)
+= xs:QName('wsa:DestinationUnreachable'))</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemIRI)
+or
+soap12:Envelope/soap12:Body/soap12:Fault/soap12:Detail/wsa:ProblemIRI
+= 'http://example.org/unreachable'</span></li>
+</ul>
+</li>
+<li>A sends an [empty] message to B.</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-OPTIONAL"><a name="test1170" id=
+"test1170"></a><a href="#test1170">test1170</a> - <b><a href=
+"mailto:hugo@w3.org">SOAP 1.1 two-way message with
+wsa:From.</a></b> (<b>OPTIONAL</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core04">core04</a></b>
+<b><a href="../features/#core05">core05</a></b> <b><a href=
+"../features/#core06">core06</a></b> <b><a href=
+"../features/#core09">core09</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action and a From marked with mustUnderstand. All other fields are
+defaulted. It is checked that the receiver understands the
+message.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP11-HTTP-In-Out">SOAP11-HTTP-In-Out</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap11/message1-70.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:From/wsa:Address</span></li>
+<li><span class=
+"xpath">soap11:Envelope/soap11:Header/wsa:From/@soap11:mustUnderstand
+and soap11:Envelope/soap11:Header/wsa:From/@soap11:mustUnderstand
+cast as xs:boolean = true()</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap11/reply1.xml">reply</a> to A.
+<ul>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:Action =
+'http://example.org/action/echoOut'</span></li>
+<li><span class="xpath">soap11:Envelope/soap11:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap11:Envelope/soap11:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType)
+or soap11:Envelope/soap11:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="testcase cr-OPTIONAL"><a name="test1270" id=
+"test1270"></a><a href="#test1270">test1270</a> - <b><a href=
+"mailto:hugo@w3.org">SOAP 1.2 two-way message with
+wsa:From.</a></b> (<b>OPTIONAL</b>)
+<div class="features">
+<p>Features: <b><a href="../features/#core04">core04</a></b>
+<b><a href="../features/#core05">core05</a></b> <b><a href=
+"../features/#core06">core06</a></b> <b><a href=
+"../features/#core09">core09</a></b></p>
+</div>
+<div class="description">
+<p class="test-description">Two-way message exchange containing an
+Action and a From marked with mustUnderstand. All other fields are
+defaulted. It is checked that the receiver understands the
+message.</p>
+<p class="message-exchange"><a href=
+"../exchanges/#SOAP12-HTTP-In-Out">SOAP12-HTTP-In-Out</a></p>
+<ol>
+<li>A sends a <a href=
+"../documents/echo/soap12/message1-70.xml">message</a> to B.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoIn'</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:From/wsa:Address</span></li>
+<li><span class=
+"xpath">soap12:Envelope/soap12:Header/wsa:From/@soap12:mustUnderstand
+and soap12:Envelope/soap12:Header/wsa:From/@soap12:mustUnderstand
+cast as xs:boolean = true()</span></li>
+</ul>
+</li>
+<li>B sends a <a href=
+"../documents/echo/soap12/reply1.xml">reply</a> to A.
+<ul>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:Action =
+'http://example.org/action/echoOut'</span></li>
+<li><span class="xpath">soap12:Envelope/soap12:Header/wsa:RelatesTo
+=
+../preceding-sibling::log:message[@testcase=current()/../@testcase
+and
+@message='1']/log:content/soap12:Envelope/soap12:Header/wsa:MessageID</span></li>
+<li><span class=
+"xpath">not(soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType)
+or soap12:Envelope/soap12:Header/wsa:RelatesTo/@RelationshipType =
+'http://www.w3.org/2005/08/addressing/reply'</span></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<hr>
+<p>Generated from <a href="testcases.xml">testcases.xml</a> using
+<a href="testcases.xsl">testcases.xsl</a>.<br>
+$Date: 2006/02/21 17:53:59 $</p>
+<address><a href="../">Web Services Addressing Test Suite</a><br>
+<br>
+<a href="mailto:paul.downey@bt.com">Paul Downey</a>, <a href=
+"mailto:david.illsley@uk.ibm.com.com">David Illsley</a>, <a href=
+"mailto:jmarsh@microsoft.com">Jonathan Marsh</a>, Editors<br>
+<a href="mailto:bob.freund@hitachisoftware.com">Bob Freund</a>,
+Chair<br>
+<br>
+<a href="/People/Hugo/">Hugo Haas</a>, <a href=
+"/People/LeHegaret/">Philippe Le Hégaret</a>, W3C Team
+contacts<br></address>
+<p class="copyright"><a rel="Copyright" href=
+"/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2006
+<a href="/"><acronym title=
+"World Wide Web Consortium">W3C</acronym></a> <sup>®</sup> (
+<a href="http://www.csail.mit.edu/"><acronym title=
+"Massachusetts Institute of Technology">MIT</acronym></a> ,
+<a href="http://www.ercim.org/"><acronym title=
+"European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>
+,<a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved.
+W3C <a href=
+"/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+<a href=
+"/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>,
+<a rel="Copyright" href=
+"/Consortium/Legal/copyright-documents">document use</a> and
+<a rel="Copyright" href=
+"/Consortium/Legal/copyright-software">software licensing</a> rules
+apply. Your interactions with this site are in accordance with our
+<a href="/Consortium/Legal/privacy-statement#Public">public</a>
+and<a href="/Consortium/Legal/privacy-statement#Members">Member</a>
+privacy statements.</p>
+</body>
+</html>

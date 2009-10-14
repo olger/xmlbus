@@ -1,0 +1,43 @@
+body 
+{ 
+    margin-top: 10px; margin-left: 40px; margin-right: auto; width: 760px; text-align: left; vertical-align: top;
+ }
+
+form { padding: 0px; margin: 0px; margin-bottom: 30px; border: 0px; font: 12px Arial, Helvetica, sans-serif; }
+
+#map { padding: 0px; margin: 0px; margin-bottom: 30px; border: 0px; font: 12px Arial, Helvetica, sans-serif; width: 620px; text-align: center; }
+
+#imageinfo { padding: 0px; margin: 0px; border: 0px; font: 12px Arial, Helvetica, sans-serif; width: 280px; text-align: center; }
+
+#imageinfo img { background-color: white; }
+
+p label { font: 12px Arial, Helvetica, sans-serif; }
+
+.testid { font: bolder 12px Arial, Helvetica, sans-serif; }
+.description { font: 12px Arial, Helvetica, sans-serif; }
+
+.byline { padding-left: 20px }
+
+a:link { color: #0063DC; text-decoration: underline; }
+a:visited { color: #2E67C7; text-decoration: underline; }
+a:hover { color: #FFFFFF; text-decoration: none; background: #0063DC; }
+a:active { color: #FFFFFF; text-decoration: none; background: #0259C4; }
+
+img { border: 0px; }
+
+.title { color: blue; font: bolder 32px Verdana, Arial, sans-serif; }
+.r { color: #FF0084; font: bolder 32px Verdana, Arial, sans-serif; }
+
+#controls   { padding: 0px; margin: 0px;  border: 0px; font: 10px Arial, Helvetica, sans-serif; }
+
+#nav   { padding: 0px; margin: 0px; margin-top: 10px; margin-bottom: 10px; border: 0px; font: 12px Arial, Helvetica, sans-serif; text-align: left; }
+
+#intro { padding: 0px; margin: 0px; border: 0px; font: 12px Arial, Helvetica, sans-serif; }
+
+#faq { padding: 0px; margin: 0px; border: 0px; font: 12px Arial, Helvetica, sans-serif; }
+
+#source { padding: 0px; margin: 0px; border: 0px; font: 12px Arial, Helvetica, sans-serif; }
+
+#author { padding: 0px; margin: 0px; border: 0px; font: 12px Arial, Helvetica, sans-serif; }
+
+v:* { behavior:url(#default#VML); }
