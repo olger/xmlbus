@@ -70,6 +70,7 @@ XMLBUSPUBFUN xmlChar* XMLBUSCALL xmlbusErrorGetString(xmlbusErrorPtr err) {
     xmlbusErrorPtr cur;
     xmlChar *tmp = NULL;
     xmlChar *res = NULL;
+	xmlChar *res2 = NULL;
     size_t len, totalLen = 0;
 	
     for (cur = err; cur; cur = cur->next) {
@@ -80,7 +81,9 @@ XMLBUSPUBFUN xmlChar* XMLBUSCALL xmlbusErrorGetString(xmlbusErrorPtr err) {
 		if (!res) {
 			res = xmlStrdup(tmp);
 		} else {
-            res = xmlStrncatNew(res, tmp, -1); // calculate the length automatically
+            res2 = xmlStrncatNew(res, tmp, -1); // calculate the length automatically
+			xmlFree(res);
+			res = res2;
 		}
 		free(tmp);
     }
