@@ -83,6 +83,12 @@ static void tvsub( struct timeval *tdiff, struct timeval *t1, struct timeval *t0
         tdiff->tv_sec--, tdiff->tv_usec += 1000000;
 }
 
+float calc_response_time (struct timeval *startTime, struct timeval *endTime)
+{
+	return (((*endTime).tv_sec - (*startTime).tv_sec)
+			+ ((float) ((*endTime).tv_usec - (*startTime).tv_usec) / 1000000));
+}
+
 
 xmlbusErrorPtr xbb_init()
 {
@@ -437,7 +443,8 @@ int main(int argc, char **argv)
     gettimeofday(&endTime, NULL);
     tvsub(&totalTime, &endTime, &startTime);
     xmlbusLogInfo(logger, BAD_CAST "totally handled %d requests in %d.%d secs",totalRequestsHandled, totalTime.tv_sec, totalTime.tv_usec);
-
+	float secsAsFloat = calc_response_time(&startTime, &endTime); 
+	xmlbusLogInfo(logger, BAD_CAST "%f request per second", (totalRequestsHandled / secsAsFloat));
     xbb_exit();
     return 0;
 }
