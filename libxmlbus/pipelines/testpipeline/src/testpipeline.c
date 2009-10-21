@@ -29,19 +29,28 @@ It is a pipeline for inbound service processing. It will check a specific header
 // pipeline processing function
 //typedef xmlbusErrorPtr (*xmlbusPipelineFilterFunc) (xmlbusSoapMessagePtr, xmlbus_pipelineresult_enum*);
 xmlbusErrorPtr myModuleFilterFunc(xmlbusSoapMessagePtr soapMsg, xmlbus_pipelineresult_enum* result) {
-	//printf("filterfunc entered\n");
 	// find the TestPipelineHeader and add a node to show that the filter works
 	xmlbusSoapHeaderEntryPtr headers = NULL;
 	xmlbusSoapHeaderEntryPtr header = NULL;
-	xmlbusSoapGetHeadersAsEntry(soapMsg,&headers);
-	header = headers;
-	while(header != NULL) {
-		if (header->soapHeaderEntry->name != NULL && xmlStrcasecmp(header->soapHeaderEntry->name, BAD_CAST "TestPipelineHeader") == 0) {
-			xmlNewTextChild(header->soapHeaderEntry,NULL,BAD_CAST "filteradd", BAD_CAST "added by filter");
+	xmlbusErrorPtr xbErr = xmlbusSoapGetHeadersAsEntry(soapMsg,&headers);
+	if (xbErr != NULL) {
+#ifdef DEBUG
+		// log the error here
+		printf("Error getting header: %s\n", xmlbusErrorGetString(xbErr));
+#endif
+		// ignore when there is no header found, free the error otherwise it leaks memory. 
+		// NOTE when the error is passed outside, do not free it. 
+		xmlbusErrorFree(xbErr);
+	} else {
+		header = headers;
+		while(header != NULL) {
+			if (header->soapHeaderEntry->name != NULL && xmlStrcasecmp(header->soapHeaderEntry->name, BAD_CAST "TestPipelineHeader") == 0) {
+				xmlNewTextChild(header->soapHeaderEntry,NULL,BAD_CAST "filteradd", BAD_CAST "added by filter");
+			}
+			header = header->next;
 		}
-		header = header->next;
+		xmlbusSoapFreeHeaderEntries(headers);
 	}
-	xmlbusSoapFreeHeaderEntries(headers);
 	return XMLBUS_OK;
 }
 

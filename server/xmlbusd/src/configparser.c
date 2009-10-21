@@ -293,6 +293,7 @@ xmlbusErrorPtr createServiceConfigStructs(xmlXPathObjectPtr xpathObj, xmlbusdSer
             //@TODO does this create a memory leak when free-ing the conf ?
             xmlChar* runnerLibName = xmlStrdup(BAD_CAST "libcdlrunner");
             newServiceConf->runner = xmlStrncatNew(runnerLibName,SHLIBEXT,xmlStrlen(SHLIBEXT));
+			xmlFree(runnerLibName);
         }
 		newServiceConf->next = serviceConf;
 		serviceConf = newServiceConf;

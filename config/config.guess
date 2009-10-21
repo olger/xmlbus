@@ -848,6 +848,9 @@ EOF
     avr32*:Linux:*:*)
 	echo ${UNAME_MACHINE}-unknown-linux-gnu
 	exit ;;
+    avr32*:Linux:*:*)
+	echo ${UNAME_MACHINE}-unknown-linux-gnu
+	exit ;;
     cris:Linux:*:*)
 	echo cris-axis-linux-gnu
 	exit ;;

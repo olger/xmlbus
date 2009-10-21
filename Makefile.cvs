@@ -2,7 +2,7 @@ default: all
 
 all:
 	aclocal -I config
-	libtoolize --force --copy
+	glibtoolize --force --copy
 	autoconf
 	autoheader
 	automake --add-missing --copy
