@@ -40,7 +40,12 @@ void* xmlbusHandleClientRequestThreaded(void* options) {
     xbErr = xmlbusSoapMessageCreateFromFd(conCustData->sockfd,&inboundSoapMsg);
 	if (xbErr != XMLBUS_OK) {
 		xbErr = xmlbusErrorAdd(xbErr,XMLBUS_ERRORS_LOCATION,-1, BAD_CAST "Could not create xmlbusSoapMessage from fd (filedesc)");
-		xmlbusTransportFireOnRequestFailedCallback(request->transport,xbErr);
+		xmlbusErrorPtr xbErrForFailedCb = xmlbusTransportFireOnRequestFailedCallback(request->transport,xbErr);
+		if (xbErrForFailedCb != NULL) {
+			// @TODO: what to do when the failed callback returns an error. (actually the failed callback is a function decl with a void return!)
+			// so this can never happen at the moment !
+			xmlbusErrorFree(xbErrForFailedCb);
+		}
 		// @TODO: When Async is enabled, put the message to the outbound transport to be sent....
 		xmlbusSoapMessagePtr responseMsg = NULL;
 		xmlChar* errorString = xmlbusErrorGetLastString(xbErr);

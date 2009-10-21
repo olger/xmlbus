@@ -31,7 +31,8 @@ void onInboundTransportFailed(xmlbusErrorPtr xmlbusError) {
 }
 
 void onRequestFailed(xmlbusErrorPtr xmlbusError) {
-	if (logger != NULL) {
+	// don't free the given error, it is freed in the process above
+	if (logger != NULL && xmlbusError != NULL) {
 		xmlbusLogError(logger,xmlbusError);
 	}
 }

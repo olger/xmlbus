@@ -84,7 +84,7 @@ XMLBUSPUBFUN void XMLBUSCALL xmlbusLogError(xmlbusLoggerPtr logger, xmlbusErrorP
 #ifdef HAVE_LOG4C
     log4c_category_error(logger->loggerCategory, (char*)returnedMsg);
 #endif
-    //xmlFree(returnedMsg);
+    xmlFree(returnedMsg);
 }
 
 XMLBUSPUBFUN xmlbusErrorPtr XMLBUSCALL xmlbusDestroyLogger(xmlbusLoggerPtr logger) {
