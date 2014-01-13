@@ -1,7 +1,12 @@
 xmlbus
 ======
 
-Welcome.
+XMLBus is a lean ESB written to process > n 1000 transactions per second. The goal of this project is to write a language agnostic service oriented platform that uses XML SOAP based messaging to connect services.
+
+Currently the XMLbus consists out of a C based service processor and a python based service processor, C based filters for input and output and a structure to advertise services including a dynamic DNS based implementation.
+
+The whole framework is build upon C and the Gnome libxml2 libraries in order to provide high performance and low resource usage.
+
 
 In order to build the sources:
 
